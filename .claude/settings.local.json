@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /home/runner/workspace -name *.json -path */rmf-funds/* -exec sh -c \"cat \"\"$1\"\" | jq -r \"\"select(.metadata.fund_type == \"\"\"RMF\"\"\") | .symbol\"\" | head -1\" _ {})",
+      "WebFetch(domain:api-portal.sec.or.th)",
+      "WebSearch",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

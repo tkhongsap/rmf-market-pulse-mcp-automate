@@ -69,6 +69,23 @@ interface SaveStats {
 }
 
 // ============================================================================
+// Database Clear Function
+// ============================================================================
+
+async function clearDatabase(client: PoolClient): Promise<void> {
+  console.log(`\n🗑️  Clearing database tables...`);
+
+  try {
+    // Truncate all tables (CASCADE will handle foreign key constraints)
+    await client.query('TRUNCATE TABLE rmf_dividends, rmf_nav_history, rmf_funds CASCADE');
+    console.log(`✅ Database cleared successfully\n`);
+  } catch (error: any) {
+    console.error(`❌ Error clearing database: ${error.message}`);
+    throw error;
+  }
+}
+
+// ============================================================================
 // Main Saver Function
 // ============================================================================
 
@@ -91,6 +108,9 @@ export async function saveFundsToDB(
   };
 
   try {
+    // Clear database before saving
+    await clearDatabase(client);
+
     console.log(`\n🗄️  Saving ${fundFiles.length} funds to PostgreSQL...\n`);
 
     for (const file of fundFiles) {
@@ -163,12 +183,18 @@ async function insertFund(client: PoolClient, fund: FundData): Promise<void> {
       latest_nav, latest_nav_date, nav_change, nav_change_percent,
       buy_price, sell_price,
       risk_level, dividend_policy, fund_policy, fund_category,
+      fund_type, management_style, net_asset,
       volatility_5y, tracking_error_1y,
+      nav_history_count, nav_history_first_date, nav_history_last_date,
+      nav_history_min, nav_history_max,
+      dividends_count, dividends_total, dividends_last_date,
+      fees_count, parties_count, risk_factors_count,
+      errors_count, errors,
       performance, benchmark, asset_allocation, fees,
       involved_parties, top_holdings, risk_factors, suitability,
       document_urls, investment_minimums, data_fetched_at
     ) VALUES (
-      $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29
+      $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45
     )
     ON CONFLICT (symbol) DO UPDATE SET
       proj_id = EXCLUDED.proj_id,
@@ -185,8 +211,24 @@ async function insertFund(client: PoolClient, fund: FundData): Promise<void> {
       dividend_policy = EXCLUDED.dividend_policy,
       fund_policy = EXCLUDED.fund_policy,
       fund_category = EXCLUDED.fund_category,
+      fund_type = EXCLUDED.fund_type,
+      management_style = EXCLUDED.management_style,
+      net_asset = EXCLUDED.net_asset,
       volatility_5y = EXCLUDED.volatility_5y,
       tracking_error_1y = EXCLUDED.tracking_error_1y,
+      nav_history_count = EXCLUDED.nav_history_count,
+      nav_history_first_date = EXCLUDED.nav_history_first_date,
+      nav_history_last_date = EXCLUDED.nav_history_last_date,
+      nav_history_min = EXCLUDED.nav_history_min,
+      nav_history_max = EXCLUDED.nav_history_max,
+      dividends_count = EXCLUDED.dividends_count,
+      dividends_total = EXCLUDED.dividends_total,
+      dividends_last_date = EXCLUDED.dividends_last_date,
+      fees_count = EXCLUDED.fees_count,
+      parties_count = EXCLUDED.parties_count,
+      risk_factors_count = EXCLUDED.risk_factors_count,
+      errors_count = EXCLUDED.errors_count,
+      errors = EXCLUDED.errors,
       performance = EXCLUDED.performance,
       benchmark = EXCLUDED.benchmark,
       asset_allocation = EXCLUDED.asset_allocation,
@@ -204,36 +246,103 @@ async function insertFund(client: PoolClient, fund: FundData): Promise<void> {
   const riskMetrics = (fund as any).risk_metrics || {};
   const category = (fund as any).category || null;
 
+  // Calculate NAV history statistics
+  let navHistoryCount = 0;
+  let navHistoryFirstDate = null;
+  let navHistoryLastDate = null;
+  let navHistoryMin = null;
+  let navHistoryMax = null;
+
+  if (fund.nav_history_30d && fund.nav_history_30d.length > 0) {
+    navHistoryCount = fund.nav_history_30d.length;
+    const navValues = fund.nav_history_30d.map(n => n.last_val).filter(v => v != null);
+
+    if (navValues.length > 0) {
+      navHistoryMin = Math.min(...navValues);
+      navHistoryMax = Math.max(...navValues);
+    }
+
+    // Dates (assuming array is sorted by date)
+    navHistoryFirstDate = fund.nav_history_30d[fund.nav_history_30d.length - 1]?.nav_date || null;
+    navHistoryLastDate = fund.nav_history_30d[0]?.nav_date || null;
+  }
+
+  // Calculate dividend statistics
+  let dividendsCount = 0;
+  let dividendsTotal = 0;
+  let dividendsLastDate = null;
+
+  if (fund.dividends && fund.dividends.length > 0) {
+    dividendsCount = fund.dividends.length;
+    dividendsTotal = fund.dividends.reduce((sum, d) => {
+      const rate = (d as any).dividend_rate || (d as any).dvidend_rate || 0;
+      return sum + rate;
+    }, 0);
+    dividendsLastDate = fund.dividends[0]?.xa_date || null;
+  }
+
+  // Calculate metadata counts
+  const feesCount = fund.fees ? (Array.isArray(fund.fees) ? fund.fees.length : Object.keys(fund.fees).length) : 0;
+  const partiesCount = fund.involved_parties ? (Array.isArray(fund.involved_parties) ? fund.involved_parties.length : 0) : 0;
+  const riskFactorsCount = fund.risk_factors ? (Array.isArray(fund.risk_factors) ? fund.risk_factors.length : 0) : 0;
+
+  // Error tracking
+  const errorsCount = fund.errors ? fund.errors.length : 0;
+  const errorsJson = fund.errors && fund.errors.length > 0 ? JSON.stringify(fund.errors) : null;
+
+  // Extract additional fields from metadata
+  const fundType = fund.metadata?.fund_type || null;
+  const managementStyle = fund.metadata?.management_style || null;
+
+  // Extract net_asset from latest_nav or metadata
+  const netAsset = (fund.latest_nav as any)?.net_asset || (fund as any).net_asset || null;
+
   const values = [
-    fund.symbol,
-    fund.fund_id,
-    fund.fund_name,
-    null,
-    fund.amc,
-    fund.metadata?.status || 'RG',
-    fund.latest_nav?.last_val || null,
-    fund.latest_nav?.nav_date || null,
-    fund.latest_nav?.change || null,
-    fund.latest_nav?.change_percent || null,
-    fund.latest_nav?.buy_price || null,
-    fund.latest_nav?.sell_price || null,
-    fund.metadata?.risk_level || null,
-    fund.metadata?.dividend_policy || null,
-    fund.metadata?.fund_classification || null,
-    category,
-    riskMetrics.volatility_5y || null,
-    riskMetrics.tracking_error_1y || null,
-    fund.performance ? JSON.stringify(fund.performance) : null,
-    fund.benchmark ? JSON.stringify(fund.benchmark) : null,
-    fund.asset_allocation ? JSON.stringify(fund.asset_allocation) : null,
-    fund.fees ? JSON.stringify(fund.fees) : null,
-    fund.involved_parties ? JSON.stringify(fund.involved_parties) : null,
-    fund.top_holdings ? JSON.stringify(fund.top_holdings) : null,
-    fund.risk_factors ? JSON.stringify(fund.risk_factors) : null,
-    fund.suitability ? JSON.stringify(fund.suitability) : null,
-    fund.document_urls ? JSON.stringify(fund.document_urls) : null,
-    fund.investment_minimums ? JSON.stringify(fund.investment_minimums) : null,
-    fund.data_fetched_at || new Date().toISOString(),
+    fund.symbol,                                             // $1
+    fund.fund_id,                                            // $2
+    fund.fund_name,                                          // $3
+    null,                                                    // $4 - fund_name_th
+    fund.amc,                                                // $5
+    fund.metadata?.status || 'RG',                           // $6
+    fund.latest_nav?.last_val || null,                       // $7
+    fund.latest_nav?.nav_date || null,                       // $8
+    fund.latest_nav?.change || null,                         // $9
+    fund.latest_nav?.change_percent || null,                 // $10
+    fund.latest_nav?.buy_price || null,                      // $11
+    fund.latest_nav?.sell_price || null,                     // $12
+    fund.metadata?.risk_level || null,                       // $13
+    fund.metadata?.dividend_policy || null,                  // $14
+    fund.metadata?.fund_classification || null,              // $15
+    category,                                                // $16 - fund_category
+    fundType,                                                // $17 - fund_type
+    managementStyle,                                         // $18 - management_style
+    netAsset,                                                // $19 - net_asset
+    riskMetrics.volatility_5y || null,                       // $20
+    riskMetrics.tracking_error_1y || null,                   // $21
+    navHistoryCount || null,                                 // $22
+    navHistoryFirstDate,                                     // $23
+    navHistoryLastDate,                                      // $24
+    navHistoryMin,                                           // $25
+    navHistoryMax,                                           // $26
+    dividendsCount || null,                                  // $27
+    dividendsTotal || null,                                  // $28
+    dividendsLastDate,                                       // $29
+    feesCount || null,                                       // $30
+    partiesCount || null,                                    // $31
+    riskFactorsCount || null,                                // $32
+    errorsCount || null,                                     // $33
+    errorsJson,                                              // $34
+    fund.performance ? JSON.stringify(fund.performance) : null,                   // $35
+    fund.benchmark ? JSON.stringify(fund.benchmark) : null,                       // $36
+    fund.asset_allocation ? JSON.stringify(fund.asset_allocation) : null,         // $37
+    fund.fees ? JSON.stringify(fund.fees) : null,                                 // $38
+    fund.involved_parties ? JSON.stringify(fund.involved_parties) : null,         // $39
+    fund.top_holdings ? JSON.stringify(fund.top_holdings) : null,                 // $40
+    fund.risk_factors ? JSON.stringify(fund.risk_factors) : null,                 // $41
+    fund.suitability ? JSON.stringify(fund.suitability) : null,                   // $42
+    fund.document_urls ? JSON.stringify(fund.document_urls) : null,               // $43
+    fund.investment_minimums ? JSON.stringify(fund.investment_minimums) : null,   // $44
+    fund.data_fetched_at || new Date().toISOString(),                             // $45
   ];
 
   await client.query(query, values);

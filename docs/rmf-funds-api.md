@@ -1,7 +1,7 @@
 # RMF Funds (API-Generated)
 
 **Total Funds:** 451
-**Generated:** 2025-11-14T07:40:41.324Z
+**Generated:** 2025-11-14T08:30:59.629Z
 **Source:** SEC Fund Factsheet API
 
 | Symbol | Fund Name | AMC | Status | Registration Date |
