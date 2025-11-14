@@ -1,0 +1,450 @@
+{
+  "fund_id": "M0080_2544",
+  "symbol": "SCBRM3",
+  "fund_name": "SCB FLEXIBLE FUND RMF",
+  "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "Unknown",
+    "management_style": "Unknown",
+    "dividend_policy": "Unknown",
+    "risk_level": 0,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-11",
+    "last_val": 21.8671,
+    "previous_val": 0,
+    "net_asset": 3887548928,
+    "buy_price": 21.8671,
+    "sell_price": 21.8672,
+    "change": 21.8671,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-12T16:10:36.647"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 21.2696,
+      "previous_val": 0,
+      "net_asset": 3843638528,
+      "buy_price": 21.2696,
+      "sell_price": 21.2697
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 21.2977,
+      "previous_val": 0,
+      "net_asset": 3847862784,
+      "buy_price": 21.2977,
+      "sell_price": 21.2978
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 21.5053,
+      "previous_val": 0,
+      "net_asset": 3883928064,
+      "buy_price": 21.5053,
+      "sell_price": 21.5054
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 21.6196,
+      "previous_val": 0,
+      "net_asset": 3900351232,
+      "buy_price": 21.6196,
+      "sell_price": 21.6197
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 21.4927,
+      "previous_val": 0,
+      "net_asset": 3875560704,
+      "buy_price": 21.4927,
+      "sell_price": 21.4928
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 21.7946,
+      "previous_val": 0,
+      "net_asset": 3927825408,
+      "buy_price": 21.7946,
+      "sell_price": 21.7947
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 21.8767,
+      "previous_val": 0,
+      "net_asset": 3940449792,
+      "buy_price": 21.8767,
+      "sell_price": 21.8768
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 22.0704,
+      "previous_val": 0,
+      "net_asset": 3967724032,
+      "buy_price": 22.0704,
+      "sell_price": 22.0705
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 21.6197,
+      "previous_val": 0,
+      "net_asset": 3879324160,
+      "buy_price": 21.6197,
+      "sell_price": 21.6198
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 21.3367,
+      "previous_val": 0,
+      "net_asset": 3829269760,
+      "buy_price": 21.3367,
+      "sell_price": 21.3368
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 21.6478,
+      "previous_val": 0,
+      "net_asset": 3884164608,
+      "buy_price": 21.6478,
+      "sell_price": 21.6479
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 21.6851,
+      "previous_val": 0,
+      "net_asset": 3887699456,
+      "buy_price": 21.6851,
+      "sell_price": 21.6852
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 21.4163,
+      "previous_val": 0,
+      "net_asset": 3835424256,
+      "buy_price": 21.4163,
+      "sell_price": 21.4164
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 21.8671,
+      "previous_val": 0,
+      "net_asset": 3887548928,
+      "buy_price": 21.8671,
+      "sell_price": 21.8672
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": -6.3,
+    "3m": 14.39,
+    "6m": 7.63,
+    "1y": -9.21,
+    "3y": -6.37,
+    "5y": 1.11,
+    "10y": -1.24,
+    "since_inception": 3.24
+  },
+  "benchmark": {
+    "name": "ดัชนีพันธบัตรรัฐบาลอายุน้อยกว่าเท่ากับ 10 ปี ของสมาคมตลาดตราสารหนี้ไทย",
+    "returns": {
+      "ytd": -1.05,
+      "3m": 9.13,
+      "6m": 7.42,
+      "1y": -2.19,
+      "3y": -0.33,
+      "5y": 2.89,
+      "10y": 2.55
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 13.38,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หุ้น",
+      "percentage": 83.84
+    },
+    {
+      "asset_class": "พันธบัตรรัฐบาล / ธนาคารแห่งประเทศไทย / รัฐวิสาหกิจ",
+      "percentage": 6.51
+    },
+    {
+      "asset_class": "ตราสารหนี้ภาคเอกชน",
+      "percentage": 4.62
+    },
+    {
+      "asset_class": "เงินฝาก",
+      "percentage": 3.48
+    },
+    {
+      "asset_class": "อื่น ๆ",
+      "percentage": 1.55
+    }
+  ],
+  "category": "AA",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZIOC4leC4o+C4suC4quC4suC4o+C4q+C4meC4teC5iSDguYHguKXguLAv4Lir4Lij4Li34Lit4LiX4Lij4Lix4Lie4Lii4LmM4Liq4Li04LiZ4LiX4Liy4LiH4LmA4Lil4Li34Lit4LiBIOC5guC4lOC4ouC4oeC4teC4quC4seC4lOC4quC5iOC4p+C4meC4geC4suC4o+C4peC4h+C4l+C4uOC4meC5g+C4meC4leC4o+C4suC4quC4suC4o+C4l+C4uOC4meC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0080_2544.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "1000",
+    "minimum_redemption": "1000",
+    "minimum_balance": 1000
+  },
+  "data_fetched_at": "2025-11-14T10:01:23.523Z",
+  "errors": [
+    "No policy metadata available",
+    "No top holdings data available"
+  ]
+}

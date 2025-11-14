@@ -1,0 +1,299 @@
+{
+  "fund_id": "M0113_2561",
+  "symbol": "M-TWSUK RMF",
+  "fund_name": "MFC Senior Taweesuk Retirement Fund",
+  "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ผสม",
+    "management_style": "AM",
+    "dividend_policy": "N",
+    "risk_level": 5,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-12",
+    "last_val": 11.395,
+    "previous_val": 0,
+    "net_asset": 286280640,
+    "buy_price": 11.395,
+    "sell_price": 11.3951,
+    "change": 11.395,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 11.3866,
+      "previous_val": 0,
+      "net_asset": 283499328,
+      "buy_price": 11.3866,
+      "sell_price": 11.3867
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 11.4251,
+      "previous_val": 0,
+      "net_asset": 284553216,
+      "buy_price": 11.4251,
+      "sell_price": 11.4252
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 11.4449,
+      "previous_val": 0,
+      "net_asset": 285119712,
+      "buy_price": 11.4449,
+      "sell_price": 11.445
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 11.4239,
+      "previous_val": 0,
+      "net_asset": 284650752,
+      "buy_price": 11.4239,
+      "sell_price": 11.424
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 11.4749,
+      "previous_val": 0,
+      "net_asset": 286030080,
+      "buy_price": 11.4749,
+      "sell_price": 11.475
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 11.4651,
+      "previous_val": 0,
+      "net_asset": 285851744,
+      "buy_price": 11.4651,
+      "sell_price": 11.4652
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 11.492,
+      "previous_val": 0,
+      "net_asset": 286182176,
+      "buy_price": 11.492,
+      "sell_price": 11.4921
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 11.4315,
+      "previous_val": 0,
+      "net_asset": 284843360,
+      "buy_price": 11.4315,
+      "sell_price": 11.4316
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 11.3805,
+      "previous_val": 0,
+      "net_asset": 283614944,
+      "buy_price": 11.3805,
+      "sell_price": 11.3806
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 11.4443,
+      "previous_val": 0,
+      "net_asset": 285488000,
+      "buy_price": 11.4443,
+      "sell_price": 11.4444
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 11.4499,
+      "previous_val": 0,
+      "net_asset": 285353248,
+      "buy_price": 11.4499,
+      "sell_price": 11.45
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 11.4032,
+      "previous_val": 0,
+      "net_asset": 284336576,
+      "buy_price": 11.4032,
+      "sell_price": 11.4033
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 11.4303,
+      "previous_val": 0,
+      "net_asset": 285044384,
+      "buy_price": 11.4303,
+      "sell_price": 11.4304
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 11.4407,
+      "previous_val": 0,
+      "net_asset": 285464896,
+      "buy_price": 11.4407,
+      "sell_price": 11.4408
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 11.4735,
+      "previous_val": 0,
+      "net_asset": 286309120,
+      "buy_price": 11.4735,
+      "sell_price": 11.4736
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.395,
+      "previous_val": 0,
+      "net_asset": 286280640,
+      "buy_price": 11.395,
+      "sell_price": 11.3951
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 1.01,
+    "3m": 5.04,
+    "6m": 4.4,
+    "1y": 3.03,
+    "3y": 0.78,
+    "5y": 3.17,
+    "10y": null,
+    "since_inception": 1.79
+  },
+  "benchmark": {
+    "name": "ดัชนีตราสารหนี้ภาคเอกชน Mark-to-Market ที่มีอันดับความน่าเชื่อถือของผู้ออกตราสารอยู่ในระดับ A- ขึ้นไป อายุ 1 - 3 ปี",
+    "returns": {
+      "ytd": 0.29,
+      "3m": 5.97,
+      "6m": 5.03,
+      "1y": -0.05,
+      "3y": 0.96,
+      "5y": 2.77,
+      "10y": null
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 4.4,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "ตราสารหนี้ภาคเอกชน",
+      "percentage": 39.15
+    },
+    {
+      "asset_class": "ตราสารหนี้ภาครัฐ",
+      "percentage": 30.74
+    },
+    {
+      "asset_class": "หุ้นสามัญ",
+      "percentage": 27.75
+    },
+    {
+      "asset_class": "เงินฝากธนาคาร และอื่นๆ",
+      "percentage": 2.36
+    }
+  ],
+  "category": "CA",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZIOC4leC4o+C4suC4quC4suC4o+C4q+C4meC4teC5iSDguYHguKXguLAv4Lir4Lij4Li34Lit4LiX4Lij4Lix4Lie4Lii4LmM4Liq4Li04LiZ4LiX4Liy4LiH4LmA4Lil4Li34Lit4LiBIOC5guC4lOC4ouC4oeC4teC4quC4seC4lOC4quC5iOC4p+C4meC4geC4suC4o+C4peC4h+C4l+C4uOC4meC5g+C4meC4leC4o+C4suC4quC4suC4o+C4l+C4uOC4meC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0113_2561.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "500",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:56:53.099Z",
+  "errors": [
+    "No top holdings data available"
+  ]
+}

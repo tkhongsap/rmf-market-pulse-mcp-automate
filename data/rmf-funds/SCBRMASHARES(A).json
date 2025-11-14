@@ -1,0 +1,312 @@
+{
+  "fund_id": "M0555_2564",
+  "symbol": "SCBRMASHARES(A)",
+  "fund_name": "SCB China A Shares Active Equity RMF",
+  "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "Unknown",
+    "management_style": "Unknown",
+    "dividend_policy": "Unknown",
+    "risk_level": 0,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-06",
+    "last_val": 7.5057,
+    "previous_val": 0,
+    "net_asset": 184158528,
+    "buy_price": 7.5057,
+    "sell_price": 7.5058,
+    "change": 7.5057,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-10T16:05:52.2"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-25",
+      "last_val": 7.4472,
+      "previous_val": 0,
+      "net_asset": 191090144,
+      "buy_price": 7.4472,
+      "sell_price": 7.4473
+    },
+    {
+      "nav_date": "2025-09-26",
+      "last_val": 7.3076,
+      "previous_val": 0,
+      "net_asset": 187888224,
+      "buy_price": 7.3076,
+      "sell_price": 7.3077
+    },
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 7.4348,
+      "previous_val": 0,
+      "net_asset": 191650112,
+      "buy_price": 7.4348,
+      "sell_price": 7.4349
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 7.5409,
+      "previous_val": 0,
+      "net_asset": 195067392,
+      "buy_price": 7.5409,
+      "sell_price": 7.541
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 7.5401,
+      "previous_val": 0,
+      "net_asset": 195450032,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 7.5401,
+      "previous_val": 0,
+      "net_asset": 195450848,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 7.5395,
+      "previous_val": 0,
+      "net_asset": 195434176,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 7.5394,
+      "previous_val": 0,
+      "net_asset": 195432752,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 7.5422,
+      "previous_val": 0,
+      "net_asset": 195503936,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 7.538,
+      "previous_val": 0,
+      "net_asset": 195394864,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 7.6145,
+      "previous_val": 0,
+      "net_asset": 197378624,
+      "buy_price": 7.6145,
+      "sell_price": 7.6146
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 7.4904,
+      "previous_val": 0,
+      "net_asset": 190618640,
+      "buy_price": 7.4904,
+      "sell_price": 7.4905
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 7.225,
+      "previous_val": 0,
+      "net_asset": 179855168,
+      "buy_price": 7.225,
+      "sell_price": 7.2251
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 7.5057,
+      "previous_val": 0,
+      "net_asset": 184158528,
+      "buy_price": 7.5057,
+      "sell_price": 7.5058
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 26.89,
+    "3m": 25.4,
+    "6m": 21.69,
+    "1y": 22.27,
+    "3y": 1.55,
+    "5y": null,
+    "10y": null,
+    "since_inception": -7.52
+  },
+  "benchmark": {
+    "name": "ผลการดำเนินงานของกองทุนรวมหลัก",
+    "returns": {
+      "ytd": 29.39,
+      "3m": 26.55,
+      "6m": 23.82,
+      "1y": 26.64,
+      "3y": 6.43,
+      "5y": null,
+      "10y": null
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 22.91,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุน",
+      "percentage": 98.82
+    },
+    {
+      "asset_class": "เงินฝาก",
+      "percentage": 2.5
+    },
+    {
+      "asset_class": "ตราสารอนุพันธ์",
+      "percentage": -0.29
+    },
+    {
+      "asset_class": "อื่น ๆ",
+      "percentage": -1.03
+    }
+  ],
+  "category": "EQCHA",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiBIOC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC5g+C4meC4o+C4reC4muC4m+C4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0555_2564.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "1000",
+    "minimum_redemption": "1000",
+    "minimum_balance": 1000
+  },
+  "data_fetched_at": "2025-11-14T10:01:23.444Z",
+  "errors": [
+    "No policy metadata available",
+    "No top holdings data available"
+  ]
+}

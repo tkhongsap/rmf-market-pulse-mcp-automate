@@ -1,0 +1,228 @@
+{
+  "fund_id": "M0589_2568",
+  "symbol": "LHGIGORMF",
+  "fund_name": "LH GLOBAL INVESTMENT GRADE OPPORTUNITIES RMF FUND",
+  "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ตราสารหนี้",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 4,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 10.0065,
+    "previous_val": 0,
+    "net_asset": 5282134,
+    "buy_price": 10.0065,
+    "sell_price": 10.0066,
+    "change": 10.0065,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 10.0123,
+      "previous_val": 0,
+      "net_asset": 2451293.25,
+      "buy_price": 10.0123,
+      "sell_price": 10.0124
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 10.0067,
+      "previous_val": 0,
+      "net_asset": 2834519.5,
+      "buy_price": 10.0067,
+      "sell_price": 10.0068
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 10.0165,
+      "previous_val": 0,
+      "net_asset": 3096759.5,
+      "buy_price": 10.0165,
+      "sell_price": 10.0166
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 10.0199,
+      "previous_val": 0,
+      "net_asset": 3097819.75,
+      "buy_price": 10.0199,
+      "sell_price": 10.02
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 10.017,
+      "previous_val": 0,
+      "net_asset": 3096938,
+      "buy_price": 10.017,
+      "sell_price": 10.0171
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 10.009,
+      "previous_val": 0,
+      "net_asset": 3094461.5,
+      "buy_price": 10.009,
+      "sell_price": 10.0091
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 10.0174,
+      "previous_val": 0,
+      "net_asset": 3106064,
+      "buy_price": 10.0174,
+      "sell_price": 10.0175
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 10.0153,
+      "previous_val": 0,
+      "net_asset": 3110954,
+      "buy_price": 10.0153,
+      "sell_price": 10.0154
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 10.0009,
+      "previous_val": 0,
+      "net_asset": 3558867.25,
+      "buy_price": 10.0009,
+      "sell_price": 10.001
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 10.0192,
+      "previous_val": 0,
+      "net_asset": 3565357.75,
+      "buy_price": 10.0192,
+      "sell_price": 10.0193
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 10.02,
+      "previous_val": 0,
+      "net_asset": 3569655.5,
+      "buy_price": 10.02,
+      "sell_price": 10.0201
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 10.0165,
+      "previous_val": 0,
+      "net_asset": 3568397.5,
+      "buy_price": 10.0165,
+      "sell_price": 10.0166
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 10.0396,
+      "previous_val": 0,
+      "net_asset": 3588377.5,
+      "buy_price": 10.0396,
+      "sell_price": 10.0397
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 10.0283,
+      "previous_val": 0,
+      "net_asset": 4216457.5,
+      "buy_price": 10.0283,
+      "sell_price": 10.0284
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.0065,
+      "previous_val": 0,
+      "net_asset": 5282134,
+      "buy_price": 10.0065,
+      "sell_price": 10.0066
+    }
+  ],
+  "dividends": [],
+  "performance": null,
+  "benchmark": null,
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุน Man Global Investment Grade Opportunities",
+      "percentage": 95
+    },
+    {
+      "asset_class": "อื่น ๆ",
+      "percentage": 5
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": null,
+  "top_holdings": null,
+  "risk_factors": null,
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4Lie4Lix4LiZ4LiY4Lia4Lix4LiV4Lij4Lij4Lix4LiQ4Lia4Liy4LilIOC5geC4peC4sOC4leC4o+C4suC4quC4suC4o+C4q+C4meC4teC5ieC5gOC4reC4geC4iuC4mSDguYLguJTguKLguKHguLXguJXguKPguLLguKrguLLguKMgbm9uLWludmVzdG1lbnQgZ3JhZGUvdW5yYXRlZCDguYTguKHguYjguYDguIHguLTguJkgMjAlIOC4guC4reC4hyBOQVY=",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0589_2568.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "100",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:55:51.133Z",
+  "errors": [
+    "No performance data available",
+    "No benchmark data available",
+    "No risk metrics available",
+    "No category data available",
+    "No involved parties data available",
+    "No top holdings data available",
+    "No risk factors data available"
+  ]
+}

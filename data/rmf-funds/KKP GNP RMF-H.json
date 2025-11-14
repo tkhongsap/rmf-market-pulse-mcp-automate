@@ -1,0 +1,413 @@
+{
+  "fund_id": "M0366_2561",
+  "symbol": "KKP GNP RMF-H",
+  "fund_name": "KKP GLOBAL NEW PERSPECTIVE RMF–HEDGED",
+  "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ตราสารทุน",
+    "management_style": "OT",
+    "dividend_policy": "N",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 18.9611,
+    "previous_val": 0,
+    "net_asset": 707180800,
+    "buy_price": 18.9611,
+    "sell_price": 18.9612,
+    "change": 18.9611,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 18.6725,
+      "previous_val": 0,
+      "net_asset": 685434816,
+      "buy_price": 18.6725,
+      "sell_price": 18.6726
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 18.7273,
+      "previous_val": 0,
+      "net_asset": 687876672,
+      "buy_price": 18.7273,
+      "sell_price": 18.7274
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 18.8685,
+      "previous_val": 0,
+      "net_asset": 693288192,
+      "buy_price": 18.8685,
+      "sell_price": 18.8686
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 18.8964,
+      "previous_val": 0,
+      "net_asset": 695473792,
+      "buy_price": 18.8964,
+      "sell_price": 18.8965
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 18.9316,
+      "previous_val": 0,
+      "net_asset": 697056640,
+      "buy_price": 18.9316,
+      "sell_price": 18.9317
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 18.9687,
+      "previous_val": 0,
+      "net_asset": 698579968,
+      "buy_price": 18.9687,
+      "sell_price": 18.9688
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 18.8847,
+      "previous_val": 0,
+      "net_asset": 696175744,
+      "buy_price": 18.8847,
+      "sell_price": 18.8848
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 18.95,
+      "previous_val": 0,
+      "net_asset": 698761280,
+      "buy_price": 18.95,
+      "sell_price": 18.9501
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 18.8912,
+      "previous_val": 0,
+      "net_asset": 697407040,
+      "buy_price": 18.8912,
+      "sell_price": 18.8913
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 18.4289,
+      "previous_val": 0,
+      "net_asset": 680563136,
+      "buy_price": 18.4289,
+      "sell_price": 18.429
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 18.8122,
+      "previous_val": 0,
+      "net_asset": 695776256,
+      "buy_price": 18.8122,
+      "sell_price": 18.8123
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 18.6523,
+      "previous_val": 0,
+      "net_asset": 695290688,
+      "buy_price": 18.6523,
+      "sell_price": 18.6524
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 18.9611,
+      "previous_val": 0,
+      "net_asset": 707180800,
+      "buy_price": 18.9611,
+      "sell_price": 18.9612
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 12.48,
+    "3m": 3.73,
+    "6m": 16.65,
+    "1y": 11,
+    "3y": 15.8,
+    "5y": 7.01,
+    "10y": null,
+    "since_inception": 9.66
+  },
+  "benchmark": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 17.12,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุนต่างประเทศ",
+      "percentage": 99.58
+    },
+    {
+      "asset_class": "เงินฝาก,บัตรเงินฝาก",
+      "percentage": 1.31
+    },
+    {
+      "asset_class": "สินทรัพย์และหนี้สินอื่น",
+      "percentage": -0.22
+    },
+    {
+      "asset_class": "สัญญาซื้อขายล่วงหน้า",
+      "percentage": -0.67
+    }
+  ],
+  "category": "EQGLH",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiBIOC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC5g+C4meC4o+C4reC4muC4m+C4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0366_2561.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "1000",
+    "minimum_redemption": null,
+    "minimum_balance": 100
+  },
+  "data_fetched_at": "2025-11-14T09:51:59.567Z",
+  "errors": [
+    "No benchmark data available",
+    "No top holdings data available"
+  ]
+}

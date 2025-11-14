@@ -1,0 +1,401 @@
+{
+  "fund_id": "M0824_2555",
+  "symbol": "KT-PROPERTY RMF",
+  "fund_name": "KTAM World Property RMF",
+  "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 7,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 13.5392,
+    "previous_val": 0,
+    "net_asset": 231884432,
+    "buy_price": 13.5392,
+    "sell_price": 13.5393,
+    "change": 13.5392,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 13.4981,
+      "previous_val": 0,
+      "net_asset": 233329824,
+      "buy_price": 13.4981,
+      "sell_price": 13.4982
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 13.5328,
+      "previous_val": 0,
+      "net_asset": 233921056,
+      "buy_price": 13.5328,
+      "sell_price": 13.5329
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 13.6258,
+      "previous_val": 0,
+      "net_asset": 235499504,
+      "buy_price": 13.6258,
+      "sell_price": 13.6259
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 13.5982,
+      "previous_val": 0,
+      "net_asset": 234928928,
+      "buy_price": 13.5982,
+      "sell_price": 13.5983
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 13.6949,
+      "previous_val": 0,
+      "net_asset": 236601328,
+      "buy_price": 13.6949,
+      "sell_price": 13.695
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 13.615,
+      "previous_val": 0,
+      "net_asset": 235045552,
+      "buy_price": 13.615,
+      "sell_price": 13.6151
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 13.5839,
+      "previous_val": 0,
+      "net_asset": 234470112,
+      "buy_price": 13.5839,
+      "sell_price": 13.584
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 13.5068,
+      "previous_val": 0,
+      "net_asset": 233486432,
+      "buy_price": 13.5068,
+      "sell_price": 13.5069
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 13.5133,
+      "previous_val": 0,
+      "net_asset": 233067568,
+      "buy_price": 13.5133,
+      "sell_price": 13.5134
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 13.5074,
+      "previous_val": 0,
+      "net_asset": 232645456,
+      "buy_price": 13.5074,
+      "sell_price": 13.5075
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 13.5254,
+      "previous_val": 0,
+      "net_asset": 232993552,
+      "buy_price": 13.5254,
+      "sell_price": 13.5255
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 13.6706,
+      "previous_val": 0,
+      "net_asset": 235462704,
+      "buy_price": 13.6706,
+      "sell_price": 13.6707
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 13.7272,
+      "previous_val": 0,
+      "net_asset": 236356288,
+      "buy_price": 13.7272,
+      "sell_price": 13.7273
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 13.6971,
+      "previous_val": 0,
+      "net_asset": 235666368,
+      "buy_price": 13.6971,
+      "sell_price": 13.6972
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 13.8516,
+      "previous_val": 0,
+      "net_asset": 237997200,
+      "buy_price": 13.8516,
+      "sell_price": 13.8517
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 13.8762,
+      "previous_val": 0,
+      "net_asset": 238319776,
+      "buy_price": 13.8762,
+      "sell_price": 13.8763
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 13.9344,
+      "previous_val": 0,
+      "net_asset": 239314912,
+      "buy_price": 13.9344,
+      "sell_price": 13.9345
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 13.9893,
+      "previous_val": 0,
+      "net_asset": 240276256,
+      "buy_price": 13.9893,
+      "sell_price": 13.9894
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 13.9541,
+      "previous_val": 0,
+      "net_asset": 239543312,
+      "buy_price": 13.9541,
+      "sell_price": 13.9542
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 13.8417,
+      "previous_val": 0,
+      "net_asset": 237842816,
+      "buy_price": 13.8417,
+      "sell_price": 13.8418
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 13.5925,
+      "previous_val": 0,
+      "net_asset": 233445296,
+      "buy_price": 13.5925,
+      "sell_price": 13.5926
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 13.5278,
+      "previous_val": 0,
+      "net_asset": 232170384,
+      "buy_price": 13.5278,
+      "sell_price": 13.5279
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 13.4681,
+      "previous_val": 0,
+      "net_asset": 230965344,
+      "buy_price": 13.4681,
+      "sell_price": 13.4682
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 13.3465,
+      "previous_val": 0,
+      "net_asset": 228839616,
+      "buy_price": 13.3465,
+      "sell_price": 13.3466
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 13.4567,
+      "previous_val": 0,
+      "net_asset": 230869552,
+      "buy_price": 13.4567,
+      "sell_price": 13.4568
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 13.4346,
+      "previous_val": 0,
+      "net_asset": 230467760,
+      "buy_price": 13.4346,
+      "sell_price": 13.4347
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 13.4644,
+      "previous_val": 0,
+      "net_asset": 230894896,
+      "buy_price": 13.4644,
+      "sell_price": 13.4645
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 13.5145,
+      "previous_val": 0,
+      "net_asset": 231598928,
+      "buy_price": 13.5145,
+      "sell_price": 13.5146
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.5392,
+      "previous_val": 0,
+      "net_asset": 231884432,
+      "buy_price": 13.5392,
+      "sell_price": 13.5393
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 3.12,
+    "3m": 2.14,
+    "6m": 3.38,
+    "1y": -7.34,
+    "3y": 0.66,
+    "5y": -0.84,
+    "10y": 1.84,
+    "since_inception": 2.38
+  },
+  "benchmark": {
+    "name": "ผลการดำเนินงานของกองทุนรวมหลัก",
+    "returns": {
+      "ytd": 4.94,
+      "3m": 2.33,
+      "6m": 5.18,
+      "1y": -5.65,
+      "3y": 1.08,
+      "5y": 2.86,
+      "10y": 3.25
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 17.15,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุน ตราสารทุน",
+      "percentage": 99.49
+    },
+    {
+      "asset_class": "เงินฝากธนาคาร",
+      "percentage": 1.29
+    },
+    {
+      "asset_class": "สินทรัพย์และหนี้สินอื่นๆ",
+      "percentage": -0.78
+    }
+  ],
+  "category": "FF",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "KuC4hOC4p+C4suC4oeC5gOC4quC4teC5iOC4ouC4h+C4guC4reC4h+C4geC4reC4h+C4l+C4uOC4mSDguKPguLDguJTguLHguJogNyDguKvguKHguLLguKLguJbguLbguIcg4LiB4Lit4LiH4LiX4Li44LiZ4Lij4Lin4Lih4Lir4Lih4Lin4LiU4Lit4Li44LiV4Liq4Liy4Lir4LiB4Lij4Lij4Lih4Lih4Li1IG5ldCBleHBvc3VyZSDguKHguLjguYjguIfguKXguIfguJfguLjguJnguYLguJTguKLguYDguInguJ7guLLguLDguYDguIjguLLguLDguIjguIfguYPguJnguJXguKPguLLguKrguLLguKPguJfguLjguJnguYDguJ7guLXguKLguIfguJrguLLguIfguKvguKHguKfguJTguK3guLjguJXguKrguLLguKvguIHguKPguKPguKHguYLguJTguKLguYDguInguKXguLXguYjguKLguKPguK3guJrguKPguLDguKLguLDguYDguKfguKXguLLguJrguLHguI3guIrguLXguYTguKHguYjguJnguYnguK3guKLguIHguKfguYjguLLguKPguYnguK3guKLguKXguLAgODAg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0824_2555.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "500",
+    "minimum_additional": "500",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:54:06.955Z",
+  "errors": [
+    "No top holdings data available"
+  ]
+}

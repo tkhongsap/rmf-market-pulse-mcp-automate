@@ -1,0 +1,207 @@
+{
+  "fund_id": "M0489_2560",
+  "symbol": "KFHAPPYRMF",
+  "fund_name": "Krungsri Happy Life RMF",
+  "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ผสม",
+    "management_style": "AM",
+    "dividend_policy": "N",
+    "risk_level": 5,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-12",
+    "last_val": 10.3955,
+    "previous_val": 0,
+    "net_asset": 1207042560,
+    "buy_price": 10.3955,
+    "sell_price": 10.3956,
+    "change": 10.3955,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 10.4521,
+      "previous_val": 0,
+      "net_asset": 1218345600,
+      "buy_price": 10.4521,
+      "sell_price": 10.4522
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.3955,
+      "previous_val": 0,
+      "net_asset": 1207042560,
+      "buy_price": 10.3955,
+      "sell_price": 10.3956
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 2.7,
+    "3m": 2.76,
+    "6m": 3.12,
+    "1y": 2.6,
+    "3y": 1.98,
+    "5y": 1.57,
+    "10y": null,
+    "since_inception": 0.55
+  },
+  "benchmark": {
+    "name": "ดัชนีพันธบัตรที่มีอายุคงที่ (ZRR) อายุประมาณ 2 ปี",
+    "returns": {
+      "ytd": 0.48,
+      "3m": 4.04,
+      "6m": 3.51,
+      "1y": 0.35,
+      "3y": 0.83,
+      "5y": 1.79,
+      "10y": null
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 2.22,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "ตราสารหนี้ที่ออกโดยบริษัทหรือภาคเอกชน",
+      "percentage": 45.89
+    },
+    {
+      "asset_class": "ตราสารภาครัฐหรือองค์กรระหว่างประเทศ",
+      "percentage": 27.16
+    },
+    {
+      "asset_class": "ตราสารทุนและหน่วยลงทุน",
+      "percentage": 17.16
+    },
+    {
+      "asset_class": "เงินฝาก หรือตราสารหนี้ที่สถาบันการเงินเป็นผู้ออก",
+      "percentage": 5.04
+    },
+    {
+      "asset_class": "พันธบัตรธนาคารแห่งประเทศไทย",
+      "percentage": 3.17
+    },
+    {
+      "asset_class": "ทรัพย์สินอื่น",
+      "percentage": 2.83
+    },
+    {
+      "asset_class": "หนี้สินอื่น",
+      "percentage": -1.25
+    }
+  ],
+  "category": "CA",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZIOC4leC4o+C4suC4quC4suC4o+C4q+C4meC4teC5ieC5geC4peC4sC/guKvguKPguLfguK3guJfguKPguLHguJ7guKLguYzguKrguLTguJnguJfguLLguIfguYDguKXguLfguK3guIEg4LmC4LiU4Lii4Lih4Li14Liq4Lix4LiU4Liq4LmI4Lin4LiZ4LiB4Liy4Lij4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LiZ4LmJ4Lit4Lii4LiB4Lin4LmI4LiyIDgwJSDguILguK3guIcgTkFW",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0489_2560.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "500",
+    "minimum_additional": "500",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:50:16.717Z",
+  "errors": [
+    "No top holdings data available"
+  ]
+}

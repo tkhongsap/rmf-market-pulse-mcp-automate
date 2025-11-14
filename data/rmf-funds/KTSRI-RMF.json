@@ -1,0 +1,225 @@
+{
+  "fund_id": "M0437_2561",
+  "symbol": "KTSRI-RMF",
+  "fund_name": "Krung Thai Sri Siri RMF",
+  "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ผสม",
+    "management_style": "AM",
+    "dividend_policy": "N",
+    "risk_level": 5,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 11.0151,
+    "previous_val": 0,
+    "net_asset": 59858536,
+    "buy_price": 11.0151,
+    "sell_price": 11.0152,
+    "change": 11.0151,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 10.933,
+      "previous_val": 0,
+      "net_asset": 58731944,
+      "buy_price": 10.933,
+      "sell_price": 10.9331
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 10.9645,
+      "previous_val": 0,
+      "net_asset": 58922244,
+      "buy_price": 10.9645,
+      "sell_price": 10.9646
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 11.1028,
+      "previous_val": 0,
+      "net_asset": 59664992,
+      "buy_price": 11.1028,
+      "sell_price": 11.1029
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 10.9836,
+      "previous_val": 0,
+      "net_asset": 59194924,
+      "buy_price": 10.9836,
+      "sell_price": 10.9837
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.0151,
+      "previous_val": 0,
+      "net_asset": 59858536,
+      "buy_price": 11.0151,
+      "sell_price": 11.0152
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 7.37,
+    "3m": 4.8,
+    "6m": 7.66,
+    "1y": 6.76,
+    "3y": 4.03,
+    "5y": null,
+    "10y": null,
+    "since_inception": 1.89
+  },
+  "benchmark": {
+    "name": "อัตราผลตอบแทนร้อยละ 5 ต่อปี",
+    "returns": {
+      "ytd": 3.73,
+      "3m": 1.24,
+      "6m": 2.48,
+      "1y": 5,
+      "3y": 5,
+      "5y": null,
+      "10y": null
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 4.88,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุน ตราสารหนี้",
+      "percentage": 49.81
+    },
+    {
+      "asset_class": "หน่วยลงทุน ตราสารทุน",
+      "percentage": 27.81
+    },
+    {
+      "asset_class": "หน่วยลงทุนในกองทุนรวมแบบผสม",
+      "percentage": 13.48
+    },
+    {
+      "asset_class": "หุ้นสามัญ",
+      "percentage": 5.28
+    },
+    {
+      "asset_class": "เงินฝากธนาคาร",
+      "percentage": 3.24
+    },
+    {
+      "asset_class": "หน่วยลงทุน ทรัพย์สินทางเลือก",
+      "percentage": 2.66
+    },
+    {
+      "asset_class": "สินทรัพย์และหนี้สินอื่นๆ",
+      "percentage": -2.28
+    }
+  ],
+  "category": "MA",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4LiE4Lin4Liy4Lih4LmA4Liq4Li14LmI4Lii4LiH4LiC4Lit4LiH4LiB4Lit4LiH4LiX4Li44LiZIOC4o+C4sOC4lOC4seC4miA1IOC4q+C4oeC4suC4ouC4luC4tuC4hyDguIHguK3guIfguJfguLjguJnguKPguKfguKHguJzguKrguKEg4LiX4Li14LmI4Lih4Li1IG5ldCBleHBvc3VyZSDguYTguJTguYnguJfguLHguYnguIfguYPguJnguJXguKPguLLguKrguLLguKPguJfguLjguJkg4LiV4Lij4Liy4Liq4Liy4Lij4Lir4LiZ4Li14LmJIOC4q+C4o+C4t+C4reC4l+C4o+C4seC4nuC4ouC5jOC4quC4tOC4meC4l+C4suC4h+C5gOC4peC4t+C4reC4gQ==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0437_2561.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "500",
+    "minimum_additional": "500",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:55:09.064Z",
+  "errors": [
+    "No top holdings data available"
+  ]
+}

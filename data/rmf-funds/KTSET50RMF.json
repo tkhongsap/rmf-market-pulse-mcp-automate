@@ -1,0 +1,305 @@
+{
+  "fund_id": "M0653_2559",
+  "symbol": "KTSET50RMF",
+  "fund_name": "Krung Thai SET50 RMF",
+  "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PM",
+    "dividend_policy": "N",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-12",
+    "last_val": 10.7705,
+    "previous_val": 0,
+    "net_asset": 1021749056,
+    "buy_price": 10.7705,
+    "sell_price": 10.7706,
+    "change": 10.7705,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-13T08:16:14.42"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 10.5947,
+      "previous_val": 0,
+      "net_asset": 1021010176,
+      "buy_price": 10.5947,
+      "sell_price": 10.5948
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 10.6947,
+      "previous_val": 0,
+      "net_asset": 1031093632,
+      "buy_price": 10.6947,
+      "sell_price": 10.6948
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 10.7467,
+      "previous_val": 0,
+      "net_asset": 1034734784,
+      "buy_price": 10.7467,
+      "sell_price": 10.7468
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 10.6708,
+      "previous_val": 0,
+      "net_asset": 1026901120,
+      "buy_price": 10.6708,
+      "sell_price": 10.6709
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 10.8233,
+      "previous_val": 0,
+      "net_asset": 1041258304,
+      "buy_price": 10.8233,
+      "sell_price": 10.8234
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 10.8203,
+      "previous_val": 0,
+      "net_asset": 1040813824,
+      "buy_price": 10.8203,
+      "sell_price": 10.8204
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 10.9273,
+      "previous_val": 0,
+      "net_asset": 1050098560,
+      "buy_price": 10.9273,
+      "sell_price": 10.9274
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 10.7286,
+      "previous_val": 0,
+      "net_asset": 1029686208,
+      "buy_price": 10.7286,
+      "sell_price": 10.7287
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 10.5573,
+      "previous_val": 0,
+      "net_asset": 1014498816,
+      "buy_price": 10.5573,
+      "sell_price": 10.5574
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 10.7304,
+      "previous_val": 0,
+      "net_asset": 1026993216,
+      "buy_price": 10.7304,
+      "sell_price": 10.7305
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 10.7582,
+      "previous_val": 0,
+      "net_asset": 1029981568,
+      "buy_price": 10.7582,
+      "sell_price": 10.7583
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 10.6306,
+      "previous_val": 0,
+      "net_asset": 1015415744,
+      "buy_price": 10.6306,
+      "sell_price": 10.6307
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 10.7404,
+      "previous_val": 0,
+      "net_asset": 1026165632,
+      "buy_price": 10.7404,
+      "sell_price": 10.7405
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.7705,
+      "previous_val": 0,
+      "net_asset": 1021749056,
+      "buy_price": 10.7705,
+      "sell_price": 10.7706
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": -5.85,
+    "3m": 17.21,
+    "6m": 13.82,
+    "1y": -6.65,
+    "3y": -2.31,
+    "5y": 3.64,
+    "10y": null,
+    "since_inception": 0.65
+  },
+  "benchmark": {
+    "name": "ดัชนีผลตอบแทนรวม SET 50 (SET50 TRI)",
+    "returns": {
+      "ytd": -5.41,
+      "3m": 17.52,
+      "6m": 14.23,
+      "1y": -6.06,
+      "3y": -1.56,
+      "5y": 4.2,
+      "10y": null
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 14.91,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หุ้นสามัญ",
+      "percentage": 99.88
+    },
+    {
+      "asset_class": "เงินฝากธนาคาร",
+      "percentage": 0.26
+    },
+    {
+      "asset_class": "สินทรัพย์และหนี้สินอื่นๆ",
+      "percentage": -0.14
+    }
+  ],
+  "category": "SET50",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "KuC4hOC4p+C4suC4oeC5gOC4quC4teC5iOC4ouC4h+C4guC4reC4h+C4geC4reC4h+C4l+C4uOC4mSDguKPguLDguJTguLHguJogNiDguIHguK3guIfguJfguLjguJnguKPguKfguKHguJXguKPguLLguKrguLLguKPguJfguLjguJnguJfguLXguYjguKHguLUgbmV0IGV4cG9zdXJlIOC5g+C4meC4leC4o+C4suC4quC4suC4o+C4l+C4uOC4meC5gOC4m+C5h+C4meC4q+C4peC4seC4geC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC4o+C4reC4muC4m+C4teC4muC4seC4jeC4iuC4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4suC4o+C5ieC4reC4ouC4peC4sCA4MCDguILguK3guIcgTkFW",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0653_2559.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "500",
+    "minimum_additional": "500",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:55:08.873Z",
+  "errors": [
+    "No top holdings data available"
+  ]
+}

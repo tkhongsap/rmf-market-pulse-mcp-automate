@@ -1,0 +1,329 @@
+{
+  "fund_id": "M0367_2564",
+  "symbol": "ES-STARTECHRMF",
+  "fund_name": "Eastspring Star50 Chinese Technology RMF",
+  "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 6.6148,
+    "previous_val": 0,
+    "net_asset": 101953672,
+    "buy_price": 6.6148,
+    "sell_price": 6.6149,
+    "change": 6.6148,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-12T16:10:36.647"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 6.9365,
+      "previous_val": 0,
+      "net_asset": 83852416,
+      "buy_price": 6.9365,
+      "sell_price": 6.9366
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 7.0675,
+      "previous_val": 0,
+      "net_asset": 86625768,
+      "buy_price": 7.0675,
+      "sell_price": 7.0676
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 7.1717,
+      "previous_val": 0,
+      "net_asset": 88760656,
+      "buy_price": 7.1717,
+      "sell_price": 7.1718
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 6.6308,
+      "previous_val": 0,
+      "net_asset": 84823352,
+      "buy_price": 6.6308,
+      "sell_price": 6.6309
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 6.6544,
+      "previous_val": 0,
+      "net_asset": 89013192,
+      "buy_price": 6.6544,
+      "sell_price": 6.6545
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 6.6977,
+      "previous_val": 0,
+      "net_asset": 90572984,
+      "buy_price": 6.6977,
+      "sell_price": 6.6978
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 6.6525,
+      "previous_val": 0,
+      "net_asset": 90903656,
+      "buy_price": 6.6525,
+      "sell_price": 6.6526
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 6.4288,
+      "previous_val": 0,
+      "net_asset": 88133152,
+      "buy_price": 6.4288,
+      "sell_price": 6.4289
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 6.4574,
+      "previous_val": 0,
+      "net_asset": 89028064,
+      "buy_price": 6.4574,
+      "sell_price": 6.4575
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 6.5881,
+      "previous_val": 0,
+      "net_asset": 91510000,
+      "buy_price": 6.5881,
+      "sell_price": 6.5882
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 6.5831,
+      "previous_val": 0,
+      "net_asset": 91448352,
+      "buy_price": 6.5831,
+      "sell_price": 6.5832
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 6.8483,
+      "previous_val": 0,
+      "net_asset": 95537152,
+      "buy_price": 6.8483,
+      "sell_price": 6.8484
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 6.9552,
+      "previous_val": 0,
+      "net_asset": 97190552,
+      "buy_price": 6.9552,
+      "sell_price": 6.9553
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 6.9111,
+      "previous_val": 0,
+      "net_asset": 97214104,
+      "buy_price": 6.9111,
+      "sell_price": 6.9112
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 6.8918,
+      "previous_val": 0,
+      "net_asset": 97199632,
+      "buy_price": 6.8918,
+      "sell_price": 6.8919
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 6.6655,
+      "previous_val": 0,
+      "net_asset": 98615112,
+      "buy_price": 6.6655,
+      "sell_price": 6.6656
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 6.565,
+      "previous_val": 0,
+      "net_asset": 98124152,
+      "buy_price": 6.565,
+      "sell_price": 6.5651
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 6.4946,
+      "previous_val": 0,
+      "net_asset": 97117992,
+      "buy_price": 6.4946,
+      "sell_price": 6.4947
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 6.5136,
+      "previous_val": 0,
+      "net_asset": 98177728,
+      "buy_price": 6.5136,
+      "sell_price": 6.5137
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 6.7105,
+      "previous_val": 0,
+      "net_asset": 102206576,
+      "buy_price": 6.7105,
+      "sell_price": 6.7106
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 6.6487,
+      "previous_val": 0,
+      "net_asset": 101433584,
+      "buy_price": 6.6487,
+      "sell_price": 6.6488
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 6.6148,
+      "previous_val": 0,
+      "net_asset": 101953672,
+      "buy_price": 6.6148,
+      "sell_price": 6.6149
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 32.25,
+    "3m": 37.59,
+    "6m": 24.92,
+    "1y": 74.29,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "since_inception": -10.72
+  },
+  "benchmark": {
+    "name": "ผลการดำเนินงานของกองทุน KraneShares SSE STAR Market 50 Index ETF",
+    "returns": {
+      "ytd": 35.58,
+      "3m": 39.14,
+      "6m": 27.03,
+      "1y": 81.92,
+      "3y": null,
+      "5y": null,
+      "10y": null
+    }
+  },
+  "risk_metrics": {
+    "standard_deviation_5y": 48.47,
+    "tracking_error_1y": null
+  },
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุนของกองทุนรวมตราสารทุน",
+      "percentage": 107.8
+    },
+    {
+      "asset_class": "เงินฝากธนาคารประเภทออมทรัพย์",
+      "percentage": 2.23
+    },
+    {
+      "asset_class": "ประเภทรายการค้างรับอื่นๆ",
+      "percentage": 0.41
+    },
+    {
+      "asset_class": "สัญญาฟอร์เวิร์ด",
+      "percentage": 0.11
+    },
+    {
+      "asset_class": "รายการอื่นๆ",
+      "percentage": -10.55
+    }
+  ],
+  "category": "CHEQ",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiB4LmC4LiU4Lii4LmA4LiJ4Lil4Li14LmI4LiiIOC5g+C4meC4o+C4reC4muC4m+C4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCAlIOC4guC4reC4hyBOQVY=",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0367_2564.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1",
+    "minimum_additional": "1",
+    "minimum_redemption": "1",
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:42:26.912Z",
+  "errors": [
+    "No top holdings data available"
+  ]
+}

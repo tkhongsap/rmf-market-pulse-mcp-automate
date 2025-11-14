@@ -1,0 +1,331 @@
+{
+  "fund_id": "M0987_2567",
+  "symbol": "ES-TECHRMF",
+  "fund_name": "Eastspring Global Prime Technology RMF",
+  "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 11.7447,
+    "previous_val": 0,
+    "net_asset": 33983900,
+    "buy_price": 11.7447,
+    "sell_price": 11.7448,
+    "change": 11.7447,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-12T16:10:36.647"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 11.4348,
+      "previous_val": 0,
+      "net_asset": 18793370,
+      "buy_price": 11.4348,
+      "sell_price": 11.4349
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 11.3582,
+      "previous_val": 0,
+      "net_asset": 18667760,
+      "buy_price": 11.3582,
+      "sell_price": 11.3583
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 11.3486,
+      "previous_val": 0,
+      "net_asset": 18744360,
+      "buy_price": 11.3486,
+      "sell_price": 11.3487
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 11.5185,
+      "previous_val": 0,
+      "net_asset": 19381460,
+      "buy_price": 11.5185,
+      "sell_price": 11.5186
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 11.5693,
+      "previous_val": 0,
+      "net_asset": 20110702,
+      "buy_price": 11.5693,
+      "sell_price": 11.5694
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 11.5904,
+      "previous_val": 0,
+      "net_asset": 20262822,
+      "buy_price": 11.5904,
+      "sell_price": 11.5905
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 11.617,
+      "previous_val": 0,
+      "net_asset": 20418488,
+      "buy_price": 11.617,
+      "sell_price": 11.6171
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 11.5986,
+      "previous_val": 0,
+      "net_asset": 20499020,
+      "buy_price": 11.5986,
+      "sell_price": 11.5987
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 11.6652,
+      "previous_val": 0,
+      "net_asset": 20749344,
+      "buy_price": 11.6652,
+      "sell_price": 11.6653
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 11.705,
+      "previous_val": 0,
+      "net_asset": 21243054,
+      "buy_price": 11.705,
+      "sell_price": 11.7051
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 11.3301,
+      "previous_val": 0,
+      "net_asset": 20832960,
+      "buy_price": 11.3301,
+      "sell_price": 11.3302
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 11.5287,
+      "previous_val": 0,
+      "net_asset": 20910792,
+      "buy_price": 11.5287,
+      "sell_price": 11.5288
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 11.5703,
+      "previous_val": 0,
+      "net_asset": 21657474,
+      "buy_price": 11.5703,
+      "sell_price": 11.5704
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 11.4497,
+      "previous_val": 0,
+      "net_asset": 21619486,
+      "buy_price": 11.4497,
+      "sell_price": 11.4498
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 11.612,
+      "previous_val": 0,
+      "net_asset": 21969790,
+      "buy_price": 11.612,
+      "sell_price": 11.6121
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 11.5798,
+      "previous_val": 0,
+      "net_asset": 22814632,
+      "buy_price": 11.5798,
+      "sell_price": 11.5799
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 11.6095,
+      "previous_val": 0,
+      "net_asset": 23445502,
+      "buy_price": 11.6095,
+      "sell_price": 11.6096
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 11.7717,
+      "previous_val": 0,
+      "net_asset": 24350224,
+      "buy_price": 11.7717,
+      "sell_price": 11.7718
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 11.9199,
+      "previous_val": 0,
+      "net_asset": 25414124,
+      "buy_price": 11.9199,
+      "sell_price": 11.92
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 11.957,
+      "previous_val": 0,
+      "net_asset": 25553258,
+      "buy_price": 11.957,
+      "sell_price": 11.9571
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 12.127,
+      "previous_val": 0,
+      "net_asset": 26130656,
+      "buy_price": 12.127,
+      "sell_price": 12.1271
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 11.9968,
+      "previous_val": 0,
+      "net_asset": 26341894,
+      "buy_price": 11.9968,
+      "sell_price": 11.9969
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 12.0019,
+      "previous_val": 0,
+      "net_asset": 26453248,
+      "buy_price": 12.0019,
+      "sell_price": 12.002
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 12.0052,
+      "previous_val": 0,
+      "net_asset": 26622356,
+      "buy_price": 12.0052,
+      "sell_price": 12.0053
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 11.8738,
+      "previous_val": 0,
+      "net_asset": 27368180,
+      "buy_price": 11.8738,
+      "sell_price": 11.8739
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 11.7726,
+      "previous_val": 0,
+      "net_asset": 27246960,
+      "buy_price": 11.7726,
+      "sell_price": 11.7727
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 11.6709,
+      "previous_val": 0,
+      "net_asset": 27072102,
+      "buy_price": 11.6709,
+      "sell_price": 11.671
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 11.4208,
+      "previous_val": 0,
+      "net_asset": 32615164,
+      "buy_price": 11.4208,
+      "sell_price": 11.4209
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.7447,
+      "previous_val": 0,
+      "net_asset": 33983900,
+      "buy_price": 11.7447,
+      "sell_price": 11.7448
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 17.89,
+    "3m": 9.29,
+    "6m": 33.85,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "since_inception": 13.58
+  },
+  "benchmark": {
+    "name": "ผลการดำเนินงานของกองทุนรวมหลัก",
+    "returns": {
+      "ytd": 19.72,
+      "3m": 9.74,
+      "6m": 35.42,
+      "1y": null,
+      "3y": null,
+      "5y": null,
+      "10y": null
+    }
+  },
+  "risk_metrics": null,
+  "asset_allocation": null,
+  "category": "TECHEQ",
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": null,
+  "top_holdings": null,
+  "risk_factors": null,
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiBIOC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC4o+C4reC4muC4m+C4teC4muC4seC4jeC4iuC4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCAlIOC4guC4reC4hyBOQVYg",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0987_2567.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1",
+    "minimum_additional": "1",
+    "minimum_redemption": "1",
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-14T09:42:26.731Z",
+  "errors": [
+    "No risk metrics available",
+    "No asset allocation data available",
+    "No involved parties data available",
+    "No top holdings data available",
+    "No risk factors data available"
+  ]
+}
