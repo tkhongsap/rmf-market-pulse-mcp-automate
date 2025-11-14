@@ -1,0 +1,344 @@
+{
+  "fund_id": "M0318_2567",
+  "symbol": "ASP-INDIARMF",
+  "fund_name": "Asset Plus India Dynamic Equity RMF Fund",
+  "amc": "ASSET PLUS FUND MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "EQIN",
+    "management_style": "-",
+    "dividend_policy": "No",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-07",
+    "last_val": 8.8079,
+    "previous_val": 0,
+    "net_asset": 28811176,
+    "buy_price": 8.8079,
+    "sell_price": 8.808,
+    "change": 8.8079,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-11T08:11:44.25"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-26",
+      "last_val": 8.6512,
+      "previous_val": 0,
+      "net_asset": 28945530,
+      "buy_price": 8.6512,
+      "sell_price": 8.6513
+    },
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 8.6453,
+      "previous_val": 0,
+      "net_asset": 29046480,
+      "buy_price": 8.6453,
+      "sell_price": 8.6454
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 8.6569,
+      "previous_val": 0,
+      "net_asset": 28812310,
+      "buy_price": 8.6569,
+      "sell_price": 8.657
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 8.7176,
+      "previous_val": 0,
+      "net_asset": 29083352,
+      "buy_price": 8.7176,
+      "sell_price": 8.7177
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 8.712,
+      "previous_val": 0,
+      "net_asset": 28882528,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 8.7306,
+      "previous_val": 0,
+      "net_asset": 28944032,
+      "buy_price": 8.7306,
+      "sell_price": 8.7307
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 8.7935,
+      "previous_val": 0,
+      "net_asset": 29415944,
+      "buy_price": 8.7935,
+      "sell_price": 8.7936
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 8.8196,
+      "previous_val": 0,
+      "net_asset": 29382286,
+      "buy_price": 8.8196,
+      "sell_price": 8.8197
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 8.7731,
+      "previous_val": 0,
+      "net_asset": 28718676,
+      "buy_price": 8.7731,
+      "sell_price": 8.7732
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 8.8085,
+      "previous_val": 0,
+      "net_asset": 28927984,
+      "buy_price": 8.8085,
+      "sell_price": 8.8086
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 8.8661,
+      "previous_val": 0,
+      "net_asset": 29390954,
+      "buy_price": 8.8661,
+      "sell_price": 8.8662
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 8.8311,
+      "previous_val": 0,
+      "net_asset": 29602550,
+      "buy_price": 8.8311,
+      "sell_price": 8.8312
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 8.9244,
+      "previous_val": 0,
+      "net_asset": 29924222,
+      "buy_price": 8.9244,
+      "sell_price": 8.9245
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 9.0049,
+      "previous_val": 0,
+      "net_asset": 30557506,
+      "buy_price": 9.0049,
+      "sell_price": 9.005
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 9.0449,
+      "previous_val": 0,
+      "net_asset": 30526608,
+      "buy_price": 9.0449,
+      "sell_price": 9.045
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 9.0576,
+      "previous_val": 0,
+      "net_asset": 30476508,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 9.0733,
+      "previous_val": 0,
+      "net_asset": 30529534,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 9.1023,
+      "previous_val": 0,
+      "net_asset": 30627110,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 9.0444,
+      "previous_val": 0,
+      "net_asset": 30432382,
+      "buy_price": 9.0444,
+      "sell_price": 9.0445
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 9.0313,
+      "previous_val": 0,
+      "net_asset": 30295840,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 8.9711,
+      "previous_val": 0,
+      "net_asset": 30093932,
+      "buy_price": 8.9711,
+      "sell_price": 8.9712
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 8.9908,
+      "previous_val": 0,
+      "net_asset": 30458638,
+      "buy_price": 8.9908,
+      "sell_price": 8.9909
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 8.9285,
+      "previous_val": 0,
+      "net_asset": 29332196,
+      "buy_price": 8.9285,
+      "sell_price": 8.9286
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 8.8692,
+      "previous_val": 0,
+      "net_asset": 29143822,
+      "buy_price": 8.8692,
+      "sell_price": 8.8693
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 8.923,
+      "previous_val": 0,
+      "net_asset": 29514464,
+      "buy_price": 8.923,
+      "sell_price": 8.9231
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 8.9144,
+      "previous_val": 0,
+      "net_asset": 29506328,
+      "buy_price": 8.9144,
+      "sell_price": 8.9145
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 8.9045,
+      "previous_val": 0,
+      "net_asset": 29174024,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 8.8214,
+      "previous_val": 0,
+      "net_asset": 28901924,
+      "buy_price": 8.8214,
+      "sell_price": 8.8215
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 8.8079,
+      "previous_val": 0,
+      "net_asset": 28811176,
+      "buy_price": 8.8079,
+      "sell_price": 8.808
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": -10.68,
+    "3m": -6.58,
+    "6m": -1.58,
+    "1y": -16.41,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "since_inception": -10.5
+  },
+  "benchmark": {
+    "name": "ดัชนี MSCI India Daily Total Return Net Index",
+    "returns": {
+      "ytd": -2.18,
+      "3m": -7.61,
+      "6m": 0.92,
+      "1y": -13.15,
+      "3y": null,
+      "5y": null,
+      "10y": null
+    }
+  },
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุน",
+      "percentage": 100.09
+    },
+    {
+      "asset_class": "เงินฝาก/ตั๋วแลกเงิน",
+      "percentage": 1.55
+    },
+    {
+      "asset_class": "อื่นๆ",
+      "percentage": -1.64
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": null,
+  "top_holdings": null,
+  "risk_factors": null,
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiBIOC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC5g+C4meC4o+C4reC4muC4m+C4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0318_2567.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "1000",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-11T06:11:43.815Z",
+  "errors": [
+    "No risk metrics available",
+    "No category data available",
+    "No involved parties data available",
+    "No top holdings data available",
+    "No risk factors data available"
+  ]
+}

@@ -1,0 +1,646 @@
+{
+  "fund_id": "M0561_2557",
+  "symbol": "TMSRMF",
+  "fund_name": "TISCO Mid/Small Cap Equity RMF",
+  "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "EQSM",
+    "management_style": "AM",
+    "dividend_policy": "-",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 9.0839,
+    "previous_val": 0,
+    "net_asset": 117124008,
+    "buy_price": 9.0839,
+    "sell_price": 9.084,
+    "change": 9.0839,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-11T08:11:44.25"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 9.5086,
+      "previous_val": 0,
+      "net_asset": 123907040,
+      "buy_price": 9.5086,
+      "sell_price": 9.5087
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 9.4454,
+      "previous_val": 0,
+      "net_asset": 123092472,
+      "buy_price": 9.4454,
+      "sell_price": 9.4455
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 9.3804,
+      "previous_val": 0,
+      "net_asset": 122168920,
+      "buy_price": 9.3804,
+      "sell_price": 9.3805
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 9.4508,
+      "previous_val": 0,
+      "net_asset": 122894024,
+      "buy_price": 9.4508,
+      "sell_price": 9.4509
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 9.4753,
+      "previous_val": 0,
+      "net_asset": 123165024,
+      "buy_price": 9.4753,
+      "sell_price": 9.4754
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 9.4178,
+      "previous_val": 0,
+      "net_asset": 122418312,
+      "buy_price": 9.4178,
+      "sell_price": 9.4179
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 9.483,
+      "previous_val": 0,
+      "net_asset": 123509352,
+      "buy_price": 9.483,
+      "sell_price": 9.4831
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 9.5168,
+      "previous_val": 0,
+      "net_asset": 123742608,
+      "buy_price": 9.5168,
+      "sell_price": 9.5169
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 9.5533,
+      "previous_val": 0,
+      "net_asset": 124166440,
+      "buy_price": 9.5533,
+      "sell_price": 9.5534
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 9.4885,
+      "previous_val": 0,
+      "net_asset": 123298464,
+      "buy_price": 9.4885,
+      "sell_price": 9.4886
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 9.3095,
+      "previous_val": 0,
+      "net_asset": 120991104,
+      "buy_price": 9.3095,
+      "sell_price": 9.3096
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 9.4511,
+      "previous_val": 0,
+      "net_asset": 122733464,
+      "buy_price": 9.4511,
+      "sell_price": 9.4512
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 9.4772,
+      "previous_val": 0,
+      "net_asset": 122933464,
+      "buy_price": 9.4772,
+      "sell_price": 9.4773
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 9.3712,
+      "previous_val": 0,
+      "net_asset": 121544736,
+      "buy_price": 9.3712,
+      "sell_price": 9.3713
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 9.3658,
+      "previous_val": 0,
+      "net_asset": 121485680,
+      "buy_price": 9.3658,
+      "sell_price": 9.3659
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 9.3407,
+      "previous_val": 0,
+      "net_asset": 121123528,
+      "buy_price": 9.3407,
+      "sell_price": 9.3408
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 9.3509,
+      "previous_val": 0,
+      "net_asset": 120768576,
+      "buy_price": 9.3509,
+      "sell_price": 9.351
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 9.335,
+      "previous_val": 0,
+      "net_asset": 120517752,
+      "buy_price": 9.335,
+      "sell_price": 9.3351
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 9.3028,
+      "previous_val": 0,
+      "net_asset": 120103704,
+      "buy_price": 9.3028,
+      "sell_price": 9.3029
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 9.2379,
+      "previous_val": 0,
+      "net_asset": 119241904,
+      "buy_price": 9.2379,
+      "sell_price": 9.238
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 9.1512,
+      "previous_val": 0,
+      "net_asset": 118123592,
+      "buy_price": 9.1512,
+      "sell_price": 9.1513
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 9.1857,
+      "previous_val": 0,
+      "net_asset": 118586240,
+      "buy_price": 9.1857,
+      "sell_price": 9.1858
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 9.1809,
+      "previous_val": 0,
+      "net_asset": 118369680,
+      "buy_price": 9.1809,
+      "sell_price": 9.181
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 9.1829,
+      "previous_val": 0,
+      "net_asset": 118425408,
+      "buy_price": 9.1829,
+      "sell_price": 9.183
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 9.0935,
+      "previous_val": 0,
+      "net_asset": 117282592,
+      "buy_price": 9.0935,
+      "sell_price": 9.0936
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 9.0601,
+      "previous_val": 0,
+      "net_asset": 116803936,
+      "buy_price": 9.0601,
+      "sell_price": 9.0602
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 9.1399,
+      "previous_val": 0,
+      "net_asset": 117840608,
+      "buy_price": 9.1399,
+      "sell_price": 9.14
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.0568,
+      "previous_val": 0,
+      "net_asset": 116769056,
+      "buy_price": 9.0568,
+      "sell_price": 9.0569
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.0839,
+      "previous_val": 0,
+      "net_asset": 117124008,
+      "buy_price": 9.0839,
+      "sell_price": 9.084
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": -21.89,
+    "3m": 13.04,
+    "6m": -0.27,
+    "1y": -27.5,
+    "3y": -15.81,
+    "5y": -5.14,
+    "10y": -0.22,
+    "since_inception": -0.51
+  },
+  "benchmark": {
+    "name": "ดัชนีผลตอบแทนรวมตลาดหลักทรัพย์แห่งประเทศไทย (SET TRI)",
+    "returns": {
+      "ytd": -5.43,
+      "3m": 18.03,
+      "6m": 12.79,
+      "1y": -8.4,
+      "3y": -3.84,
+      "5y": 3.86,
+      "10y": 2.66
+    }
+  },
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "หุ้น",
+      "percentage": 89.78
+    },
+    {
+      "asset_class": "เงินฝากธนาคาร",
+      "percentage": 6.94
+    },
+    {
+      "asset_class": "สินทรัพย์อื่น",
+      "percentage": 3.9
+    },
+    {
+      "asset_class": "หนี้สินอื่น",
+      "percentage": -0.63
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiBIOC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC5g+C4meC4o+C4reC4muC4m+C4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0561_2557.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1000",
+    "minimum_additional": "1000",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-11T06:42:38.731Z",
+  "errors": [
+    "No risk metrics available",
+    "No category data available",
+    "No top holdings data available"
+  ]
+}

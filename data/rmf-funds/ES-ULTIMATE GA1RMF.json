@@ -1,0 +1,222 @@
+{
+  "fund_id": "M0791_2568",
+  "symbol": "ES-ULTIMATE GA1RMF",
+  "fund_name": "Eastspring Ultimate Global Allocation Fund 1 RMF",
+  "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "MIXFI",
+    "management_style": "-",
+    "dividend_policy": "No",
+    "risk_level": 5,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-07",
+    "last_val": 9.966,
+    "previous_val": 0,
+    "net_asset": 16369805,
+    "buy_price": 9.966,
+    "sell_price": 9.9661,
+    "change": 9.966,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-11T08:11:44.25"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 9.9998,
+      "previous_val": 0,
+      "net_asset": 3493316,
+      "buy_price": 9.9998,
+      "sell_price": 9.9999
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 9.9994,
+      "previous_val": 0,
+      "net_asset": 3493202.25,
+      "buy_price": 9.9994,
+      "sell_price": 9.9995
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 9.9919,
+      "previous_val": 0,
+      "net_asset": 4238103.5,
+      "buy_price": 9.9919,
+      "sell_price": 9.992
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 10.0318,
+      "previous_val": 0,
+      "net_asset": 5309727,
+      "buy_price": 10.0318,
+      "sell_price": 10.0319
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 10.0313,
+      "previous_val": 0,
+      "net_asset": 6049389.5,
+      "buy_price": 10.0313,
+      "sell_price": 10.0314
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 10.0496,
+      "previous_val": 0,
+      "net_asset": 6127454,
+      "buy_price": 10.0496,
+      "sell_price": 10.0497
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 10.063,
+      "previous_val": 0,
+      "net_asset": 6165689.5,
+      "buy_price": 10.063,
+      "sell_price": 10.0631
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 10.0752,
+      "previous_val": 0,
+      "net_asset": 6815701.5,
+      "buy_price": 10.0752,
+      "sell_price": 10.0753
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 10.0429,
+      "previous_val": 0,
+      "net_asset": 8903896,
+      "buy_price": 10.0429,
+      "sell_price": 10.043
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 9.9887,
+      "previous_val": 0,
+      "net_asset": 8866979,
+      "buy_price": 9.9887,
+      "sell_price": 9.9888
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 9.9978,
+      "previous_val": 0,
+      "net_asset": 9185334,
+      "buy_price": 9.9978,
+      "sell_price": 9.9979
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 9.997,
+      "previous_val": 0,
+      "net_asset": 12268183,
+      "buy_price": 9.997,
+      "sell_price": 9.9971
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 10.0043,
+      "previous_val": 0,
+      "net_asset": 13353169,
+      "buy_price": 10.0043,
+      "sell_price": 10.0044
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 9.9966,
+      "previous_val": 0,
+      "net_asset": 13688182,
+      "buy_price": 9.9966,
+      "sell_price": 9.9967
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 9.9652,
+      "previous_val": 0,
+      "net_asset": 16044844,
+      "buy_price": 9.9652,
+      "sell_price": 9.9653
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.966,
+      "previous_val": 0,
+      "net_asset": 16369805,
+      "buy_price": 9.966,
+      "sell_price": 9.9661
+    }
+  ],
+  "dividends": [],
+  "performance": null,
+  "benchmark": null,
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "ตราสารหนี้",
+      "percentage": 55.1
+    },
+    {
+      "asset_class": "ตราสารทุน",
+      "percentage": 34.1
+    },
+    {
+      "asset_class": "สินทรัพย์ที่มีสภาพคล่อง",
+      "percentage": 10.8
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": null,
+  "top_holdings": null,
+  "risk_factors": null,
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZIOC4leC4o+C4suC4quC4suC4o+C4q+C4meC4teC5iSDguYHguKXguLAv4Lir4Lij4Li34Lit4LiX4Lij4Lix4Lie4Lii4LmM4Liq4Li04LiZ4LiX4Liy4LiH4LmA4Lil4Li34Lit4LiBIOC5guC4lOC4ouC5g+C4meC4quC4oOC4suC4p+C4sOC4m+C4geC4leC4tOC4oeC4teC4quC4seC4lOC4quC5iOC4p+C4meC4geC4suC4o+C4peC4h+C4l+C4uOC4meC5g+C4meC4leC4o+C4suC4quC4suC4o+C4l+C4uOC4mSDguYLguJTguKLguYDguInguKXguLXguYjguKLguYPguJnguKPguK3guJrguJvguLXguJrguLHguI3guIrguLXguYTguKHguYjguYDguIHguLTguJnguKPguYnguK3guKLguKXguLAgNTAg4LiC4Lit4LiHIE5BVgo=",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0791_2568.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1",
+    "minimum_additional": "1",
+    "minimum_redemption": "1",
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-11T06:18:50.145Z",
+  "errors": [
+    "No performance data available",
+    "No benchmark data available",
+    "No risk metrics available",
+    "No category data available",
+    "No involved parties data available",
+    "No top holdings data available",
+    "No risk factors data available"
+  ]
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 16px; }
+    .fund-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px;
+      background: white;
+    }
+    .fund-header {
+      border-bottom: 2px solid #f3f4f6;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    .fund-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    .fund-code {
+      font-size: 14px;
+      color: #6b7280;
+      font-family: monospace;
+    }
+    .nav-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background: #f9fafb;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .nav-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: #059669;
+    }
+    .nav-label {
+      font-size: 12px;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .performance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .perf-item {
+      text-align: center;
+      padding: 12px;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+    .perf-label {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+    .perf-value {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .perf-value.positive { color: #059669; }
+    .perf-value.negative { color: #dc2626; }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .info-label { color: #6b7280; font-size: 14px; }
+    .info-value { font-weight: 600; font-size: 14px; }
+    .risk-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .risk-1, .risk-2 { background: #d1fae5; color: #065f46; }
+    .risk-3, .risk-4 { background: #fef3c7; color: #92400e; }
+    .risk-5, .risk-6 { background: #fed7aa; color: #9a3412; }
+    .risk-7, .risk-8 { background: #fecaca; color: #991b1b; }
+  </style>
+</head>
+<body>
+  <div class="fund-card">
+    <div class="fund-header">
+      <div class="fund-name" id="fundName"></div>
+      <div class="fund-code" id="fundCode"></div>
+    </div>
+
+    <div class="nav-section">
+      <div>
+        <div class="nav-label">Net Asset Value</div>
+        <div class="nav-value" id="nav"></div>
+      </div>
+      <div style="text-align: right;">
+        <div class="nav-label">As of</div>
+        <div style="font-size: 14px; color: #374151;" id="navDate"></div>
+      </div>
+    </div>
+
+    <div class="performance-grid" id="performanceGrid"></div>
+
+    <div id="infoRows"></div>
+  </div>
+
+  <script>
+    const data = window.openai.toolOutput._meta.fundData;
+
+    document.getElementById('fundName').textContent = data.fund_name || 'N/A';
+    document.getElementById('fundCode').textContent = data.symbol || 'N/A';
+    document.getElementById('nav').textContent = data.nav_value
+      ? parseFloat(data.nav_value).toFixed(4) + ' THB'
+      : 'N/A';
+    document.getElementById('navDate').textContent = data.nav_date || 'N/A';
+
+    // Performance metrics
+    const perfMetrics = [
+      { label: 'YTD', value: data.perf_ytd },
+      { label: '3M', value: data.perf_3m },
+      { label: '6M', value: data.perf_6m },
+      { label: '1Y', value: data.perf_1y },
+      { label: '3Y', value: data.perf_3y },
+      { label: '5Y', value: data.perf_5y }
+    ];
+
+    const perfGrid = document.getElementById('performanceGrid');
+    perfMetrics.forEach(({ label, value }) => {
+      const val = parseFloat(value);
+      const className = val >= 0 ? 'positive' : 'negative';
+      const display = !isNaN(val) ? val.toFixed(2) + '%' : 'N/A';
+
+      perfGrid.innerHTML += `
+        <div class="perf-item">
+          <div class="perf-label">${label}</div>
+          <div class="perf-value ${className}">${display}</div>
+        </div>
+      `;
+    });
+
+    // Fund info
+    const riskLevel = parseInt(data.risk_level) || 0;
+    const infoData = [
+      { label: 'AMC', value: data.amc || 'N/A' },
+      { label: 'Risk Level', value: `<span class="risk-badge risk-${riskLevel}">Level ${riskLevel}</span>` },
+      { label: 'Classification', value: data.fund_classification || 'N/A' },
+      { label: 'Management Style', value: data.management_style || 'N/A' }
+    ];
+
+    const infoRows = document.getElementById('infoRows');
+    infoData.forEach(({ label, value }) => {
+      infoRows.innerHTML += `
+        <div class="info-row">
+          <span class="info-label">${label}</span>
+          <span class="info-value">${value}</span>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
+

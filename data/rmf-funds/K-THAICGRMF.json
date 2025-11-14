@@ -1,0 +1,448 @@
+{
+  "fund_id": "M0527_2560",
+  "symbol": "K-THAICGRMF",
+  "fund_name": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
+  "amc": "EQGEN",
+  "metadata": {
+    "fund_classification": "AM",
+    "management_style": "No",
+    "dividend_policy": "6",
+    "risk_level": 0,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-10",
+    "last_val": 9.988,
+    "previous_val": 0,
+    "net_asset": 364072224,
+    "buy_price": 9.988,
+    "sell_price": 9.9881,
+    "change": 9.988,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-11T08:11:44.25"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 10.2101,
+      "previous_val": 0,
+      "net_asset": 377696768,
+      "buy_price": 10.2101,
+      "sell_price": 10.2102
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 10.0453,
+      "previous_val": 0,
+      "net_asset": 371027520,
+      "buy_price": 10.0453,
+      "sell_price": 10.0454
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 9.9981,
+      "previous_val": 0,
+      "net_asset": 368648480,
+      "buy_price": 9.9981,
+      "sell_price": 9.9982
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 10.1281,
+      "previous_val": 0,
+      "net_asset": 373056256,
+      "buy_price": 10.1281,
+      "sell_price": 10.1282
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 10.1306,
+      "previous_val": 0,
+      "net_asset": 373192736,
+      "buy_price": 10.1306,
+      "sell_price": 10.1307
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 10.0407,
+      "previous_val": 0,
+      "net_asset": 369464768,
+      "buy_price": 10.0407,
+      "sell_price": 10.0408
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 10.2392,
+      "previous_val": 0,
+      "net_asset": 376576384,
+      "buy_price": 10.2392,
+      "sell_price": 10.2393
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 10.2264,
+      "previous_val": 0,
+      "net_asset": 375403616,
+      "buy_price": 10.2264,
+      "sell_price": 10.2265
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 10.2746,
+      "previous_val": 0,
+      "net_asset": 376460512,
+      "buy_price": 10.2746,
+      "sell_price": 10.2747
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 10.037,
+      "previous_val": 0,
+      "net_asset": 367994720,
+      "buy_price": 10.037,
+      "sell_price": 10.0371
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 9.8294,
+      "previous_val": 0,
+      "net_asset": 360180544,
+      "buy_price": 9.8294,
+      "sell_price": 9.8295
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 10.0927,
+      "previous_val": 0,
+      "net_asset": 369765600,
+      "buy_price": 10.0927,
+      "sell_price": 10.0928
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 10.1361,
+      "previous_val": 0,
+      "net_asset": 371008160,
+      "buy_price": 10.1361,
+      "sell_price": 10.1362
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 9.9415,
+      "previous_val": 0,
+      "net_asset": 363335296,
+      "buy_price": 9.9415,
+      "sell_price": 9.9416
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 10.0658,
+      "previous_val": 0,
+      "net_asset": 368392032,
+      "buy_price": 10.0658,
+      "sell_price": 10.0659
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 10.1018,
+      "previous_val": 0,
+      "net_asset": 369583904,
+      "buy_price": 10.1018,
+      "sell_price": 10.1019
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 10.2179,
+      "previous_val": 0,
+      "net_asset": 373229792,
+      "buy_price": 10.2179,
+      "sell_price": 10.218
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 10.2748,
+      "previous_val": 0,
+      "net_asset": 375353120,
+      "buy_price": 10.2748,
+      "sell_price": 10.2749
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 10.277,
+      "previous_val": 0,
+      "net_asset": 376118080,
+      "buy_price": 10.277,
+      "sell_price": 10.2771
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 10.2137,
+      "previous_val": 0,
+      "net_asset": 373701216,
+      "buy_price": 10.2137,
+      "sell_price": 10.2138
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 10.1955,
+      "previous_val": 0,
+      "net_asset": 372468608,
+      "buy_price": 10.1955,
+      "sell_price": 10.1956
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 10.1831,
+      "previous_val": 0,
+      "net_asset": 372569312,
+      "buy_price": 10.1831,
+      "sell_price": 10.1832
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 10.1546,
+      "previous_val": 0,
+      "net_asset": 370970208,
+      "buy_price": 10.1546,
+      "sell_price": 10.1547
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 10.1039,
+      "previous_val": 0,
+      "net_asset": 368330880,
+      "buy_price": 10.1039,
+      "sell_price": 10.104
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 9.9503,
+      "previous_val": 0,
+      "net_asset": 362771968,
+      "buy_price": 9.9503,
+      "sell_price": 9.9504
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 9.8614,
+      "previous_val": 0,
+      "net_asset": 359688480,
+      "buy_price": 9.8614,
+      "sell_price": 9.8615
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 10.0107,
+      "previous_val": 0,
+      "net_asset": 364926400,
+      "buy_price": 10.0107,
+      "sell_price": 10.0108
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.9442,
+      "previous_val": 0,
+      "net_asset": 362558400,
+      "buy_price": 9.9442,
+      "sell_price": 9.9443
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.988,
+      "previous_val": 0,
+      "net_asset": 364072224,
+      "buy_price": 9.988,
+      "sell_price": 9.9881
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 4.7,
+    "3m": 22.9,
+    "6m": 22.36,
+    "1y": -0.67,
+    "3y": -1.98,
+    "5y": 3.75,
+    "10y": null,
+    "since_inception": 0.06
+  },
+  "benchmark": {
+    "name": "ดัชนีผลตอบแทนรวมตลาดหลักทรัพย์แห่งประเทศไทย (SET TRI)",
+    "returns": {
+      "ytd": -5.43,
+      "3m": 18.03,
+      "6m": 12.79,
+      "1y": -8.4,
+      "3y": -3.84,
+      "5y": 3.86,
+      "10y": null
+    }
+  },
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "ตราสารทุน",
+      "percentage": 97.1
+    },
+    {
+      "asset_class": "เงินฝาก",
+      "percentage": 3.85
+    },
+    {
+      "asset_class": "อื่นๆ",
+      "percentage": -0.96
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiBIOC5guC4lOC4ouC5gOC4ieC4peC4teC5iOC4ouC5g+C4meC4o+C4reC4muC4m+C4teC5hOC4oeC5iOC4meC5ieC4reC4ouC4geC4p+C5iOC4siA4MCUg4LiC4Lit4LiHIE5BVg==",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0527_2560.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "500",
+    "minimum_additional": "500",
+    "minimum_redemption": "500",
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-11T06:23:14.264Z",
+  "errors": [
+    "No risk metrics available",
+    "No category data available",
+    "No top holdings data available"
+  ]
+}

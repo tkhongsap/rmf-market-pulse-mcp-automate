@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 16px; }
+    .chart-container {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 20px;
+      background: white;
+    }
+    .chart-header {
+      border-bottom: 2px solid #f3f4f6;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    .fund-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    .fund-code {
+      font-size: 14px;
+      color: #6b7280;
+      font-family: monospace;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 12px;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .stat-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+    }
+    .stat-value.positive { color: #059669; }
+    .stat-value.negative { color: #dc2626; }
+    .chart-area {
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 20px;
+      min-height: 200px;
+    }
+    .chart-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 16px;
+    }
+    .nav-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .nav-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      padding: 8px;
+      border-bottom: 1px solid #e5e7eb;
+      align-items: center;
+    }
+    .nav-row:hover { background: #f3f4f6; }
+    .nav-date {
+      font-size: 13px;
+      color: #6b7280;
+      font-family: monospace;
+    }
+    .nav-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      text-align: right;
+    }
+    .nav-change {
+      font-size: 13px;
+      font-weight: 600;
+      text-align: right;
+    }
+    .nav-change.positive { color: #059669; }
+    .nav-change.negative { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <div class="chart-header">
+      <div class="fund-name" id="fundName"></div>
+      <div class="fund-code" id="fundCode"></div>
+    </div>
+
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <div class="chart-area">
+      <div class="chart-title">NAV History</div>
+      <div class="nav-list" id="navList"></div>
+    </div>
+  </div>
+
+  <script>
+    const data = window.openai.toolOutput._meta;
+    
+    document.getElementById('fundName').textContent = data.fundName || 'N/A';
+    document.getElementById('fundCode').textContent = data.fundCode || 'N/A';
+
+    // Display statistics
+    const statsGrid = document.getElementById('statsGrid');
+    const stats = [
+      { label: 'Min NAV', value: data.statistics?.minNav || 'N/A' },
+      { label: 'Max NAV', value: data.statistics?.maxNav || 'N/A' },
+      { label: 'Avg NAV', value: data.statistics?.avgNav || 'N/A' },
+      { label: 'Period Return', value: data.statistics?.periodReturn || 'N/A', isReturn: true },
+      { label: 'Volatility', value: data.statistics?.volatility || 'N/A' },
+    ];
+
+    stats.forEach(({ label, value, isReturn }) => {
+      let className = '';
+      if (isReturn && typeof value === 'string' && value.includes('%')) {
+        const numValue = parseFloat(value);
+        className = numValue >= 0 ? 'positive' : 'negative';
+      }
+
+      statsGrid.innerHTML += `
+        <div class="stat-item">
+          <div class="stat-label">${label}</div>
+          <div class="stat-value ${className}">${value}</div>
+        </div>
+      `;
+    });
+
+    // Display NAV history
+    const navList = document.getElementById('navList');
+    const navHistory = data.navHistory || [];
+
+    if (navHistory.length === 0) {
+      navList.innerHTML = '<div style="text-align: center; padding: 20px; color: #6b7280;">No NAV history available</div>';
+    } else {
+      navHistory.forEach(item => {
+        const changePercent = item.change_percent;
+        const changeClass = changePercent >= 0 ? 'positive' : 'negative';
+        const changeText = changePercent !== null && !isNaN(changePercent)
+          ? `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%`
+          : 'N/A';
+
+        navList.innerHTML += `
+          <div class="nav-row">
+            <div class="nav-date">${item.date || 'N/A'}</div>
+            <div class="nav-value">${item.nav ? parseFloat(item.nav).toFixed(4) : 'N/A'}</div>
+            <div class="nav-change ${changeClass}">${changeText}</div>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>

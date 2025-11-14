@@ -1,0 +1,1475 @@
+openapi: 3.0.1
+info:
+  title: Fund Factsheet API
+  description: ข้อมูลเกี่ยวกับกองทุนรวมทั่วไป
+  version: '1.0'
+servers:
+  - url: https://api.sec.or.th/FundFactsheet
+paths:
+  /fund/amc:
+    get:
+      summary: 01. รายชื่อ บลจ.
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>unique_id</td><td>รหัสนิติบุคคลบริษัทจัดการ</td></tr>\n<tr><td>name_th</td><td> ชื่อนิติบุคคล / บุคคล (ภาษาไทย)</td></tr>\n<tr><td>name_en</td><td> ชื่อนิติบุคคล / บุคคล (ภาษาอังกฤษ)</td></tr>\n</table>\n<br>\n<h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ ** </h5>\n<br>"
+      operationId: 01-รายชื่อ-บลจ
+      responses:
+        '200':
+          description: รายชื่อ บลจ.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Entities'
+              example:
+                - last_upd_date: string
+                  unique_id: string
+                  name_th: string
+                  name_en: string
+  '/fund/amc/{unique_id}':
+    get:
+      summary: 02. กองทุนภายใต้การบริหารจัดการของบลจ.
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>proj_id</td><td>เลขที่โครงการ ({Type}{ID}_YYYY)</td></tr>\n<tr><td>regis_id</td><td>เลขที่จดทะเบียนกองทุนรวม</td></tr> <tr><td>regis_date</td><td>วันที่จดทะเบียนกองทุนรวม</td></tr> <tr><td>cancel_date</td><td>วันที่เลิกกองทุนรวม</td></tr>\n<tr><td>proj_name_th</td><td>ชื่อโครงการจัดการ (ไทย)</td></tr>\n<tr><td>proj_name_en</td><td>ชื่อโครงการจัดการ (อังกฤษ)</td></tr>\n<tr><td>proj_abbr_name</td><td>ชื่อย่อ</td></tr>\n<tr><td>fund_status</td><td> สถานะกอง <br>SE = อนุมัติ(อยู่ระหว่าง Filing) <br>EX = หมดเวลาเสนอขาย <br>RG = จดทะเบียน <br>CA = เลิกโครงการ <br>LI = จดทะเบียนเลิก         </td></tr> <tr><td>unique_id</td><td>รหัส บลจ.</td></tr> <tr><td><b>*permit_us_investment</b></td><td><b>อนุญาติให้ผู้ที่มีสัญชาติ US ลงทุน</b></td></tr> <tr><td>invest_country_flag</td><td>หมายเหตุ<br>\n       1 = กองทุนรวมที่เน้นลงทุนแบบมีความเสี่ยงต่างประเทศ<br>\n       2 = ลงทุนในต่างประเทศบางส่วน<br>\n       3 = กองทุนที่ลงทุนแบบไม่มีความเสี่ยงต่างประเทศ<br>\n       4 = กองทุนที่ลงทุนแบบมีความเสี่ยงทั้งในและต่างประเทศ\n </td></tr>\n</table> <br> <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6> <br> <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ ** </h5> <br>"
+      operationId: 02-กองทุนภายใต้การบริหารจัดการของบลจ
+      parameters:
+        - name: unique_id
+          in: path
+          description: รหัส บลจ.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: กองทุนภายใต้การบริหารจัดการของบลจ.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Funds'
+              example:
+                - last_upd_date: string
+                  proj_id: string
+                  regis_id: string
+                  regis_date: string
+                  cancel_date: string
+                  proj_name_th: string
+                  proj_name_en: string
+                  proj_abbr_name: string
+                  fund_status: string
+                  unique_id: string
+                  permit_us_investment: string
+                  invest_country_flage: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  /fund:
+    post:
+      summary: 03. ค้นหาชื่อกองทุนด้วยชื่อย่อหรือชื่อกองทุนบางส่วน
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n <tr><td>proj_id</td><td>เลขที่โครงการ ({Type}-{ID}-YYYY)</td></tr>\n <tr><td>regis_id</td><td>เลขที่จดทะเบียนกองทุนรวม</td></tr>\n <tr><td>regis_date</td><td>วันที่จดทะเบียนกองทุนรวม</td></tr>\n <tr><td>cancel_date</td><td>วันที่เลิกกองทุนรวม</td></tr>\n <tr><td>proj_name_th</td><td>ชื่อโครงการจัดการ (ไทย)</td></tr>\n <tr><td>proj_name_en</td><td>ชื่อโครงการจัดการ (อังกฤษ)</td></tr>\n <tr><td>proj_abbr_name</td><td>ชื่อย่อ</td></tr>\n <tr><td>fund_status</td><td>สถานะกอง</td></tr>\n <tr><td>unique_id</td><td>รหัส บลจ.</td></tr>\n <tr><td><b>*permit_us_investment</b></td><td><b>อนุญาติให้ผู้ที่มีสัญชาติ US ลงทุน</b></td></tr>\n <tr><td>invest_country_flag</td><td>หมายเหตุ<br>\n        1 = กองทุนรวมที่เน้นลงทุนแบบมีความเสี่ยงต่างประเทศ<br>\n        2 = ลงทุนในต่างประเทศบางส่วน<br>\n        3 = กองทุนที่ลงทุนแบบไม่มีความเสี่ยงต่างประเทศ<br>\n        4 = กองทุนที่ลงทุนแบบมีความเสี่ยงทั้งในและต่างประเทศ\n  </td></tr>\n </table>\n <br>\n <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6>\n <br>\n<h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ ** </h5>\n<br>"
+      operationId: 03-ค้นหาชื่อกองทุนด้วยชื่อย่อหรือชื่อกองทุนบางส่วน
+      requestBody:
+        description: Partial name to search
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NameString'
+            example:
+              name: string
+      responses:
+        '200':
+          description: Funds
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Funds'
+              example:
+                - last_upd_date: string
+                  proj_id: string
+                  regis_id: string
+                  regis_date: string
+                  cancel_date: string
+                  proj_name_th: string
+                  proj_name_en: string
+                  proj_abbr_name: string
+                  fund_status: string
+                  unique_id: string
+                  permit_us_investment: string
+                  invest_country_flage: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/URLs':
+    get:
+      summary: 04. URL ของ Fact Sheet และรายงานประจำปีของกองทุน
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>url_halfyear_report</td><td>Link รายงาน 6 เดือน</td></tr>\n<tr><td>url_annual_report</td><td>Link รายงานประจำปี</td></tr>\n<tr><td>url_factsheet</td><td>Link รายละเอียดข้อมูล Fund Factsheet</td></tr>\n</table> <br> <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ ** </h5> <br>"
+      operationId: 04-url-ของ-fact-sheet-และรายงานประจำปีของกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Funds' URL
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundURL'
+              example:
+                last_upd_date: string
+                url_halfyear_report: string
+                url_annual_report: string
+                url_factsheet: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/IPO':
+    get:
+      summary: 05. การเสนอขาย
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>first_sell_start_date</td><td>วันเริ่ม IPO</td></tr>\n <tr><td>first_sell_end_date</td><td>วันสิ้นสุด IPO</td></tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n </table>\n <br>\n <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ ** </h5>\n <br>"
+      operationId: 05-การเสนอขาย
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund IPO
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IPO'
+              example:
+                last_upd_date: string
+                first_sell_start_date: string
+                first_sell_end_date: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/investment':
+    get:
+      summary: 06. มูลค่าหน่วยลงทุน/จำนวนหน่วยลงทุนในการสั่งซื้อขาย/คงเหลือ
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>class_id</td><td>รหัสคลาส</td></tr>\n <tr><td>minimum_sub_ipo</td><td>มูลค่าขั้นต่ำของการสั่งซื้อครั้งแรก (9.5.3)</td></tr>\n <tr><td>minimum_sub_ipo_cur</td><td>หน่วย มูลค่าขั้นต่ำของการสั่งซื้อครั้งแรก (9.5.3)</td></tr>\n <tr><td><b>* minimum_sub_ipo_addi_desc</b></td><td><b>รายละเอียดเพิ่มเติมของมูลค่าขั้นต่ำของการสั่งซื้อครั้งแรก (9.5.3)</b></td></tr>\n <tr><td>minimum_sub</td><td>มูลค่าขั้นต่ำของการสั่งซื้อครั้งถัดไป (9.5.4)</td></tr>\n <tr><td>minimum_sub_cur</td><td>หน่วย มูลค่าขั้นต่ำของการสั่งซื้อครั้งถัดไป (9.5.4)</td></tr>\n <tr><td><b>* minimum_sub_addi_desc</b></td><td><b>รายละเอียดเพิ่มเติมของมูลค่าขั้นต่ำของการสั่งซื้อครั้งถัดไป (9.5.4)</b></td></tr>\n <tr><td>minimum_redempt</td><td>มูลค่าขั้นต่ำของการสั่งขายคืน (9.5.6)</td></tr>\n <tr><td>minimum_redempt_cur</td><td>หน่วย (มูลค่าขั้นต่ำของการสั่งขายคืน) (9.5.6)</td></tr>\n <tr><td><b>* minimum_redempt_addi_desc</b></td><td><b>รายละเอียดเพิ่มเติมของหน่วย (มูลค่าขั้นต่ำของการสั่งขายคืน)</b></td></tr>\n <tr><td>minimum_redempt_unit</td><td>จำนวนหน่วยลงทุนขั้นต่ำของการสั่งขายคืน (9.5.6)</td></tr>\n <tr><td><b>* minimum_redempt_unit_addi_desc</b></td><td><b>รายละเอียดเพิ่มเติมของจำนวนหน่วยลงทุนขั้นต่ำของการสั่งขายคืน</b></td></tr>\n <tr><td>lowbal_val</td><td>มูลค่าคงเหลือขั้นต่ำ</td></tr>\n <tr><td>lowbal_val_cur</td><td>หน่วย มูลค่าคงเหลือขั้นต่ำ</td></tr>\n <tr><td>lowbal_unit</td><td>จำนวนหน่วยคงเหลือขั้นต่ำ</td></tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n </table>\n <br>\n <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6>\n <br>\n <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ ** </h5>\n <br>"
+      operationId: 06-มูลค่าหน่วยลงทุน-จำนวนหน่วยลงทุนในการสั่งซื้อขาย-คงเหลือ
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund investment
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/investments'
+              example:
+                - last_upd_date: string
+                  minimum_sub_ipo: string
+                  minimum_sub_ipo_cur: string
+                  minimum_sub_ipo_addi_desc: string
+                  minimum_sub: string
+                  minimum_sub_cur: string
+                  minimum_sub_addi_desc: string
+                  minimum_redempt: string
+                  minimum_redempt_cur: string
+                  minimum_redempt_addi_desc: string
+                  minimum_redempt_unit: string
+                  minimum_redempt_unit_addi_desc: string
+                  lowbal_val: 0
+                  lowbal_val_cur: string
+                  lowbal_unit: 0
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/project_type':
+    get:
+      summary: 07. ลักษณะและอายุโครงการ
+      description: "<table style=\"width:100%\">\n  <tr>\n      <th>ชื่อ Field</th>\n      <th>รายละเอียด</th>\n  </tr>\n  <tr>\n      <td>last_upd_date</td>\n      <td>วันที่แก้ไขข้อมูลล่าสุด</td>\n  </tr>\n  <tr>\n      <td>proj_retail_type</td>\n      <td>\n          ลักษณะโครงการ -- R, A, N, G, X, H, {null} <br><br>\n          <b>A</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมที่เสนอขายเฉพาะผู้ลงทุนที่มิใช่รายย่อย<br>\n          <b>B</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมที่เสนอขายเฉพาะผู้มีเงินลงทุนสูง<br>\n          <b>F</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมเสริมสภาพคล่องเพื่อลดความเสี่ยงของการระดมทุนในตลาดตราสารหนี้ภาคเอกชน<br>\n          <b>G</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมพิเศษเพื่อตอบสนองนโยบายภาครัฐ<br>\n          <b>H</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมที่เสนอขายผู้ลงทุนที่มิใช่รายย่อยและผู้มีเงินลงทุนสูง<br>\n          <b>N</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนเพื่อผู้ลงทุนสถาบัน<br>\n          <b>R</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนเพื่อผู้ลงทุนทั่วไป<br>\n          <b>V</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมเพื่อผู้ลงทุนที่เป็นกองทุนสำรองเลี้ยงชีพ<br>\n          <b>X</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; กองทุนรวมที่เสนอขายผู้ลงทุนสถาบันและผู้ลงทุนรายใหญ่พิเศษ<br>\n      </td>\n  </tr>\n  <tr>\n      <td>proj_term_flag</td>\n      <td>อายุโครงการ Y = กำหนด, N = ไม่กำหนด</td>\n  </tr>\n  <tr>\n      <td>proj_term_dd</td>\n      <td>อายุโครงการ (วัน)</td>\n  </tr>\n  <tr>\n      <td>proj_term_mm</td>\n      <td>อายุโครงการ (เดือน)</td>\n  </tr>\n  <tr>\n      <td>proj_term_yy</td>\n      <td>อายุโครงการ (ปี)</td>\n  </tr>\n</table>\n  <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n  <br>"
+      operationId: 07-ลักษณะและอายุโครงการ
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund Project Type
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundProjectType'
+              example:
+                last_upd_date: string
+                proj_retail_type: string
+                proj_term_flag: string
+                proj_term_dd: string
+                proj_term_mm: string
+                proj_term_yy: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/policy':
+    get:
+      summary: 08. ประเภทกองทุนตามนโยบายกองทุน
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>policy_desc</td><td>ประเภทกองทุนตามนโยบายกองทุน (นิยามประกาศ สน.87/2558 ภาคผนวก 2)</td></tr>\n<tr><td><b>*investment_policy_desc</b></td><td><b>นโยบายการลงทุน</b><br><b style=\"color:red;\">หมายเหตุ: ข้อมูลเป็น String ที่ Encode ด้วย Base64 ไว้</b></td></tr>\n<tr><td>management_style</td><td>กลยุทธ์การบริหารจัดการกองทุน (Management Style)\n    <br>AM = มุ่งหวังให้ผลประกอบการเคลื่อนไหวสูงกว่าดัชนีชี้วัด (active management)\n    <br>AN = กองทุนไทยมุ่งหวังให้ผลประกอบการเคลื่อนไหวตามกองทุนหลัก ส่วนกองทุนหลักมุ่งหวังให้ผลประกอบการสูงกว่าดัชนีชี้วัด (active management)\n    <br>PM = มุ่งหวังให้ผลประกอบการเคลื่อนไหวตามดัชนีชี้วัด (passive management/index tracking)\n    <br>PN = กองทุนไทยมุ่งหวังให้ผลประกอบการเคลื่อนไหวตามกองทุนหลัก\n    ส่วนกองทุนหลักมุ่งหวังให้ผลประกอบการเคลื่อนไหวตามดัชนีชี้วัด (passive management)\n    <br>IM = มุ่งหวังให้ได้รับผลประกอบการเคลื่อนไหวตรงกันข้ามกับผลตอบแทนรายวันของดัชนีที่กองทุนรวมใช้อ้างอิง (inverse management)\n    <br>IN = กองทุนไทยมุ่งหวังให้ผลประกอบการเคลื่อนไหวตามกองทุนหลัก ส่วนกองทุนหลักมุ่งหวังให้ได้รับผลประกอบการเคลื่อนไหวตรงกันข้ามกับผลตอบแทนรายวันของดัชนีที่กองทุนรวมใช้อ้างอิง (inverse management)\n    <br>LM = มุ่งหวังให้ได้รับผลประกอบการเคลื่อนไหวทวีคูณกับผลตอบแทนรายวันของดัชนีที่กองทุนรวมใช้อ้างอิง (leveraged management)\n    <br>LN = กองทุนไทยมุ่งหวังให้ผลประกอบการเคลื่อนไหวตามกองทุนหลัก\n    ส่วนกองทุนหลักมุ่งหวังให้ได้รับผลประกอบการเคลื่อนไหวทวีคูณกับผลตอบแทนรายวันของดัชนีที่กองทุนรวมใช้อ้างอิง (leveraged management)\n    <br>BH = มีกลยุทธ์การลงทุนครั้งเดียว (buy-and-hold)\n    <br>SM = มุ่งหวังให้ผลประกอบการเคลื่อนไหวตามดัชนีชี้วัด\n    และในบางโอกาสอาจสร้างผลตอบแทนสูงกว่าดัชนีชี้วัด\n    <br>OT = อื่น ๆ\n\n</td></tr>\n</table> <br> <h6><b style>* = กองทุนรวมทั่วไปที่จัดตั้งหลังพฤษภาคม 2565 จะไม่มีข้อมูลใน field investment_policy_desc</h6> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 08-ประเภทกองทุนตามนโยบายกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund Policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundPolicy'
+              example:
+                last_upd_date: string
+                policy_desc: string
+                investment_policy_desc: string
+                management_style: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/specification':
+    get:
+      summary: 09. ประเภทกองทุนตามลักษณะพิเศษ
+      description: "<table style=\"width:100%\"> <tr> <th>ชื่อ Field</th> <th>รายละเอียด</th> </tr> <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>spec_code</td><td>รหัสลักษณะพิเศษ</td></tr> <tr><td>spec_desc</td><td>ประเภทกองทุนตามลักษณะพิเศษ (นิยามประกาศ สน.87/2558 ภาคผนวก 2)</td></tr> </table> <br> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 09-ประเภทกองทุนตามลักษณะพิเศษ
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ประเภทกองทุนตามลักษณะพิเศษ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundSpecification'
+              example:
+                last_upd_date: string
+                spec_code: string
+                spec_desc: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/feeder_fund':
+    get:
+      summary: 10. ประเภทกองทุน Feeder Fund (เฉพาะกรณีที่เป็น Feeder Fund เท่านั้น)
+      description: "<table style=\"width:100%\"> <tr> <th>ชื่อ Field</th> <th>รายละเอียด</th> </tr> <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>main_feeder_fund</td><td>ชื่อกองทุนหลัก</td></tr> <tr><td><b>* feeder_fund_link</b></td><td><b>URL บลจ.ของกองทุนหลัก</b></td></tr> <tr><td>feeder_fund_country</td><td>ประเทศที่จดทะเบียนของกองทุนหลัก</td></tr> </table>  <br> <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 10-ประเภทกองทุน-Feeder-Fund-เฉพาะกรณีที่เป็น-Feeder-Fund-เท่านั้น
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund's Feeder status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundFeederDetail'
+              example:
+                last_upd_date: string
+                main_feeder_fund: string
+                feeder_fund_link: string
+                feeder_fund_country: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/redemption':
+    get:
+      summary: 11. ระยะเวลาขายและรับซื้อคืน
+      description: "<table style=\"width:100%\"> <tr><th>ชื่อ Field</th><th>รายละเอียด</th></tr> <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>redemp_period</td><td>ระยะเวลาขายและรับซื้อคืน</td></tr> <tr><td></td><td>1 = ทุกวันทำการ</td></tr> <tr><td></td><td>2 = มากกว่าทุกวันทำการ แต่ไม่เกิน 1 สัปดาห์</td></tr>  <tr><td></td><td>3 = มากกว่า 1 สัปดาห์ แต่ไม่เกิน 2 สัปดาห์</td></tr>  <tr><td></td><td>4 = มากกว่า 2 สัปดาห์ แต่ไม่เกิน 1 เดือน</td></tr>  <tr><td></td><td>5 = มากกว่า 1 เดือน แต่ไม่เกิน 2 เดือน</td></tr> <tr><td></td><td>6 = มากกว่า 2 เดือน แต่ไม่เกิน 3 เดือน</td></tr> <tr><td></td><td>7 = มากกว่า 3 เดือน แต่ไม่เกิน 6 เดือน</td></tr> <tr><td></td><td>8 = มากกว่า 6 เดือน แต่ไม่เกิน 1 ปี</td></tr> <tr><td></td><td>9 = อื่น ๆ</td></tr> <tr><td></td><td>E = เมื่อสิ้นสุดอายุโครงการ</td></tr> <tr><td></td><td>T = เมื่อถึง Trigger</td></tr> <tr><td>redemp_period_oth</td><td>คำอธิบายการขายและรับซื้อคืน(กรณีที่ redemp_period มีค่าเป็น  9(อื่นๆ))</td></tr> <tr><td>settlement_period</td><td>ระยะเวลาการรับเงินค่าขายคืน </td></tr> <tr><td>buying_cut_off_time</td><td>เวลา Cut-off สำหรับการซื้อกองทุน</td></tr> <tr><td>selling_cut_off_time</td><td>เวลา Cut-off สำหรับการขายกองทุน</td></tr> </table> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 11-ระยะเวลาขายและรับซื้อคืน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Redemption
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundRedemption'
+              example:
+                last_upd_date: string
+                redemp_period: string
+                redemp_period_oth: string
+                settlement_period: string
+                buying_cut_off_time: string
+                selling_cut_off_time: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/risk':
+    get:
+      summary: 13. ปัจจัยความเสี่ยงที่สำคัญ
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>group_code_desc</td><td>คำอธิบายกลุ่มความเสี่ยง</td></tr>\n <tr><td>code_desc</td><td>คำอธิบายรหัสความเสี่ยง</td></tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n </table>\n <br>\n <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n <br>"
+      operationId: 13-ปัจจัยความเสี่ยงที่สำคัญ
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund risk
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/risk'
+              example:
+                group_code_desc: string
+                code_desc: string
+                last_upd_date: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/asset':
+    get:
+      summary: 14. สัดส่วนประเภททรัพย์สินที่ลงทุนของกองทุน
+      description: "<h6>\n  <b style=\"color: red;\">\n    หมายเหตุ: จะไม่มีข้อมูลของกองทุนรวมทั่วไปที่จัดตั้งก่อนพฤษภาคม 2565 \n    และมีสถานะเป็น หมดเวลาเสนอขาย (EX), เลิกโครงการ (CA), และจดทะเบียนเลิก (LI)\n  </b>\n</h6> <br> <table style=\"width:100%\"> <tr> <th>ชื่อ Field</th> <th>รายละเอียด</th> </tr> <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>asset_seq</td><td>ลำดับรายการ</td></tr> <tr><td>asset_name</td><td>รายละเอียดประเภททรัพย์สินที่ลงทุน</td></tr> <tr><td>asset_ratio</td><td>% สัดส่วนของทรัพย์สินที่ลงทุน</td></tr> </table> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 14-สัดส่วนประเภททรัพย์สินที่ลงทุนของกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundAssets'
+              example:
+                - last_upd_date: string
+                  asset_seq: string
+                  asset_name: string
+                  asset_ratio: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/turnover_ratio':
+    get:
+      summary: 15. อัตราส่วนหมุนเวียนการลงทุนของกองทุนรวม
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>class_abbr_name</td><td>ชื่อย่อชนิดหน่วยลงทุน (เป็น “main“ ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)</td></tr> <tr><td>portfolio_turnover_ratio</td><td>อัตราส่วนหมุนเวียนการลงทุนของกองทุนรวม (portfolio turnover ratio) (9.9)</td></tr> <tr><td>as_of_date</td><td>อัตราส่วนหมุนเวียนการลงทุนของกองทุนรวม ณ วันที่</td></tr>\n</td></tr>\n</table> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 15-อัตราส่วนหมุนเวียนการลงทุนของกองทุนรวม
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund Turnover ratio
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundTurnoverRatio'
+              example:
+                last_upd_date: string
+                portfolio_turnover_ratio: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/benchmark':
+    get:
+      summary: 18. ดัชนีชี้วัดกองทุน
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>group_seq</td><td>ลำดับกลุ่ม</td></tr>\n<tr><td>benchmark</td><td>ดัชนีชี้วัด (8.1)</td></tr>\n</td></tr>\n</table>\n<br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 18-ดัชนีชี้วัดกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundBenchmarks'
+              example:
+                - last_upd_date: string
+                  group_seq: string
+                  benchmark: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/fund_compare':
+    get:
+      summary: 19. ประเภทกองทุนรวมเพื่อใช้เปรียบเทียบผลการดำเนินงาน ณ จุดขาย
+      description: "<table style=\"width:100%\"> <tr> <th>ชื่อ Field</th> <th>รายละเอียด</th> </tr> <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>fund_compare</td><td>ประเภทกองทุนรวมเพื่อใช้เปรียบเทียบผลการดำเนินงาน ณ จุดขาย (8.2)</td></tr> <tr><td><b>* fund_compare_link</b></td><td><b>ลิ้งค์ของประเภทกองทุนรวมเพื่อใช้เปรียบเทียบผลการดำเนินงาน ณ จุดขาย (8.2)</b></td></tr> </td></tr> </table>  <br> <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 19-ประเภทกองทุนรวมเพื่อใช้เปรียบเทียบผลการดำเนินงาน-ณ-จุดขาย
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: FundCompare
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundCompare'
+              example:
+                last_upd_date: string
+                fund_compare: string
+                fund_compare_link: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/class_fund':
+    get:
+      summary: 20. ประเภทหน่วยลงทุนที่มีในกองทุน (ถ้ามีมากกว่า 1 ประเภท)
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>proj_id</td><td>รหัสกองทุน</td></tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n <tr><td>proj_abbr_name</td><td>ช่อย่อกองทุน</td></tr>\n<tr><td>class_abbr_name</td><td>ชื่อย่อชนิดหน่วยลงทุน (Class Fund)</td></tr> <tr><td>class_name</td><td>ชื่อชนิดหน่วยลงทุน</td></tr> <tr><td>class_additional_desc</td><td>คำอธิบายชนิดหน่วยลงทุนเพิ่มเติม(ถ้ามี)</td></tr> </td></tr>\n </table>\n <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n <br>"
+      operationId: 20-ประเภทหน่วยลงทุนที่มีในกองทุน-ถ้ามีมากกว่า-1-ประเภท
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ประเภทหน่วยลงทุนที่มีในกองทุน (ถ้ามีมากกว่า 1 ประเภท)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundClasses'
+              example:
+                - proj_id: string
+                  last_upd_date: string
+                  proj_abbr_name: string
+                  class_abbr_name: string
+                  class_name: string
+                  class_additional_desc: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/performance':
+    get:
+      summary: 22. ผลการดำเนินงานย้อนหลังของกองทุน
+      description: "<h6>\n  <b style=\"color: red;\">\n    หมายเหตุ: จะไม่มีข้อมูลของกองทุนรวมทั่วไปที่จัดตั้งก่อนพฤษภาคม 2565 \n    และมีสถานะเป็น หมดเวลาเสนอขาย (EX), เลิกโครงการ (CA), และจดทะเบียนเลิก (LI)\n  </b>\n</h6> <br> <table style=\"width:100%\"> <tr> <th>ชื่อ Field</th> <th>รายละเอียด</th> </tr> <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>class_abbr_name</td><td>ชื่อย่อชนิดหน่วยลงทุน (เป็น “main“ ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)</td></tr> <tr><td>performance_type_desc</td><td>คำอธิบายประเภทผลตอบแทน</td></tr> <tr><td>reference_period</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>performance_val</td><td>ผลการดำเนินงานย้อนหลังของกองทุน(8.3)</td></tr> <tr><td><b>as_of_date</b></td><td><b>ผลการดำเนินงานย้อนหลังของกองทุน ณ วันที่ (8.3) -- Format ไม่ตายตัว เป็น Free Text</b></td></tr> </table> <br> \n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 21-ผลการดำเนินงานย้อนหลังของกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund Performance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundPerformances'
+              example:
+                - last_upd_date: string
+                  class_abbr_name: string
+                  performance_type_desc: string
+                  reference_period: string
+                  performance_val: string
+                  as_of_date: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/dividend':
+    get:
+      summary: 24. นโยบายการจ่ายเงินปันผลตามชนิดหน่วยลงทุนของกองทุน
+      description: "<table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> <tr><td>class_abbr_name</td><td>ชื่อย่่่อชนิดหน่วยลงทุน (เป็น - ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)</td></tr> <tr><td>dividend_policy</td><td>นโยบายการจ่ายเงินปันผล</td></tr>\n<tr><td><b>* dividend_policy_remark</b></td><td><b>หมายเหตุ นโยบายการจ่ายเงินปันผล</b></td></tr>\n<tr><td><b>* dividend_details</b></td><td><b>ปันผล (ระบุใน Fund Factsheet)</b></td></tr> <tr><td>&emsp;&emsp;&emsp;<b>* book_closing_date</b></td><td><b>วันที่ปิดสมุด</b></td></tr>\n<tr><td>&emsp;&emsp;&emsp;<b>* payment_date</b></td><td><b>วันที่จ่าย</b></td></tr>\n<tr><td>&emsp;&emsp;&emsp;<b>* dividend_per_share</b></td><td><b>จำนวนเงินปันผล</b></td></tr>\n</td></tr>\n</table>\n<br> <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 23-นโยบายการจ่ายเงินปันผลตามชนิดหน่วยลงทุนของกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundDividends'
+              example:
+                - last_upd_date: string
+                  class_abbr_name: string
+                  dividend_policy: string
+                  dividend_policy_remark: string
+                  dividend_details:
+                    - 
+                      - book_closing_date: string
+                        payment_date: string
+                        dividend_per_share: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/fee':
+    get:
+      summary: 25. ค่าธรรมเนียมกองทุน
+      description: "<h6>\n  <b style=\"color: red;\">\n    หมายเหตุ: จะไม่มีข้อมูลของกองทุนรวมทั่วไปที่จัดตั้งก่อนพฤษภาคม 2565 \n    และมีสถานะเป็น หมดเวลาเสนอขาย (EX), เลิกโครงการ (CA), และจดทะเบียนเลิก (LI)\n  </b>\n</h6> <br> <table style=\"width:100%\">\n<tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>class_abbr_name</td><td>ชื่อย่อชนิดหน่วยลงทุน (เป็น “-“ ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)</td></tr>\n<tr><td>fee_type_desc</td><td>ชื่อประเภทค่าธรรมเนียม</td></tr>\n<tr><td>rate</td><td>อัตราตามโครงการ (Free Text)</td></tr>\n<tr><td>rate_unit</td><td>หน่วย อัตราตามโครงการ (Free Text)</td></tr>\n<tr><td>actual_value</td><td>อัตราที่จ่ายจริง (Free Text)</td></tr>\n<tr><td><b>* actual_value_unit</b></td><td><b>หน่วย อัตราที่จ่ายจริง (Free Text)</b></td></tr>\n<tr><td><b>* fee_other_desc</b></td><td><b>หมายเหตุุเพิ่มเติม (ถ้ามี)</b></td></tr>\n</td></tr>\n</table>\n<br> <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 24-ค่าธรรมเนียมกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ค่าธรรมเนียมกองทุน
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundFees'
+              example:
+                - last_upd_date: string
+                  class_abbr_name: string
+                  fee_type_desc: string
+                  rate: string
+                  rate_unit: string
+                  actual_value: string
+                  actual_value_unit: string
+                  fee_other_desc: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/InvolveParty':
+    get:
+      summary: 26. ผู้เกี่ยวข้องกับกองทุน
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n <tr><td>entity_type</td><td>ประเภทบุคคล/นิติบุคคลที่เกี่ยวข้อง\n <br>ENTITY_TYPE แบ่งเป็น\n <br>A=ผู้สอบบัญชี\n <br>U=ผู้จัดจำหน่าย\n <br>S=ผู้สนับสนุนการขายและรับซื้อคืน\n <br>R=นายทะเบียนหน่วยลงทุน\n <br>V=ผู้ดูแลผลประโยชน์\n <br>M=ที่ปรึกษาการลงทุน\n <br>O=ผู้รับมอบหมายงานด้านการจัดการลงทุน\n <br>P=ผู้ลงทุนรายใหญ่\n <br>K=ผู้ดูแลสภาพคล่อง\n <br>N=ที่ปรึกษาทางการเงิน\n <br>F=ผู้จัดการกองทุน\n </td></tr>\n <tr><td>seq</td><td>ลำดับรายการ</td></tr>\n <tr><td>entity_name</td><td>ชื่อบุคคล/นิติบุคคล</td></tr>\n <tr><td>addr</td><td>ที่อยู่</td></tr>\n <tr><td>position</td><td>ตำแหน่ง</td></tr>\n <tr><td>effective_date</td><td>วันที่มีผล  YYYY-MM-DD  YYYY เป็น\nพ.ศ.</td></tr>       \n </table>\n <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n <br>"
+      operationId: 25-ผู้เกี่ยวข้องกับกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundInvolveParties'
+              example:
+                - last_upd_date: string
+                  entity_type: string
+                  seq: string
+                  entity_name: string
+                  addr: string
+                  position: string
+                  effective_date: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/FundPort/{period}':
+    get:
+      summary: 27. การลงทุนของกองทุนรวม ณ สิ้นสุดวันทำการแต่ละรอบไตรมาส
+      description: "<table style=\"width:100%\">\n<tr><th>ชื่อ Field</th> <th>รายละเอียด</th></tr>  \n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr> \n<tr><td>as_of_date</td><td>ข้อมูล ณ วันที่ (YYYY-MM-DD)</td></tr> \n<tr><td>assetliab_id</td><td>ประเภทสินทรัพย์หนี้สิน</td></tr>\n<tr><td>issue_code</td><td>ชื่อย่อหลักทรัพย์</td></tr> \n<tr><td>isin_code</td><td>ISIN Code</td></tr> \n<tr><td>issuer</td><td>ชื่อผู้ออกหลักทรัพย์</td></tr> \n<tr><td>assetliab_value</td><td>มูลค่าตามราคาตลาด (บาท) -- ทศนิยม 5 ตำแหน่ง --> Round</td></tr>\n<tr><td>percent_nav</td><td>%NAV -- ทศนิยม 5 ตำแหน่ง --> Round</td></tr>\n<tr><td></td><td>เนื่องจากการปัดเศษทศนิยม จึงอนุโลมให้สัดส่วนการลงทุนรวมกันเกิน 100% ได้ถึง 100.20% ของ nav</td></tr>\n</table> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>\n"
+      operationId: 26-การลงทุนของกองทุนรวม-ณ-สิ้นสุดวันทำการแต่ละรอบไตรมาส
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+        - name: period
+          in: path
+          description: 'งวดข้อมูล (YYYYMM) : YYYY คือ ปี ค.ศ. และ MM คือ เดือน 03, 06, 09, 12 เท่านั้น โดยแสดงข้อมูลย้อนหลังไม่เกิน 3 ปี และ หลังสิ้นไตรมาสอย่างน้อย 60 วัน'
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ประเภทกองทุนตามลักษณะพิเศษ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundPortfolios'
+              example:
+                - last_upd_date: string
+                  as_of_date: string
+                  assetliab_id: string
+                  issue_code: string
+                  isin_code: string
+                  issuer: string
+                  assetliab_value: string
+                  percent_nav: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/FundFullPort/{period}':
+    get:
+      summary: 28. สัดส่วนของการลงทุนของกองทุนรวม
+      description: "<table style=\"width:100%\">\n        <tr><th>ชื่อ Field</th> <th>รายละเอียด</th></tr>  \n        <tr><td>proj_id</td><td>เลขที่โครงการ({Type}{ID}_YYYY)</td></tr> \n        <tr><td>assetliab_code</td><td>\n        <table>\n            <tr><td>รหัสประเภทการลงทุน</td></tr>\n            <tr><td>101 = หุ้น (รหัส 101-102)</td></tr>\n            <tr><td>103 = หุ้นกู้ (รหัส 103 -107)</td></tr>\n            <tr><td>108 = หน่วยลงทุน (รหัส 108-109,117-121,139,130)</td></tr>\n            <tr><td>110 = ใบสำคัญแสดงสิทธิ (รหัส 110 -116,124-129)</td></tr>\n            <tr><td>201 = เงินฝากธนาคาร P/N และ B/E (รหัส 202-205,216-224)</td></tr>\n            <tr><td>206 = พันธบัตรรัฐบาล (รหัส 213)</td></tr>\n            <tr><td>401 = ตราสารอนุพันธ์(รหัส 401-407)</td></tr>\n            <tr><td>450 = ทองคำแท่ง (รหัส 450)</td></tr>\n            <tr><td>700 = สินทรัพย์อื่นๆ/หนี้สินอื่นๆ (รหัส 122,211,301-399,500-599) หัก (รหัส 601-699)</td></tr>\n            <tr><td>903 = รวม = sum (101-599) หัก sum (601-699)</td></tr>\n        </table></td></tr> \n        <tr><td>period</td><td>งวดข้อมูล (YYYYMM)</td></tr>\n        <tr><td>market_value</td><td>มูลค่าตลาด</td></tr> \n        <tr><td>percent_nav</td><td>สัดส่วนต่อมูลค่าสินทรัพย์สุทธิ</td></tr>\n        </table>\n        <br>\n          <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n          <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n        <br>"
+      operationId: 5cf76eebfdf44f2687ed80b6
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+        - name: period
+          in: path
+          description: งวดข้อมูล (YYYYMM) YYYY คือปี ค.ศ. MM คือ เดือน 01-12
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundFullPorts'
+              example:
+                - proj_id: string
+                  assetliab_code: string
+                  period: string
+                  market_value: string
+                  percent_nav: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/FundTop5/{period}':
+    get:
+      summary: 29. หลักทรัพย์ 5 อันดับแรกที่ลงทุน
+      description: "<h6>\n  <b style=\"color: red;\">\n    หมายเหตุ: จะไม่มีข้อมูลของกองทุนรวมทั่วไปที่จัดตั้งก่อนพฤษภาคม 2565 \n    และมีสถานะเป็น หมดเวลาเสนอขาย (EX), เลิกโครงการ (CA), และจดทะเบียนเลิก (LI)\n  </b>\n</h6>\n<br>\n<table style=\"width:100%\"> <tr><th>ชื่อ Field</th>\n        <th>รายละเอียด</th></tr>  \n        <tr><td>proj_id</td><td>เลขที่โครงการ({Type}{ID}_YYYY)</td></tr> \n        <tr><td>assetseq</td><td>ลำดับการลงทุน</td></tr> \n        <tr><td>secur_name</td><td>ชื่อหลักทรัพย์</td></tr> \n        <tr><td>period</td><td>งวดข้อมูล (YYYYMM)</td></tr>\n        <tr><td>secur_invest_size</td><td>สัดส่วนการลงทุนของหลักทรัพย์/สถาบันการเงิน(%)</td></tr>\n        </table> <br>\n<br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 5cf866ed88c490f5c54a39b9
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+        - name: period
+          in: path
+          description: งวดข้อมูล (YYYYMM) YYYY คือปี ค.ศ. MM คือ เดือน 01-12
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              example:
+                - proj_id: string
+                  assetseq: string
+                  secur_name: string
+                  period: string
+                  secur_Invest_size: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  /fund/class_fund:
+    post:
+      summary: 21. ค้นหารหัสกองลงทุนด้วยชื่อย่อกองทุนหรือชื่อย่อชนิดหน่วยลงทุน
+      description: "<table style=\"width:100%\">\n <tr>\n <th>ชื่อ Field</th>\n <th>รายละเอียด</th>\n </tr>\n <tr><td>proj_id</td><td>รหัสกองทุน</td></tr>\n <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n <tr><td>proj_abbr_name</td><td>ช่อย่อกองทุน</td></tr>\n<tr><td>class_abbr_name</td><td>ชื่อย่อชนิดหน่วยลงทุน (Class Fund)</td></tr> <tr><td>class_name</td><td>ชื่อชนิดหน่วยลงทุน</td></tr> <tr><td>class_additional_desc</td><td>คำอธิบายชนิดหน่วยลงทุนเพิ่มเติม (ถ้ามี)</td></tr> </td></tr>\n </table>\n <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n <br>\n "
+      operationId: 21-ค้นหารหัสกองลงทุนด้วยชื่อย่อกองทุนหรือชื่อย่อชนิดหน่วยลงทุน
+      requestBody:
+        description: Partial name to search
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NameString'
+            example:
+              name: string
+      responses:
+        '200':
+          description: ประเภทหน่วยลงทุนที่มีในกองทุน (ถ้ามีมากกว่า 1 ประเภท)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundClasses'
+              example:
+                - proj_id: string
+                  last_upd_date: string
+                  proj_abbr_name: string
+                  class_abbr_name: string
+                  class_name: string
+                  class_additional_desc: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/FundHist':
+    get:
+      summary: 30. ประวัติการเปลี่ยนชื่อ / นโยบาย / การลงทุนต่างประเทศ / ลักษณะโครงการ
+      description: "<table style=\"width:100%\"> <tr><th>ชื่อ Field</th>\n    <th>รายละเอียด</th></tr>  \n    <tr><td>proj_id</td><td>เลขที่โครงการ({Type}{ID}_YYYY)</td></tr> \n    <tr><td>efft_date</td><td>วันที่มีผล</td></tr> \n    <tr><td>exp_date</td><td>วันที่สิ้นสุด</td></tr>\n    <tr><td>proj_name_th</td><td>ชื่อโครงการจัดการ (ไทย)</td></tr> \n    <tr><td>proj_name_en</td><td>ชื่อโครงการจัดการ (อังกฤษ)</td></tr> \n    <tr><td>proj_abbr_name</td><td>ชื่อย่อ</td></tr> \n    <tr><td>policy_desc</td><td>ประเภทกองทุนตามนโยบายกองทุน (นิยามประกาศ สน.87/2558 ภาคผนวก 2)</td></tr>\n    <tr><td>invest_country_flag</td><td>\n        <table>\n            <tr><td><strong>การลงทุนต่างประเทศ</strong></td></tr>\n            <tr><td>1 = กองทุนรวมที่เน้นลงทุนแบบมีความเสี่ยงต่างประเทศ</td></tr>\n            <tr><td>2 = ลงทุนในต่างประเทศบางส่วน</td></tr>\n            <tr><td>3 = กองทุนที่ลงทุนแบบไม่มีความเสี่ยงต่างประเทศ</td></tr>\n            <tr><td>4 = กองทุนที่ลงทุนแบบมีความเสี่ยงทั้งในและต่างประเทศ</td></tr>\n        </table>\n    </td></tr>\n    <tr><td>proj_retail_type</td><td>\n        <table>\n            <tr><td><strong>ลักษณะโครงการ -- R , A , N , G , X , H , {null}</strong></td></tr>\n            <tr><td>A = กองทุนรวมที่เสนอขายเฉพาะผู้ลงทุนที่มิใช่รายย่อย</td></tr>\n            <tr><td>B = กองทุนรวมที่เสนอขายเฉพาะผู้มีเงินลงทุนสูง</td></tr>\n            <tr><td>G = กองทุนรวมพิเศษเพื่อตอบสนองนโยบายภาครัฐ</td></tr>\n            <tr><td>H = กองทุนรวมที่เสนอขายผู้ลงทุนที่มิใช่รายย่อยและผู้มีเงินลงทุนสูง</td></tr>\n            <tr><td>N = กองทุนเพื่อผู้ลงทุนสถาบัน</td></tr>\n            <tr><td>R = กองทุนเพื่อผู้ลงทุนทั่วไป</td></tr>\n            <tr><td>X = กองทุนรวมที่เสนอขายผู้ลงทุนสถาบันและผู้ลงทุนรายใหญ่พิเศษ</td></tr>\n        </table>\n    </td></tr>\n    <tr><td>remark</td><td>รายละเอียกการเปลี่ยนแปลง</td></tr>\n    <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n</table> \n<br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 60dc65bd025914604e4a99fb
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              example:
+                - proj_id: string
+                  efft_date: string
+                  exp_date: string
+                  proj_name_th: string
+                  proj_eng_name: string
+                  proj_abbr_name: string
+                  policy_desc: string
+                  INVEST_COUNTRY_FLAG: string
+                  proj_retail_type: string
+                  remark: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/FundTrackingError':
+    get:
+      summary: 31. ความผันผวนของส่วนต่างของผลตอบแทนเฉลี่ยของกองทุนรวมและผลตอบแทนของดัชนีอ้างอิงย้อนหลัง 1 ปี (Tracking Error)
+      description: "<table style=\"width:100%\"> <tr><th>ชื่อ Field</th>\n    <th>รายละเอียด</th></tr>\n    <tr><td>proj_id</td><td>เลขที่โครงการ({Type}{ID}_YYYY)</td></tr> \n    <tr><td>class_abbr_name</td><td>ชื่อย่อชนิดหน่วยลงทุน (Class Fund)</td></tr> \n    <tr><td>tracking_error_percent</td><td>ความผันผวนของส่วนต่างของผลตอบแทนเฉลี่ยของกองทุนรวมและผลตอบแทนของดัชนีอ้างอิงย้อนหลัง 1 ปี (Tracking Error)</td></tr>\n    <tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n</table> \n<br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 60dc6d598346a35dc78563a4
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              example:
+                - proj_id: string
+                  class_abbr_name: string
+                  tracking_error_percent: string
+                  last_upd_date: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/fund_manager':
+    get:
+      summary: 32. ประวัติการเปลี่ยนบริษัทจัดการของกองทุน
+      description: "<table style=\"width:100%\"> <tr><th>ชื่อ Field</th>\n          <tr><td>seq</td><td>ลำดับที่ (เรียงจากล่าสุด)</td></tr>\n          <tr><td>unique_id</td><td>รหัสนิติบุคคลบริษัทจัดการ</td></tr>\n          <tr><td>efft_date</td><td>วันที่เริ่มเป็น Fund manager</td></tr>\n          <tr><td>exp_date</td><td>วันที่สิ้นสุดการเป็น Fund manager</td></tr>\n        </table> \n<br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 6620a6285622f421f127c4cc
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Fund
+          content:
+            application/json:
+              example:
+                - seq: int
+                  unique_id: string
+                  efft_date: date
+                  exp_date: date
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+  '/fund/{proj_id}/suitability':
+    get:
+      summary: 12. ความเหมาะสมกับผู้ลงทุนและความเสี่ยงของกองทุน
+      description: "<h6>\n  <b style=\"color: red;\">\n    หมายเหตุ: จะไม่มีข้อมูลของกองทุนรวมทั่วไปที่จัดตั้งก่อนพฤษภาคม 2565 \n    และมีสถานะเป็น หมดเวลาเสนอขาย (EX), เลิกโครงการ (CA), และจดทะเบียนเลิก (LI)\n  </b>\n</h6> <br> <table style=\"width:100%\"> <tr>\n<th>ชื่อ Field</th>\n<th>รายละเอียด</th>\n</tr>\n<tr><td>last_upd_date</td><td>วันที่แก้ไขข้อมูลล่าสุด</td></tr>\n<tr><td>risk_spectrum_desc</td><td>รายละเอียดบรรยายความเสี่ยงของกองทุนรวม<br><b style=\"color:red;\">หมายเหตุ: ข้อมูลเป็น String ที่ Encode ด้วย Base64 ไว้</b></td></tr>\n<tr><td>risk_spectrum</td><td>ความเสี่ยงของกองทุนรวม <br>RS1 = ความเสี่ยงระดับ 1 <br>RS2  = ความเสี่ยงระดับ 2 <br>RS3  = ความเสี่ยงระดับ 3 <br>RS4  = ความเสี่ยงระดับ 4 <br>RS5  = ความเสี่ยงระดับ 5 <br>RS6  = ความเสี่ยงระดับ 6 <br>RS7  = ความเสี่ยงระดับ 7 <br>RS8  = ความเสี่ยงระดับ 8 <br>RS81 = ความเสี่ยงระดับ 8+ </td></tr> </table>  <br> <h6><b>* = ข้อมูลสิ้นสุด ณ พฤษภาคม 2565</b> <a href=\"https://api-portal.sec.or.th/changes#IVWo8\">อ่านเพิ่มเติม</a></h6> <br>\n      <h5><b style=\"color: red;\">** ข้อมูลที่เผยแพร่ผ่าน Fund Factsheet API นี้ใช้สำหรับกองทุนรวมทั่วไปเท่านั้น  \n      <b>ไม่รวม</b> กองทุนรวมโครงสร้างพื้นฐานและกองทุนรวมอสังหาริมทรัพย์ **</b></h5>\n<br>"
+      operationId: 12-ความเหมาะสมกับผู้ลงทุนและความเสี่ยงของกองทุน
+      parameters:
+        - name: proj_id
+          in: path
+          description: Fund's id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Funds' Suitability
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FundSuitability'
+              example:
+                last_upd_date: string
+                risk_spectrum_desc: string
+                risk_spectrum: string
+        '204':
+          description: ไม่พบข้อมูล
+          content:
+            application/json: { }
+components:
+  schemas:
+    FundTop5:
+      properties:
+        proj_id:
+          type: string
+          description: 'เลขที่โครงการ ({Type}{ID}_YYYY)'
+        assetseq:
+          type: string
+          description: ลำดับการลงทุน
+        secur_name:
+          type: string
+          description: ชื่อหลักทรัพย์
+        period:
+          type: string
+          description: ถึง ณ เดือนที่ ปีที่ (YYYYMM)
+        secur_Invest_size:
+          type: string
+          description: สัดส่วนการลงทุนของหลักทรัพย์/สถาบันการเงิน (%)
+    FundFullPort:
+      properties:
+        proj_id:
+          type: string
+          description: 'เลขที่โครงการ ({Type}{ID}_YYYY)'
+        assetliab_code:
+          type: string
+          description: รหัสประเภทการลงทุน
+        period:
+          type: string
+          description: ถึง ณ เดือนที่ ปีที่ (YYYYMM)
+        market_value:
+          type: string
+          description: มูลค่าตลาด
+        percent_nav:
+          type: string
+          description: สัดส่วนต่อมูลค่าสินทรัพย์สุทธิ
+    FundPortfolio:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        as_of_date:
+          type: string
+          description: ข้อมูล ณ วันที่ (YYYY-MM-DD)
+        assetliab_id:
+          type: string
+          description: ประเภทสินทรัพย์หนี้สิน
+        issue_code:
+          type: string
+          description: ชื่อย่อหลักทรัพย์
+        isin_code:
+          type: string
+          description: ISIN Code
+        issuer:
+          type: string
+          description: ชื่อผู้ออกหลักทรัพย์
+        assetliab_value:
+          type: string
+          description: มูลค่าตามราคาตลาด (บาท)    -- ทศนิยม 5 ตำแหน่ง --> Round
+        percent_nav:
+          type: string
+          description: '%NAV -- ทศนิยม 5 ตัำแหน่ง  --> Round(เนื่องจากการปัดเศษทศนิยม จึงอนุโลมให้สัดส่วนการลงทุนรวมกันเกิน 100% ได้ถึง 100.20% ของ nav)'
+    FundPortfolios:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundPortfolio'
+    Entity:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        unique_id:
+          type: string
+          description: รหัสนิติบุคคลบริษัทจัดการ
+        name_th:
+          type: string
+          description: ชื่อนิติบุคคล / บุคคล (ภาษาไทย)
+        name_en:
+          type: string
+          description: ชื่อนิติบุคคล / บุคคล (ภาษาอังกฤษ)
+    Entities:
+      type: array
+      items:
+        $ref: '#/components/schemas/Entity'
+    FundSpecification:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        spec_code:
+          type: string
+          description: รหัสลักษณะพิเศษ
+        spec_desc:
+          type: string
+          description: ลักษณะพิเศษ
+    Fund:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        proj_id:
+          type: string
+          description: 'เลขที่โครงการ ({Type}{ID}_YYYY)'
+        regis_id:
+          type: string
+          description: เลขที่จดทะเบียนกองทุนรวม
+        regis_date:
+          type: string
+          description: วันที่จดทะเบียนกองทุนรวม
+        cancel_date:
+          type: string
+          description: วันที่เลิกกองทุนรวม
+        proj_name_th:
+          type: string
+          description: ชื่อโครงการจัดการ (ไทย)
+        proj_name_en:
+          type: string
+          description: ชื่อโครงการจัดการ (อังกฤษ)
+        proj_abbr_name:
+          type: string
+          description: ชื่อย่อ
+        fund_status:
+          type: string
+          description: "สถานะกอง\nSE = อนุมัติ(อยู่ระหว่าง Filing)\nEX = หมดเวลาเสนอขาย\nRG = จดทะเบียน\nCA = เลิกโครงการ\nLI = จดทะเบียนเลิก\n"
+        unique_id:
+          type: string
+          description: รหัส บลจ.
+        permit_us_investment:
+          type: string
+          description: อนุญาติให้ผู้ที่มีสัญชาติ US ลงทุน
+        invest_country_flage:
+          type: string
+          description: "การลงทุนต่างประเทศ\n1 = กองทุนรวมที่เน้นลงทุนแบบมีความเสี่ยงต่างประเทศ\n2 = ลงทุนในต่างประเทศบางส่วน\n3 = กองทุนที่ลงทุนแบบไม่มีความเสี่ยงต่างประเทศ\n4 = กองทุนที่ลงทุนแบบมีความเสี่ยงทั้งในและต่างประเทศ\n"
+    Funds:
+      type: array
+      items:
+        $ref: '#/components/schemas/Fund'
+    FundProjectType:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        proj_retail_type:
+          type: string
+          description: "ลักษณะโครงการ -- R , A , N , G , X , H , {null}  \nA             กองทุนรวมที่เสนอขายเฉพาะผู้ลงทุนที่มิใช่รายย่อย\nB             กองทุนรวมที่เสนอขายเฉพาะผู้มีเงินลงทุนสูง\nG             กองทุนรวมพิเศษเพื่อตอบสนองนโยบายภาครัฐ\nH             กองทุนรวมที่เสนอขายผู้ลงทุนที่มิใช่รายย่อยและผู้มีเงินลงทุนสูง\nN             กองทุนเพื่อผู้ลงทุนสถาบัน\nR             กองทุนเพื่อผู้ลงทุนทั่วไป\nX             กองทุนรวมที่เสนอขายผู้ลงทุนสถาบันและผู้ลงทุนรายใหญ่พิเศษ"
+        proj_term_flag:
+          type: string
+          description: อายุโครงการ Y=กำหนด N=ไม่กำหนด
+        proj_term_dd:
+          type: string
+          description: อายุโครงการ (วัน)
+        proj_term_mm:
+          type: string
+          description: อายุโครงการ (เดือน)
+        proj_term_yy:
+          type: string
+          description: อายุโครงการ (ปี)
+    FundAsset:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        asset_seq:
+          type: string
+          description: ลำดับรายการ
+        asset_name:
+          type: string
+          description: รายละเอียดประเภททรัพย์สินที่ลงทุน
+        asset_ratio:
+          type: string
+          description: '% สัดส่วนของทรัพย์สินที่ลงทุน'
+    FundAssets:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundAsset'
+    FundTurnoverRatio:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        portfolio_turnover_ratio:
+          type: string
+          description: อัตราส่วนหมุนเวียนการลงทุนของกองทุนรวม (portfolio turnover ratio) (9.9)
+    FundBenchmark:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        group_seq:
+          type: string
+          description: ลำดับกลุ่ม
+        benchmark:
+          type: string
+          description: ดัชนีชี้วัด (8.1)
+    FundBenchmarks:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundBenchmark'
+    FundPerformance:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        class_abbr_name:
+          type: string
+          description: ชื่อย่อชนิดหน่วยลงทุน (เป็น main ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)
+        performance_type_desc:
+          type: string
+          description: คำอธิบายประเภทผลตอบแทน
+        reference_period:
+          type: string
+          description: 'คำอธิิบายเวลาอ้างอิงย้อนหลัง (3 เดือน, 1 ปี, ตั้งแต่จัดตั้ง  ฯลฯ)'
+        performance_val:
+          type: string
+          description: ผลการดำเนินงานย้อนหลังของกองทุน (8.3)
+        as_of_date:
+          type: string
+          description: ผลการดำเนินงานย้อนหลังของกองทุน ณ วันที่ (8.3)
+    FundPerformances:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundPerformance'
+    FundCompare:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        fund_compare:
+          type: string
+          description: ประเภทกองทุนรวมเพื่อใช้เปรียบเทียบผลการดำเนินงาน ณ จุดขาย (8.2)
+        fund_compare_link:
+          type: string
+          description: ลิ้งค์ของประเภทกองทุนรวมเพื่อใช้เปรียบเทียบผลการดำเนินงาน ณ จุดขาย (8.2)
+    FundClass:
+      properties:
+        proj_id:
+          type: string
+          description: รหัสกองทุน
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        proj_abbr_name:
+          type: string
+          description: ชื่อย่อกองทุน
+        class_abbr_name:
+          type: string
+          description: ชื่อย่อชนิดหน่วยลงทุน (Class Fund)
+        class_name:
+          type: string
+          description: ชื่อชนิดหน่วยลงทุน
+        class_additional_desc:
+          type: string
+          description: คำอธิบายชนิดหน่วยลงทุนเพิ่มเติม (ถ้ามี)
+    FundClasses:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundClass'
+    FundFeederDetail:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        main_feeder_fund:
+          type: string
+          description: ชื่อกองทุนหลัก
+        feeder_fund_link:
+          type: string
+          description: URL บลจ.ของกองทุนหลัก
+        feeder_fund_country:
+          type: string
+          description: ประเทศที่จดทะเบียนของกองทุนหลัก
+    FundRedemption:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        redemp_period:
+          type: string
+          description: ระยะเวลาขายและรับซื้อคืน
+        redemp_period_oth:
+          type: string
+          description: คำอธิบายการขายและรับซื้อคืน
+        settlement_period:
+          type: string
+          description: ระยะเวลาการรับเงินค่าขายคืน
+        buying_cut_off_time:
+          type: string
+          description: เวลา Cut-off สำหรับการซื้อกองทุน
+        selling_cut_off_time:
+          type: string
+          description: เวลา Cut-off สำหรับการขายกองทุน
+    FundReturn:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        total_estimated_return:
+          type: string
+          description: ประมาณผลตอบแทนที่กองทุนจะได้รับก่อนหักค่าใช้จ่าย…%ต่อปี (9.13.1.1)
+        annual_estimated_expense:
+          type: string
+          description: ประมาณการค่าใช้จ่าย (9.13.1.2)
+        annual_average_return:
+          type: string
+          description: ประมาณการผลตอบแทนที่กองทุนจะได้รับโดยเฉลี่ย…%ต่อปี (9.13.1.3)
+        investment_period_year:
+          type: string
+          description: ระยะเวลาการลงทุน (โดยประมาณ) ปี (9.13.1.4)
+        investment_period_month:
+          type: string
+          description: ระยะเวลาการลงทุน (โดยประมาณ) เดือน (9.13.1.4)
+    Fund5YearLost:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        class_abbr_name:
+          type: string
+          description: ชื่อย่อชนิดหน่วยลงทุน (เป็น NULL ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)
+        loss_five_year_percent:
+          type: string
+          description: ผลขาดทุนสูงสุดในช่วง 5 ปี (8.4)
+        sd_five_year_percent:
+          type: string
+          description: ความผันผวนของผลการดำเนินงานย้อนหลัง 5 ปี (8.5)
+        tracking_error_percent:
+          type: string
+          description: ความผันผวนของส่วนต่างของผลตอบแทนเฉลี่ยของกองทุนรวม (8.6)
+    FundSuitability:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        risk_spectrum_desc:
+          type: string
+          description: ความเสี่ยงของกองทุนรวม (Base64)
+        risk_spectrum:
+          type: string
+          description: "RISK_SPECTRUM \nRS1 = ความเสี่ยงระดับ 1\nRS2 = ความเสี่ยงระดับ 2\nRS3 = ความเสี่ยงระดับ 3\nRS4 = ความเสี่ยงระดับ 4\nRS5 = ความเสี่ยงระดับ 5 \nRS6 = ความเสี่ยงระดับ 6 \nRS7 = ความเสี่ยงระดับ 7\nRS8 = ความเสี่ยงระดับ 8\n"
+    FundFee:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        class_abbr_name:
+          type: string
+          description: ชื่อย่อชนิดหน่วยลงทุน (เป็น NULL ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)
+        fee_type_desc:
+          type: string
+          description: ชื่อประเภทค่าธรรมเนียม
+        rate:
+          type: string
+          description: อัตราตามโครงการ (Free Text)
+        rate_unit:
+          type: string
+          description: หน่วย อัตราตามโครงการ (Free Text)
+        actual_value:
+          type: string
+          description: อัตราที่จ่ายจริง (Free Text)
+        actual_value_unit:
+          type: string
+          description: หน่วย อัตราที่จ่ายจริง (Free Text)
+        fee_other_desc:
+          type: string
+          description: หมายเหตุุเพิ่มเติม (ถ้ามี)
+    FundFees:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundFee'
+    FundDividend:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        class_abbr_name:
+          type: string
+          description: ชื่อย่่่อชนิดหน่วยลงทุน (เป็น NULL ถ้าเป็นกองทุนที่ไม่ใช่ Class Fund)
+        dividend_policy:
+          type: string
+          description: นโยบายการจ่ายเงินปันผล
+        dividend_policy_remark:
+          type: string
+          description: หมายเหตุ นโยบายการจ่ายเงินปันผล
+        dividend_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/DividendDetails'
+    DividendDetail:
+      properties:
+        book_closing_date:
+          type: string
+          description: วันที่ปิดสมุด
+        payment_date:
+          type: string
+          description: วันที่จ่าย
+        dividend_per_share:
+          type: string
+          description: จำนวนเงินปันผล
+    DividendDetails:
+      type: array
+      items:
+        $ref: '#/components/schemas/DividendDetail'
+    FundDividends:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundDividend'
+    FundInvolveParty:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        entity_type:
+          type: string
+          description: "ประเภทบุคคล/นิติบุคคลที่เกี่ยวข้อง\nENTITY_TYPE แบ่งเป็น\nA=ผู้สอบบัญชี\nU=ผู้จัดจำหน่าย\nS=ผู้สนับสนุนการขายและรับซื้อคืน\nR=นายทะเบียนหน่วยลงทุน\nV=ผู้ดูแลผลประโยชน์\nM=ที่ปรึกษาการลงทุน\nO=ผู้รับมอบหมายงานด้านการจัดการลงทุน\nP=ผู้ลงทุนรายใหญ่\nK=ผู้ดูแลสภาพคล่อง\nF=ที่ปรึกษาทางการเงิน"
+        seq:
+          type: string
+          description: ลำดับรายการ
+        entity_name:
+          type: string
+          description: ชื่อบุคคล/นิติบุคคล
+        addr:
+          type: string
+          description: ที่อยู่
+        position:
+          type: string
+          description: ตำแหน่ง
+        effective_date:
+          type: string
+          description: วันที่มีผล  YYYY-MM-DD  YYYY เป็น พ.ศ.
+    FundInvolveParties:
+      type: array
+      items:
+        $ref: '#/components/schemas/FundInvolveParty'
+    FundPolicy:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        policy_desc:
+          type: string
+          description: ประเภทกองทุนตามนโยบายกองทุน
+        investment_policy_desc:
+          type: string
+          description: นโยบายการลงทุน (Base64)
+        management_style:
+          type: string
+          description: "กลยุทธ์การบริหารจัดการกองทุน (Management Style)\nAM = มุ่งหวังให้ผลประกอบการสูงกว่าดัชนีชี้วัด (active management)\nBH = มีกลยุทธ์การลงทุนครั้งเดียว (buy-and-hold)\nSM = มุ่งหวังให้ผลประกอบการเคลื่อนไหวตามดัชนีชี้วัด และในบางโอกาสอาจสร้างผลตอบแทนสูงกว่าดัชนีชี้วัด\nOT = อื่น ๆ\nPM = มุ่งหวังให้ผลประกอบการเคลื่อนไหวตามดัชนีชี้วัด (passive management/index tracking)"
+    FundURL:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        url_halfyear_report:
+          type: string
+          description: Link รายงาน 6 เดือน
+        url_annual_report:
+          type: string
+          description: Link รายงานประจำปี
+        url_factsheet:
+          type: string
+          description: Link รายละเอียดข้อมูล Fund Factsheet
+    NameString:
+      required:
+        - name
+      properties:
+        name:
+          type: string
+      example:
+        name: string
+    IPO:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        first_sell_start_date:
+          type: string
+          description: วันเริ่ม IPO
+        first_sell_end_date:
+          type: string
+          description: วันสิ้นสุด IPO
+    investment:
+      properties:
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        minimum_sub_ipo:
+          type: string
+          description: มูลค่าขั้นต่ำของการสั่งซื้อครั้งแรก (9.5.3)
+        minimum_sub_ipo_cur:
+          type: string
+          description: หน่วย มูลค่าขั้นต่ำของการสั่งซื้อครั้งแรก (9.5.3)
+        minimum_sub_ipo_addi_desc:
+          type: string
+          description: รายละเอียดเพิ่มเติมของมูลค่าขั้นต่ำของการสั่งซื้อครั้งแรก (9.5.3)
+        minimum_sub:
+          type: string
+          description: มูลค่าขั้นต่ำของการสั่งซื้อครั้งถัดไป (9.5.4)
+        minimum_sub_cur:
+          type: string
+          description: หน่วย มูลค่าขั้นต่ำของการสั่งซื้อครั้งถัดไป (9.5.4)
+        minimum_sub_addi_desc:
+          type: string
+          description: รายละเอียดเพิ่มเติมของมูลค่าขั้นต่ำของการสั่งซื้อครั้งถัดไป (9.5.4)
+        minimum_redempt:
+          type: string
+          description: มูลค่าขั้นต่ำของการสั่งขายคืน (9.5.6)
+        minimum_redempt_cur:
+          type: string
+          description: หน่วย (มูลค่าขั้นต่ำของการสั่งขายคืน) (9.5.6)
+        minimum_redempt_addi_desc:
+          type: string
+          description: รายละเอียดเพิ่มเติมของหน่วย (มูลค่าขั้นต่ำของการสั่งขายคืน)
+        minimum_redempt_unit:
+          type: string
+          description: จำนวนหน่วยลงทุนขั้นต่ำของการสั่งขายคืน (9.5.6)
+        minimum_redempt_unit_addi_desc:
+          type: string
+          description: รายละเอียดเพิ่มเติมของจำนวนหน่วยลงทุนขั้นต่ำของการสั่งขายคืน
+        lowbal_val:
+          type: number
+          description: มูลค่าคงเหลือขั้นต่ำ
+        lowbal_val_cur:
+          type: string
+          description: หน่วย มูลค่าคงเหลือขั้นต่ำ
+        lowbal_unit:
+          type: number
+          description: จำนวนหน่วยคงเหลือขั้นต่ำ
+    investments:
+      type: array
+      items:
+        $ref: '#/components/schemas/investment'
+    risk:
+      properties:
+        group_code_desc:
+          type: string
+          description: คำอธิบายกลุ่มความเสี่ยง
+        code_desc:
+          type: string
+          description: คำอธิบายรหัสความเสี่ยง
+        last_upd_date:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+    buy_and_hold:
+      properties:
+        investment_type:
+          type: string
+          description: วันที่แก้ไขข้อมูลล่าสุด
+        country:
+          type: string
+          description: ชื่อประเทศที่ลงทุน
+        issuer_name_en:
+          type: string
+          description: ชื่อผู้ออกตราสารภาษาอังกฤษ
+        issue_code:
+          type: string
+          description: ชื่อตราสารที่ลงทุน
+        issuer_name_th:
+          type: string
+          description: ชื่อผู้ออกตราสารภาษาไทย
+        rating_comp:
+          type: string
+          description: ชื่อสถาบันจัดอันดับ
+        rating_maturity:
+          type: string
+          description: อันดับเครดิตแบ่งตามการชำระเงิน
+        international_rating:
+          type: string
+          description: อันดับความน่าเชื่อถือผู้ออกตราสาร International Rating
+        national_rating:
+          type: string
+          description: อันดับความน่าเชื่อถือผู้ออกตราสาร National Rating
+        rate_of_return_for_mf_pery:
+          type: string
+          description: ประมาณการผลตอบแทนที่กองทุนจะได้รับต่อปี…% ต่อปี
+        rate_of_return_for_mf_pery_u:
+          type: string
+          description: หน่วย ประมาณการผลตอบแทนที่กองทุนจะได้รับต่อปี…% ต่อปี
+        rate_of_return_pery:
+          type: string
+          description: ประมาณการผลตอบแทนของตราสารต่อปี…% ต่อปี
+        rate_of_return_pery_unit:
+          type: string
+          description: หน่วย ประมาณการผลตอบแทนของตราสารต่อปี…% ต่อปี
+        ratio_of_invest:
+          type: string
+          description: สัดส่วนการลงทุนโดยประมาณ…% ต่อปี
+        ratio_of_invest_unit:
+          type: string
+          description: หน่วย สัดส่วนการลงทุนโดยประมาณ…% ต่อปี
+  securitySchemes:
+    apiKeyHeader:
+      type: apiKey
+      name: Ocp-Apim-Subscription-Key
+      in: header
+    apiKeyQuery:
+      type: apiKey
+      name: subscription-key
+      in: query
+security:
+  - apiKeyHeader: [ ]
+  - apiKeyQuery: [ ]

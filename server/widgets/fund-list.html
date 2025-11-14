@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 16px; }
+    .fund-list {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+    }
+    .list-header {
+      background: #f9fafb;
+      padding: 16px;
+      border-bottom: 2px solid #e5e7eb;
+      font-weight: 600;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 12px;
+      font-size: 12px;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .fund-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 12px;
+      padding: 16px;
+      border-bottom: 1px solid #f3f4f6;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .fund-row:hover { background: #f9fafb; }
+    .fund-info { }
+    .fund-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: #111827;
+      margin-bottom: 2px;
+    }
+    .fund-code {
+      font-size: 12px;
+      color: #6b7280;
+      font-family: monospace;
+    }
+    .nav-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+    }
+    .perf-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .perf-value.positive { color: #059669; }
+    .perf-value.negative { color: #dc2626; }
+    .risk-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .risk-1, .risk-2 { background: #d1fae5; color: #065f46; }
+    .risk-3, .risk-4 { background: #fef3c7; color: #92400e; }
+    .risk-5, .risk-6 { background: #fed7aa; color: #9a3412; }
+    .risk-7, .risk-8 { background: #fecaca; color: #991b1b; }
+    .pagination {
+      padding: 16px;
+      text-align: center;
+      font-size: 14px;
+      color: #6b7280;
+      background: #f9fafb;
+    }
+  </style>
+</head>
+<body>
+  <div class="fund-list">
+    <div class="list-header">
+      <div>Fund</div>
+      <div>NAV</div>
+      <div>YTD</div>
+      <div>1Y</div>
+      <div>Risk</div>
+    </div>
+    <div id="fundRows"></div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <script>
+    const { funds, pagination } = window.openai.toolOutput._meta;
+
+    const fundRows = document.getElementById('fundRows');
+    funds.forEach(fund => {
+      const ytd = parseFloat(fund.perf_ytd);
+      const oneYear = parseFloat(fund.perf_1y);
+      const ytdClass = ytd >= 0 ? 'positive' : 'negative';
+      const oneYearClass = oneYear >= 0 ? 'positive' : 'negative';
+      const riskLevel = parseInt(fund.risk_level) || 0;
+
+      fundRows.innerHTML += `
+        <div class="fund-row">
+          <div class="fund-info">
+            <div class="fund-name">${fund.fund_name || 'N/A'}</div>
+            <div class="fund-code">${fund.symbol || 'N/A'}</div>
+          </div>
+          <div class="nav-value">${fund.nav_value ? parseFloat(fund.nav_value).toFixed(4) : 'N/A'}</div>
+          <div class="perf-value ${ytdClass}">${!isNaN(ytd) ? ytd.toFixed(2) + '%' : 'N/A'}</div>
+          <div class="perf-value ${oneYearClass}">${!isNaN(oneYear) ? oneYear.toFixed(2) + '%' : 'N/A'}</div>
+          <div><span class="risk-badge risk-${riskLevel}">${riskLevel}</span></div>
+        </div>
+      `;
+    });
+
+    if (pagination) {
+      document.getElementById('pagination').textContent =
+        `Page ${pagination.page} • Showing ${funds.length} of ${pagination.totalCount} funds`;
+    }
+  </script>
+</body>
+</html>
+

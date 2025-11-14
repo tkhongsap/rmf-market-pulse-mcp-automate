@@ -1,0 +1,376 @@
+{
+  "fund_id": "M0120_2565",
+  "symbol": "ES-VIETNAMRMF",
+  "fund_name": "Eastspring Vietnam Active Equity RMF",
+  "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "EQVIET",
+    "management_style": "AN",
+    "dividend_policy": "No",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-07",
+    "last_val": 9.6378,
+    "previous_val": 0,
+    "net_asset": 381371520,
+    "buy_price": 9.6378,
+    "sell_price": 9.6379,
+    "change": 9.6378,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-11T08:11:44.25"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-09-26",
+      "last_val": 10.2111,
+      "previous_val": 0,
+      "net_asset": 416215584,
+      "buy_price": 10.2111,
+      "sell_price": 10.2112
+    },
+    {
+      "nav_date": "2025-09-29",
+      "last_val": 10.2481,
+      "previous_val": 0,
+      "net_asset": 417227168,
+      "buy_price": 10.2481,
+      "sell_price": 10.2482
+    },
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 10.2474,
+      "previous_val": 0,
+      "net_asset": 416415072,
+      "buy_price": 10.2474,
+      "sell_price": 10.2475
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 10.2558,
+      "previous_val": 0,
+      "net_asset": 416869312,
+      "buy_price": 10.2558,
+      "sell_price": 10.2559
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 10.1824,
+      "previous_val": 0,
+      "net_asset": 412610912,
+      "buy_price": 10.1824,
+      "sell_price": 10.1825
+    },
+    {
+      "nav_date": "2025-10-03",
+      "last_val": 10.1179,
+      "previous_val": 0,
+      "net_asset": 408542304,
+      "buy_price": 10.1179,
+      "sell_price": 10.118
+    },
+    {
+      "nav_date": "2025-10-06",
+      "last_val": 10.5088,
+      "previous_val": 0,
+      "net_asset": 419842816,
+      "buy_price": 10.5088,
+      "sell_price": 10.5089
+    },
+    {
+      "nav_date": "2025-10-07",
+      "last_val": 10.4573,
+      "previous_val": 0,
+      "net_asset": 417647936,
+      "buy_price": 10.4573,
+      "sell_price": 10.4574
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 10.5388,
+      "previous_val": 0,
+      "net_asset": 421642592,
+      "buy_price": 10.5388,
+      "sell_price": 10.5389
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 10.6821,
+      "previous_val": 0,
+      "net_asset": 428553984,
+      "buy_price": 10.6821,
+      "sell_price": 10.6822
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 10.881,
+      "previous_val": 0,
+      "net_asset": 435713472,
+      "buy_price": 10.881,
+      "sell_price": 10.8811
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 10.955,
+      "previous_val": 0,
+      "net_asset": 438869088,
+      "buy_price": 10.955,
+      "sell_price": 10.9551
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 10.8747,
+      "previous_val": 0,
+      "net_asset": 429612672,
+      "buy_price": 10.8747,
+      "sell_price": 10.8748
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 10.9684,
+      "previous_val": 0,
+      "net_asset": 433807968,
+      "buy_price": 10.9684,
+      "sell_price": 10.9685
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 10.8078,
+      "previous_val": 0,
+      "net_asset": 427883392,
+      "buy_price": 10.8078,
+      "sell_price": 10.8079
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 10.3323,
+      "previous_val": 0,
+      "net_asset": 408891488,
+      "buy_price": 10.3323,
+      "sell_price": 10.3324
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 10.4537,
+      "previous_val": 0,
+      "net_asset": 416213504,
+      "buy_price": 10.4537,
+      "sell_price": 10.4538
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 10.355,
+      "previous_val": 0,
+      "net_asset": 413396416,
+      "buy_price": 10.355,
+      "sell_price": 10.3551
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 10.2571,
+      "previous_val": 0,
+      "net_asset": 409760480,
+      "buy_price": 10.2571,
+      "sell_price": 10.2572
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 10.2033,
+      "previous_val": 0,
+      "net_asset": 406927744,
+      "buy_price": 10.2033,
+      "sell_price": 10.2034
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 10.1481,
+      "previous_val": 0,
+      "net_asset": 405355008,
+      "buy_price": 10.1481,
+      "sell_price": 10.1482
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 9.9667,
+      "previous_val": 0,
+      "net_asset": 397027776,
+      "buy_price": 9.9667,
+      "sell_price": 9.9668
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 9.7749,
+      "previous_val": 0,
+      "net_asset": 388747712,
+      "buy_price": 9.7749,
+      "sell_price": 9.775
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 10.0888,
+      "previous_val": 0,
+      "net_asset": 401343296,
+      "buy_price": 10.0888,
+      "sell_price": 10.0889
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 10.072,
+      "previous_val": 0,
+      "net_asset": 400160896,
+      "buy_price": 10.072,
+      "sell_price": 10.0721
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 9.9247,
+      "previous_val": 0,
+      "net_asset": 392115104,
+      "buy_price": 9.9247,
+      "sell_price": 9.9248
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.6378,
+      "previous_val": 0,
+      "net_asset": 381371520,
+      "buy_price": 9.6378,
+      "sell_price": 9.6379
+    }
+  ],
+  "dividends": [],
+  "performance": {
+    "ytd": 10.85,
+    "3m": 20.3,
+    "6m": 14.96,
+    "1y": 13.3,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "since_inception": 0.76
+  },
+  "benchmark": {
+    "name": "Vietnam Ho Chi Minh Stock Index",
+    "returns": {
+      "ytd": 19.53,
+      "3m": 18.9,
+      "6m": 16.25,
+      "1y": 20.59,
+      "3y": null,
+      "5y": null,
+      "10y": null
+    }
+  },
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วยลงทุนของกองทุนรวมตราสารทุน",
+      "percentage": 99.83
+    },
+    {
+      "asset_class": "เงินฝากธนาคารประเภทออมทรัพย์",
+      "percentage": 0.8
+    },
+    {
+      "asset_class": "ประเภทรายการค้างรับอื่นๆ",
+      "percentage": 0.58
+    },
+    {
+      "asset_class": "ประเภทรายการค้างจ่ายหรือหนี้สินอื่นๆ",
+      "percentage": -1.21
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
+  "top_holdings": null,
+  "risk_factors": [
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    },
+    {
+      "risk_type": "Unknown",
+      "risk_desc": ""
+    }
+  ],
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiB4LmC4LiU4Lii4LmA4LiJ4Lil4Li14LmI4Lii4LmD4LiZ4Lij4Lit4Lia4Lib4Li14LmE4Lih4LmI4LiZ4LmJ4Lit4Lii4LiB4Lin4LmI4LiyIDgwJSDguILguK3guIcgTkFW",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0120_2565.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "1",
+    "minimum_additional": "1",
+    "minimum_redemption": "1",
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-11T06:19:10.055Z",
+  "errors": [
+    "No risk metrics available",
+    "No category data available",
+    "No top holdings data available"
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "fund_id": "M0867_2568",
+  "symbol": "KF-US-PLUSRMF",
+  "fund_name": "Krungsri US Select Equity Plus RMF",
+  "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "-",
+    "management_style": "-",
+    "dividend_policy": "No",
+    "risk_level": 6,
+    "fund_type": "RMF"
+  },
+  "latest_nav": {
+    "nav_date": "2025-11-07",
+    "last_val": 9.9722,
+    "previous_val": 0,
+    "net_asset": 10781482,
+    "buy_price": 9.9722,
+    "sell_price": 9.9723,
+    "change": 9.9722,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-11T08:11:44.25"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 10.1376,
+      "previous_val": 0,
+      "net_asset": 1934423.13,
+      "buy_price": 10.1376,
+      "sell_price": 10.1377
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 10.1527,
+      "previous_val": 0,
+      "net_asset": 2341406.75,
+      "buy_price": 10.1527,
+      "sell_price": 10.1528
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 10.2026,
+      "previous_val": 0,
+      "net_asset": 2665429.5,
+      "buy_price": 10.2026,
+      "sell_price": 10.2027
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 10.2508,
+      "previous_val": 0,
+      "net_asset": 2651707,
+      "buy_price": 10.2508,
+      "sell_price": 10.2509
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 10.2763,
+      "previous_val": 0,
+      "net_asset": 3364789.5,
+      "buy_price": 10.2763,
+      "sell_price": 10.2764
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 10.3012,
+      "previous_val": 0,
+      "net_asset": 4515429,
+      "buy_price": 10.3012,
+      "sell_price": 10.3013
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 10.2615,
+      "previous_val": 0,
+      "net_asset": 5992184.5,
+      "buy_price": 10.2615,
+      "sell_price": 10.2616
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 10.2498,
+      "previous_val": 0,
+      "net_asset": 9343560,
+      "buy_price": 10.2498,
+      "sell_price": 10.2499
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 10.2322,
+      "previous_val": 0,
+      "net_asset": 10115070,
+      "buy_price": 10.2322,
+      "sell_price": 10.2323
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 10.1808,
+      "previous_val": 0,
+      "net_asset": 10300842,
+      "buy_price": 10.1808,
+      "sell_price": 10.1809
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 10.1538,
+      "previous_val": 0,
+      "net_asset": 10825393,
+      "buy_price": 10.1538,
+      "sell_price": 10.1539
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 10.0875,
+      "previous_val": 0,
+      "net_asset": 10853813,
+      "buy_price": 10.0875,
+      "sell_price": 10.0876
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.9722,
+      "previous_val": 0,
+      "net_asset": 10781482,
+      "buy_price": 9.9722,
+      "sell_price": 9.9723
+    }
+  ],
+  "dividends": [],
+  "performance": null,
+  "benchmark": null,
+  "risk_metrics": null,
+  "asset_allocation": [
+    {
+      "asset_class": "หน่วย CIS",
+      "percentage": 80
+    },
+    {
+      "asset_class": "อื่นๆ",
+      "percentage": 20
+    }
+  ],
+  "category": null,
+  "fees": [
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าใช้จ่ายอื่นๆ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการขายหน่วยลงทุน (Front-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการจัดการ",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการรับซื้อคืนหน่วยลงทุน (Back-end Fee)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนเข้า (SWITCHING IN)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการสับเปลี่ยนหน่วยลงทุนออก (SWITCHING OUT)",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมการโอนหน่วยลงทุน",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมนายทะเบียนหน่วย",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมผู้ดูแลผลประโยชน์",
+      "fee_value": null,
+      "fee_remark": null
+    },
+    {
+      "fee_type": "Unknown",
+      "fee_desc": "ค่าธรรมเนียมและค่าใช้จ่ายรวมทั้งหมด",
+      "fee_value": null,
+      "fee_remark": null
+    }
+  ],
+  "involved_parties": null,
+  "top_holdings": null,
+  "risk_factors": null,
+  "suitability": {
+    "investment_horizon": null,
+    "risk_level": "4Lil4LiH4LiX4Li44LiZ4LmD4LiZ4LiV4Lij4Liy4Liq4Liy4Lij4LiX4Li44LiZ4LmA4Lib4LmH4LiZ4Lir4Lil4Lix4LiB4LmC4LiU4Lii4LmA4LiJ4Lil4Li14LmI4Lii4LmD4LiZ4Lij4Lit4Lia4Lib4Li1DQrguYTguKHguYjguJnguYnguK3guKLguIHguKfguYjguLIgODAlIOC4guC4reC4hyBOQVY=",
+    "target_investor": null
+  },
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0867_2568.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": "0",
+    "minimum_additional": "0",
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-11T06:24:54.981Z",
+  "errors": [
+    "No performance data available",
+    "No benchmark data available",
+    "No risk metrics available",
+    "No category data available",
+    "No involved parties data available",
+    "No top holdings data available",
+    "No risk factors data available"
+  ]
+}
