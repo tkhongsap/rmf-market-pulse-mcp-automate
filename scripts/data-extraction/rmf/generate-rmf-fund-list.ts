@@ -13,9 +13,11 @@ import 'dotenv/config';
 import {
   fetchAMCList,
   fetchFundsByAMC,
+  fetchFundClasses,
   clearCache,
   type AMCData,
   type FundBasicInfo,
+  type FundClassInfo,
 } from '../../../server/services/secFundFactsheetApi';
 
 import { writeFileSync, mkdirSync } from 'fs';
@@ -172,41 +174,80 @@ async function generateRMFFundList() {
         const funds = await fetchFundsByAMC(amc.unique_id);
         stats.total_funds += funds.length;
 
-        // Filter RMF funds
+        // Filter RMF funds (case-insensitive)
         const rmfFundsForAMC = funds.filter(fund => {
-          const isRMF = fund.proj_id?.includes('RMF') ||
-                        fund.proj_name_th?.includes('RMF') ||
-                        fund.proj_name_en?.includes('RMF') ||
-                        fund.proj_abbr_name?.includes('RMF');
+          const isRMF = fund.proj_id?.toUpperCase().includes('RMF') ||
+                        fund.proj_name_th?.toUpperCase().includes('RMF') ||
+                        fund.proj_name_en?.toUpperCase().includes('RMF') ||
+                        fund.proj_abbr_name?.toUpperCase().includes('RMF');
           return isRMF;
         });
 
-        // Add to list
+        // Add to list (including all share classes)
         for (const fund of rmfFundsForAMC) {
-          const symbol = fund.proj_abbr_name?.trim();
+          try {
+            // Fetch share classes for this fund
+            const classes = await fetchFundClasses(fund.proj_id);
 
-          if (!symbol) {
-            log(`  ⚠️  No symbol for fund: ${fund.proj_name_en || fund.proj_id}`, 'yellow');
-            continue;
+            // If no classes returned, use base fund info
+            if (!classes || classes.length === 0) {
+              const symbol = fund.proj_abbr_name?.trim();
+
+              if (!symbol) {
+                log(`  ⚠️  No symbol for fund: ${fund.proj_name_en || fund.proj_id}`, 'yellow');
+                continue;
+              }
+
+              // Track fund status
+              if (fund.fund_status === 'CA' || fund.fund_status === 'LI') {
+                stats.cancelled_funds++;
+              } else {
+                stats.active_funds++;
+              }
+
+              rmfFunds.push({
+                symbol,
+                fund_name: fund.proj_name_en || fund.proj_name_th || 'Unknown',
+                amc: amcMap.get(amc.unique_id) || 'Unknown',
+                proj_id: fund.proj_id,
+                fund_status: fund.fund_status || 'Unknown',
+                regis_date: fund.regis_date || '',
+                cancel_date: fund.cancel_date || null,
+              });
+              stats.rmf_funds++;
+            } else {
+              // Add each share class as a separate entry
+              for (const classInfo of classes) {
+                const symbol = classInfo.class_abbr_name?.trim();
+
+                if (!symbol) {
+                  continue;
+                }
+
+                // Track fund status
+                if (fund.fund_status === 'CA' || fund.fund_status === 'LI') {
+                  stats.cancelled_funds++;
+                } else {
+                  stats.active_funds++;
+                }
+
+                rmfFunds.push({
+                  symbol,
+                  fund_name: classInfo.class_name_en || classInfo.class_name_th || fund.proj_name_en || fund.proj_name_th || 'Unknown',
+                  amc: amcMap.get(amc.unique_id) || 'Unknown',
+                  proj_id: fund.proj_id,
+                  fund_status: fund.fund_status || 'Unknown',
+                  regis_date: fund.regis_date || '',
+                  cancel_date: fund.cancel_date || null,
+                });
+                stats.rmf_funds++;
+              }
+            }
+
+            await sleep(50); // Small delay between class fetches
+          } catch (error: any) {
+            log(`  ⚠️  Error fetching classes for ${fund.proj_id}: ${error.message}`, 'yellow');
           }
-
-          // Track fund status
-          if (fund.fund_status === 'CA' || fund.fund_status === 'LI') {
-            stats.cancelled_funds++;
-          } else {
-            stats.active_funds++;
-          }
-
-          rmfFunds.push({
-            symbol,
-            fund_name: fund.proj_name_en || fund.proj_name_th || 'Unknown',
-            amc: amcMap.get(amc.unique_id) || 'Unknown',
-            proj_id: fund.proj_id,
-            fund_status: fund.fund_status || 'Unknown',
-            regis_date: fund.regis_date || '',
-            cancel_date: fund.cancel_date || null,
-          });
-          stats.rmf_funds++;
         }
 
         if (rmfFundsForAMC.length > 0) {
