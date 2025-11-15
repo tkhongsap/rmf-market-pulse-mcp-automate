@@ -9,7 +9,8 @@ A standalone **Model Context Protocol (MCP)** server providing comprehensive Tha
 ## 🎯 Features
 
 - **6 MCP Tools** for comprehensive fund data access
-- **403 RMF Funds** with complete market data
+- **442 RMF Funds** with complete market data
+- **Automated Data Pipeline** - Production-safe daily refresh
 - **Real-time NAV** and performance metrics
 - **Historical Data** with 30-day NAV history
 - **Comprehensive Search** and filtering capabilities
@@ -93,6 +94,22 @@ Server will start on `http://localhost:5000`
 npm run build
 npm start
 ```
+
+### Data Pipeline
+
+**Daily data refresh** from SEC Thailand API:
+
+```bash
+npm run data:rmf:daily-refresh
+```
+
+This automated pipeline:
+- ✅ Fetches latest data for 442 RMF funds
+- ✅ Validates data completeness
+- ✅ Updates PostgreSQL database safely via UPSERT
+- ⏱️ Takes ~25-30 minutes
+
+See [`docs/PIPELINE-GUIDE.md`](docs/PIPELINE-GUIDE.md) for complete documentation.
 
 ## 📡 API Endpoints
 

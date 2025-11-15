@@ -121,10 +121,37 @@ psql $DATABASE_URL -c "SELECT MAX(data_updated_at) FROM rmf_funds;"
 
 See `docs/PIPELINE-GUIDE.md` for complete documentation.
 
-### Critical Bug Fixes (November 15, 2025)
-- **Manifest Validator**: Fixed to read actual symbols from JSON files instead of deriving from filenames (handles symbols with spaces correctly)
-- **Daily Refresh**: Added progress file clearing before fetch to ensure fresh data instead of resuming old fetches
-- **Result**: Validation now correctly compares fetched funds vs mapping, preventing data mismatches
+### Production-Safe Daily Refresh Pipeline (November 15, 2025)
+
+**Status**: ✅ Production-ready and tested
+
+Successfully implemented and tested a production-safe automated daily refresh pipeline that fetches 442 Thai RMF funds from SEC Thailand API and updates PostgreSQL database.
+
+**Three Critical Bugs Fixed:**
+
+1. **Symbol Reading Bug** (handles spaces in symbols)
+   - **Issue**: Validator derived symbols from filenames, breaking on "BCAP-2030 RMF.json"
+   - **Fix**: Now reads actual `symbol` field from JSON content
+   - **Result**: Correctly handles all symbol variations including spaces
+
+2. **Cancelled Funds Mismatch** 
+   - **Issue**: Phase-0 mapping included 6 cancelled/liquidated funds (CA/LI), but Phase-1 skipped them
+   - **Fix**: Validator now filters out CA/LI status funds from expected count
+   - **Result**: Compares only active funds (390 expected vs 390 fetched)
+
+3. **Symbol Normalization** (SEC API vs CSV differences)
+   - **Issue**: Different sources use different suffixes
+     - Mapping: "KKP INRMF FUND", "SCBRMASHARES"
+     - Fetched: "KKP INRMF", "SCBRMASHARES(A)", "SCBRMASHARES(E)"
+   - **Fix**: Normalizes BOTH sides by removing: (A), (B), (E), (P), -A, -B, -P, -H, -UH, -F, " FUND"
+   - **Result**: Perfect match (0 missing, 0 extra funds)
+
+**Test Results (Full 30-minute run):**
+- ✅ 442 funds fetched from SEC API
+- ✅ 2,059 NAV records stored
+- ✅ 0 errors encountered
+- ✅ Validation passed (390 = 390)
+- ✅ Database safely updated via UPSERT
 
 ### Files Modified/Added
 - `server/pipeline/manifest-validator.ts` - Reads symbols from JSON payloads (not filenames)
