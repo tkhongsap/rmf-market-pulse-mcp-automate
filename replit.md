@@ -82,22 +82,24 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 
 **Current Status**: ✅ Production-ready with all 442 funds loaded
 
-The pipeline supports both initial load and daily updates via upsert mode:
+The pipeline performs full daily refresh from SEC Thailand API:
 
 ```bash
-# Daily update (recommended for production)
-npm run data:rmf:save-to-db
-
-# Fresh load (clears database first - use only for initial setup)
-npm run data:rmf:save-to-db -- --clear
+# Daily refresh (recommended for production)
+npm run data:rmf:daily-refresh
 ```
 
-**Pipeline Configuration:**
-- **BATCH_SIZE**: 1 fund at a time (maximum reliability)
-- **FUND_LIMIT**: 450 (processes all 442 funds by default)
-- **Upsert Mode**: Updates existing funds + inserts new ones
-- **Runtime**: ~30-60 minutes for full 442-fund update
-- **Checkpoint System**: Safe to interrupt and restart
+**What it does:**
+1. Fetches latest fund list from SEC API
+2. Fetches complete fund data (NAV, performance, history)
+3. Truncates database tables
+4. Reloads with fresh data
+
+**Pipeline Details:**
+- **Data Source**: SEC Thailand API (live data, not cached)
+- **Fund Count**: ~450 RMF funds
+- **Runtime**: 25-30 minutes (respects SEC API rate limits)
+- **Output**: Fresh JSON files + updated database
 
 **Verification:**
 ```bash

@@ -74,9 +74,10 @@ async function fetchRMFFundList(): Promise<FundMapping[]> {
 
   // Step 2: Fetch funds from each AMC
   for (const amc of amcs) {
-    console.log(`🏢 Fetching funds from ${amc.name}...`);
+    const amcName = amc.name_en || amc.name_th || 'Unknown';
+    console.log(`🏢 Fetching funds from ${amcName}...`);
     try {
-      const funds = await fetchFundsByAMC(amc.id);
+      const funds = await fetchFundsByAMC(amc.unique_id);
       
       // Filter for RMF funds only
       const rmfFunds = funds.filter(f => 
@@ -88,7 +89,7 @@ async function fetchRMFFundList(): Promise<FundMapping[]> {
           proj_id: fund.proj_id,
           symbol: fund.symbol,
           fund_name: fund.fund_name,
-          amc: amc.name,
+          amc: amcName,
         });
       }
       

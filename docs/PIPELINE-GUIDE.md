@@ -14,21 +14,21 @@ This guide explains how to use the automated data pipeline that extracts 442 Tha
 
 ## Quick Start
 
-### Daily Update (Recommended for Production)
+### Daily Refresh (Recommended for Production)
 
-Upsert all 442 funds (updates existing + inserts new):
+Complete refresh from SEC API (truncate + reload):
 
 ```bash
-npm run data:rmf:save-to-db
+npm run data:rmf:daily-refresh
 ```
 
-This will:
-- Update NAV data for all existing funds
-- Insert any new funds that were added
-- Refresh `data_updated_at` timestamps
-- Default processes all 442 funds (FUND_LIMIT=450)
+This orchestrates the full pipeline:
+1. **Phase 0**: Fetch latest fund list from SEC API → `data/fund-mapping.json`
+2. **Phase 1**: Fetch complete data for all funds → `data/rmf-funds/*.json`
+3. **Truncate**: Clear all database tables (rmf_funds, rmf_nav_history, rmf_dividends)
+4. **Reload**: Load fresh JSON data into database
 
-**For automated daily updates**, just run this command once per day. The upsert mode ensures data stays fresh.
+**Expected runtime**: 25-30 minutes for ~450 funds
 
 ### Check Progress
 
