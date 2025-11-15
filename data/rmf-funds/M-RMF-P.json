@@ -4,56 +4,24 @@
   "fund_name": "MONEY PLUS RETIREMENT MUTUAL FUND",
   "amc": "ONE ASSET MANAGEMENT LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "SM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 1,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 14.4532,
+    "nav_date": "2025-11-14",
+    "last_val": 14.4551,
     "previous_val": 0,
-    "net_asset": 523315808,
-    "buy_price": 14.4532,
-    "sell_price": 14.4533,
-    "change": 14.4532,
+    "net_asset": 524665728,
+    "buy_price": 14.4551,
+    "sell_price": 14.4552,
+    "change": 14.4551,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 14.4352,
-      "previous_val": 0,
-      "net_asset": 519289760,
-      "buy_price": 14.4352,
-      "sell_price": 14.4353
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 14.436,
-      "previous_val": 0,
-      "net_asset": 517238176,
-      "buy_price": 14.436,
-      "sell_price": 14.4361
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 14.4365,
-      "previous_val": 0,
-      "net_asset": 517572288,
-      "buy_price": 14.4365,
-      "sell_price": 14.4366
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 14.437,
-      "previous_val": 0,
-      "net_asset": 518633120,
-      "buy_price": 14.437,
-      "sell_price": 14.4371
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 14.4377,
@@ -253,6 +221,38 @@
       "net_asset": 523315808,
       "buy_price": 14.4532,
       "sell_price": 14.4533
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 14.4536,
+      "previous_val": 0,
+      "net_asset": 521358624,
+      "buy_price": 14.4536,
+      "sell_price": 14.4537
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 14.4542,
+      "previous_val": 0,
+      "net_asset": 522179744,
+      "buy_price": 14.4542,
+      "sell_price": 14.4543
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 14.4545,
+      "previous_val": 0,
+      "net_asset": 523429504,
+      "buy_price": 14.4545,
+      "sell_price": 14.4546
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 14.4551,
+      "previous_val": 0,
+      "net_asset": 524665728,
+      "buy_price": 14.4551,
+      "sell_price": 14.4552
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.19
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.08,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้ภาคเอกชน",
@@ -501,9 +504,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:00.090Z",
+  "data_fetched_at": "2025-11-15T10:55:20.464Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

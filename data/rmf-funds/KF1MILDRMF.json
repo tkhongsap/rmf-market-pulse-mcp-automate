@@ -4,56 +4,24 @@
   "fund_name": "Krungsri The One Mild RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXCONS",
+    "fund_classification": "ผสม",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 10.6982,
+    "nav_date": "2025-11-12",
+    "last_val": 10.7423,
     "previous_val": 0,
-    "net_asset": 49057060,
-    "buy_price": 10.6982,
-    "sell_price": 10.6983,
-    "change": 10.6982,
+    "net_asset": 49053824,
+    "buy_price": 10.7423,
+    "sell_price": 10.7424,
+    "change": 10.7423,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 10.6748,
-      "previous_val": 0,
-      "net_asset": 47216888,
-      "buy_price": 10.6748,
-      "sell_price": 10.6749
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.6811,
-      "previous_val": 0,
-      "net_asset": 47303224,
-      "buy_price": 10.6811,
-      "sell_price": 10.6812
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.7058,
-      "previous_val": 0,
-      "net_asset": 47416268,
-      "buy_price": 10.7058,
-      "sell_price": 10.7059
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.7125,
-      "previous_val": 0,
-      "net_asset": 47437312,
-      "buy_price": 10.7125,
-      "sell_price": 10.7126
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 10.7292,
@@ -253,6 +221,38 @@
       "net_asset": 49057060,
       "buy_price": 10.6982,
       "sell_price": 10.6983
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 10.6961,
+      "previous_val": 0,
+      "net_asset": 49048580,
+      "buy_price": 10.6961,
+      "sell_price": 10.6962
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.73,
+      "previous_val": 0,
+      "net_asset": 48990916,
+      "buy_price": 10.73,
+      "sell_price": 10.7301
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.7518,
+      "previous_val": 0,
+      "net_asset": 49097256,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.7423,
+      "previous_val": 0,
+      "net_asset": 49053824,
+      "buy_price": 10.7423,
+      "sell_price": 10.7424
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 3.85,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "กองทุนเปิดกรุงศรี The One Mild-ผู้ลงทุนสถาบัน",
@@ -293,7 +296,7 @@
       "percentage": -0.11
     }
   ],
-  "category": null,
+  "category": "CA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -384,10 +387,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:25:15.931Z",
+  "data_fetched_at": "2025-11-15T10:47:18.645Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

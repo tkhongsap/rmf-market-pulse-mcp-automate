@@ -4,22 +4,22 @@
   "fund_name": "KTAM World Technology RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.9988,
+    "nav_date": "2025-11-13",
+    "last_val": 10.1992,
     "previous_val": 0,
-    "net_asset": 16604889,
-    "buy_price": 9.9988,
-    "sell_price": 9.9989,
-    "change": 9.9988,
+    "net_asset": 20806370,
+    "buy_price": 10.1992,
+    "sell_price": 10.1993,
+    "change": 10.1992,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -37,6 +37,30 @@
       "net_asset": 16604889,
       "buy_price": 9.9988,
       "sell_price": 9.9989
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.1959,
+      "previous_val": 0,
+      "net_asset": 16932200,
+      "buy_price": 10.1959,
+      "sell_price": 10.196
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.3023,
+      "previous_val": 0,
+      "net_asset": 18249402,
+      "buy_price": 10.3023,
+      "sell_price": 10.3024
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.1992,
+      "previous_val": 0,
+      "net_asset": 20806370,
+      "buy_price": 10.1992,
+      "sell_price": 10.1993
     }
   ],
   "dividends": [],
@@ -129,7 +153,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:29:58.399Z",
+  "data_fetched_at": "2025-11-15T10:52:55.204Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

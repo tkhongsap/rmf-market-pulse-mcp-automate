@@ -4,56 +4,24 @@
   "fund_name": "Asset Plus Equity RMF",
   "amc": "ASSET PLUS FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 28.9871,
+    "nav_date": "2025-11-14",
+    "last_val": 28.1227,
     "previous_val": 0,
-    "net_asset": 213749328,
-    "buy_price": 28.9871,
-    "sell_price": 28.9872,
-    "change": 28.9871,
+    "net_asset": 207333760,
+    "buy_price": 28.1227,
+    "sell_price": 28.1228,
+    "change": 28.1227,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 28.3691,
-      "previous_val": 0,
-      "net_asset": 214276656,
-      "buy_price": 28.3691,
-      "sell_price": 28.3692
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 28.1642,
-      "previous_val": 0,
-      "net_asset": 212725536,
-      "buy_price": 28.1642,
-      "sell_price": 28.1643
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 28.2474,
-      "previous_val": 0,
-      "net_asset": 213396176,
-      "buy_price": 28.2474,
-      "sell_price": 28.2475
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 28.6161,
-      "previous_val": 0,
-      "net_asset": 214215104,
-      "buy_price": 28.6161,
-      "sell_price": 28.6162
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 28.6887,
@@ -253,6 +221,38 @@
       "net_asset": 213749328,
       "buy_price": 28.9871,
       "sell_price": 28.9872
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 28.8916,
+      "previous_val": 0,
+      "net_asset": 213020432,
+      "buy_price": 28.8916,
+      "sell_price": 28.8917
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 28.491,
+      "previous_val": 0,
+      "net_asset": 210066592,
+      "buy_price": 28.491,
+      "sell_price": 28.4911
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 28.4594,
+      "previous_val": 0,
+      "net_asset": 209816528,
+      "buy_price": 28.4594,
+      "sell_price": 28.4595
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 28.1227,
+      "previous_val": 0,
+      "net_asset": 207333760,
+      "buy_price": 28.1227,
+      "sell_price": 28.1228
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.28,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารทุน",
@@ -293,7 +296,7 @@
       "percentage": 2.8
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -397,10 +400,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:11:23.096Z",
+  "data_fetched_at": "2025-11-15T11:20:36.716Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

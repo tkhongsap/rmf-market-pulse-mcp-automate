@@ -4,56 +4,24 @@
   "fund_name": "Bualuang Basic RMF",
   "amc": "BBL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 7.4052,
+    "nav_date": "2025-11-14",
+    "last_val": 7.2876,
     "previous_val": 0,
-    "net_asset": 1767659904,
-    "buy_price": 7.4052,
-    "sell_price": 7.4053,
-    "change": 7.4052,
+    "net_asset": 1736826368,
+    "buy_price": 7.2876,
+    "sell_price": 7.2877,
+    "change": 7.2876,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 7.9391,
-      "previous_val": 0,
-      "net_asset": 1924081024,
-      "buy_price": 7.9391,
-      "sell_price": 7.9392
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 7.8792,
-      "previous_val": 0,
-      "net_asset": 1908668416,
-      "buy_price": 7.8792,
-      "sell_price": 7.8793
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 7.8101,
-      "previous_val": 0,
-      "net_asset": 1891371392,
-      "buy_price": 7.8101,
-      "sell_price": 7.8102
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 7.8727,
-      "previous_val": 0,
-      "net_asset": 1905864192,
-      "buy_price": 7.8727,
-      "sell_price": 7.8728
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 7.8354,
@@ -253,6 +221,38 @@
       "net_asset": 1767659904,
       "buy_price": 7.4052,
       "sell_price": 7.4053
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 7.4149,
+      "previous_val": 0,
+      "net_asset": 1768903040,
+      "buy_price": 7.4149,
+      "sell_price": 7.415
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 7.3197,
+      "previous_val": 0,
+      "net_asset": 1745911296,
+      "buy_price": 7.3197,
+      "sell_price": 7.3198
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 7.3375,
+      "previous_val": 0,
+      "net_asset": 1750001920,
+      "buy_price": 7.3375,
+      "sell_price": 7.3376
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 7.2876,
+      "previous_val": 0,
+      "net_asset": 1736826368,
+      "buy_price": 7.2876,
+      "sell_price": 7.2877
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 3.75
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 11.34,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -493,9 +496,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:13:47.721Z",
+  "data_fetched_at": "2025-11-15T11:23:22.789Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

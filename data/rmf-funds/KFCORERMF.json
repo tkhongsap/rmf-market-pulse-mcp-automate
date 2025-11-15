@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Global Core Allocation RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXFI",
+    "fund_classification": "ผสม",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.663,
+    "nav_date": "2025-11-13",
+    "last_val": 11.8036,
     "previous_val": 0,
-    "net_asset": 47812452,
-    "buy_price": 11.663,
-    "sell_price": 11.6631,
-    "change": 11.663,
+    "net_asset": 49434364,
+    "buy_price": 11.8036,
+    "sell_price": 11.8037,
+    "change": 11.8036,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.489,
-      "previous_val": 0,
-      "net_asset": 44600728,
-      "buy_price": 11.489,
-      "sell_price": 11.4891
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.5265,
-      "previous_val": 0,
-      "net_asset": 43699308,
-      "buy_price": 11.5265,
-      "sell_price": 11.5266
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.537,
-      "previous_val": 0,
-      "net_asset": 43700184,
-      "buy_price": 11.537,
-      "sell_price": 11.5371
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.5536,
-      "previous_val": 0,
-      "net_asset": 43769128,
-      "buy_price": 11.5536,
-      "sell_price": 11.5537
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.6179,
@@ -253,6 +221,38 @@
       "net_asset": 47812452,
       "buy_price": 11.663,
       "sell_price": 11.6631
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.7908,
+      "previous_val": 0,
+      "net_asset": 48387584,
+      "buy_price": 11.7908,
+      "sell_price": 11.7909
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.818,
+      "previous_val": 0,
+      "net_asset": 48924784,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.8549,
+      "previous_val": 0,
+      "net_asset": 49077596,
+      "buy_price": 11.8549,
+      "sell_price": 11.855
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.8036,
+      "previous_val": 0,
+      "net_asset": 49434364,
+      "buy_price": 11.8036,
+      "sell_price": 11.8037
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 8.47,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "BGF ESG Multi-Asset Fund Class I2 Hedged USD",
@@ -293,7 +296,7 @@
       "percentage": -2.79
     }
   ],
-  "category": null,
+  "category": "FIA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -384,10 +387,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:25:36.091Z",
+  "data_fetched_at": "2025-11-15T10:47:39.974Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

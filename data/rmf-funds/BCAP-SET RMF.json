@@ -4,56 +4,24 @@
   "fund_name": "BCAP SET Index Retirement Mutual Fund",
   "amc": "BANGKOK CAPITAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PM",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.2373,
+    "nav_date": "2025-11-14",
+    "last_val": 8.9853,
     "previous_val": 0,
-    "net_asset": 8203423.5,
-    "buy_price": 9.2373,
-    "sell_price": 9.2374,
-    "change": 9.2373,
+    "net_asset": 7994730.5,
+    "buy_price": 8.9853,
+    "sell_price": 8.9854,
+    "change": 8.9853,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0762,
-      "previous_val": 0,
-      "net_asset": 7868336.5,
-      "buy_price": 9.0762,
-      "sell_price": 9.0763
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.9831,
-      "previous_val": 0,
-      "net_asset": 7792218,
-      "buy_price": 8.9831,
-      "sell_price": 8.9832
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.0026,
-      "previous_val": 0,
-      "net_asset": 7809115.5,
-      "buy_price": 9.0026,
-      "sell_price": 9.0027
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 9.0943,
-      "previous_val": 0,
-      "net_asset": 7899237.5,
-      "buy_price": 9.0943,
-      "sell_price": 9.0944
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.1365,
@@ -253,25 +221,57 @@
       "net_asset": 8203423.5,
       "buy_price": 9.2373,
       "sell_price": 9.2374
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.2014,
+      "previous_val": 0,
+      "net_asset": 8186485.5,
+      "buy_price": 9.2014,
+      "sell_price": 9.2015
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.0921,
+      "previous_val": 0,
+      "net_asset": 8089770.5,
+      "buy_price": 9.0921,
+      "sell_price": 9.0922
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.1109,
+      "previous_val": 0,
+      "net_asset": 8106428.5,
+      "buy_price": 9.1109,
+      "sell_price": 9.111
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.9853,
+      "previous_val": 0,
+      "net_asset": 7994730.5,
+      "buy_price": 8.9853,
+      "sell_price": 8.9854
     }
   ],
   "dividends": [],
   "performance": {
-    "ytd": -6.8,
-    "3m": 16.31,
-    "6m": 11.02,
+    "ytd": -3.93,
+    "3m": 5.66,
+    "6m": 9.85,
     "1y": null,
     "3y": null,
     "5y": null,
     "10y": null,
-    "since_inception": -10.13
+    "since_inception": -7.37
   },
   "benchmark": {
     "name": "ดัชนีผลตอบแทนรวมตลาดหลักทรัพย์แห่งประเทศไทย (SET TRI)",
     "returns": {
-      "ytd": -5.43,
-      "3m": 18.03,
-      "6m": 12.79,
+      "ytd": -2.58,
+      "3m": 6.61,
+      "6m": 11.32,
       "1y": null,
       "3y": null,
       "5y": null,
@@ -282,22 +282,22 @@
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
-      "percentage": 93.07
-    },
-    {
-      "asset_class": "กองทุนรวมโครงสร้างพี้นฐาน",
-      "percentage": 1.76
-    },
-    {
-      "asset_class": "ทรัสต์เพื่อการลงทุนในอสังหาริมทรัพย์",
-      "percentage": 1.71
+      "percentage": 92.66
     },
     {
       "asset_class": "เงินฝากธนาคาร",
-      "percentage": 1.38
+      "percentage": 2.09
+    },
+    {
+      "asset_class": "กองทุนรวมโครงสร้างพี้นฐาน",
+      "percentage": 1.73
+    },
+    {
+      "asset_class": "ทรัสต์เพื่อการลงทุนในอสังหาริมทรัพย์",
+      "percentage": 1.62
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -343,10 +343,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:14:07.606Z",
+  "data_fetched_at": "2025-11-15T11:24:02.305Z",
   "errors": [
     "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

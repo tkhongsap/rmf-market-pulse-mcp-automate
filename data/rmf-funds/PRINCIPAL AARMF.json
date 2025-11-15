@@ -4,56 +4,24 @@
   "fund_name": "Principal Aggressive allocation Retirement Mutual Fund",
   "amc": "PRINCIPAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 17.6764,
+    "nav_date": "2025-11-12",
+    "last_val": 17.6672,
     "previous_val": 0,
-    "net_asset": 34693260,
-    "buy_price": 17.6764,
-    "sell_price": 17.6765,
-    "change": 17.6764,
+    "net_asset": 34750248,
+    "buy_price": 17.6672,
+    "sell_price": 17.6673,
+    "change": 17.6672,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 17.4115,
-      "previous_val": 0,
-      "net_asset": 34140620,
-      "buy_price": 17.4115,
-      "sell_price": 17.4116
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 17.357,
-      "previous_val": 0,
-      "net_asset": 34044516,
-      "buy_price": 17.357,
-      "sell_price": 17.3571
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 17.4512,
-      "previous_val": 0,
-      "net_asset": 34232748,
-      "buy_price": 17.4512,
-      "sell_price": 17.4513
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 17.406,
-      "previous_val": 0,
-      "net_asset": 34162008,
-      "buy_price": 17.406,
-      "sell_price": 17.4061
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 17.4509,
@@ -253,6 +221,30 @@
       "net_asset": 34693260,
       "buy_price": 17.6764,
       "sell_price": 17.6765
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 17.6145,
+      "previous_val": 0,
+      "net_asset": 34574968,
+      "buy_price": 17.6145,
+      "sell_price": 17.6146
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 17.7586,
+      "previous_val": 0,
+      "net_asset": 34876288,
+      "buy_price": 17.7586,
+      "sell_price": 17.7587
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 17.6672,
+      "previous_val": 0,
+      "net_asset": 34750248,
+      "buy_price": 17.6672,
+      "sell_price": 17.6673
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": 4.93
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 11.06,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "Unit Trust - Equity - Domestic",
@@ -293,7 +288,7 @@
       "percentage": -0.12
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -357,10 +352,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:34:22.111Z",
+  "data_fetched_at": "2025-11-15T10:58:29.754Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

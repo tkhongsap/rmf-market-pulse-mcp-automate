@@ -4,56 +4,24 @@
   "fund_name": "SCB GLOBAL WEALTH PLUS RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXFI",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 13.0792,
+    "nav_date": "2025-11-12",
+    "last_val": 13.1849,
     "previous_val": 0,
-    "net_asset": 167918048,
-    "buy_price": 13.0792,
-    "sell_price": 13.0793,
-    "change": 13.0792,
+    "net_asset": 169231680,
+    "buy_price": 13.1849,
+    "sell_price": 13.185,
+    "change": 13.1849,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 12.8949,
-      "previous_val": 0,
-      "net_asset": 164969984,
-      "buy_price": 12.8949,
-      "sell_price": 12.895
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.8938,
-      "previous_val": 0,
-      "net_asset": 165049056,
-      "buy_price": 12.8938,
-      "sell_price": 12.8939
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.9627,
-      "previous_val": 0,
-      "net_asset": 165962736,
-      "buy_price": 12.9627,
-      "sell_price": 12.9628
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.9847,
-      "previous_val": 0,
-      "net_asset": 166237312,
-      "buy_price": 12.9847,
-      "sell_price": 12.9848
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 13.0362,
@@ -253,6 +221,38 @@
       "net_asset": 167918048,
       "buy_price": 13.0792,
       "sell_price": 13.0793
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 13.0819,
+      "previous_val": 0,
+      "net_asset": 168006992,
+      "buy_price": 13.0819,
+      "sell_price": 13.082
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.1526,
+      "previous_val": 0,
+      "net_asset": 168810000,
+      "buy_price": 13.1526,
+      "sell_price": 13.1527
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.1756,
+      "previous_val": 0,
+      "net_asset": 169112336,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.1849,
+      "previous_val": 0,
+      "net_asset": 169231680,
+      "buy_price": 13.1849,
+      "sell_price": 13.185
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 7.25
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 11.51,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -0.27
     }
   ],
-  "category": null,
+  "category": "FIA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -455,10 +458,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-11T06:37:06.455Z",
+  "data_fetched_at": "2025-11-15T11:01:36.253Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

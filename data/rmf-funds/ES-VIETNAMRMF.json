@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Vietnam Active Equity RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQVIET",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.6378,
+    "nav_date": "2025-11-13",
+    "last_val": 9.7839,
     "previous_val": 0,
-    "net_asset": 381371520,
-    "buy_price": 9.6378,
-    "sell_price": 9.6379,
-    "change": 9.6378,
+    "net_asset": 389910880,
+    "buy_price": 9.7839,
+    "sell_price": 9.784,
+    "change": 9.7839,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.2111,
-      "previous_val": 0,
-      "net_asset": 416215584,
-      "buy_price": 10.2111,
-      "sell_price": 10.2112
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.2481,
-      "previous_val": 0,
-      "net_asset": 417227168,
-      "buy_price": 10.2481,
-      "sell_price": 10.2482
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.2474,
-      "previous_val": 0,
-      "net_asset": 416415072,
-      "buy_price": 10.2474,
-      "sell_price": 10.2475
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.2558,
-      "previous_val": 0,
-      "net_asset": 416869312,
-      "buy_price": 10.2558,
-      "sell_price": 10.2559
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.1824,
@@ -237,6 +205,30 @@
       "net_asset": 381371520,
       "buy_price": 9.6378,
       "sell_price": 9.6379
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.547,
+      "previous_val": 0,
+      "net_asset": 378539488,
+      "buy_price": 9.547,
+      "sell_price": 9.5471
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.9011,
+      "previous_val": 0,
+      "net_asset": 393075904,
+      "buy_price": 9.9011,
+      "sell_price": 9.9012
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.7839,
+      "previous_val": 0,
+      "net_asset": 389910880,
+      "buy_price": 9.7839,
+      "sell_price": 9.784
     }
   ],
   "dividends": [],
@@ -262,7 +254,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 21.51,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนรวมตราสารทุน",
@@ -281,7 +276,7 @@
       "percentage": -1.21
     }
   ],
-  "category": null,
+  "category": "VIEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -367,10 +362,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:19:10.055Z",
+  "data_fetched_at": "2025-11-15T10:42:27.090Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

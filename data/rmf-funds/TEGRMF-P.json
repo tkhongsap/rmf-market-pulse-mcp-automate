@@ -1,59 +1,27 @@
 {
   "fund_id": "M0096_2545",
   "symbol": "TEGRMF-P",
-  "fund_name": "TISCO Equity Growth Retirement Fund",
-  "amc": "EQGEN",
+  "fund_name": "TISCO Equity Growth Retirement  Fund",
+  "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "AM",
-    "management_style": "No",
-    "dividend_policy": "6",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AM",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 60.4015,
+    "nav_date": "2025-11-14",
+    "last_val": 58.8122,
     "previous_val": 0,
-    "net_asset": 383832352,
-    "buy_price": 60.4015,
-    "sell_price": 60.4016,
-    "change": 60.4015,
+    "net_asset": 373468160,
+    "buy_price": 58.8122,
+    "sell_price": 58.8123,
+    "change": 58.8122,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 62.1696,
-      "previous_val": 0,
-      "net_asset": 397185472,
-      "buy_price": 62.1696,
-      "sell_price": 62.1697
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 61.6633,
-      "previous_val": 0,
-      "net_asset": 393494880,
-      "buy_price": 61.6633,
-      "sell_price": 61.6634
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 61.2306,
-      "previous_val": 0,
-      "net_asset": 390739584,
-      "buy_price": 61.2306,
-      "sell_price": 61.2307
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 61.8809,
-      "previous_val": 0,
-      "net_asset": 394910592,
-      "buy_price": 61.8809,
-      "sell_price": 61.881
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 61.7793,
@@ -253,6 +221,38 @@
       "net_asset": 383832352,
       "buy_price": 60.4015,
       "sell_price": 60.4016
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 60.2219,
+      "previous_val": 0,
+      "net_asset": 382449952,
+      "buy_price": 60.2219,
+      "sell_price": 60.222
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 59.6116,
+      "previous_val": 0,
+      "net_asset": 378543360,
+      "buy_price": 59.6116,
+      "sell_price": 59.6117
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 59.2356,
+      "previous_val": 0,
+      "net_asset": 376156928,
+      "buy_price": 59.2356,
+      "sell_price": 59.2357
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 58.8122,
+      "previous_val": 0,
+      "net_asset": 373468160,
+      "buy_price": 58.8122,
+      "sell_price": 58.8123
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.4,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้น",
@@ -297,7 +300,7 @@
       "percentage": -0.62
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -637,10 +640,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:39:51.899Z",
+  "data_fetched_at": "2025-11-15T11:04:38.418Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

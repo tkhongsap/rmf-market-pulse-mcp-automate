@@ -4,56 +4,24 @@
   "fund_name": "Krung Thai Property and Infrastructure Flexible RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPMIX",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.9361,
+    "nav_date": "2025-11-14",
+    "last_val": 10.8213,
     "previous_val": 0,
-    "net_asset": 248317952,
-    "buy_price": 10.9361,
-    "sell_price": 10.9362,
-    "change": 10.9361,
+    "net_asset": 245641600,
+    "buy_price": 10.8213,
+    "sell_price": 10.8214,
+    "change": 10.8213,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.7452,
-      "previous_val": 0,
-      "net_asset": 250290000,
-      "buy_price": 10.7452,
-      "sell_price": 10.7453
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.772,
-      "previous_val": 0,
-      "net_asset": 250642032,
-      "buy_price": 10.772,
-      "sell_price": 10.7721
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.7906,
-      "previous_val": 0,
-      "net_asset": 250973216,
-      "buy_price": 10.7906,
-      "sell_price": 10.7907
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.8355,
-      "previous_val": 0,
-      "net_asset": 251961136,
-      "buy_price": 10.8355,
-      "sell_price": 10.8356
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.8361,
@@ -253,6 +221,38 @@
       "net_asset": 248317952,
       "buy_price": 10.9361,
       "sell_price": 10.9362
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.9888,
+      "previous_val": 0,
+      "net_asset": 249547312,
+      "buy_price": 10.9888,
+      "sell_price": 10.9889
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.9697,
+      "previous_val": 0,
+      "net_asset": 249124384,
+      "buy_price": 10.9697,
+      "sell_price": 10.9698
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.9105,
+      "previous_val": 0,
+      "net_asset": 247796864,
+      "buy_price": 10.9105,
+      "sell_price": 10.9106
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.8213,
+      "previous_val": 0,
+      "net_asset": 245641600,
+      "buy_price": 10.8213,
+      "sell_price": 10.8214
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 9.18,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนในทรัสต์เพื่อการลงทุนอสังหาริมทรัพย์",
@@ -301,7 +304,7 @@
       "percentage": -0.47
     }
   ],
-  "category": null,
+  "category": "FPF",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -399,10 +402,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:29:58.462Z",
+  "data_fetched_at": "2025-11-15T10:52:55.214Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

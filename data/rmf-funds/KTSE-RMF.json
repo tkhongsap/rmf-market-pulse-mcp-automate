@@ -4,56 +4,24 @@
   "fund_name": "Krung Thai Selective Equity RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.7149,
+    "nav_date": "2025-11-14",
+    "last_val": 10.4211,
     "previous_val": 0,
-    "net_asset": 477976128,
-    "buy_price": 10.7149,
-    "sell_price": 10.715,
-    "change": 10.7149,
+    "net_asset": 462929568,
+    "buy_price": 10.4211,
+    "sell_price": 10.4212,
+    "change": 10.4211,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.4932,
-      "previous_val": 0,
-      "net_asset": 473966528,
-      "buy_price": 10.4932,
-      "sell_price": 10.4933
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.3972,
-      "previous_val": 0,
-      "net_asset": 469607136,
-      "buy_price": 10.3972,
-      "sell_price": 10.3973
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.4236,
-      "previous_val": 0,
-      "net_asset": 469742336,
-      "buy_price": 10.4236,
-      "sell_price": 10.4237
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.5365,
-      "previous_val": 0,
-      "net_asset": 474736512,
-      "buy_price": 10.5365,
-      "sell_price": 10.5366
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.5866,
@@ -253,6 +221,38 @@
       "net_asset": 477976128,
       "buy_price": 10.7149,
       "sell_price": 10.715
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.6713,
+      "previous_val": 0,
+      "net_asset": 476046720,
+      "buy_price": 10.6713,
+      "sell_price": 10.6714
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.5433,
+      "previous_val": 0,
+      "net_asset": 469485856,
+      "buy_price": 10.5433,
+      "sell_price": 10.5434
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.5647,
+      "previous_val": 0,
+      "net_asset": 469300128,
+      "buy_price": 10.5647,
+      "sell_price": 10.5648
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.4211,
+      "previous_val": 0,
+      "net_asset": 462929568,
+      "buy_price": 10.4211,
+      "sell_price": 10.4212
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 12.36,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -293,7 +296,7 @@
       "percentage": -0.18
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -377,10 +380,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:30:59.046Z",
+  "data_fetched_at": "2025-11-15T10:53:57.374Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "MEGA WORLD 30 RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.0766,
+    "nav_date": "2025-11-13",
+    "last_val": 11.1533,
     "previous_val": 0,
-    "net_asset": 16326063,
-    "buy_price": 11.0766,
-    "sell_price": 11.0767,
-    "change": 11.0766,
+    "net_asset": 16731514,
+    "buy_price": 11.1533,
+    "sell_price": 11.1534,
+    "change": 11.1533,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.8276,
-      "previous_val": 0,
-      "net_asset": 12955391,
-      "buy_price": 10.8276,
-      "sell_price": 10.8277
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.8887,
-      "previous_val": 0,
-      "net_asset": 13058370,
-      "buy_price": 10.8887,
-      "sell_price": 10.8888
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.9941,
-      "previous_val": 0,
-      "net_asset": 13277508,
-      "buy_price": 10.9941,
-      "sell_price": 10.9942
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.113,
-      "previous_val": 0,
-      "net_asset": 13434110,
-      "buy_price": 11.113,
-      "sell_price": 11.1131
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.1674,
@@ -253,6 +221,30 @@
       "net_asset": 16326063,
       "buy_price": 11.0766,
       "sell_price": 11.0767
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.2679,
+      "previous_val": 0,
+      "net_asset": 16731034,
+      "buy_price": 11.2679,
+      "sell_price": 11.268
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.3823,
+      "previous_val": 0,
+      "net_asset": 17023512,
+      "buy_price": 11.3823,
+      "sell_price": 11.3824
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.1533,
+      "previous_val": 0,
+      "net_asset": 16731514,
+      "buy_price": 11.1533,
+      "sell_price": 11.1534
     }
   ],
   "dividends": [],
@@ -293,7 +285,7 @@
       "percentage": 0.69
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -369,10 +361,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:01.482Z",
+  "data_fetched_at": "2025-11-15T10:56:48.086Z",
   "errors": [
     "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

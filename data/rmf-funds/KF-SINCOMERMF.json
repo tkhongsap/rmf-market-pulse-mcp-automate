@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Global Smart Income RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXGLH",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.7669,
+    "nav_date": "2025-11-13",
+    "last_val": 11.7594,
     "previous_val": 0,
-    "net_asset": 1311422464,
-    "buy_price": 11.7669,
-    "sell_price": 11.767,
-    "change": 11.7669,
+    "net_asset": 1315421824,
+    "buy_price": 11.7594,
+    "sell_price": 11.7595,
+    "change": 11.7594,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.6373,
-      "previous_val": 0,
-      "net_asset": 1262888704,
-      "buy_price": 11.6373,
-      "sell_price": 11.6374
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.6558,
-      "previous_val": 0,
-      "net_asset": 1265808512,
-      "buy_price": 11.6558,
-      "sell_price": 11.6559
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.6572,
-      "previous_val": 0,
-      "net_asset": 1269034368,
-      "buy_price": 11.6572,
-      "sell_price": 11.6573
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.6782,
-      "previous_val": 0,
-      "net_asset": 1271359360,
-      "buy_price": 11.6782,
-      "sell_price": 11.6783
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.689,
@@ -253,6 +221,38 @@
       "net_asset": 1311422464,
       "buy_price": 11.7669,
       "sell_price": 11.767
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.765,
+      "previous_val": 0,
+      "net_asset": 1311808640,
+      "buy_price": 11.765,
+      "sell_price": 11.7651
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.8003,
+      "previous_val": 0,
+      "net_asset": 1317699712,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.7889,
+      "previous_val": 0,
+      "net_asset": 1316430208,
+      "buy_price": 11.7889,
+      "sell_price": 11.789
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.7594,
+      "previous_val": 0,
+      "net_asset": 1315421824,
+      "buy_price": 11.7594,
+      "sell_price": 11.7595
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 1.75
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 4.45,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "PIMCO GIS Income Fund",
@@ -286,7 +289,7 @@
       "percentage": -0.78
     }
   ],
-  "category": null,
+  "category": "GBF",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -402,11 +405,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:34.783Z",
+  "data_fetched_at": "2025-11-15T10:46:56.821Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

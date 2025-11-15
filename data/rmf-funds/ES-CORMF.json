@@ -2,50 +2,26 @@
   "fund_id": "M0328_2558",
   "symbol": "ES-CORMF",
   "fund_name": "Eastspring China Opportunity RMF",
-  "amc": "EQCH",
+  "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "AN",
-    "management_style": "No",
-    "dividend_policy": "6",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 12.8874,
+    "nav_date": "2025-11-13",
+    "last_val": 13.1581,
     "previous_val": 0,
-    "net_asset": 3002830848,
-    "buy_price": 12.8745,
-    "sell_price": 12.9004,
-    "change": 12.8874,
+    "net_asset": 3060581888,
+    "buy_price": 13.1449,
+    "sell_price": 13.1714,
+    "change": 13.1581,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.9872,
-      "previous_val": 0,
-      "net_asset": 3051547392,
-      "buy_price": 12.9742,
-      "sell_price": 13.0003
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.0826,
-      "previous_val": 0,
-      "net_asset": 3074830592,
-      "buy_price": 13.0695,
-      "sell_price": 13.0958
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.2896,
-      "previous_val": 0,
-      "net_asset": 3123963392,
-      "buy_price": 13.2763,
-      "sell_price": 13.303
-    },
     {
       "nav_date": "2025-10-09",
       "last_val": 13.3238,
@@ -197,6 +173,30 @@
       "net_asset": 3002830848,
       "buy_price": 12.8745,
       "sell_price": 12.9004
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.0108,
+      "previous_val": 0,
+      "net_asset": 3030110464,
+      "buy_price": 12.9978,
+      "sell_price": 13.0239
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.1075,
+      "previous_val": 0,
+      "net_asset": 3052077056,
+      "buy_price": 13.0944,
+      "sell_price": 13.1207
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.1581,
+      "previous_val": 0,
+      "net_asset": 3060581888,
+      "buy_price": 13.1449,
+      "sell_price": 13.1714
     }
   ],
   "dividends": [],
@@ -222,7 +222,10 @@
       "10y": 7.16
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 25.57,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนรวมตราสารทุน",
@@ -245,7 +248,7 @@
       "percentage": -0.94
     }
   ],
-  "category": null,
+  "category": "CHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -327,10 +330,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:16:07.942Z",
+  "data_fetched_at": "2025-11-15T11:26:26.124Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

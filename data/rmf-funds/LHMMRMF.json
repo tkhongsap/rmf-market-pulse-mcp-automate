@@ -4,56 +4,24 @@
   "fund_name": "LH MONEY MARKET RMF FUND",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 2,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.4118,
+    "nav_date": "2025-11-14",
+    "last_val": 10.4127,
     "previous_val": 0,
-    "net_asset": 44014396,
-    "buy_price": 10.4118,
-    "sell_price": 10.4119,
-    "change": 10.4118,
+    "net_asset": 44696316,
+    "buy_price": 10.4127,
+    "sell_price": 10.4128,
+    "change": 10.4127,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.4005,
-      "previous_val": 0,
-      "net_asset": 42905960,
-      "buy_price": 10.4005,
-      "sell_price": 10.4006
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.401,
-      "previous_val": 0,
-      "net_asset": 42547172,
-      "buy_price": 10.401,
-      "sell_price": 10.4011
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.4013,
-      "previous_val": 0,
-      "net_asset": 42550520,
-      "buy_price": 10.4013,
-      "sell_price": 10.4014
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.4017,
-      "previous_val": 0,
-      "net_asset": 42554352,
-      "buy_price": 10.4017,
-      "sell_price": 10.4018
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.4021,
@@ -253,6 +221,38 @@
       "net_asset": 44014396,
       "buy_price": 10.4118,
       "sell_price": 10.4119
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.412,
+      "previous_val": 0,
+      "net_asset": 44522048,
+      "buy_price": 10.412,
+      "sell_price": 10.4121
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.4123,
+      "previous_val": 0,
+      "net_asset": 44699560,
+      "buy_price": 10.4123,
+      "sell_price": 10.4124
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.4123,
+      "previous_val": 0,
+      "net_asset": 44694640,
+      "buy_price": 10.4123,
+      "sell_price": 10.4124
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.4127,
+      "previous_val": 0,
+      "net_asset": 44696316,
+      "buy_price": 10.4127,
+      "sell_price": 10.4128
     }
   ],
   "dividends": [],
@@ -340,7 +340,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:31:39.452Z",
+  "data_fetched_at": "2025-11-15T10:54:59.551Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

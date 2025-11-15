@@ -4,56 +4,24 @@
   "fund_name": "United Global Healthcare RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQHEALTH",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.6836,
+    "nav_date": "2025-11-13",
+    "last_val": 12.1778,
     "previous_val": 0,
-    "net_asset": 559561472,
-    "buy_price": 11.6836,
-    "sell_price": 11.6837,
-    "change": 11.6836,
+    "net_asset": 583270400,
+    "buy_price": 12.1778,
+    "sell_price": 12.1779,
+    "change": 12.1778,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.7473,
-      "previous_val": 0,
-      "net_asset": 523387744,
-      "buy_price": 10.7473,
-      "sell_price": 10.7474
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.8565,
-      "previous_val": 0,
-      "net_asset": 528609984,
-      "buy_price": 10.8565,
-      "sell_price": 10.8566
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.091,
-      "previous_val": 0,
-      "net_asset": 538719744,
-      "buy_price": 11.091,
-      "sell_price": 11.0911
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.4752,
-      "previous_val": 0,
-      "net_asset": 557394368,
-      "buy_price": 11.4752,
-      "sell_price": 11.4753
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.4999,
@@ -245,6 +213,30 @@
       "net_asset": 559561472,
       "buy_price": 11.6836,
       "sell_price": 11.6837
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.7897,
+      "previous_val": 0,
+      "net_asset": 564568576,
+      "buy_price": 11.7897,
+      "sell_price": 11.7898
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.2049,
+      "previous_val": 0,
+      "net_asset": 584470272,
+      "buy_price": 12.2049,
+      "sell_price": 12.205
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.1778,
+      "previous_val": 0,
+      "net_asset": 583270400,
+      "buy_price": 12.1778,
+      "sell_price": 12.1779
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": 5.5
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.6,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนระหว่างประเทศ",
@@ -281,7 +276,7 @@
       "percentage": 0.9
     }
   ],
-  "category": null,
+  "category": "HCS",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -409,10 +404,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:44:40.502Z",
+  "data_fetched_at": "2025-11-15T11:09:32.683Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

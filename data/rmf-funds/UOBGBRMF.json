@@ -4,56 +4,24 @@
   "fund_name": "UOB GOVERNMENT BOND RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGOV",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 3,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 16.4373,
+    "nav_date": "2025-11-14",
+    "last_val": 16.4527,
     "previous_val": 0,
-    "net_asset": 1480518016,
-    "buy_price": 16.4373,
-    "sell_price": 16.4374,
-    "change": 16.4373,
+    "net_asset": 1478118912,
+    "buy_price": 16.4527,
+    "sell_price": 16.4528,
+    "change": 16.4527,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 16.6686,
-      "previous_val": 0,
-      "net_asset": 1502470272,
-      "buy_price": 16.6686,
-      "sell_price": 16.6687
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.6994,
-      "previous_val": 0,
-      "net_asset": 1503495040,
-      "buy_price": 16.6994,
-      "sell_price": 16.6995
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 16.6952,
-      "previous_val": 0,
-      "net_asset": 1504164736,
-      "buy_price": 16.6952,
-      "sell_price": 16.6953
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 16.6937,
-      "previous_val": 0,
-      "net_asset": 1506089856,
-      "buy_price": 16.6937,
-      "sell_price": 16.6938
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.7052,
@@ -253,6 +221,38 @@
       "net_asset": 1480518016,
       "buy_price": 16.4373,
       "sell_price": 16.4374
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 16.415,
+      "previous_val": 0,
+      "net_asset": 1477560320,
+      "buy_price": 16.415,
+      "sell_price": 16.4151
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 16.4464,
+      "previous_val": 0,
+      "net_asset": 1482095616,
+      "buy_price": 16.4464,
+      "sell_price": 16.4465
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 16.4632,
+      "previous_val": 0,
+      "net_asset": 1479066496,
+      "buy_price": 16.4632,
+      "sell_price": 16.4633
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 16.4527,
+      "previous_val": 0,
+      "net_asset": 1478118912,
+      "buy_price": 16.4527,
+      "sell_price": 16.4528
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 2.23
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 1.09,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรรัฐบาลและที่มีรัฐบาลค้ำประกัน",
@@ -282,7 +285,7 @@
       "percentage": 0.02
     }
   ],
-  "category": null,
+  "category": "MTGOV",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -418,11 +421,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:45:21.255Z",
+  "data_fetched_at": "2025-11-15T11:09:53.110Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

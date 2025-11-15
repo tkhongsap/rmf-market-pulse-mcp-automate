@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Government Bonds RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 16.7443,
+    "nav_date": "2025-11-14",
+    "last_val": 16.7514,
     "previous_val": 0,
-    "net_asset": 3030038016,
-    "buy_price": 16.7443,
-    "sell_price": 16.7444,
-    "change": 16.7443,
+    "net_asset": 3050307584,
+    "buy_price": 16.7514,
+    "sell_price": 16.7515,
+    "change": 16.7514,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 16.862,
-      "previous_val": 0,
-      "net_asset": 3066642432,
-      "buy_price": 16.862,
-      "sell_price": 16.8621
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.8789,
-      "previous_val": 0,
-      "net_asset": 3070281472,
-      "buy_price": 16.8789,
-      "sell_price": 16.879
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 16.8802,
-      "previous_val": 0,
-      "net_asset": 3070054656,
-      "buy_price": 16.8802,
-      "sell_price": 16.8803
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 16.8784,
-      "previous_val": 0,
-      "net_asset": 3069286400,
-      "buy_price": 16.8784,
-      "sell_price": 16.8785
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.8827,
@@ -253,6 +221,38 @@
       "net_asset": 3030038016,
       "buy_price": 16.7443,
       "sell_price": 16.7444
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 16.731,
+      "previous_val": 0,
+      "net_asset": 3026609664,
+      "buy_price": 16.731,
+      "sell_price": 16.7311
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 16.7468,
+      "previous_val": 0,
+      "net_asset": 3049231872,
+      "buy_price": 16.7468,
+      "sell_price": 16.7469
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 16.7559,
+      "previous_val": 0,
+      "net_asset": 3050817024,
+      "buy_price": 16.7559,
+      "sell_price": 16.756
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 16.7514,
+      "previous_val": 0,
+      "net_asset": 3050307584,
+      "buy_price": 16.7514,
+      "sell_price": 16.7515
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 2.23
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.68,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตร",
@@ -286,7 +289,7 @@
       "percentage": 0.65
     }
   ],
-  "category": null,
+  "category": "MTGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -412,11 +415,9 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:17:28.293Z",
+  "data_fetched_at": "2025-11-15T11:27:47.897Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

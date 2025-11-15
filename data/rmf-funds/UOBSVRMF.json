@@ -4,56 +4,24 @@
   "fund_name": "UOB Smart Value RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 13.3172,
+    "nav_date": "2025-11-14",
+    "last_val": 13.3176,
     "previous_val": 0,
-    "net_asset": 257773712,
-    "buy_price": 13.3172,
-    "sell_price": 13.3173,
-    "change": 13.3172,
+    "net_asset": 262424912,
+    "buy_price": 13.3176,
+    "sell_price": 13.3177,
+    "change": 13.3176,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.299,
-      "previous_val": 0,
-      "net_asset": 253698864,
-      "buy_price": 13.299,
-      "sell_price": 13.2991
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.3009,
-      "previous_val": 0,
-      "net_asset": 251668768,
-      "buy_price": 13.3009,
-      "sell_price": 13.301
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.3018,
-      "previous_val": 0,
-      "net_asset": 252213664,
-      "buy_price": 13.3018,
-      "sell_price": 13.3019
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 13.3028,
-      "previous_val": 0,
-      "net_asset": 256676288,
-      "buy_price": 13.3028,
-      "sell_price": 13.3029
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 13.3033,
@@ -253,6 +221,38 @@
       "net_asset": 257773712,
       "buy_price": 13.3172,
       "sell_price": 13.3173
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.317,
+      "previous_val": 0,
+      "net_asset": 257955232,
+      "buy_price": 13.317,
+      "sell_price": 13.3171
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.3172,
+      "previous_val": 0,
+      "net_asset": 257929392,
+      "buy_price": 13.3172,
+      "sell_price": 13.3173
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.3177,
+      "previous_val": 0,
+      "net_asset": 268832320,
+      "buy_price": 13.3177,
+      "sell_price": 13.3178
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 13.3176,
+      "previous_val": 0,
+      "net_asset": 262424912,
+      "buy_price": 13.3176,
+      "sell_price": 13.3177
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.36
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.3,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นกู้",
@@ -301,7 +304,7 @@
       "percentage": 3.22
     }
   ],
-  "category": null,
+  "category": "STGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -437,10 +440,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:45:21.229Z",
+  "data_fetched_at": "2025-11-15T11:10:13.362Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

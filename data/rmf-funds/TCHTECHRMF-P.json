@@ -4,56 +4,24 @@
   "fund_name": "TISCO China Technology RMF",
   "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQCH",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 5.7129,
+    "nav_date": "2025-11-13",
+    "last_val": 5.6283,
     "previous_val": 0,
-    "net_asset": 141096048,
-    "buy_price": 5.7129,
-    "sell_price": 5.713,
-    "change": 5.7129,
+    "net_asset": 137496896,
+    "buy_price": 5.6283,
+    "sell_price": 5.6284,
+    "change": 5.6283,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 5.9508,
-      "previous_val": 0,
-      "net_asset": 144694176,
-      "buy_price": 5.9508,
-      "sell_price": 5.9509
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 6.0623,
-      "previous_val": 0,
-      "net_asset": 147616816,
-      "buy_price": 6.0623,
-      "sell_price": 6.0624
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 6.1425,
-      "previous_val": 0,
-      "net_asset": 149756944,
-      "buy_price": 6.1425,
-      "sell_price": 6.1426
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 6.2129,
-      "previous_val": 0,
-      "net_asset": 151528736,
-      "buy_price": 6.2129,
-      "sell_price": 6.213
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 6.2864,
@@ -253,6 +221,38 @@
       "net_asset": 141096048,
       "buy_price": 5.7129,
       "sell_price": 5.713
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 5.7971,
+      "previous_val": 0,
+      "net_asset": 142400176,
+      "buy_price": 5.7971,
+      "sell_price": 5.7972
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 5.7417,
+      "previous_val": 0,
+      "net_asset": 140185104,
+      "buy_price": 5.7417,
+      "sell_price": 5.7418
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 5.6988,
+      "previous_val": 0,
+      "net_asset": 139175024,
+      "buy_price": 5.6988,
+      "sell_price": 5.6989
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 5.6283,
+      "previous_val": 0,
+      "net_asset": 137496896,
+      "buy_price": 5.6283,
+      "sell_price": 5.6284
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 36.25,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +296,7 @@
       "percentage": -0.92
     }
   ],
-  "category": null,
+  "category": "CHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -573,10 +576,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:39:31.013Z",
+  "data_fetched_at": "2025-11-15T11:04:17.230Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

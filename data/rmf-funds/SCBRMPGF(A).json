@@ -4,56 +4,24 @@
   "fund_name": "SCB Platinum Global RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 10.7445,
+    "nav_date": "2025-11-12",
+    "last_val": 11.0296,
     "previous_val": 0,
-    "net_asset": 57985524,
-    "buy_price": 10.7445,
-    "sell_price": 10.7446,
-    "change": 10.7445,
+    "net_asset": 59669088,
+    "buy_price": 11.0296,
+    "sell_price": 11.0297,
+    "change": 11.0296,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 10.5017,
-      "previous_val": 0,
-      "net_asset": 57575400,
-      "buy_price": 10.5017,
-      "sell_price": 10.5018
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.5667,
-      "previous_val": 0,
-      "net_asset": 58031412,
-      "buy_price": 10.5667,
-      "sell_price": 10.5668
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.4556,
-      "previous_val": 0,
-      "net_asset": 57435152,
-      "buy_price": 10.4556,
-      "sell_price": 10.4557
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.4582,
-      "previous_val": 0,
-      "net_asset": 57469652,
-      "buy_price": 10.4582,
-      "sell_price": 10.4583
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 10.5237,
@@ -253,6 +221,38 @@
       "net_asset": 57985524,
       "buy_price": 10.7445,
       "sell_price": 10.7446
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 10.7056,
+      "previous_val": 0,
+      "net_asset": 57811200,
+      "buy_price": 10.7056,
+      "sell_price": 10.7057
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.7749,
+      "previous_val": 0,
+      "net_asset": 58206564,
+      "buy_price": 10.7749,
+      "sell_price": 10.775
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.9114,
+      "previous_val": 0,
+      "net_asset": 59029344,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.0296,
+      "previous_val": 0,
+      "net_asset": 59669088,
+      "buy_price": 11.0296,
+      "sell_price": 11.0297
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.35,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -1.11
     }
   ],
-  "category": null,
+  "category": "EQGLOTH",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -429,10 +432,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-11T06:37:49.577Z",
+  "data_fetched_at": "2025-11-15T11:02:17.159Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

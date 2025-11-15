@@ -4,56 +4,24 @@
   "fund_name": "Krungsri The One Mean RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXMOD",
+    "fund_classification": "ผสม",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 10.5841,
+    "nav_date": "2025-11-12",
+    "last_val": 10.6423,
     "previous_val": 0,
-    "net_asset": 30053036,
-    "buy_price": 10.5841,
-    "sell_price": 10.5842,
-    "change": 10.5841,
+    "net_asset": 30207968,
+    "buy_price": 10.6423,
+    "sell_price": 10.6424,
+    "change": 10.6423,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 10.5877,
-      "previous_val": 0,
-      "net_asset": 29494132,
-      "buy_price": 10.5877,
-      "sell_price": 10.5878
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.5981,
-      "previous_val": 0,
-      "net_asset": 29523668,
-      "buy_price": 10.5981,
-      "sell_price": 10.5982
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.625,
-      "previous_val": 0,
-      "net_asset": 29599456,
-      "buy_price": 10.625,
-      "sell_price": 10.6251
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.6312,
-      "previous_val": 0,
-      "net_asset": 29674222,
-      "buy_price": 10.6312,
-      "sell_price": 10.6313
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 10.6481,
@@ -253,6 +221,38 @@
       "net_asset": 30053036,
       "buy_price": 10.5841,
       "sell_price": 10.5842
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 10.581,
+      "previous_val": 0,
+      "net_asset": 30033870,
+      "buy_price": 10.581,
+      "sell_price": 10.5811
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.6341,
+      "previous_val": 0,
+      "net_asset": 30184538,
+      "buy_price": 10.6341,
+      "sell_price": 10.6342
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.6554,
+      "previous_val": 0,
+      "net_asset": 30244968,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.6423,
+      "previous_val": 0,
+      "net_asset": 30207968,
+      "buy_price": 10.6423,
+      "sell_price": 10.6424
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 5.63,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "กองทุนเปิดกรุงศรี The One Mean-ผู้ลงทุนสถาบัน",
@@ -293,7 +296,7 @@
       "percentage": -0.17
     }
   ],
-  "category": null,
+  "category": "MA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -384,10 +387,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:54.824Z",
+  "data_fetched_at": "2025-11-15T10:47:18.867Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Medium Term Fixed Income RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 15.4251,
+    "nav_date": "2025-11-14",
+    "last_val": 15.4331,
     "previous_val": 0,
-    "net_asset": 5643379712,
-    "buy_price": 15.4251,
-    "sell_price": 15.4252,
-    "change": 15.4251,
+    "net_asset": 5640885248,
+    "buy_price": 15.4331,
+    "sell_price": 15.4332,
+    "change": 15.4331,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.5106,
-      "previous_val": 0,
-      "net_asset": 5477280256,
-      "buy_price": 15.5106,
-      "sell_price": 15.5107
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.5266,
-      "previous_val": 0,
-      "net_asset": 5503306240,
-      "buy_price": 15.5266,
-      "sell_price": 15.5267
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.5243,
-      "previous_val": 0,
-      "net_asset": 5507959296,
-      "buy_price": 15.5243,
-      "sell_price": 15.5244
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 15.5269,
-      "previous_val": 0,
-      "net_asset": 5524365824,
-      "buy_price": 15.5269,
-      "sell_price": 15.527
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 15.5306,
@@ -253,6 +221,38 @@
       "net_asset": 5643379712,
       "buy_price": 15.4251,
       "sell_price": 15.4252
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 15.4129,
+      "previous_val": 0,
+      "net_asset": 5635862016,
+      "buy_price": 15.4129,
+      "sell_price": 15.413
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.4258,
+      "previous_val": 0,
+      "net_asset": 5636930048,
+      "buy_price": 15.4258,
+      "sell_price": 15.4259
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.4371,
+      "previous_val": 0,
+      "net_asset": 5646422528,
+      "buy_price": 15.4371,
+      "sell_price": 15.4372
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 15.4331,
+      "previous_val": 0,
+      "net_asset": 5640885248,
+      "buy_price": 15.4331,
+      "sell_price": 15.4332
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.39
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.7,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้ที่ออกโดยบริษัทหรือภาคเอกชน",
@@ -305,7 +308,7 @@
       "percentage": -0.45
     }
   ],
-  "category": null,
+  "category": "MTGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -417,10 +420,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:27:15.918Z",
+  "data_fetched_at": "2025-11-15T10:49:45.025Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

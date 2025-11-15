@@ -4,22 +4,22 @@
   "fund_name": "Krungsri Global Dividend RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.7766,
+    "nav_date": "2025-11-13",
+    "last_val": 9.9757,
     "previous_val": 0,
-    "net_asset": 9644674,
-    "buy_price": 9.7766,
-    "sell_price": 9.7767,
-    "change": 9.7766,
+    "net_asset": 10691936,
+    "buy_price": 9.9757,
+    "sell_price": 9.9758,
+    "change": 9.9757,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -125,6 +125,38 @@
       "net_asset": 9644674,
       "buy_price": 9.7766,
       "sell_price": 9.7767
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.8206,
+      "previous_val": 0,
+      "net_asset": 9800593,
+      "buy_price": 9.8206,
+      "sell_price": 9.8207
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.9268,
+      "previous_val": 0,
+      "net_asset": 10322866,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.9646,
+      "previous_val": 0,
+      "net_asset": 10362139,
+      "buy_price": 9.9646,
+      "sell_price": 9.9647
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.9757,
+      "previous_val": 0,
+      "net_asset": 10691936,
+      "buy_price": 9.9757,
+      "sell_price": 9.9758
     }
   ],
   "dividends": [],
@@ -223,7 +255,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:14.496Z",
+  "data_fetched_at": "2025-11-15T10:46:36.380Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

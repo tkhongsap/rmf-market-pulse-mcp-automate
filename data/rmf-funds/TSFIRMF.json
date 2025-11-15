@@ -1,59 +1,27 @@
 {
   "fund_id": "M0059_2544",
   "symbol": "TSFIRMF",
-  "fund_name": "TISCO Secured Fixed Income Retirement Fund",
+  "fund_name": "TISCO Secured  Fixed Income Retirement  Fund",
   "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "SM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 14.8545,
+    "nav_date": "2025-11-14",
+    "last_val": 14.8614,
     "previous_val": 0,
-    "net_asset": 445281984,
-    "buy_price": 14.8545,
-    "sell_price": 14.8546,
-    "change": 14.8545,
+    "net_asset": 451084768,
+    "buy_price": 14.8614,
+    "sell_price": 14.8615,
+    "change": 14.8614,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 14.9451,
-      "previous_val": 0,
-      "net_asset": 446614976,
-      "buy_price": 14.9451,
-      "sell_price": 14.9452
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 14.9615,
-      "previous_val": 0,
-      "net_asset": 447162272,
-      "buy_price": 14.9615,
-      "sell_price": 14.9616
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 14.9613,
-      "previous_val": 0,
-      "net_asset": 447964288,
-      "buy_price": 14.9613,
-      "sell_price": 14.9614
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 14.9635,
-      "previous_val": 0,
-      "net_asset": 447061568,
-      "buy_price": 14.9635,
-      "sell_price": 14.9636
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 14.9684,
@@ -253,6 +221,38 @@
       "net_asset": 445281984,
       "buy_price": 14.8545,
       "sell_price": 14.8546
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 14.8448,
+      "previous_val": 0,
+      "net_asset": 444947776,
+      "buy_price": 14.8448,
+      "sell_price": 14.8449
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 14.8574,
+      "previous_val": 0,
+      "net_asset": 445865792,
+      "buy_price": 14.8574,
+      "sell_price": 14.8575
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 14.8645,
+      "previous_val": 0,
+      "net_asset": 451185440,
+      "buy_price": 14.8645,
+      "sell_price": 14.8646
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 14.8614,
+      "previous_val": 0,
+      "net_asset": 451084768,
+      "buy_price": 14.8614,
+      "sell_price": 14.8615
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.63
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.41,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตร",
@@ -305,7 +308,7 @@
       "percentage": -0.05
     }
   ],
-  "category": null,
+  "category": "MTGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -533,10 +536,8 @@
     "minimum_redemption": "0",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:43:19.395Z",
+  "data_fetched_at": "2025-11-15T11:07:47.984Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

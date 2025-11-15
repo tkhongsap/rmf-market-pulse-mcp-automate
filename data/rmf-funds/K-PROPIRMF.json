@@ -4,56 +4,24 @@
   "fund_name": "K Property Infrastructure Flexible RMF",
   "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPMIX",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "Unknown",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.3606,
+    "nav_date": "2025-11-14",
+    "last_val": 9.2846,
     "previous_val": 0,
-    "net_asset": 501328288,
-    "buy_price": 9.3606,
-    "sell_price": 9.3607,
-    "change": 9.3606,
+    "net_asset": 498534016,
+    "buy_price": 9.2846,
+    "sell_price": 9.2847,
+    "change": 9.2846,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.1637,
-      "previous_val": 0,
-      "net_asset": 506756000,
-      "buy_price": 9.1637,
-      "sell_price": 9.1638
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.1831,
-      "previous_val": 0,
-      "net_asset": 507750144,
-      "buy_price": 9.1831,
-      "sell_price": 9.1832
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.2053,
-      "previous_val": 0,
-      "net_asset": 508785952,
-      "buy_price": 9.2053,
-      "sell_price": 9.2054
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 9.2454,
-      "previous_val": 0,
-      "net_asset": 510438048,
-      "buy_price": 9.2454,
-      "sell_price": 9.2455
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.2567,
@@ -245,6 +213,38 @@
       "net_asset": 501328288,
       "buy_price": 9.3606,
       "sell_price": 9.3607
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.4039,
+      "previous_val": 0,
+      "net_asset": 504234528,
+      "buy_price": 9.4039,
+      "sell_price": 9.404
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.3845,
+      "previous_val": 0,
+      "net_asset": 503299712,
+      "buy_price": 9.3845,
+      "sell_price": 9.3846
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.3494,
+      "previous_val": 0,
+      "net_asset": 501502304,
+      "buy_price": 9.3494,
+      "sell_price": 9.3495
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 9.2846,
+      "previous_val": 0,
+      "net_asset": 498534016,
+      "buy_price": 9.2846,
+      "sell_price": 9.2847
     }
   ],
   "dividends": [],
@@ -259,7 +259,10 @@
     "since_inception": -1.44
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 10.68,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารทุน",
@@ -418,10 +421,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:21:52.518Z",
+  "data_fetched_at": "2025-11-15T10:45:12.565Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

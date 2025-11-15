@@ -4,56 +4,24 @@
   "fund_name": "MFC Smart Property Retirement Fund",
   "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPTH",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.7614,
+    "nav_date": "2025-11-14",
+    "last_val": 9.6284,
     "previous_val": 0,
-    "net_asset": 227656480,
-    "buy_price": 9.7614,
-    "sell_price": 9.7615,
-    "change": 9.7614,
+    "net_asset": 224537712,
+    "buy_price": 9.6284,
+    "sell_price": 9.6285,
+    "change": 9.6284,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.6557,
-      "previous_val": 0,
-      "net_asset": 230384272,
-      "buy_price": 9.6557,
-      "sell_price": 9.6558
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.662,
-      "previous_val": 0,
-      "net_asset": 230561424,
-      "buy_price": 9.662,
-      "sell_price": 9.6621
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.6365,
-      "previous_val": 0,
-      "net_asset": 229975536,
-      "buy_price": 9.6365,
-      "sell_price": 9.6366
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 9.604,
-      "previous_val": 0,
-      "net_asset": 229256352,
-      "buy_price": 9.604,
-      "sell_price": 9.6041
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.5908,
@@ -253,6 +221,38 @@
       "net_asset": 227656480,
       "buy_price": 9.7614,
       "sell_price": 9.7615
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.7804,
+      "previous_val": 0,
+      "net_asset": 228133024,
+      "buy_price": 9.7804,
+      "sell_price": 9.7805
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.7789,
+      "previous_val": 0,
+      "net_asset": 228098944,
+      "buy_price": 9.7789,
+      "sell_price": 9.779
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.7133,
+      "previous_val": 0,
+      "net_asset": 226546800,
+      "buy_price": 9.7133,
+      "sell_price": 9.7134
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 9.6284,
+      "previous_val": 0,
+      "net_asset": 224537712,
+      "buy_price": 9.6284,
+      "sell_price": 9.6285
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 10.97,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -289,7 +292,7 @@
       "percentage": 2.61
     }
   ],
-  "category": null,
+  "category": "FFT",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -385,10 +388,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:00.340Z",
+  "data_fetched_at": "2025-11-15T10:55:20.534Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

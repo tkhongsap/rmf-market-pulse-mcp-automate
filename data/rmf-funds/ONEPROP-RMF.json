@@ -4,56 +4,24 @@
   "fund_name": "ONE PROPERTY RETIREMENT MUTUAL FUND",
   "amc": "ONE ASSET MANAGEMENT LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.4908,
+    "nav_date": "2025-11-14",
+    "last_val": 9.3791,
     "previous_val": 0,
-    "net_asset": 109846136,
+    "net_asset": 108505160,
     "buy_price": 0,
-    "sell_price": 9.4909,
-    "change": 9.4908,
+    "sell_price": 9.3792,
+    "change": 9.3791,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.4581,
-      "previous_val": 0,
-      "net_asset": 109560296,
-      "buy_price": 0,
-      "sell_price": 9.4582
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.4524,
-      "previous_val": 0,
-      "net_asset": 109493608,
-      "buy_price": 9.4288,
-      "sell_price": 9.4525
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.4327,
-      "previous_val": 0,
-      "net_asset": 109168536,
-      "buy_price": 0,
-      "sell_price": 9.4328
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 9.4008,
-      "previous_val": 0,
-      "net_asset": 108821120,
-      "buy_price": 0,
-      "sell_price": 9.4009
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.3934,
@@ -253,6 +221,38 @@
       "net_asset": 109846136,
       "buy_price": 0,
       "sell_price": 9.4909
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.5067,
+      "previous_val": 0,
+      "net_asset": 110067968,
+      "buy_price": 9.4829,
+      "sell_price": 9.5068
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.5037,
+      "previous_val": 0,
+      "net_asset": 109942744,
+      "buy_price": 0,
+      "sell_price": 9.5038
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.456,
+      "previous_val": 0,
+      "net_asset": 109394896,
+      "buy_price": 0,
+      "sell_price": 9.4561
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 9.3791,
+      "previous_val": 0,
+      "net_asset": 108505160,
+      "buy_price": 0,
+      "sell_price": 9.3792
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 4.21
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 9.97,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนในประเทศ",
@@ -433,9 +436,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:34:01.860Z",
+  "data_fetched_at": "2025-11-15T10:58:09.214Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

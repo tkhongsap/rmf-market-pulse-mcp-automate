@@ -4,56 +4,24 @@
   "fund_name": "TISCO Income Plus RMF",
   "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXMOD",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.3114,
+    "nav_date": "2025-11-14",
+    "last_val": 10.2273,
     "previous_val": 0,
-    "net_asset": 110477792,
-    "buy_price": 10.3114,
-    "sell_price": 10.3115,
-    "change": 10.3114,
+    "net_asset": 109563832,
+    "buy_price": 10.2273,
+    "sell_price": 10.2274,
+    "change": 10.2273,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.2784,
-      "previous_val": 0,
-      "net_asset": 114563208,
-      "buy_price": 10.2784,
-      "sell_price": 10.2785
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.2626,
-      "previous_val": 0,
-      "net_asset": 114337616,
-      "buy_price": 10.2626,
-      "sell_price": 10.2627
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.2479,
-      "previous_val": 0,
-      "net_asset": 114174536,
-      "buy_price": 10.2479,
-      "sell_price": 10.248
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.2677,
-      "previous_val": 0,
-      "net_asset": 110265536,
-      "buy_price": 10.2677,
-      "sell_price": 10.2678
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.2646,
@@ -253,6 +221,38 @@
       "net_asset": 110477792,
       "buy_price": 10.3114,
       "sell_price": 10.3115
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.3153,
+      "previous_val": 0,
+      "net_asset": 110526960,
+      "buy_price": 10.3153,
+      "sell_price": 10.3154
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.2825,
+      "previous_val": 0,
+      "net_asset": 110155992,
+      "buy_price": 10.2825,
+      "sell_price": 10.2826
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.2784,
+      "previous_val": 0,
+      "net_asset": 110112016,
+      "buy_price": 10.2784,
+      "sell_price": 10.2785
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.2273,
+      "previous_val": 0,
+      "net_asset": 109563832,
+      "buy_price": 10.2273,
+      "sell_price": 10.2274
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 4.56,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นกู้",
@@ -309,7 +312,7 @@
       "percentage": -0.62
     }
   ],
-  "category": null,
+  "category": "MA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -649,10 +652,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:41:36.639Z",
+  "data_fetched_at": "2025-11-15T11:06:25.475Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

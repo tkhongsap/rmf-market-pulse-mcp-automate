@@ -4,56 +4,24 @@
   "fund_name": "Principal SET100 Retirement Mutual Fund",
   "amc": "PRINCIPAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQLARGE",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 17.1743,
+    "nav_date": "2025-11-14",
+    "last_val": 16.7435,
     "previous_val": 0,
-    "net_asset": 23079216,
-    "buy_price": 17.1743,
-    "sell_price": 17.1744,
-    "change": 17.1743,
+    "net_asset": 22542896,
+    "buy_price": 16.7435,
+    "sell_price": 16.7436,
+    "change": 16.7435,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 16.866,
-      "previous_val": 0,
-      "net_asset": 22700790,
-      "buy_price": 16.866,
-      "sell_price": 16.8661
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.6858,
-      "previous_val": 0,
-      "net_asset": 22458716,
-      "buy_price": 16.6858,
-      "sell_price": 16.6859
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 16.6933,
-      "previous_val": 0,
-      "net_asset": 22469550,
-      "buy_price": 16.6933,
-      "sell_price": 16.6934
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 16.8637,
-      "previous_val": 0,
-      "net_asset": 22699564,
-      "buy_price": 16.8637,
-      "sell_price": 16.8638
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.9392,
@@ -253,6 +221,38 @@
       "net_asset": 23079216,
       "buy_price": 17.1743,
       "sell_price": 17.1744
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 17.1137,
+      "previous_val": 0,
+      "net_asset": 22997740,
+      "buy_price": 17.1137,
+      "sell_price": 17.1138
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 16.9248,
+      "previous_val": 0,
+      "net_asset": 22775696,
+      "buy_price": 16.9248,
+      "sell_price": 16.9249
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 16.973,
+      "previous_val": 0,
+      "net_asset": 22868810,
+      "buy_price": 16.973,
+      "sell_price": 16.9731
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 16.7435,
+      "previous_val": 0,
+      "net_asset": 22542896,
+      "buy_price": 16.7435,
+      "sell_price": 16.7436
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.24
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.67,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -293,7 +296,7 @@
       "percentage": -0.13
     }
   ],
-  "category": null,
+  "category": "ELCE",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -357,10 +360,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:35:02.748Z",
+  "data_fetched_at": "2025-11-15T10:59:10.781Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

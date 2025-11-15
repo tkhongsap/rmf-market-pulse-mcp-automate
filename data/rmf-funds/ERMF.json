@@ -4,56 +4,24 @@
   "fund_name": "Equity Retirement Mutual Fund",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 78.0583,
+    "nav_date": "2025-11-14",
+    "last_val": 75.2888,
     "previous_val": 0,
-    "net_asset": 1142778624,
-    "buy_price": 78.0583,
-    "sell_price": 78.0584,
-    "change": 78.0583,
+    "net_asset": 1100548736,
+    "buy_price": 75.2888,
+    "sell_price": 75.2889,
+    "change": 75.2888,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 76.488,
-      "previous_val": 0,
-      "net_asset": 1134317824,
-      "buy_price": 76.488,
-      "sell_price": 76.4881
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 75.6024,
-      "previous_val": 0,
-      "net_asset": 1121036544,
-      "buy_price": 75.6024,
-      "sell_price": 75.6025
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 75.7109,
-      "previous_val": 0,
-      "net_asset": 1121805440,
-      "buy_price": 75.7109,
-      "sell_price": 75.711
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 76.5844,
-      "previous_val": 0,
-      "net_asset": 1134167936,
-      "buy_price": 76.5844,
-      "sell_price": 76.5845
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 76.8238,
@@ -253,6 +221,38 @@
       "net_asset": 1142778624,
       "buy_price": 78.0583,
       "sell_price": 78.0584
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 77.6231,
+      "previous_val": 0,
+      "net_asset": 1135296256,
+      "buy_price": 77.6231,
+      "sell_price": 77.6232
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 76.4643,
+      "previous_val": 0,
+      "net_asset": 1117972224,
+      "buy_price": 76.4643,
+      "sell_price": 76.4644
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 76.5157,
+      "previous_val": 0,
+      "net_asset": 1118664704,
+      "buy_price": 76.5157,
+      "sell_price": 76.5158
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 75.2888,
+      "previous_val": 0,
+      "net_asset": 1100548736,
+      "buy_price": 75.2888,
+      "sell_price": 75.2889
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.74,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารทุน",
@@ -293,7 +296,7 @@
       "percentage": -2.9
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -421,10 +424,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:15:47.595Z",
+  "data_fetched_at": "2025-11-15T11:26:05.222Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

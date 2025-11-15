@@ -4,56 +4,24 @@
   "fund_name": "K Global Technology Equity RMF",
   "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 17.1888,
+    "nav_date": "2025-11-12",
+    "last_val": 17.163,
     "previous_val": 0,
-    "net_asset": 1005492736,
-    "buy_price": 17.1888,
-    "sell_price": 17.1889,
-    "change": 17.1888,
+    "net_asset": 1007439040,
+    "buy_price": 17.163,
+    "sell_price": 17.1631,
+    "change": 17.163,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 15.7321,
-      "previous_val": 0,
-      "net_asset": 820172864,
-      "buy_price": 15.7321,
-      "sell_price": 15.7322
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 15.789,
-      "previous_val": 0,
-      "net_asset": 824804864,
-      "buy_price": 15.789,
-      "sell_price": 15.7891
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.9025,
-      "previous_val": 0,
-      "net_asset": 833153088,
-      "buy_price": 15.9025,
-      "sell_price": 15.9026
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.0946,
-      "previous_val": 0,
-      "net_asset": 846829248,
-      "buy_price": 16.0946,
-      "sell_price": 16.0947
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 16.3146,
@@ -253,6 +221,30 @@
       "net_asset": 1005492736,
       "buy_price": 17.1888,
       "sell_price": 17.1889
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 17.0653,
+      "previous_val": 0,
+      "net_asset": 1004402176,
+      "buy_price": 17.0653,
+      "sell_price": 17.0654
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 17.4678,
+      "previous_val": 0,
+      "net_asset": 1022411520,
+      "buy_price": 17.4678,
+      "sell_price": 17.4679
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 17.163,
+      "previous_val": 0,
+      "net_asset": 1007439040,
+      "buy_price": 17.163,
+      "sell_price": 17.1631
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 27.05,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +288,7 @@
       "percentage": -0.48
     }
   ],
-  "category": null,
+  "category": "TECHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -360,10 +355,8 @@
     "minimum_redemption": "500",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:21:32.368Z",
+  "data_fetched_at": "2025-11-15T10:44:31.316Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

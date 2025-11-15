@@ -1,59 +1,27 @@
 {
   "fund_id": "M0074_2545",
   "symbol": "TFPRMF-P",
-  "fund_name": "TISCO Flexible Portfolio Retirement Fund",
-  "amc": "MIXAGG",
+  "fund_name": "TISCO  Flexible Portfolio Retirement Fund",
+  "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "AM",
-    "management_style": "No",
-    "dividend_policy": "6",
-    "risk_level": 0,
+    "fund_classification": "ผสม",
+    "management_style": "AM",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 54.8759,
+    "nav_date": "2025-11-14",
+    "last_val": 53.5439,
     "previous_val": 0,
-    "net_asset": 782433472,
-    "buy_price": 54.8759,
-    "sell_price": 54.876,
-    "change": 54.8759,
+    "net_asset": 762653184,
+    "buy_price": 53.5439,
+    "sell_price": 53.544,
+    "change": 53.5439,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 55.4931,
-      "previous_val": 0,
-      "net_asset": 796472128,
-      "buy_price": 55.4931,
-      "sell_price": 55.4932
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 55.0245,
-      "previous_val": 0,
-      "net_asset": 789776320,
-      "buy_price": 55.0245,
-      "sell_price": 55.0246
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 54.758,
-      "previous_val": 0,
-      "net_asset": 785836608,
-      "buy_price": 54.758,
-      "sell_price": 54.7581
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 55.272,
-      "previous_val": 0,
-      "net_asset": 793259840,
-      "buy_price": 55.272,
-      "sell_price": 55.2721
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 55.2732,
@@ -253,6 +221,38 @@
       "net_asset": 782433472,
       "buy_price": 54.8759,
       "sell_price": 54.876
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 54.7248,
+      "previous_val": 0,
+      "net_asset": 780301632,
+      "buy_price": 54.7248,
+      "sell_price": 54.7249
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 54.0225,
+      "previous_val": 0,
+      "net_asset": 770287168,
+      "buy_price": 54.0225,
+      "sell_price": 54.0226
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 54.0835,
+      "previous_val": 0,
+      "net_asset": 771140224,
+      "buy_price": 54.0835,
+      "sell_price": 54.0836
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 53.5439,
+      "previous_val": 0,
+      "net_asset": 762653184,
+      "buy_price": 53.5439,
+      "sell_price": 53.544
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.78
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 12.65,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้น",
@@ -301,7 +304,7 @@
       "percentage": -2.26
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -577,10 +580,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:40:14.882Z",
+  "data_fetched_at": "2025-11-15T11:05:01.809Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

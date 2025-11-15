@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Japan Equity RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQJP",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 23.7491,
+    "nav_date": "2025-11-14",
+    "last_val": 23.4879,
     "previous_val": 0,
-    "net_asset": 178823840,
-    "buy_price": 23.7254,
-    "sell_price": 23.7729,
-    "change": 23.7491,
+    "net_asset": 177093072,
+    "buy_price": 23.4644,
+    "sell_price": 23.5115,
+    "change": 23.4879,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 21.0965,
-      "previous_val": 0,
-      "net_asset": 144783504,
-      "buy_price": 21.0754,
-      "sell_price": 21.1177
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 21.0815,
-      "previous_val": 0,
-      "net_asset": 143895040,
-      "buy_price": 21.0604,
-      "sell_price": 21.1027
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 20.9122,
-      "previous_val": 0,
-      "net_asset": 142993184,
-      "buy_price": 20.8913,
-      "sell_price": 20.9332
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 21.1049,
-      "previous_val": 0,
-      "net_asset": 142915296,
-      "buy_price": 21.0838,
-      "sell_price": 21.1261
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 21.4802,
@@ -245,6 +213,30 @@
       "net_asset": 178823840,
       "buy_price": 23.7254,
       "sell_price": 23.7729
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 23.8063,
+      "previous_val": 0,
+      "net_asset": 179147632,
+      "buy_price": 23.7825,
+      "sell_price": 23.8302
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 23.9047,
+      "previous_val": 0,
+      "net_asset": 180036016,
+      "buy_price": 23.8808,
+      "sell_price": 23.9287
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 23.4879,
+      "previous_val": 0,
+      "net_asset": 177093072,
+      "buy_price": 23.4644,
+      "sell_price": 23.5115
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": 13.22
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 19.33,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนรวมตราสารทุน",
@@ -289,7 +284,7 @@
       "percentage": -1.34
     }
   ],
-  "category": null,
+  "category": "JPEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -371,10 +366,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:17:49.034Z",
+  "data_fetched_at": "2025-11-15T10:41:03.698Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

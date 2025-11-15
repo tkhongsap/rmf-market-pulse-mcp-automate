@@ -4,56 +4,24 @@
   "fund_name": "MFC Global Focus Retirement Fund",
   "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 13.3869,
+    "nav_date": "2025-11-13",
+    "last_val": 13.3529,
     "previous_val": 0,
-    "net_asset": 373877280,
-    "buy_price": 13.3869,
-    "sell_price": 13.387,
-    "change": 13.3869,
+    "net_asset": 373922720,
+    "buy_price": 13.3529,
+    "sell_price": 13.353,
+    "change": 13.3529,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 13.178,
-      "previous_val": 0,
-      "net_asset": 370247040,
-      "buy_price": 13.178,
-      "sell_price": 13.1781
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.2541,
-      "previous_val": 0,
-      "net_asset": 371919168,
-      "buy_price": 13.2541,
-      "sell_price": 13.2542
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.3219,
-      "previous_val": 0,
-      "net_asset": 374281312,
-      "buy_price": 13.3219,
-      "sell_price": 13.322
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.3609,
-      "previous_val": 0,
-      "net_asset": 375438880,
-      "buy_price": 13.3609,
-      "sell_price": 13.361
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 13.4042,
@@ -253,6 +221,30 @@
       "net_asset": 373877280,
       "buy_price": 13.3869,
       "sell_price": 13.387
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.6136,
+      "previous_val": 0,
+      "net_asset": 380448704,
+      "buy_price": 13.6136,
+      "sell_price": 13.6137
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.6179,
+      "previous_val": 0,
+      "net_asset": 382156832,
+      "buy_price": 13.6179,
+      "sell_price": 13.618
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.3529,
+      "previous_val": 0,
+      "net_asset": 373922720,
+      "buy_price": 13.3529,
+      "sell_price": 13.353
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 15.35,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -289,7 +284,7 @@
       "percentage": 1.48
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -389,10 +384,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:01.547Z",
+  "data_fetched_at": "2025-11-15T10:56:48.035Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "Asset Plus Mixed RMF",
   "amc": "ASSET PLUS FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 26.8503,
+    "nav_date": "2025-11-14",
+    "last_val": 26.5305,
     "previous_val": 0,
-    "net_asset": 138449600,
-    "buy_price": 26.8503,
-    "sell_price": 26.8504,
-    "change": 26.8503,
+    "net_asset": 136691360,
+    "buy_price": 26.5305,
+    "sell_price": 26.5306,
+    "change": 26.5305,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 26.7744,
-      "previous_val": 0,
-      "net_asset": 140107856,
-      "buy_price": 26.7744,
-      "sell_price": 26.7745
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 26.7008,
-      "previous_val": 0,
-      "net_asset": 140139520,
-      "buy_price": 26.7008,
-      "sell_price": 26.7009
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 26.6717,
-      "previous_val": 0,
-      "net_asset": 139539280,
-      "buy_price": 26.6717,
-      "sell_price": 26.6718
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 26.8092,
-      "previous_val": 0,
-      "net_asset": 140259520,
-      "buy_price": 26.8092,
-      "sell_price": 26.8093
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 26.7533,
@@ -253,6 +221,38 @@
       "net_asset": 138449600,
       "buy_price": 26.8503,
       "sell_price": 26.8504
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 26.7892,
+      "previous_val": 0,
+      "net_asset": 137990080,
+      "buy_price": 26.7892,
+      "sell_price": 26.7893
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 26.6756,
+      "previous_val": 0,
+      "net_asset": 137902896,
+      "buy_price": 26.6756,
+      "sell_price": 26.6757
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 26.642,
+      "previous_val": 0,
+      "net_asset": 137681360,
+      "buy_price": 26.642,
+      "sell_price": 26.6421
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 26.5305,
+      "previous_val": 0,
+      "net_asset": 136691360,
+      "buy_price": 26.5305,
+      "sell_price": 26.5306
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.27
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.39,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้รัฐบาล",
@@ -297,7 +300,7 @@
       "percentage": 0.71
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -397,10 +400,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:11:43.555Z",
+  "data_fetched_at": "2025-11-15T11:20:57.431Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

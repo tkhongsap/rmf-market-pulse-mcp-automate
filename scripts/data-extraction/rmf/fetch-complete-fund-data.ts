@@ -45,7 +45,7 @@ import {
   type VolatilityMetrics,
   type TrackingError,
   type FundCompareData,
-  type FundAssets,
+  type FundAsset,
   type FundPolicyData,
   type DividendPolicyData,
   type SuitabilityData,
@@ -461,8 +461,8 @@ async function fetchRiskMetrics(proj_id: string): Promise<RiskMetrics | null> {
       fetchFundTrackingError(proj_id).catch(() => null),
     ]);
 
-    const stdDev5y = volatility && volatility.length > 0 ? parseFloat(volatility[0]?.[1]) : null;
-    const te1y = trackingError && trackingError.length > 0 ? parseFloat(trackingError[0]?.[1]) : null;
+    const stdDev5y = volatility?.standardDeviation ?? null;
+    const te1y = trackingError?.oneYear ?? null;
 
     if (stdDev5y !== null || te1y !== null) {
       log(`  ✓ Found risk metrics (SD: ${stdDev5y}, TE: ${te1y})`, 'green');
@@ -516,12 +516,12 @@ async function fetchFundCategory(proj_id: string): Promise<string | null> {
   try {
     const compareData = await fetchFundCompare(proj_id);
 
-    if (!compareData || compareData.length === 0) {
+    if (!compareData || !compareData.category) {
       log('  ✗ No category data available', 'yellow');
       return null;
     }
 
-    const category = compareData[0]?.[1] || null;
+    const category = compareData.category || null;
     log(`  ✓ Category: ${category}`, 'green');
     return category;
   } catch (error: any) {
@@ -668,9 +668,9 @@ async function fetchSuitabilityInfo(proj_id: string): Promise<SuitabilityInfo | 
     }
 
     const suitabilityInfo: SuitabilityInfo = {
-      investment_horizon: suitability.invest_period_desc || null,
+      investment_horizon: null,
       risk_level: suitability.risk_spectrum_desc || null,
-      target_investor: suitability.suitability_desc || null,
+      target_investor: null,
     };
 
     log('  ✓ Found suitability data', 'green');
@@ -1056,7 +1056,7 @@ async function main() {
     mkdirSync(outputDir, { recursive: true });
 
     // Save to JSON file
-    const outputPath = join(outputDir, `${metadata.symbol}.json`);
+    const outputPath = join(outputDir, `${basicInfo.symbol}.json`);
     writeFileSync(outputPath, JSON.stringify(completeData, null, 2), 'utf-8');
 
     logSection('Success!');

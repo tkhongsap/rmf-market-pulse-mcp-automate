@@ -4,56 +4,24 @@
   "fund_name": "MFC Money Market Retirement Fund",
   "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMMGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "SM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 1,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 13.4829,
+    "nav_date": "2025-11-14",
+    "last_val": 13.4842,
     "previous_val": 0,
-    "net_asset": 327443584,
-    "buy_price": 13.4829,
-    "sell_price": 13.483,
-    "change": 13.4829,
+    "net_asset": 329608736,
+    "buy_price": 13.4842,
+    "sell_price": 13.4843,
+    "change": 13.4842,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.4691,
-      "previous_val": 0,
-      "net_asset": 324171680,
-      "buy_price": 13.4691,
-      "sell_price": 13.4692
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.4695,
-      "previous_val": 0,
-      "net_asset": 324160224,
-      "buy_price": 13.4695,
-      "sell_price": 13.4696
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.4698,
-      "previous_val": 0,
-      "net_asset": 323993344,
-      "buy_price": 13.4698,
-      "sell_price": 13.4699
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 13.4698,
-      "previous_val": 0,
-      "net_asset": 324028640,
-      "buy_price": 13.4698,
-      "sell_price": 13.4699
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 13.4702,
@@ -253,6 +221,38 @@
       "net_asset": 327443584,
       "buy_price": 13.4829,
       "sell_price": 13.483
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.4833,
+      "previous_val": 0,
+      "net_asset": 326723168,
+      "buy_price": 13.4833,
+      "sell_price": 13.4834
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.4836,
+      "previous_val": 0,
+      "net_asset": 336868896,
+      "buy_price": 13.4836,
+      "sell_price": 13.4837
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.4839,
+      "previous_val": 0,
+      "net_asset": 336497856,
+      "buy_price": 13.4839,
+      "sell_price": 13.484
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 13.4842,
+      "previous_val": 0,
+      "net_asset": 329608736,
+      "buy_price": 13.4842,
+      "sell_price": 13.4843
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.18
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.09,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้ภาครัฐ",
@@ -293,7 +296,7 @@
       "percentage": 0.06
     }
   ],
-  "category": null,
+  "category": "MMG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -401,10 +404,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:21.819Z",
+  "data_fetched_at": "2025-11-15T10:57:08.620Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "United CIO Growth Fund TH RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.2499,
+    "nav_date": "2025-11-13",
+    "last_val": 10.428,
     "previous_val": 0,
-    "net_asset": 43371532,
-    "buy_price": 10.2499,
-    "sell_price": 10.25,
-    "change": 10.2499,
+    "net_asset": 46331836,
+    "buy_price": 10.428,
+    "sell_price": 10.4281,
+    "change": 10.428,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.242,
-      "previous_val": 0,
-      "net_asset": 16245958,
-      "buy_price": 10.242,
-      "sell_price": 10.2421
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.2968,
-      "previous_val": 0,
-      "net_asset": 17883076,
-      "buy_price": 10.2968,
-      "sell_price": 10.2969
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.3003,
-      "previous_val": 0,
-      "net_asset": 19364862,
-      "buy_price": 10.3003,
-      "sell_price": 10.3004
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.3546,
-      "previous_val": 0,
-      "net_asset": 20023998,
-      "buy_price": 10.3546,
-      "sell_price": 10.3547
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.3593,
@@ -245,6 +213,30 @@
       "net_asset": 43371532,
       "buy_price": 10.2499,
       "sell_price": 10.25
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.4177,
+      "previous_val": 0,
+      "net_asset": 45553184,
+      "buy_price": 10.4177,
+      "sell_price": 10.4178
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.5248,
+      "previous_val": 0,
+      "net_asset": 46461148,
+      "buy_price": 10.5248,
+      "sell_price": 10.5249
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.428,
+      "previous_val": 0,
+      "net_asset": 46331836,
+      "buy_price": 10.428,
+      "sell_price": 10.4281
     }
   ],
   "dividends": [],
@@ -281,7 +273,7 @@
       "percentage": 0.08
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -363,10 +355,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:44:20.530Z",
+  "data_fetched_at": "2025-11-15T11:09:11.462Z",
   "errors": [
     "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

@@ -4,56 +4,24 @@
   "fund_name": "KTAM Gold RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "COMPM",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 21.8783,
+    "nav_date": "2025-11-14",
+    "last_val": 22.4264,
     "previous_val": 0,
-    "net_asset": 1211676416,
-    "buy_price": 21.8783,
-    "sell_price": 21.8784,
-    "change": 21.8783,
+    "net_asset": 1260400000,
+    "buy_price": 22.4264,
+    "sell_price": 22.4265,
+    "change": 22.4264,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 20.5744,
-      "previous_val": 0,
-      "net_asset": 1089053568,
-      "buy_price": 20.5744,
-      "sell_price": 20.5745
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 20.5931,
-      "previous_val": 0,
-      "net_asset": 1093481216,
-      "buy_price": 20.5931,
-      "sell_price": 20.5932
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 20.9803,
-      "previous_val": 0,
-      "net_asset": 1118667136,
-      "buy_price": 20.9803,
-      "sell_price": 20.9804
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 20.8689,
-      "previous_val": 0,
-      "net_asset": 1115979136,
-      "buy_price": 20.8689,
-      "sell_price": 20.869
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 20.8078,
@@ -245,6 +213,30 @@
       "net_asset": 1211676416,
       "buy_price": 21.8783,
       "sell_price": 21.8784
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 22.1704,
+      "previous_val": 0,
+      "net_asset": 1229449728,
+      "buy_price": 22.1704,
+      "sell_price": 22.1705
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 22.6485,
+      "previous_val": 0,
+      "net_asset": 1267809280,
+      "buy_price": 22.6485,
+      "sell_price": 22.6486
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 22.4264,
+      "previous_val": 0,
+      "net_asset": 1260400000,
+      "buy_price": 22.4264,
+      "sell_price": 22.4265
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": 11.23
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.08,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ทรัพย์สินทางเลือก",
@@ -285,7 +280,7 @@
       "percentage": -1.7
     }
   ],
-  "category": null,
+  "category": "CPM",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -389,10 +384,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:29:37.813Z",
+  "data_fetched_at": "2025-11-15T10:52:34.181Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

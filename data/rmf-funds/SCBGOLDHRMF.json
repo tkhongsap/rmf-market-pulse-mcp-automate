@@ -4,56 +4,24 @@
   "fund_name": "SCB GOLD THB HEDGED RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "COMPM",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 18.4434,
+    "nav_date": "2025-11-14",
+    "last_val": 18.9116,
     "previous_val": 0,
-    "net_asset": 3807401984,
-    "buy_price": 18.4434,
-    "sell_price": 18.4435,
-    "change": 18.4434,
+    "net_asset": 3985708800,
+    "buy_price": 18.9116,
+    "sell_price": 18.9117,
+    "change": 18.9116,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 17.3857,
-      "previous_val": 0,
-      "net_asset": 3413915648,
-      "buy_price": 17.3857,
-      "sell_price": 17.3858
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 17.3769,
-      "previous_val": 0,
-      "net_asset": 3429094400,
-      "buy_price": 17.3769,
-      "sell_price": 17.377
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 17.7136,
-      "previous_val": 0,
-      "net_asset": 3467966720,
-      "buy_price": 17.7136,
-      "sell_price": 17.7137
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 17.6052,
-      "previous_val": 0,
-      "net_asset": 3501652992,
-      "buy_price": 17.6052,
-      "sell_price": 17.6053
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 17.5521,
@@ -253,6 +221,38 @@
       "net_asset": 3807401984,
       "buy_price": 18.4434,
       "sell_price": 18.4435
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 18.7185,
+      "previous_val": 0,
+      "net_asset": 3907032320,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 18.66,
+      "previous_val": 0,
+      "net_asset": 3894819072,
+      "buy_price": 18.66,
+      "sell_price": 18.6601
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 19.1304,
+      "previous_val": 0,
+      "net_asset": 4007698944,
+      "buy_price": 19.1304,
+      "sell_price": 19.1305
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 18.9116,
+      "previous_val": 0,
+      "net_asset": 3985708800,
+      "buy_price": 18.9116,
+      "sell_price": 18.9117
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 8.94
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.46,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -0.92
     }
   ],
-  "category": null,
+  "category": "CPM",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -455,10 +458,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:35:22.924Z",
+  "data_fetched_at": "2025-11-15T10:59:52.197Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

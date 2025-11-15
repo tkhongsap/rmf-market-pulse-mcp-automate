@@ -4,56 +4,24 @@
   "fund_name": "The Krung Thai Debt Securities RMF 3",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXLONGGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 3,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 15.4423,
+    "nav_date": "2025-11-14",
+    "last_val": 15.4501,
     "previous_val": 0,
-    "net_asset": 3870915072,
-    "buy_price": 15.4423,
-    "sell_price": 15.4424,
-    "change": 15.4423,
+    "net_asset": 3871935488,
+    "buy_price": 15.4501,
+    "sell_price": 15.4502,
+    "change": 15.4501,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.5712,
-      "previous_val": 0,
-      "net_asset": 3914237696,
-      "buy_price": 15.5712,
-      "sell_price": 15.5713
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.5936,
-      "previous_val": 0,
-      "net_asset": 3919296512,
-      "buy_price": 15.5936,
-      "sell_price": 15.5937
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.5906,
-      "previous_val": 0,
-      "net_asset": 3917949696,
-      "buy_price": 15.5906,
-      "sell_price": 15.5907
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 15.5929,
-      "previous_val": 0,
-      "net_asset": 3918498816,
-      "buy_price": 15.5929,
-      "sell_price": 15.593
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 15.5988,
@@ -253,6 +221,38 @@
       "net_asset": 3870915072,
       "buy_price": 15.4423,
       "sell_price": 15.4424
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 15.4309,
+      "previous_val": 0,
+      "net_asset": 3870233344,
+      "buy_price": 15.4309,
+      "sell_price": 15.431
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.4453,
+      "previous_val": 0,
+      "net_asset": 3870435328,
+      "buy_price": 15.4453,
+      "sell_price": 15.4454
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.4556,
+      "previous_val": 0,
+      "net_asset": 3872038656,
+      "buy_price": 15.4556,
+      "sell_price": 15.4557
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 15.4501,
+      "previous_val": 0,
+      "net_asset": 3871935488,
+      "buy_price": 15.4501,
+      "sell_price": 15.4502
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.16
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.95,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรรัฐบาล",
@@ -305,7 +308,7 @@
       "percentage": -0.16
     }
   ],
-  "category": null,
+  "category": "LTGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -395,10 +398,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:35:22.884Z",
+  "data_fetched_at": "2025-11-15T10:59:31.523Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

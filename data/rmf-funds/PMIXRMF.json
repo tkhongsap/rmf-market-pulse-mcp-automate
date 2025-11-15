@@ -4,56 +4,24 @@
   "fund_name": "PHILLIP MIXED RETIREMENT MUTUAL FUND",
   "amc": "PHILLIP ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 22.616,
+    "nav_date": "2025-11-14",
+    "last_val": 22.4924,
     "previous_val": 0,
-    "net_asset": 33226712,
-    "buy_price": 22.616,
-    "sell_price": 22.6161,
-    "change": 22.616,
+    "net_asset": 33036716,
+    "buy_price": 22.4924,
+    "sell_price": 22.4925,
+    "change": 22.4924,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 22.6104,
-      "previous_val": 0,
-      "net_asset": 33463452,
-      "buy_price": 22.6104,
-      "sell_price": 22.6105
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 22.5895,
-      "previous_val": 0,
-      "net_asset": 33439516,
-      "buy_price": 22.5895,
-      "sell_price": 22.5896
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 22.4779,
-      "previous_val": 0,
-      "net_asset": 33294266,
-      "buy_price": 22.4779,
-      "sell_price": 22.478
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 22.6141,
-      "previous_val": 0,
-      "net_asset": 33487786,
-      "buy_price": 22.6141,
-      "sell_price": 22.6142
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 22.6215,
@@ -253,6 +221,38 @@
       "net_asset": 33226712,
       "buy_price": 22.616,
       "sell_price": 22.6161
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 22.6614,
+      "previous_val": 0,
+      "net_asset": 33293304,
+      "buy_price": 22.6614,
+      "sell_price": 22.6615
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 22.5743,
+      "previous_val": 0,
+      "net_asset": 33156928,
+      "buy_price": 22.5743,
+      "sell_price": 22.5744
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 22.6753,
+      "previous_val": 0,
+      "net_asset": 33305380,
+      "buy_price": 22.6753,
+      "sell_price": 22.6754
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 22.4924,
+      "previous_val": 0,
+      "net_asset": 33036716,
+      "buy_price": 22.4924,
+      "sell_price": 22.4925
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 3.57
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 11.8,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารทุน",
@@ -301,7 +304,7 @@
       "percentage": 0.09
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -485,10 +488,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:34:22.279Z",
+  "data_fetched_at": "2025-11-15T10:58:29.857Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

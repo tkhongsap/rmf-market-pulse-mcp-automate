@@ -4,56 +4,24 @@
   "fund_name": "BCAP Global Target Date 2050 Retirement Mutual Fund",
   "amc": "BANGKOK CAPITAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXMOD",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 12.246,
+    "nav_date": "2025-11-12",
+    "last_val": 12.4086,
     "previous_val": 0,
-    "net_asset": 85529816,
-    "buy_price": 12.246,
-    "sell_price": 12.2461,
-    "change": 12.246,
+    "net_asset": 86720744,
+    "buy_price": 12.4086,
+    "sell_price": 12.4087,
+    "change": 12.4086,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 12.0456,
-      "previous_val": 0,
-      "net_asset": 82393832,
-      "buy_price": 12.0456,
-      "sell_price": 12.0457
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.0611,
-      "previous_val": 0,
-      "net_asset": 82529856,
-      "buy_price": 12.0611,
-      "sell_price": 12.0612
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.1219,
-      "previous_val": 0,
-      "net_asset": 82984784,
-      "buy_price": 12.1219,
-      "sell_price": 12.122
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.1394,
-      "previous_val": 0,
-      "net_asset": 83135824,
-      "buy_price": 12.1394,
-      "sell_price": 12.1395
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 12.1803,
@@ -253,43 +221,78 @@
       "net_asset": 85529816,
       "buy_price": 12.246,
       "sell_price": 12.2461
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 12.1979,
+      "previous_val": 0,
+      "net_asset": 85205896,
+      "buy_price": 12.1979,
+      "sell_price": 12.198
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.3082,
+      "previous_val": 0,
+      "net_asset": 86002640,
+      "buy_price": 12.3082,
+      "sell_price": 12.3083
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 12.364,
+      "previous_val": 0,
+      "net_asset": 86409000,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.4086,
+      "previous_val": 0,
+      "net_asset": 86720744,
+      "buy_price": 12.4086,
+      "sell_price": 12.4087
     }
   ],
   "dividends": [],
   "performance": {
-    "ytd": 8.89,
-    "3m": 4.61,
-    "6m": 8.22,
-    "1y": 8.62,
-    "3y": 6.21,
-    "5y": null,
+    "ytd": 10.42,
+    "3m": 4.86,
+    "6m": 8.94,
+    "1y": 9.82,
+    "3y": 6.2,
+    "5y": 5.12,
     "10y": null,
-    "since_inception": 3.97
+    "since_inception": 4.19
   },
   "benchmark": {
     "name": "Bloomberg Global Aggregate Total Return Index Hedged THB",
     "returns": {
-      "ytd": 3.28,
-      "3m": 10.41,
-      "6m": 12.1,
-      "1y": 4.58,
-      "3y": 6.08,
-      "5y": null,
+      "ytd": 5.53,
+      "3m": 5.52,
+      "6m": 12.24,
+      "1y": 5.13,
+      "3y": 5.59,
+      "5y": 8.37,
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 8.39,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
-      "percentage": 98.2
+      "percentage": 96.6
     },
     {
       "asset_class": "เงินฝากธนาคาร",
-      "percentage": 2.02
+      "percentage": 3.49
     }
   ],
-  "category": null,
+  "category": "MA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -417,10 +420,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:14:07.753Z",
+  "data_fetched_at": "2025-11-15T11:23:22.764Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

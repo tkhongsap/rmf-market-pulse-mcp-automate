@@ -4,56 +4,24 @@
   "fund_name": "UOB Gold RMF - Currency Hedged",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "COMPM",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 18.6143,
+    "nav_date": "2025-11-14",
+    "last_val": 19.0795,
     "previous_val": 0,
-    "net_asset": 260745792,
-    "buy_price": 18.6143,
-    "sell_price": 18.6144,
-    "change": 18.6143,
+    "net_asset": 273927200,
+    "buy_price": 19.0795,
+    "sell_price": 19.0796,
+    "change": 19.0795,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 17.5586,
-      "previous_val": 0,
-      "net_asset": 222464176,
-      "buy_price": 17.5586,
-      "sell_price": 17.5587
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 17.5473,
-      "previous_val": 0,
-      "net_asset": 225863600,
-      "buy_price": 17.5473,
-      "sell_price": 17.5474
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 17.8813,
-      "previous_val": 0,
-      "net_asset": 232519856,
-      "buy_price": 17.8813,
-      "sell_price": 17.8814
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 17.7739,
-      "previous_val": 0,
-      "net_asset": 231916704,
-      "buy_price": 17.7739,
-      "sell_price": 17.774
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 17.7207,
@@ -245,6 +213,30 @@
       "net_asset": 260745792,
       "buy_price": 18.6143,
       "sell_price": 18.6144
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 18.8317,
+      "previous_val": 0,
+      "net_asset": 264855728,
+      "buy_price": 18.8317,
+      "sell_price": 18.8318
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 19.2972,
+      "previous_val": 0,
+      "net_asset": 276572288,
+      "buy_price": 19.2972,
+      "sell_price": 19.2973
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 19.0795,
+      "previous_val": 0,
+      "net_asset": 273927200,
+      "buy_price": 19.0795,
+      "sell_price": 19.0796
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": 12.68
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.42,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนระหว่างประเทศ",
@@ -285,7 +280,7 @@
       "percentage": 0.01
     }
   ],
-  "category": null,
+  "category": "CPM",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -417,10 +412,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:45:20.938Z",
+  "data_fetched_at": "2025-11-15T11:10:13.443Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

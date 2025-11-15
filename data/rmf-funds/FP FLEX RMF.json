@@ -4,64 +4,24 @@
   "fund_name": "First Plus Flexible Retirement Mutual Fund",
   "amc": "FIRST PLUS ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXMOD",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "-",
+    "dividend_policy": "Unknown",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 19.8602,
+    "nav_date": "2025-11-14",
+    "last_val": 19.8104,
     "previous_val": 0,
-    "net_asset": 29430924,
-    "buy_price": 19.8602,
-    "sell_price": 19.8603,
-    "change": 19.8602,
+    "net_asset": 29328338,
+    "buy_price": 19.8104,
+    "sell_price": 19.8105,
+    "change": 19.8104,
     "change_percent": 0,
-    "last_upd_date": "2025-11-10T16:05:52.2"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 20.0303,
-      "previous_val": 0,
-      "net_asset": 29945930,
-      "buy_price": 20.0303,
-      "sell_price": 20.0304
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 20.0645,
-      "previous_val": 0,
-      "net_asset": 29996956,
-      "buy_price": 20.0645,
-      "sell_price": 20.0646
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 20.0377,
-      "previous_val": 0,
-      "net_asset": 29956906,
-      "buy_price": 20.0377,
-      "sell_price": 20.0378
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 20.005,
-      "previous_val": 0,
-      "net_asset": 29908128,
-      "buy_price": 20.005,
-      "sell_price": 20.0051
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 20.0375,
-      "previous_val": 0,
-      "net_asset": 29956596,
-      "buy_price": 20.0375,
-      "sell_price": 20.0376
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 20.0518,
@@ -253,6 +213,46 @@
       "net_asset": 29430924,
       "buy_price": 19.8602,
       "sell_price": 19.8603
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 19.8753,
+      "previous_val": 0,
+      "net_asset": 29453196,
+      "buy_price": 19.8753,
+      "sell_price": 19.8754
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 19.8689,
+      "previous_val": 0,
+      "net_asset": 29443754,
+      "buy_price": 19.8689,
+      "sell_price": 19.869
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 19.8374,
+      "previous_val": 0,
+      "net_asset": 29368338,
+      "buy_price": 19.8374,
+      "sell_price": 19.8375
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 19.8514,
+      "previous_val": 0,
+      "net_asset": 29389000,
+      "buy_price": 19.8514,
+      "sell_price": 19.8515
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 19.8104,
+      "previous_val": 0,
+      "net_asset": 29328338,
+      "buy_price": 19.8104,
+      "sell_price": 19.8105
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 3.64
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 7.63,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้",
@@ -293,7 +296,7 @@
       "percentage": 0.76
     }
   ],
-  "category": null,
+  "category": "MA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -377,10 +380,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:19:30.539Z",
+  "data_fetched_at": "2025-11-15T10:42:48.227Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

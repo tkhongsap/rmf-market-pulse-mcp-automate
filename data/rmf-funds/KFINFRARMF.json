@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Next Generation Infrastructure RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 9.6598,
+    "nav_date": "2025-11-12",
+    "last_val": 9.8587,
     "previous_val": 0,
-    "net_asset": 70109560,
-    "buy_price": 9.6598,
-    "sell_price": 9.6599,
-    "change": 9.6598,
+    "net_asset": 71515896,
+    "buy_price": 9.8587,
+    "sell_price": 9.8588,
+    "change": 9.8587,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 9.78,
-      "previous_val": 0,
-      "net_asset": 70354480,
-      "buy_price": 9.78,
-      "sell_price": 9.7801
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 9.8365,
-      "previous_val": 0,
-      "net_asset": 70780168,
-      "buy_price": 9.8365,
-      "sell_price": 9.8366
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.8569,
-      "previous_val": 0,
-      "net_asset": 70951280,
-      "buy_price": 9.8569,
-      "sell_price": 9.857
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.9078,
-      "previous_val": 0,
-      "net_asset": 71385952,
-      "buy_price": 9.9078,
-      "sell_price": 9.9079
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 9.8815,
@@ -253,6 +221,38 @@
       "net_asset": 70109560,
       "buy_price": 9.6598,
       "sell_price": 9.6599
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.7073,
+      "previous_val": 0,
+      "net_asset": 70410576,
+      "buy_price": 9.7073,
+      "sell_price": 9.7074
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.7373,
+      "previous_val": 0,
+      "net_asset": 70672312,
+      "buy_price": 9.7373,
+      "sell_price": 9.7374
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.8052,
+      "previous_val": 0,
+      "net_asset": 71127896,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.8587,
+      "previous_val": 0,
+      "net_asset": 71515896,
+      "buy_price": 9.8587,
+      "sell_price": 9.8588
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.03,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "UBS (Lux) Infrastructure Equity Fund",
@@ -293,7 +296,7 @@
       "percentage": -0.86
     }
   ],
-  "category": null,
+  "category": "EQGLINFRA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -397,10 +400,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:26:55.991Z",
+  "data_fetched_at": "2025-11-15T10:49:23.724Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

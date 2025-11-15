@@ -1,59 +1,27 @@
 {
   "fund_id": "M0045_2565",
   "symbol": "K-VIETNAMRMF",
-  "fund_name": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
-  "amc": "EQVIET",
+  "fund_name": "K Vietnam Equity RMF",
+  "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "AN",
-    "management_style": "No",
-    "dividend_policy": "6",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.8857,
+    "nav_date": "2025-11-14",
+    "last_val": 10.1508,
     "previous_val": 0,
-    "net_asset": 2575269120,
-    "buy_price": 9.8857,
-    "sell_price": 9.8858,
-    "change": 9.8857,
+    "net_asset": 2655536640,
+    "buy_price": 10.1508,
+    "sell_price": 10.1509,
+    "change": 10.1508,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.4361,
-      "previous_val": 0,
-      "net_asset": 2721979136,
-      "buy_price": 10.4361,
-      "sell_price": 10.4362
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.4,
-      "previous_val": 0,
-      "net_asset": 2709101568,
-      "buy_price": 10.4,
-      "sell_price": 10.4001
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.4499,
-      "previous_val": 0,
-      "net_asset": 2721696768,
-      "buy_price": 10.4499,
-      "sell_price": 10.45
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.4119,
-      "previous_val": 0,
-      "net_asset": 2707952384,
-      "buy_price": 10.4119,
-      "sell_price": 10.412
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.3295,
@@ -253,6 +221,30 @@
       "net_asset": 2575269120,
       "buy_price": 9.8857,
       "sell_price": 9.8858
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.1987,
+      "previous_val": 0,
+      "net_asset": 2662443264,
+      "buy_price": 10.1987,
+      "sell_price": 10.1988
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.0997,
+      "previous_val": 0,
+      "net_asset": 2638594048,
+      "buy_price": 10.0997,
+      "sell_price": 10.0998
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.1508,
+      "previous_val": 0,
+      "net_asset": 2655536640,
+      "buy_price": 10.1508,
+      "sell_price": 10.1509
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 19.73,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +292,7 @@
       "percentage": -0.79
     }
   ],
-  "category": null,
+  "category": "VIEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -381,10 +376,8 @@
     "minimum_redemption": "500",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:23:34.182Z",
+  "data_fetched_at": "2025-11-15T10:45:54.514Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

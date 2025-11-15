@@ -4,56 +4,24 @@
   "fund_name": "LH GLOBAL EQUITY RMF FUND",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 12.319,
+    "nav_date": "2025-11-13",
+    "last_val": 12.4339,
     "previous_val": 0,
-    "net_asset": 125768800,
-    "buy_price": 12.319,
-    "sell_price": 12.3191,
-    "change": 12.319,
+    "net_asset": 126946008,
+    "buy_price": 12.4339,
+    "sell_price": 12.434,
+    "change": 12.4339,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.0665,
-      "previous_val": 0,
-      "net_asset": 125605696,
-      "buy_price": 12.0665,
-      "sell_price": 12.0666
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.1009,
-      "previous_val": 0,
-      "net_asset": 125970320,
-      "buy_price": 12.1009,
-      "sell_price": 12.101
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.1645,
-      "previous_val": 0,
-      "net_asset": 126633768,
-      "buy_price": 12.1645,
-      "sell_price": 12.1646
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.2734,
-      "previous_val": 0,
-      "net_asset": 126396472,
-      "buy_price": 12.2734,
-      "sell_price": 12.2735
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 12.343,
@@ -253,6 +221,38 @@
       "net_asset": 125768800,
       "buy_price": 12.319,
       "sell_price": 12.3191
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.447,
+      "previous_val": 0,
+      "net_asset": 127074520,
+      "buy_price": 12.447,
+      "sell_price": 12.4471
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 12.5316,
+      "previous_val": 0,
+      "net_asset": 127941432,
+      "buy_price": 12.5316,
+      "sell_price": 12.5317
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.5772,
+      "previous_val": 0,
+      "net_asset": 128407216,
+      "buy_price": 12.5772,
+      "sell_price": 12.5773
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.4339,
+      "previous_val": 0,
+      "net_asset": 126946008,
+      "buy_price": 12.4339,
+      "sell_price": 12.434
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 3.9743243164774
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 17.084051128654,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน GMO Quality Investment Fund                                                                                                                                                                                                                                                                                 ",
@@ -282,7 +285,7 @@
       "percentage": 1.39063607912948
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -386,11 +389,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:31:19.550Z",
+  "data_fetched_at": "2025-11-15T10:54:38.576Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

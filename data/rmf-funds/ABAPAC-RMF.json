@@ -4,56 +4,24 @@
   "fund_name": "abrdn Asia Pacific Equity Retirement Mutual Fund",
   "amc": "ABERDEEN ASSET MANAGEMENT (THAILAND) LIMITED",
   "metadata": {
-    "fund_classification": "EQASxJP",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 15.626,
+    "nav_date": "2025-11-13",
+    "last_val": 15.889,
     "previous_val": 0,
-    "net_asset": 590630848,
-    "buy_price": 15.626,
-    "sell_price": 15.6261,
-    "change": 15.626,
+    "net_asset": 600099520,
+    "buy_price": 15.889,
+    "sell_price": 15.8891,
+    "change": 15.889,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 14.8926,
-      "previous_val": 0,
-      "net_asset": 563885312,
-      "buy_price": 14.8926,
-      "sell_price": 14.8927
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.0861,
-      "previous_val": 0,
-      "net_asset": 570958016,
-      "buy_price": 15.0861,
-      "sell_price": 15.0862
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.1741,
-      "previous_val": 0,
-      "net_asset": 575041792,
-      "buy_price": 15.1741,
-      "sell_price": 15.1742
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.1702,
-      "previous_val": 0,
-      "net_asset": 574542784,
-      "buy_price": 15.1702,
-      "sell_price": 15.1703
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 15.4035,
@@ -245,6 +213,38 @@
       "net_asset": 590630848,
       "buy_price": 15.626,
       "sell_price": 15.6261
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 15.8194,
+      "previous_val": 0,
+      "net_asset": 596732352,
+      "buy_price": 15.8194,
+      "sell_price": 15.8195
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 15.8284,
+      "previous_val": 0,
+      "net_asset": 598753792,
+      "buy_price": 15.8284,
+      "sell_price": 15.8285
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.8958,
+      "previous_val": 0,
+      "net_asset": 601248256,
+      "buy_price": 15.8958,
+      "sell_price": 15.8959
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.889,
+      "previous_val": 0,
+      "net_asset": 600099520,
+      "buy_price": 15.889,
+      "sell_price": 15.8891
     }
   ],
   "dividends": [],
@@ -270,7 +270,10 @@
       "10y": 7.35
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.72,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "Unit Trust",
@@ -281,7 +284,7 @@
       "percentage": 1.1
     }
   ],
-  "category": null,
+  "category": "AEJ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -367,10 +370,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:10:41.753Z",
+  "data_fetched_at": "2025-11-15T11:19:53.366Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

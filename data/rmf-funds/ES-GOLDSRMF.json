@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Gold Singapore RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "COMPM",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 21.6254,
+    "nav_date": "2025-11-14",
+    "last_val": 22.1609,
     "previous_val": 0,
-    "net_asset": 753596864,
-    "buy_price": 21.6038,
-    "sell_price": 21.6471,
-    "change": 21.6254,
+    "net_asset": 776953216,
+    "buy_price": 22.1387,
+    "sell_price": 22.1832,
+    "change": 22.1609,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 20.3771,
-      "previous_val": 0,
-      "net_asset": 699726464,
-      "buy_price": 20.3567,
-      "sell_price": 20.3976
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 20.3674,
-      "previous_val": 0,
-      "net_asset": 701658752,
-      "buy_price": 20.347,
-      "sell_price": 20.3879
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 20.7637,
-      "previous_val": 0,
-      "net_asset": 717879168,
-      "buy_price": 20.7429,
-      "sell_price": 20.7846
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 20.6395,
-      "previous_val": 0,
-      "net_asset": 714174656,
-      "buy_price": 20.6189,
-      "sell_price": 20.6602
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 20.5767,
@@ -245,6 +213,30 @@
       "net_asset": 753596864,
       "buy_price": 21.6038,
       "sell_price": 21.6471
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 21.8761,
+      "previous_val": 0,
+      "net_asset": 764472128,
+      "buy_price": 21.8542,
+      "sell_price": 21.8981
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 22.4154,
+      "previous_val": 0,
+      "net_asset": 786799104,
+      "buy_price": 22.393,
+      "sell_price": 22.4379
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 22.1609,
+      "previous_val": 0,
+      "net_asset": 776953216,
+      "buy_price": 22.1387,
+      "sell_price": 22.1832
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": 11.31
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.44,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนประเภทอื่น",
@@ -293,7 +288,7 @@
       "percentage": -1.35
     }
   ],
-  "category": null,
+  "category": "CPM",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -375,10 +370,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:17:08.117Z",
+  "data_fetched_at": "2025-11-15T11:27:27.465Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

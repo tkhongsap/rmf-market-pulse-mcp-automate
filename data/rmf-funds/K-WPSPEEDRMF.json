@@ -4,56 +4,24 @@
   "fund_name": "K WealthPLUS SpeedUp RMF",
   "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ผสม",
+    "management_style": "AM",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.6964,
+    "nav_date": "2025-11-13",
+    "last_val": 10.8187,
     "previous_val": 0,
-    "net_asset": 194744784,
-    "buy_price": 10.6964,
-    "sell_price": 10.6965,
-    "change": 10.6964,
+    "net_asset": 198133504,
+    "buy_price": 10.8187,
+    "sell_price": 10.8188,
+    "change": 10.8187,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.6603,
-      "previous_val": 0,
-      "net_asset": 174481184,
-      "buy_price": 10.6603,
-      "sell_price": 10.6604
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.7156,
-      "previous_val": 0,
-      "net_asset": 175422416,
-      "buy_price": 10.7156,
-      "sell_price": 10.7157
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.7509,
-      "previous_val": 0,
-      "net_asset": 176095344,
-      "buy_price": 10.7509,
-      "sell_price": 10.751
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.7519,
-      "previous_val": 0,
-      "net_asset": 176533824,
-      "buy_price": 10.7519,
-      "sell_price": 10.752
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.8365,
@@ -213,6 +181,30 @@
       "net_asset": 194744784,
       "buy_price": 10.6964,
       "sell_price": 10.6965
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.8028,
+      "previous_val": 0,
+      "net_asset": 197291120,
+      "buy_price": 10.8028,
+      "sell_price": 10.8029
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.9051,
+      "previous_val": 0,
+      "net_asset": 199486320,
+      "buy_price": 10.9051,
+      "sell_price": 10.9052
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.8187,
+      "previous_val": 0,
+      "net_asset": 198133504,
+      "buy_price": 10.8187,
+      "sell_price": 10.8188
     }
   ],
   "dividends": [],
@@ -238,7 +230,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 9.73,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -257,7 +252,7 @@
       "percentage": -2.44
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -315,10 +310,8 @@
     "minimum_redemption": "500",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:23:54.198Z",
+  "data_fetched_at": "2025-11-15T10:45:54.749Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

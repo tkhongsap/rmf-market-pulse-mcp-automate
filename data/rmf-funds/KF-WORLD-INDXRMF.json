@@ -4,56 +4,24 @@
   "fund_name": "Krungsri World Equity Index RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.3044,
+    "nav_date": "2025-11-13",
+    "last_val": 11.3432,
     "previous_val": 0,
-    "net_asset": 231306368,
-    "buy_price": 11.3044,
-    "sell_price": 11.3045,
-    "change": 11.3044,
+    "net_asset": 241921712,
+    "buy_price": 11.3432,
+    "sell_price": 11.3433,
+    "change": 11.3432,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.1851,
-      "previous_val": 0,
-      "net_asset": 144401856,
-      "buy_price": 11.1851,
-      "sell_price": 11.1852
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.2131,
-      "previous_val": 0,
-      "net_asset": 145640976,
-      "buy_price": 11.2131,
-      "sell_price": 11.2132
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.2589,
-      "previous_val": 0,
-      "net_asset": 148531568,
-      "buy_price": 11.2589,
-      "sell_price": 11.259
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.313,
-      "previous_val": 0,
-      "net_asset": 149087824,
-      "buy_price": 11.313,
-      "sell_price": 11.3131
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.3381,
@@ -253,6 +221,38 @@
       "net_asset": 231306368,
       "buy_price": 11.3044,
       "sell_price": 11.3045
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.4618,
+      "previous_val": 0,
+      "net_asset": 234814240,
+      "buy_price": 11.4618,
+      "sell_price": 11.4619
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.4986,
+      "previous_val": 0,
+      "net_asset": 237694256,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.5215,
+      "previous_val": 0,
+      "net_asset": 238167296,
+      "buy_price": 11.5215,
+      "sell_price": 11.5216
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.3432,
+      "previous_val": 0,
+      "net_asset": 241921712,
+      "buy_price": 11.3432,
+      "sell_price": 11.3433
     }
   ],
   "dividends": [],
@@ -282,7 +282,7 @@
       "percentage": -1.07
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -364,11 +364,10 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:55.044Z",
+  "data_fetched_at": "2025-11-15T10:46:56.577Z",
   "errors": [
     "No benchmark data available",
     "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

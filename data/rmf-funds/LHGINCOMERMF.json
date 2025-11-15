@@ -4,56 +4,24 @@
   "fund_name": "LH Global Income Retirement Mutual Fund",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXFI",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 9.3961,
+    "nav_date": "2025-11-12",
+    "last_val": 9.4156,
     "previous_val": 0,
-    "net_asset": 21298680,
-    "buy_price": 9.3961,
-    "sell_price": 9.3962,
-    "change": 9.3961,
+    "net_asset": 21333612,
+    "buy_price": 9.4156,
+    "sell_price": 9.4157,
+    "change": 9.4156,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 9.3403,
-      "previous_val": 0,
-      "net_asset": 21824348,
-      "buy_price": 9.3403,
-      "sell_price": 9.3404
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 9.3433,
-      "previous_val": 0,
-      "net_asset": 21831304,
-      "buy_price": 9.3433,
-      "sell_price": 9.3434
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.3621,
-      "previous_val": 0,
-      "net_asset": 21875164,
-      "buy_price": 9.3621,
-      "sell_price": 9.3622
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.3583,
-      "previous_val": 0,
-      "net_asset": 21873372,
-      "buy_price": 9.3583,
-      "sell_price": 9.3584
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 9.3713,
@@ -253,6 +221,38 @@
       "net_asset": 21298680,
       "buy_price": 9.3961,
       "sell_price": 9.3962
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.3911,
+      "previous_val": 0,
+      "net_asset": 21287424,
+      "buy_price": 9.3911,
+      "sell_price": 9.3912
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.3918,
+      "previous_val": 0,
+      "net_asset": 21288902,
+      "buy_price": 9.3918,
+      "sell_price": 9.3919
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.4167,
+      "previous_val": 0,
+      "net_asset": 21336180,
+      "buy_price": 9.4167,
+      "sell_price": 9.4168
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.4156,
+      "previous_val": 0,
+      "net_asset": 21333612,
+      "buy_price": 9.4156,
+      "sell_price": 9.4157
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": -0.840205229962931
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 3.66932741642292,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -278,7 +281,7 @@
       "percentage": 1.24206063105588
     }
   ],
-  "category": null,
+  "category": "FIA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -378,11 +381,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:31:39.746Z",
+  "data_fetched_at": "2025-11-15T10:54:38.721Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

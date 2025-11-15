@@ -5,7 +5,7 @@
 CREATE TABLE IF NOT EXISTS rmf_funds (
     id SERIAL PRIMARY KEY,
     symbol VARCHAR(50) UNIQUE NOT NULL,
-    proj_id VARCHAR(50) UNIQUE NOT NULL,
+    proj_id VARCHAR(50) NOT NULL,
     fund_name_en TEXT,
     fund_name_th TEXT,
     amc VARCHAR(255),
@@ -28,6 +28,9 @@ CREATE TABLE IF NOT EXISTS rmf_funds (
     dividend_policy TEXT,
     risk_level INTEGER,
     fund_category VARCHAR(100),
+    fund_type VARCHAR(10),
+    management_style VARCHAR(10),
+    net_asset DECIMAL(16, 2),
 
     -- Performance (JSON for flexibility)
     performance JSONB,
@@ -36,6 +39,27 @@ CREATE TABLE IF NOT EXISTS rmf_funds (
     -- Risk Metrics
     volatility_5y DECIMAL(8, 4),
     tracking_error_1y DECIMAL(8, 4),
+
+    -- NAV History Statistics
+    nav_history_count INTEGER,
+    nav_history_first_date DATE,
+    nav_history_last_date DATE,
+    nav_history_min DECIMAL(12, 4),
+    nav_history_max DECIMAL(12, 4),
+
+    -- Dividend Statistics
+    dividends_count INTEGER,
+    dividends_total DECIMAL(12, 4),
+    dividends_last_date DATE,
+
+    -- Metadata Counts
+    fees_count INTEGER,
+    parties_count INTEGER,
+    risk_factors_count INTEGER,
+
+    -- Error Tracking
+    errors_count INTEGER,
+    errors JSONB,
 
     -- Asset Allocation (JSONB array)
     asset_allocation JSONB,
@@ -69,6 +93,7 @@ CREATE TABLE IF NOT EXISTS rmf_funds (
 
 -- Indexes for rmf_funds
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_symbol ON rmf_funds(symbol);
+CREATE INDEX IF NOT EXISTS idx_rmf_funds_proj_id ON rmf_funds(proj_id);
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_amc ON rmf_funds(amc);
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_risk_level ON rmf_funds(risk_level);
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_status ON rmf_funds(status);

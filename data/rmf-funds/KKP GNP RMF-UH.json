@@ -4,56 +4,24 @@
   "fund_name": "KKP GLOBAL NEW PERSPECTIVE RMF-UNHEDGED",
   "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 21.0372,
+    "nav_date": "2025-11-13",
+    "last_val": 21.1307,
     "previous_val": 0,
-    "net_asset": 759260160,
-    "buy_price": 21.0372,
-    "sell_price": 21.0373,
-    "change": 21.0372,
+    "net_asset": 768217984,
+    "buy_price": 21.1307,
+    "sell_price": 21.1308,
+    "change": 21.1307,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 20.8611,
-      "previous_val": 0,
-      "net_asset": 718299200,
-      "buy_price": 20.8611,
-      "sell_price": 20.8612
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 20.9454,
-      "previous_val": 0,
-      "net_asset": 722207616,
-      "buy_price": 20.9454,
-      "sell_price": 20.9455
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 21.0689,
-      "previous_val": 0,
-      "net_asset": 727473280,
-      "buy_price": 21.0689,
-      "sell_price": 21.069
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 21.2064,
-      "previous_val": 0,
-      "net_asset": 733011072,
-      "buy_price": 21.2064,
-      "sell_price": 21.2065
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 21.2694,
@@ -253,6 +221,30 @@
       "net_asset": 759260160,
       "buy_price": 21.0372,
       "sell_price": 21.0373
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 21.3955,
+      "previous_val": 0,
+      "net_asset": 773220800,
+      "buy_price": 21.3955,
+      "sell_price": 21.3956
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 21.6113,
+      "previous_val": 0,
+      "net_asset": 782675584,
+      "buy_price": 21.6113,
+      "sell_price": 21.6114
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 21.1307,
+      "previous_val": 0,
+      "net_asset": 768217984,
+      "buy_price": 21.1307,
+      "sell_price": 21.1308
     }
   ],
   "dividends": [],
@@ -267,7 +259,10 @@
     "since_inception": 11.57
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 17.88,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนต่างประเทศ",
@@ -282,7 +277,7 @@
       "percentage": -0.21
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -522,11 +517,9 @@
     "minimum_redemption": null,
     "minimum_balance": 100
   },
-  "data_fetched_at": "2025-11-11T06:28:17.464Z",
+  "data_fetched_at": "2025-11-15T10:50:47.119Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

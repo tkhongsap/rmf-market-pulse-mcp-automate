@@ -4,56 +4,24 @@
   "fund_name": "SCB GOVERNMENT BOND RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MISC",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "SM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 15.7888,
+    "nav_date": "2025-11-14",
+    "last_val": 15.8104,
     "previous_val": 0,
-    "net_asset": 10592109568,
-    "buy_price": 15.7888,
-    "sell_price": 15.7889,
-    "change": 15.7888,
+    "net_asset": 10604516352,
+    "buy_price": 15.8104,
+    "sell_price": 15.8105,
+    "change": 15.8104,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.9738,
-      "previous_val": 0,
-      "net_asset": 10793537536,
-      "buy_price": 15.9738,
-      "sell_price": 15.9739
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.0004,
-      "previous_val": 0,
-      "net_asset": 10814418944,
-      "buy_price": 16.0004,
-      "sell_price": 16.0005
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.991,
-      "previous_val": 0,
-      "net_asset": 10822770688,
-      "buy_price": 15.991,
-      "sell_price": 15.9911
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 15.9995,
-      "previous_val": 0,
-      "net_asset": 10828488704,
-      "buy_price": 15.9995,
-      "sell_price": 15.9996
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.0035,
@@ -253,6 +221,38 @@
       "net_asset": 10592109568,
       "buy_price": 15.7888,
       "sell_price": 15.7889
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 15.7743,
+      "previous_val": 0,
+      "net_asset": 10579171328,
+      "buy_price": 15.7743,
+      "sell_price": 15.7744
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.8033,
+      "previous_val": 0,
+      "net_asset": 10600014848,
+      "buy_price": 15.8033,
+      "sell_price": 15.8034
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.8177,
+      "previous_val": 0,
+      "net_asset": 10606249984,
+      "buy_price": 15.8177,
+      "sell_price": 15.8178
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 15.8104,
+      "previous_val": 0,
+      "net_asset": 10604516352,
+      "buy_price": 15.8104,
+      "sell_price": 15.8105
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.23
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 1.13,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรรัฐบาล / ธนาคารแห่งประเทศไทย / รัฐวิสาหกิจ",
@@ -301,7 +304,7 @@
       "percentage": -3.39
     }
   ],
-  "category": null,
+  "category": "MIS",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -555,10 +558,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-11T06:35:43.123Z",
+  "data_fetched_at": "2025-11-15T10:59:52.205Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

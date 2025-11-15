@@ -4,56 +4,24 @@
   "fund_name": "LH FLEXIBLE RMF",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 13.947,
+    "nav_date": "2025-11-14",
+    "last_val": 13.7374,
     "previous_val": 0,
-    "net_asset": 243429280,
-    "buy_price": 13.947,
-    "sell_price": 13.9471,
-    "change": 13.947,
+    "net_asset": 239466688,
+    "buy_price": 13.7374,
+    "sell_price": 13.7375,
+    "change": 13.7374,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.9626,
-      "previous_val": 0,
-      "net_asset": 246946688,
-      "buy_price": 13.9626,
-      "sell_price": 13.9627
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.9099,
-      "previous_val": 0,
-      "net_asset": 246111456,
-      "buy_price": 13.9099,
-      "sell_price": 13.91
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.8898,
-      "previous_val": 0,
-      "net_asset": 245758256,
-      "buy_price": 13.8898,
-      "sell_price": 13.8899
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 13.9725,
-      "previous_val": 0,
-      "net_asset": 247245056,
-      "buy_price": 13.9725,
-      "sell_price": 13.9726
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 13.9969,
@@ -253,6 +221,38 @@
       "net_asset": 243429280,
       "buy_price": 13.947,
       "sell_price": 13.9471
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.9051,
+      "previous_val": 0,
+      "net_asset": 242702208,
+      "buy_price": 13.9051,
+      "sell_price": 13.9052
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.8314,
+      "previous_val": 0,
+      "net_asset": 241122512,
+      "buy_price": 13.8314,
+      "sell_price": 13.8315
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.836,
+      "previous_val": 0,
+      "net_asset": 241202816,
+      "buy_price": 13.836,
+      "sell_price": 13.8361
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 13.7374,
+      "previous_val": 0,
+      "net_asset": 239466688,
+      "buy_price": 13.7374,
+      "sell_price": 13.7375
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 2.60161901346787
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 12.1809688425545,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -290,7 +293,7 @@
       "percentage": 2.02372520624857
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -386,11 +389,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:31:19.461Z",
+  "data_fetched_at": "2025-11-15T10:54:17.862Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

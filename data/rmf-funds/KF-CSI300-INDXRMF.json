@@ -4,22 +4,22 @@
   "fund_name": "Krungsri China Equity CSI 300 RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.3759,
+    "nav_date": "2025-11-14",
+    "last_val": 10.1795,
     "previous_val": 0,
-    "net_asset": 19482614,
-    "buy_price": 10.3759,
-    "sell_price": 10.376,
-    "change": 10.3759,
+    "net_asset": 20659856,
+    "buy_price": 10.1795,
+    "sell_price": 10.1796,
+    "change": 10.1795,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -125,6 +125,38 @@
       "net_asset": 19482614,
       "buy_price": 10.3759,
       "sell_price": 10.376
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.2904,
+      "previous_val": 0,
+      "net_asset": 19644866,
+      "buy_price": 10.2904,
+      "sell_price": 10.2905
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.2702,
+      "previous_val": 0,
+      "net_asset": 20314866,
+      "buy_price": 10.2702,
+      "sell_price": 10.2703
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.3418,
+      "previous_val": 0,
+      "net_asset": 20675820,
+      "buy_price": 10.3418,
+      "sell_price": 10.3419
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.1795,
+      "previous_val": 0,
+      "net_asset": 20659856,
+      "buy_price": 10.1795,
+      "sell_price": 10.1796
     }
   ],
   "dividends": [],
@@ -223,7 +255,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:14.204Z",
+  "data_fetched_at": "2025-11-15T10:46:15.669Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

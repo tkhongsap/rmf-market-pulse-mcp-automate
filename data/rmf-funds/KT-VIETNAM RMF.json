@@ -4,56 +4,24 @@
   "fund_name": "KTAM Vietnam Equity RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQVIET",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 11.6313,
+    "nav_date": "2025-11-14",
+    "last_val": 11.9939,
     "previous_val": 0,
-    "net_asset": 268357312,
-    "buy_price": 11.6313,
-    "sell_price": 11.6314,
-    "change": 11.6313,
+    "net_asset": 276117472,
+    "buy_price": 11.9939,
+    "sell_price": 11.994,
+    "change": 11.9939,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.3823,
-      "previous_val": 0,
-      "net_asset": 276249536,
-      "buy_price": 12.3823,
-      "sell_price": 12.3824
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.4328,
-      "previous_val": 0,
-      "net_asset": 277223584,
-      "buy_price": 12.4328,
-      "sell_price": 12.4329
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.4989,
-      "previous_val": 0,
-      "net_asset": 278513792,
-      "buy_price": 12.4989,
-      "sell_price": 12.499
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 12.4484,
-      "previous_val": 0,
-      "net_asset": 276603648,
-      "buy_price": 12.4484,
-      "sell_price": 12.4485
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 12.3897,
@@ -253,6 +221,30 @@
       "net_asset": 268357312,
       "buy_price": 11.6313,
       "sell_price": 11.6314
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.052,
+      "previous_val": 0,
+      "net_asset": 276805664,
+      "buy_price": 12.052,
+      "sell_price": 12.0521
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.9222,
+      "previous_val": 0,
+      "net_asset": 274553440,
+      "buy_price": 11.9222,
+      "sell_price": 11.9223
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 11.9939,
+      "previous_val": 0,
+      "net_asset": 276117472,
+      "buy_price": 11.9939,
+      "sell_price": 11.994
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 20.9,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -297,7 +292,7 @@
       "percentage": 0.76
     }
   ],
-  "category": null,
+  "category": "VIEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -382,10 +377,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:30:19.408Z",
+  "data_fetched_at": "2025-11-15T10:53:16.108Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

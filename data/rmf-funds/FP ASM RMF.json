@@ -4,56 +4,24 @@
   "fund_name": "First Plus Asian Small Cap Equity RMF",
   "amc": "FIRST PLUS ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQASxJP",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "-",
+    "dividend_policy": "Unknown",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.3324,
+    "nav_date": "2025-11-13",
+    "last_val": 11.5528,
     "previous_val": 0,
-    "net_asset": 51306508,
-    "buy_price": 11.3324,
-    "sell_price": 11.3325,
-    "change": 11.3324,
+    "net_asset": 52310120,
+    "buy_price": 11.5528,
+    "sell_price": 11.5529,
+    "change": 11.5528,
     "change_percent": 0,
-    "last_upd_date": "2025-11-10T16:05:52.2"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.4658,
-      "previous_val": 0,
-      "net_asset": 53106740,
-      "buy_price": 11.4658,
-      "sell_price": 11.4659
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.6352,
-      "previous_val": 0,
-      "net_asset": 53903672,
-      "buy_price": 11.6352,
-      "sell_price": 11.6353
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.7962,
-      "previous_val": 0,
-      "net_asset": 54652556,
-      "buy_price": 11.7962,
-      "sell_price": 11.7963
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.9041,
-      "previous_val": 0,
-      "net_asset": 55178264,
-      "buy_price": 11.9041,
-      "sell_price": 11.9042
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.99,
@@ -253,6 +221,38 @@
       "net_asset": 51306508,
       "buy_price": 11.3324,
       "sell_price": 11.3325
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.1862,
+      "previous_val": 0,
+      "net_asset": 50644636,
+      "buy_price": 11.1862,
+      "sell_price": 11.1863
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.1638,
+      "previous_val": 0,
+      "net_asset": 50544416,
+      "buy_price": 11.1638,
+      "sell_price": 11.1639
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.2507,
+      "previous_val": 0,
+      "net_asset": 50938984,
+      "buy_price": 11.2507,
+      "sell_price": 11.2508
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.5528,
+      "previous_val": 0,
+      "net_asset": 52310120,
+      "buy_price": 11.5528,
+      "sell_price": 11.5529
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 4.53
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.46,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนกองทุนหลัก",
@@ -293,7 +296,7 @@
       "percentage": -0.14
     }
   ],
-  "category": null,
+  "category": "AEJ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -381,10 +384,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:19:30.259Z",
+  "data_fetched_at": "2025-11-15T10:42:26.627Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

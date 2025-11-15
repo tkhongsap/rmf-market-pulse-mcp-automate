@@ -4,22 +4,22 @@
   "fund_name": "Krungsri US Select Equity Plus RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.9722,
+    "nav_date": "2025-11-13",
+    "last_val": 10.1474,
     "previous_val": 0,
-    "net_asset": 10781482,
-    "buy_price": 9.9722,
-    "sell_price": 9.9723,
-    "change": 9.9722,
+    "net_asset": 12227319,
+    "buy_price": 10.1474,
+    "sell_price": 10.1475,
+    "change": 10.1474,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -125,6 +125,38 @@
       "net_asset": 10781482,
       "buy_price": 9.9722,
       "sell_price": 9.9723
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.1486,
+      "previous_val": 0,
+      "net_asset": 11156931,
+      "buy_price": 10.1486,
+      "sell_price": 10.1487
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.1765,
+      "previous_val": 0,
+      "net_asset": 11327780,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.2325,
+      "previous_val": 0,
+      "net_asset": 11390115,
+      "buy_price": 10.2325,
+      "sell_price": 10.2326
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.1474,
+      "previous_val": 0,
+      "net_asset": 12227319,
+      "buy_price": 10.1474,
+      "sell_price": 10.1475
     }
   ],
   "dividends": [],
@@ -223,7 +255,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:54.981Z",
+  "data_fetched_at": "2025-11-15T10:46:56.880Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

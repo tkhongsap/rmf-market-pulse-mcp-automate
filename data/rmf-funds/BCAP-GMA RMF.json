@@ -1,0 +1,52 @@
+{
+  "fund_id": "M0140_2565",
+  "symbol": "BCAP-GMA RMF",
+  "fund_name": "BCAP Global Multi Asset Retirement Mutual Fund",
+  "amc": "BANGKOK CAPITAL ASSET MANAGEMENT COMPANY LIMITED",
+  "metadata": {
+    "fund_classification": "ผสม",
+    "management_style": "AN",
+    "dividend_policy": "Unknown",
+    "risk_level": 0,
+    "fund_type": "RMF"
+  },
+  "latest_nav": null,
+  "nav_history_30d": [],
+  "dividends": [],
+  "performance": null,
+  "benchmark": null,
+  "risk_metrics": null,
+  "asset_allocation": null,
+  "category": null,
+  "fees": null,
+  "involved_parties": null,
+  "top_holdings": null,
+  "risk_factors": null,
+  "suitability": null,
+  "document_urls": {
+    "factsheet_url": "https://secdocumentstorage.blob.core.windows.net/fundfactsheet/M0140_2565.pdf",
+    "annual_report_url": "-",
+    "halfyear_report_url": "-"
+  },
+  "investment_minimums": {
+    "minimum_initial": null,
+    "minimum_additional": null,
+    "minimum_redemption": null,
+    "minimum_balance": null
+  },
+  "data_fetched_at": "2025-11-15T11:23:41.676Z",
+  "errors": [
+    "Failed to fetch latest NAV",
+    "No NAV history available",
+    "No performance data available",
+    "No benchmark data available",
+    "No risk metrics available",
+    "No asset allocation data available",
+    "No category data available",
+    "No fee data available",
+    "No involved parties data available",
+    "No top holdings data available",
+    "No risk factors data available",
+    "No suitability data available"
+  ]
+}

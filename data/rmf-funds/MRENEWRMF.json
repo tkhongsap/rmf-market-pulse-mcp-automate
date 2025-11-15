@@ -4,56 +4,24 @@
   "fund_name": "MFC Renewable Energy Retirement Fund",
   "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.411,
+    "nav_date": "2025-11-13",
+    "last_val": 9.5679,
     "previous_val": 0,
-    "net_asset": 105701760,
-    "buy_price": 9.411,
-    "sell_price": 9.4111,
-    "change": 9.411,
+    "net_asset": 107807104,
+    "buy_price": 9.5679,
+    "sell_price": 9.568,
+    "change": 9.5679,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 8.9997,
-      "previous_val": 0,
-      "net_asset": 100422960,
-      "buy_price": 8.9997,
-      "sell_price": 8.9998
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0814,
-      "previous_val": 0,
-      "net_asset": 101459848,
-      "buy_price": 9.0814,
-      "sell_price": 9.0815
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.0827,
-      "previous_val": 0,
-      "net_asset": 101474296,
-      "buy_price": 9.0827,
-      "sell_price": 9.0828
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.2111,
-      "previous_val": 0,
-      "net_asset": 102887448,
-      "buy_price": 9.2111,
-      "sell_price": 9.2112
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 9.3127,
@@ -253,6 +221,30 @@
       "net_asset": 105701760,
       "buy_price": 9.411,
       "sell_price": 9.4111
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.5922,
+      "previous_val": 0,
+      "net_asset": 107729184,
+      "buy_price": 9.5922,
+      "sell_price": 9.5923
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.6846,
+      "previous_val": 0,
+      "net_asset": 108910856,
+      "buy_price": 9.6846,
+      "sell_price": 9.6847
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.5679,
+      "previous_val": 0,
+      "net_asset": 107807104,
+      "buy_price": 9.5679,
+      "sell_price": 9.568
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 20.48,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -289,7 +284,7 @@
       "percentage": 1.05
     }
   ],
-  "category": null,
+  "category": "EQGLAENG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -389,10 +384,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:21.621Z",
+  "data_fetched_at": "2025-11-15T10:57:08.547Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

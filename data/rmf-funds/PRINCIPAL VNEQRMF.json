@@ -4,56 +4,24 @@
   "fund_name": "Principal Vietnam Equity Retirement Mutual Fund",
   "amc": "PRINCIPAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQVIET",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.8284,
+    "nav_date": "2025-11-13",
+    "last_val": 10.9631,
     "previous_val": 0,
-    "net_asset": 329608128,
-    "buy_price": 10.8284,
-    "sell_price": 10.8285,
-    "change": 10.8284,
+    "net_asset": 335529600,
+    "buy_price": 10.9631,
+    "sell_price": 10.9632,
+    "change": 10.9631,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.7342,
-      "previous_val": 0,
-      "net_asset": 335796928,
-      "buy_price": 11.7342,
-      "sell_price": 11.7343
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.6981,
-      "previous_val": 0,
-      "net_asset": 335625600,
-      "buy_price": 11.6981,
-      "sell_price": 11.6982
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.6371,
-      "previous_val": 0,
-      "net_asset": 334406720,
-      "buy_price": 11.6371,
-      "sell_price": 11.6372
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.6812,
-      "previous_val": 0,
-      "net_asset": 335987936,
-      "buy_price": 11.6812,
-      "sell_price": 11.6813
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.5632,
@@ -253,6 +221,30 @@
       "net_asset": 329608128,
       "buy_price": 10.8284,
       "sell_price": 10.8285
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.6968,
+      "previous_val": 0,
+      "net_asset": 326371008,
+      "buy_price": 10.6968,
+      "sell_price": 10.6969
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.0614,
+      "previous_val": 0,
+      "net_asset": 337874656,
+      "buy_price": 11.0614,
+      "sell_price": 11.0615
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.9631,
+      "previous_val": 0,
+      "net_asset": 335529600,
+      "buy_price": 10.9631,
+      "sell_price": 10.9632
     }
   ],
   "dividends": [],
@@ -267,7 +259,10 @@
     "since_inception": 7.81
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 21.99,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "Unit Trust - Equity - Domestic",
@@ -282,7 +277,7 @@
       "percentage": -0.36
     }
   ],
-  "category": null,
+  "category": "VIEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -349,11 +344,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:35:02.823Z",
+  "data_fetched_at": "2025-11-15T10:59:11.003Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

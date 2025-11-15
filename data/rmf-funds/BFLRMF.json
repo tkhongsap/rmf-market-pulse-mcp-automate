@@ -4,56 +4,24 @@
   "fund_name": "Bualuang Flexible RMF",
   "amc": "BBL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 46.4309,
+    "nav_date": "2025-11-14",
+    "last_val": 45.5513,
     "previous_val": 0,
-    "net_asset": 14959052800,
-    "buy_price": 46.4309,
-    "sell_price": 46.431,
-    "change": 46.4309,
+    "net_asset": 14653893632,
+    "buy_price": 45.5513,
+    "sell_price": 45.5514,
+    "change": 45.5513,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 46.1823,
-      "previous_val": 0,
-      "net_asset": 15162579968,
-      "buy_price": 46.1823,
-      "sell_price": 46.1824
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 45.775,
-      "previous_val": 0,
-      "net_asset": 15019916288,
-      "buy_price": 45.775,
-      "sell_price": 45.7751
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 45.8499,
-      "previous_val": 0,
-      "net_asset": 15034062848,
-      "buy_price": 45.8499,
-      "sell_price": 45.85
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 46.292,
-      "previous_val": 0,
-      "net_asset": 15163696128,
-      "buy_price": 46.292,
-      "sell_price": 46.2921
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 46.4258,
@@ -253,6 +221,38 @@
       "net_asset": 14959052800,
       "buy_price": 46.4309,
       "sell_price": 46.431
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 46.3231,
+      "previous_val": 0,
+      "net_asset": 14918552576,
+      "buy_price": 46.3231,
+      "sell_price": 46.3232
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 45.872,
+      "previous_val": 0,
+      "net_asset": 14767584256,
+      "buy_price": 45.872,
+      "sell_price": 45.8721
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 46.0407,
+      "previous_val": 0,
+      "net_asset": 14818280448,
+      "buy_price": 46.0407,
+      "sell_price": 46.0408
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 45.5513,
+      "previous_val": 0,
+      "net_asset": 14653893632,
+      "buy_price": 45.5513,
+      "sell_price": 45.5514
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.28
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 10.91,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตร",
@@ -465,9 +468,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:14:27.713Z",
+  "data_fetched_at": "2025-11-15T11:24:22.472Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

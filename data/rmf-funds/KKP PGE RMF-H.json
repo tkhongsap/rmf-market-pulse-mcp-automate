@@ -4,56 +4,24 @@
   "fund_name": "KKP PASSIVE GLOBAL EQUITY RMF-HEDGED",
   "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 12.2593,
+    "nav_date": "2025-11-13",
+    "last_val": 12.3063,
     "previous_val": 0,
-    "net_asset": 401351584,
-    "buy_price": 12.2593,
-    "sell_price": 12.2594,
-    "change": 12.2593,
+    "net_asset": 405868608,
+    "buy_price": 12.3063,
+    "sell_price": 12.3064,
+    "change": 12.3063,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.1141,
-      "previous_val": 0,
-      "net_asset": 386576448,
-      "buy_price": 12.1141,
-      "sell_price": 12.1142
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.144,
-      "previous_val": 0,
-      "net_asset": 388471008,
-      "buy_price": 12.144,
-      "sell_price": 12.1441
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.1944,
-      "previous_val": 0,
-      "net_asset": 390820832,
-      "buy_price": 12.1944,
-      "sell_price": 12.1945
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.2536,
-      "previous_val": 0,
-      "net_asset": 392847968,
-      "buy_price": 12.2536,
-      "sell_price": 12.2537
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 12.2807,
@@ -253,6 +221,30 @@
       "net_asset": 401351584,
       "buy_price": 12.2593,
       "sell_price": 12.2594
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.4343,
+      "previous_val": 0,
+      "net_asset": 407542272,
+      "buy_price": 12.4343,
+      "sell_price": 12.4344
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.5009,
+      "previous_val": 0,
+      "net_asset": 410565888,
+      "buy_price": 12.5009,
+      "sell_price": 12.501
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.3063,
+      "previous_val": 0,
+      "net_asset": 405868608,
+      "buy_price": 12.3063,
+      "sell_price": 12.3064
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 15.25,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนต่างประเทศ",
@@ -301,7 +296,7 @@
       "percentage": -1.28
     }
   ],
-  "category": null,
+  "category": "EQGLH",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -433,10 +428,8 @@
     "minimum_redemption": null,
     "minimum_balance": 100
   },
-  "data_fetched_at": "2025-11-11T06:28:58.005Z",
+  "data_fetched_at": "2025-11-15T10:51:08.954Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

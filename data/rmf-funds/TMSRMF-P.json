@@ -4,56 +4,24 @@
   "fund_name": "TISCO Mid/Small Cap Equity RMF",
   "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQSM",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.0839,
+    "nav_date": "2025-11-14",
+    "last_val": 8.9436,
     "previous_val": 0,
-    "net_asset": 117124008,
-    "buy_price": 9.0839,
-    "sell_price": 9.084,
-    "change": 9.0839,
+    "net_asset": 115323080,
+    "buy_price": 8.9436,
+    "sell_price": 8.9437,
+    "change": 8.9436,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.5086,
-      "previous_val": 0,
-      "net_asset": 123907040,
-      "buy_price": 9.5086,
-      "sell_price": 9.5087
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.4454,
-      "previous_val": 0,
-      "net_asset": 123092472,
-      "buy_price": 9.4454,
-      "sell_price": 9.4455
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.3804,
-      "previous_val": 0,
-      "net_asset": 122168920,
-      "buy_price": 9.3804,
-      "sell_price": 9.3805
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 9.4508,
-      "previous_val": 0,
-      "net_asset": 122894024,
-      "buy_price": 9.4508,
-      "sell_price": 9.4509
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.4753,
@@ -253,6 +221,38 @@
       "net_asset": 117124008,
       "buy_price": 9.0839,
       "sell_price": 9.084
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.041,
+      "previous_val": 0,
+      "net_asset": 116587624,
+      "buy_price": 9.041,
+      "sell_price": 9.0411
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.0377,
+      "previous_val": 0,
+      "net_asset": 116535576,
+      "buy_price": 9.0377,
+      "sell_price": 9.0378
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.95,
+      "previous_val": 0,
+      "net_asset": 115415072,
+      "buy_price": 8.95,
+      "sell_price": 8.9501
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.9436,
+      "previous_val": 0,
+      "net_asset": 115323080,
+      "buy_price": 8.9436,
+      "sell_price": 8.9437
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 15.55,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้น",
@@ -297,7 +300,7 @@
       "percentage": -0.63
     }
   ],
-  "category": null,
+  "category": "ESMP",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -637,10 +640,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:42:38.741Z",
+  "data_fetched_at": "2025-11-15T11:07:23.444Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

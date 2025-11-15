@@ -4,56 +4,24 @@
   "fund_name": "Capital Protected Retirement Mutual Fund 5",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MISC",
+    "fund_classification": "ผสม",
     "management_style": "PM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 15.9525,
+    "nav_date": "2025-11-14",
+    "last_val": 15.9438,
     "previous_val": 0,
-    "net_asset": 45929220,
-    "buy_price": 15.1549,
-    "sell_price": 16.7502,
-    "change": 15.9525,
+    "net_asset": 45904144,
+    "buy_price": 15.1466,
+    "sell_price": 16.7411,
+    "change": 15.9438,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.9528,
-      "previous_val": 0,
-      "net_asset": 45929944,
-      "buy_price": 15.1552,
-      "sell_price": 16.7505
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.9533,
-      "previous_val": 0,
-      "net_asset": 45931456,
-      "buy_price": 15.1556,
-      "sell_price": 16.7511
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.9579,
-      "previous_val": 0,
-      "net_asset": 45944788,
-      "buy_price": 15.16,
-      "sell_price": 16.7559
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 15.9622,
-      "previous_val": 0,
-      "net_asset": 45957064,
-      "buy_price": 15.1641,
-      "sell_price": 16.7604
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 15.9648,
@@ -253,6 +221,38 @@
       "net_asset": 45929220,
       "buy_price": 15.1549,
       "sell_price": 16.7502
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 15.9481,
+      "previous_val": 0,
+      "net_asset": 45916584,
+      "buy_price": 15.1507,
+      "sell_price": 16.7456
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.9485,
+      "previous_val": 0,
+      "net_asset": 45917584,
+      "buy_price": 15.1511,
+      "sell_price": 16.746
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.9507,
+      "previous_val": 0,
+      "net_asset": 45924112,
+      "buy_price": 15.1532,
+      "sell_price": 16.7483
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 15.9438,
+      "previous_val": 0,
+      "net_asset": 45904144,
+      "buy_price": 15.1466,
+      "sell_price": 16.7411
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.69
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 2.26,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรรัฐบาล",
@@ -301,7 +304,7 @@
       "percentage": 0.2
     }
   ],
-  "category": null,
+  "category": "MIS",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -433,10 +436,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:15:27.418Z",
+  "data_fetched_at": "2025-11-15T11:25:44.378Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

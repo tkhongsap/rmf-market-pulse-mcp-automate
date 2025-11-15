@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Equity Sustainable Global Growth RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.214,
+    "nav_date": "2025-11-13",
+    "last_val": 11.1566,
     "previous_val": 0,
-    "net_asset": 84863488,
-    "buy_price": 11.214,
-    "sell_price": 11.2141,
-    "change": 11.214,
+    "net_asset": 84414872,
+    "buy_price": 11.1566,
+    "sell_price": 11.1567,
+    "change": 11.1566,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.355,
-      "previous_val": 0,
-      "net_asset": 86707632,
-      "buy_price": 11.355,
-      "sell_price": 11.3551
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.403,
-      "previous_val": 0,
-      "net_asset": 87074784,
-      "buy_price": 11.403,
-      "sell_price": 11.4031
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.4507,
-      "previous_val": 0,
-      "net_asset": 87192440,
-      "buy_price": 11.4507,
-      "sell_price": 11.4508
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.4582,
-      "previous_val": 0,
-      "net_asset": 87175456,
-      "buy_price": 11.4582,
-      "sell_price": 11.4583
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.4799,
@@ -253,6 +221,38 @@
       "net_asset": 84863488,
       "buy_price": 11.214,
       "sell_price": 11.2141
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.3202,
+      "previous_val": 0,
+      "net_asset": 85664936,
+      "buy_price": 11.3202,
+      "sell_price": 11.3203
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.3362,
+      "previous_val": 0,
+      "net_asset": 85823904,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.3759,
+      "previous_val": 0,
+      "net_asset": 86125152,
+      "buy_price": 11.3759,
+      "sell_price": 11.376
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.1566,
+      "previous_val": 0,
+      "net_asset": 84414872,
+      "buy_price": 11.1566,
+      "sell_price": 11.1567
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 16.61,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "AB SICAV I-Sustainable Global Thematic Portfolio",
@@ -293,7 +296,7 @@
       "percentage": -0.9
     }
   ],
-  "category": null,
+  "category": "EQGLH",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -384,10 +387,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:25:56.138Z",
+  "data_fetched_at": "2025-11-15T10:48:00.845Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

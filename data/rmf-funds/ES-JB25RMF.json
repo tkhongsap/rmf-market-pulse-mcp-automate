@@ -4,56 +4,24 @@
   "fund_name": "Eastspring JUMBO 25 RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQLARGE",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 33.1954,
+    "nav_date": "2025-11-14",
+    "last_val": 32.5407,
     "previous_val": 0,
-    "net_asset": 2646955776,
-    "buy_price": 33.1622,
-    "sell_price": 33.2287,
-    "change": 33.1954,
+    "net_asset": 2585397504,
+    "buy_price": 32.5082,
+    "sell_price": 32.5733,
+    "change": 32.5407,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 32.5666,
-      "previous_val": 0,
-      "net_asset": 2643317248,
-      "buy_price": 32.534,
-      "sell_price": 32.5993
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 32.2642,
-      "previous_val": 0,
-      "net_asset": 2617376256,
-      "buy_price": 32.2319,
-      "sell_price": 32.2966
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 32.3326,
-      "previous_val": 0,
-      "net_asset": 2622386432,
-      "buy_price": 32.3003,
-      "sell_price": 32.365
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 32.5397,
-      "previous_val": 0,
-      "net_asset": 2638822656,
-      "buy_price": 32.5072,
-      "sell_price": 32.5723
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 32.6622,
@@ -253,6 +221,38 @@
       "net_asset": 2646955776,
       "buy_price": 33.1622,
       "sell_price": 33.2287
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 33.0476,
+      "previous_val": 0,
+      "net_asset": 2632823040,
+      "buy_price": 33.0146,
+      "sell_price": 33.0807
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 32.7104,
+      "previous_val": 0,
+      "net_asset": 2603854336,
+      "buy_price": 32.6777,
+      "sell_price": 32.7432
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 32.9548,
+      "previous_val": 0,
+      "net_asset": 2623441152,
+      "buy_price": 32.9218,
+      "sell_price": 32.9879
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 32.5407,
+      "previous_val": 0,
+      "net_asset": 2585397504,
+      "buy_price": 32.5082,
+      "sell_price": 32.5733
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.36
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.71,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -297,7 +300,7 @@
       "percentage": -10.16
     }
   ],
-  "category": null,
+  "category": "ELCE",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -383,10 +386,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:17:49.035Z",
+  "data_fetched_at": "2025-11-15T11:28:08.736Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "KKP BALANCE RETIREMENT MUTUAL FUND",
   "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 26.4349,
+    "nav_date": "2025-11-14",
+    "last_val": 26.0193,
     "previous_val": 0,
-    "net_asset": 244410208,
-    "buy_price": 26.4349,
-    "sell_price": 26.435,
-    "change": 26.4349,
+    "net_asset": 239704992,
+    "buy_price": 26.0193,
+    "sell_price": 26.0194,
+    "change": 26.0193,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 26.6612,
-      "previous_val": 0,
-      "net_asset": 248886752,
-      "buy_price": 26.6612,
-      "sell_price": 26.6613
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 26.4985,
-      "previous_val": 0,
-      "net_asset": 247432256,
-      "buy_price": 26.4985,
-      "sell_price": 26.4986
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 26.4018,
-      "previous_val": 0,
-      "net_asset": 246529552,
-      "buy_price": 26.4018,
-      "sell_price": 26.4019
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 26.5815,
-      "previous_val": 0,
-      "net_asset": 248230112,
-      "buy_price": 26.5815,
-      "sell_price": 26.5816
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 26.5783,
@@ -253,6 +221,38 @@
       "net_asset": 244410208,
       "buy_price": 26.4349,
       "sell_price": 26.435
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 26.3971,
+      "previous_val": 0,
+      "net_asset": 244080736,
+      "buy_price": 26.3971,
+      "sell_price": 26.3972
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 26.2486,
+      "previous_val": 0,
+      "net_asset": 241747264,
+      "buy_price": 26.2486,
+      "sell_price": 26.2487
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 26.2301,
+      "previous_val": 0,
+      "net_asset": 241647184,
+      "buy_price": 26.2301,
+      "sell_price": 26.2302
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 26.0193,
+      "previous_val": 0,
+      "net_asset": 239704992,
+      "buy_price": 26.0193,
+      "sell_price": 26.0194
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 3.05
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 9.07,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารทุนในประเทศ",
@@ -301,7 +304,7 @@
       "percentage": -0.11
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -553,10 +556,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:28:17.663Z",
+  "data_fetched_at": "2025-11-15T10:50:26.175Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

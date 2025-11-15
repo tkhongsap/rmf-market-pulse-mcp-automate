@@ -4,56 +4,24 @@
   "fund_name": "KTAM US Growth Equity RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQUS",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 12.8826,
+    "nav_date": "2025-11-13",
+    "last_val": 12.8988,
     "previous_val": 0,
-    "net_asset": 140944064,
-    "buy_price": 12.8826,
-    "sell_price": 12.8827,
-    "change": 12.8826,
+    "net_asset": 143530416,
+    "buy_price": 12.8988,
+    "sell_price": 12.8989,
+    "change": 12.8988,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.8396,
-      "previous_val": 0,
-      "net_asset": 135079584,
-      "buy_price": 12.8396,
-      "sell_price": 12.8397
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.904,
-      "previous_val": 0,
-      "net_asset": 136102192,
-      "buy_price": 12.904,
-      "sell_price": 12.9041
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.9759,
-      "previous_val": 0,
-      "net_asset": 136824000,
-      "buy_price": 12.9759,
-      "sell_price": 12.976
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.99,
-      "previous_val": 0,
-      "net_asset": 137034464,
-      "buy_price": 12.99,
-      "sell_price": 12.9901
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 13.053,
@@ -245,6 +213,30 @@
       "net_asset": 140944064,
       "buy_price": 12.8826,
       "sell_price": 12.8827
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.1215,
+      "previous_val": 0,
+      "net_asset": 144857600,
+      "buy_price": 13.1215,
+      "sell_price": 13.1216
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.1403,
+      "previous_val": 0,
+      "net_asset": 145176144,
+      "buy_price": 13.1403,
+      "sell_price": 13.1404
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.8988,
+      "previous_val": 0,
+      "net_asset": 143530416,
+      "buy_price": 12.8988,
+      "sell_price": 12.8989
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 21.85,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ตราสารทุน",
@@ -285,7 +280,7 @@
       "percentage": -1.76
     }
   ],
-  "category": null,
+  "category": "USEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -370,10 +365,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:30:19.410Z",
+  "data_fetched_at": "2025-11-15T10:53:15.728Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

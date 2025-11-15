@@ -4,56 +4,24 @@
   "fund_name": "TISCO Global Smart Allocation RMF",
   "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXFI",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ผสม",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 10.3001,
+    "nav_date": "2025-11-12",
+    "last_val": 10.4154,
     "previous_val": 0,
-    "net_asset": 40106408,
-    "buy_price": 10.3001,
-    "sell_price": 10.3002,
-    "change": 10.3001,
+    "net_asset": 40815804,
+    "buy_price": 10.4154,
+    "sell_price": 10.4155,
+    "change": 10.4154,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 10.1245,
-      "previous_val": 0,
-      "net_asset": 12601434,
-      "buy_price": 10.1245,
-      "sell_price": 10.1246
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.1432,
-      "previous_val": 0,
-      "net_asset": 12899280,
-      "buy_price": 10.1432,
-      "sell_price": 10.1433
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.175,
-      "previous_val": 0,
-      "net_asset": 12989703,
-      "buy_price": 10.175,
-      "sell_price": 10.1751
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.2049,
-      "previous_val": 0,
-      "net_asset": 13178657,
-      "buy_price": 10.2049,
-      "sell_price": 10.205
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 10.2129,
@@ -253,6 +221,38 @@
       "net_asset": 40106408,
       "buy_price": 10.3001,
       "sell_price": 10.3002
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 10.2583,
+      "previous_val": 0,
+      "net_asset": 39943440,
+      "buy_price": 10.2583,
+      "sell_price": 10.2584
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.3027,
+      "previous_val": 0,
+      "net_asset": 40221380,
+      "buy_price": 10.3027,
+      "sell_price": 10.3028
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.3562,
+      "previous_val": 0,
+      "net_asset": 40581872,
+      "buy_price": 10.3562,
+      "sell_price": 10.3563
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.4154,
+      "previous_val": 0,
+      "net_asset": 40815804,
+      "buy_price": 10.4154,
+      "sell_price": 10.4155
     }
   ],
   "dividends": [],
@@ -260,7 +260,7 @@
   "benchmark": null,
   "risk_metrics": null,
   "asset_allocation": null,
-  "category": null,
+  "category": "FIA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -462,13 +462,12 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:41:16.528Z",
+  "data_fetched_at": "2025-11-15T11:06:04.783Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",
     "No risk metrics available",
     "No asset allocation data available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

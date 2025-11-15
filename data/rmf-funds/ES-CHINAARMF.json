@@ -2,50 +2,26 @@
   "fund_id": "M0489_2563",
   "symbol": "ES-CHINAARMF",
   "fund_name": "Eastspring China A RMF",
-  "amc": "EQCH",
+  "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "AN",
-    "management_style": "No",
-    "dividend_policy": "6",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 6.0955,
+    "nav_date": "2025-11-13",
+    "last_val": 6.2312,
     "previous_val": 0,
-    "net_asset": 590588416,
-    "buy_price": 6.0955,
-    "sell_price": 6.0956,
-    "change": 6.0955,
+    "net_asset": 602809792,
+    "buy_price": 6.2312,
+    "sell_price": 6.2313,
+    "change": 6.2312,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 6.1793,
-      "previous_val": 0,
-      "net_asset": 610553792,
-      "buy_price": 6.1793,
-      "sell_price": 6.1794
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 6.2361,
-      "previous_val": 0,
-      "net_asset": 616401088,
-      "buy_price": 6.2361,
-      "sell_price": 6.2362
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 6.2956,
-      "previous_val": 0,
-      "net_asset": 622431424,
-      "buy_price": 6.2956,
-      "sell_price": 6.2957
-    },
     {
       "nav_date": "2025-10-09",
       "last_val": 6.3074,
@@ -197,6 +173,30 @@
       "net_asset": 590588416,
       "buy_price": 6.0955,
       "sell_price": 6.0956
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 6.1491,
+      "previous_val": 0,
+      "net_asset": 594433280,
+      "buy_price": 6.1491,
+      "sell_price": 6.1492
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 6.169,
+      "previous_val": 0,
+      "net_asset": 596206656,
+      "buy_price": 6.169,
+      "sell_price": 6.1691
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 6.2312,
+      "previous_val": 0,
+      "net_asset": 602809792,
+      "buy_price": 6.2312,
+      "sell_price": 6.2313
     }
   ],
   "dividends": [],
@@ -222,7 +222,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 16.12,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ในต่างประเทศ",
@@ -233,7 +236,7 @@
       "percentage": 0.51
     }
   ],
-  "category": null,
+  "category": "EQCHA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -353,10 +356,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:16:07.744Z",
+  "data_fetched_at": "2025-11-15T11:26:25.958Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

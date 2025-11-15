@@ -4,56 +4,24 @@
   "fund_name": "TISCO Global Quality Equity RMF",
   "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.7165,
+    "nav_date": "2025-11-13",
+    "last_val": 10.9693,
     "previous_val": 0,
-    "net_asset": 35685144,
-    "buy_price": 10.7165,
-    "sell_price": 10.7166,
-    "change": 10.7165,
+    "net_asset": 37018252,
+    "buy_price": 10.9693,
+    "sell_price": 10.9694,
+    "change": 10.9693,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.7757,
-      "previous_val": 0,
-      "net_asset": 37386708,
-      "buy_price": 10.7757,
-      "sell_price": 10.7758
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.8384,
-      "previous_val": 0,
-      "net_asset": 37604456,
-      "buy_price": 10.8384,
-      "sell_price": 10.8385
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.8399,
-      "previous_val": 0,
-      "net_asset": 37615608,
-      "buy_price": 10.8399,
-      "sell_price": 10.84
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.9234,
-      "previous_val": 0,
-      "net_asset": 37902884,
-      "buy_price": 10.9234,
-      "sell_price": 10.9235
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.9601,
@@ -253,6 +221,38 @@
       "net_asset": 35685144,
       "buy_price": 10.7165,
       "sell_price": 10.7166
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.871,
+      "previous_val": 0,
+      "net_asset": 36259720,
+      "buy_price": 10.871,
+      "sell_price": 10.8711
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.9653,
+      "previous_val": 0,
+      "net_asset": 36726592,
+      "buy_price": 10.9653,
+      "sell_price": 10.9654
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.0204,
+      "previous_val": 0,
+      "net_asset": 37190728,
+      "buy_price": 11.0204,
+      "sell_price": 11.0205
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.9693,
+      "previous_val": 0,
+      "net_asset": 37018252,
+      "buy_price": 10.9693,
+      "sell_price": 10.9694
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.71,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +296,7 @@
       "percentage": -0.5
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -495,10 +498,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:40:56.257Z",
+  "data_fetched_at": "2025-11-15T11:05:44.302Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

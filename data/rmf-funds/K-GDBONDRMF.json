@@ -4,56 +4,24 @@
   "fund_name": "K Global Dynamic Bond RMF",
   "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXGLDISC",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารหนี้",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.2883,
+    "nav_date": "2025-11-13",
+    "last_val": 10.2816,
     "previous_val": 0,
-    "net_asset": 315240672,
-    "buy_price": 10.2883,
-    "sell_price": 10.2884,
-    "change": 10.2883,
+    "net_asset": 312479744,
+    "buy_price": 10.2816,
+    "sell_price": 10.2817,
+    "change": 10.2816,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.174,
-      "previous_val": 0,
-      "net_asset": 196975344,
-      "buy_price": 10.174,
-      "sell_price": 10.1741
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.1904,
-      "previous_val": 0,
-      "net_asset": 202683488,
-      "buy_price": 10.1904,
-      "sell_price": 10.1905
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.1907,
-      "previous_val": 0,
-      "net_asset": 204964832,
-      "buy_price": 10.1907,
-      "sell_price": 10.1908
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.209,
-      "previous_val": 0,
-      "net_asset": 205490880,
-      "buy_price": 10.209,
-      "sell_price": 10.2091
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.2181,
@@ -253,6 +221,30 @@
       "net_asset": 315240672,
       "buy_price": 10.2883,
       "sell_price": 10.2884
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.2849,
+      "previous_val": 0,
+      "net_asset": 317239776,
+      "buy_price": 10.2849,
+      "sell_price": 10.285
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.3073,
+      "previous_val": 0,
+      "net_asset": 308650496,
+      "buy_price": 10.3073,
+      "sell_price": 10.3074
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.2816,
+      "previous_val": 0,
+      "net_asset": 312479744,
+      "buy_price": 10.2816,
+      "sell_price": 10.2817
     }
   ],
   "dividends": [],
@@ -293,7 +285,7 @@
       "percentage": -1.07
     }
   ],
-  "category": null,
+  "category": "GBD",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -351,10 +343,9 @@
     "minimum_redemption": "500",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:21:11.683Z",
+  "data_fetched_at": "2025-11-15T10:44:11.040Z",
   "errors": [
     "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

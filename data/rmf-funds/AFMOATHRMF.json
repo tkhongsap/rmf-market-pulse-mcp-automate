@@ -4,56 +4,24 @@
   "fund_name": "AF US WIDE MOAT HEDGE RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQUS",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 12.052,
+    "nav_date": "2025-11-13",
+    "last_val": 12.1397,
     "previous_val": 0,
-    "net_asset": 31645146,
-    "buy_price": 12.052,
-    "sell_price": 12.0521,
-    "change": 12.052,
+    "net_asset": 32055024,
+    "buy_price": 12.1397,
+    "sell_price": 12.1398,
+    "change": 12.1397,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 11.9108,
-      "previous_val": 0,
-      "net_asset": 31941552,
-      "buy_price": 11.9108,
-      "sell_price": 11.9109
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.9268,
-      "previous_val": 0,
-      "net_asset": 31986686,
-      "buy_price": 11.9268,
-      "sell_price": 11.9269
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.0046,
-      "previous_val": 0,
-      "net_asset": 32211716,
-      "buy_price": 12.0046,
-      "sell_price": 12.0047
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.1653,
-      "previous_val": 0,
-      "net_asset": 32671246,
-      "buy_price": 12.1653,
-      "sell_price": 12.1654
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 12.1791,
@@ -253,6 +221,30 @@
       "net_asset": 31645146,
       "buy_price": 12.052,
       "sell_price": 12.0521
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.1165,
+      "previous_val": 0,
+      "net_asset": 31800170,
+      "buy_price": 12.1165,
+      "sell_price": 12.1166
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.2769,
+      "previous_val": 0,
+      "net_asset": 32324694,
+      "buy_price": 12.2769,
+      "sell_price": 12.277
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.1397,
+      "previous_val": 0,
+      "net_asset": 32055024,
+      "buy_price": 12.1397,
+      "sell_price": 12.1398
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 19.94,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +292,7 @@
       "percentage": -0.96
     }
   ],
-  "category": null,
+  "category": "USEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -382,10 +377,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:11:02.456Z",
+  "data_fetched_at": "2025-11-15T11:20:15.923Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Global Brands Equity RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 16.0556,
+    "nav_date": "2025-11-13",
+    "last_val": 16.3518,
     "previous_val": 0,
-    "net_asset": 3964182016,
-    "buy_price": 16.0556,
-    "sell_price": 16.0557,
-    "change": 16.0556,
+    "net_asset": 4027149312,
+    "buy_price": 16.3518,
+    "sell_price": 16.3519,
+    "change": 16.3518,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 16.8238,
-      "previous_val": 0,
-      "net_asset": 4243069952,
-      "buy_price": 16.8238,
-      "sell_price": 16.8239
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 16.8399,
-      "previous_val": 0,
-      "net_asset": 4244179712,
-      "buy_price": 16.8399,
-      "sell_price": 16.84
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.8988,
-      "previous_val": 0,
-      "net_asset": 4252099072,
-      "buy_price": 16.8988,
-      "sell_price": 16.8989
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 16.934,
-      "previous_val": 0,
-      "net_asset": 4260239616,
-      "buy_price": 16.934,
-      "sell_price": 16.9341
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 16.9277,
@@ -253,6 +221,38 @@
       "net_asset": 3964182016,
       "buy_price": 16.0556,
       "sell_price": 16.0557
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 16.1156,
+      "previous_val": 0,
+      "net_asset": 3976380928,
+      "buy_price": 16.1156,
+      "sell_price": 16.1157
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 16.2431,
+      "previous_val": 0,
+      "net_asset": 4003231232,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 16.3535,
+      "previous_val": 0,
+      "net_asset": 4030423296,
+      "buy_price": 16.3535,
+      "sell_price": 16.3536
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 16.3518,
+      "previous_val": 0,
+      "net_asset": 4027149312,
+      "buy_price": 16.3518,
+      "sell_price": 16.3519
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.41,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "Morgan Stanley Investment Funds - Global Brands Fund",
@@ -297,7 +300,7 @@
       "percentage": -0.74
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -401,10 +404,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:26:15.943Z",
+  "data_fetched_at": "2025-11-15T10:48:21.012Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "Krung Thai Money Market RMF 4",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMMGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 1,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 12.2872,
+    "nav_date": "2025-11-14",
+    "last_val": 12.2885,
     "previous_val": 0,
-    "net_asset": 3006118144,
-    "buy_price": 12.2872,
-    "sell_price": 12.2873,
-    "change": 12.2872,
+    "net_asset": 2993949696,
+    "buy_price": 12.2885,
+    "sell_price": 12.2886,
+    "change": 12.2885,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.2715,
-      "previous_val": 0,
-      "net_asset": 2891301888,
-      "buy_price": 12.2715,
-      "sell_price": 12.2716
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.2723,
-      "previous_val": 0,
-      "net_asset": 2890546688,
-      "buy_price": 12.2723,
-      "sell_price": 12.2724
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.2728,
-      "previous_val": 0,
-      "net_asset": 2891098368,
-      "buy_price": 12.2728,
-      "sell_price": 12.2729
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 12.2736,
-      "previous_val": 0,
-      "net_asset": 2891766272,
-      "buy_price": 12.2736,
-      "sell_price": 12.2737
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 12.274,
@@ -253,6 +221,38 @@
       "net_asset": 3006118144,
       "buy_price": 12.2872,
       "sell_price": 12.2873
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 12.2875,
+      "previous_val": 0,
+      "net_asset": 2996556032,
+      "buy_price": 12.2875,
+      "sell_price": 12.2876
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.2879,
+      "previous_val": 0,
+      "net_asset": 2996906496,
+      "buy_price": 12.2879,
+      "sell_price": 12.288
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.2882,
+      "previous_val": 0,
+      "net_asset": 2989621760,
+      "buy_price": 12.2882,
+      "sell_price": 12.2883
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 12.2885,
+      "previous_val": 0,
+      "net_asset": 2993949696,
+      "buy_price": 12.2885,
+      "sell_price": 12.2886
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.37
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.08,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรธนาคารแห่งประเทศไทย",
@@ -309,7 +312,7 @@
       "percentage": -0.06
     }
   ],
-  "category": null,
+  "category": "MMG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -409,10 +412,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:35:23.011Z",
+  "data_fetched_at": "2025-11-15T10:59:31.653Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

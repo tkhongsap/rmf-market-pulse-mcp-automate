@@ -4,56 +4,24 @@
   "fund_name": "LH THAI PROPERTY RMF FUND",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPTH",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 12.4105,
+    "nav_date": "2025-11-14",
+    "last_val": 12.2458,
     "previous_val": 0,
-    "net_asset": 389562816,
-    "buy_price": 12.4105,
-    "sell_price": 12.4106,
-    "change": 12.4105,
+    "net_asset": 382966400,
+    "buy_price": 12.2458,
+    "sell_price": 12.2459,
+    "change": 12.2458,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.2541,
-      "previous_val": 0,
-      "net_asset": 388568288,
-      "buy_price": 12.2541,
-      "sell_price": 12.2542
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.2669,
-      "previous_val": 0,
-      "net_asset": 388972448,
-      "buy_price": 12.2669,
-      "sell_price": 12.267
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.2376,
-      "previous_val": 0,
-      "net_asset": 388033408,
-      "buy_price": 12.2376,
-      "sell_price": 12.2377
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 12.1903,
-      "previous_val": 0,
-      "net_asset": 386503136,
-      "buy_price": 12.1903,
-      "sell_price": 12.1904
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 12.1628,
@@ -253,6 +221,38 @@
       "net_asset": 389562816,
       "buy_price": 12.4105,
       "sell_price": 12.4106
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 12.4243,
+      "previous_val": 0,
+      "net_asset": 388556544,
+      "buy_price": 12.4243,
+      "sell_price": 12.4244
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.419,
+      "previous_val": 0,
+      "net_asset": 388389376,
+      "buy_price": 12.419,
+      "sell_price": 12.4191
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.3566,
+      "previous_val": 0,
+      "net_asset": 386441152,
+      "buy_price": 12.3566,
+      "sell_price": 12.3567
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 12.2458,
+      "previous_val": 0,
+      "net_asset": 382966400,
+      "buy_price": 12.2458,
+      "sell_price": 12.2459
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 2.09376620468202
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 10.9352122436845,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "กองทุนรวมอสังหาริมทรัพย์และทรัสต์เพื่อการลงทุนในอสังหาริมทรัพย์",
@@ -282,7 +285,7 @@
       "percentage": 4.10790145118318
     }
   ],
-  "category": null,
+  "category": "FFT",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -373,11 +376,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:00.466Z",
+  "data_fetched_at": "2025-11-15T10:54:59.544Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

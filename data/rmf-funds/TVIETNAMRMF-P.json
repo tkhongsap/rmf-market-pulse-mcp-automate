@@ -2,58 +2,26 @@
   "fund_id": "M0577_2565",
   "symbol": "TVIETNAMRMF-P",
   "fund_name": "TISCO Vietnam Equity RMF",
-  "amc": "EQVIET",
+  "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "AM",
-    "management_style": "No",
-    "dividend_policy": "6",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AM",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 12.4354,
+    "nav_date": "2025-11-12",
+    "last_val": 12.438,
     "previous_val": 0,
-    "net_asset": 91794912,
-    "buy_price": 12.4354,
-    "sell_price": 12.4355,
-    "change": 12.4354,
+    "net_asset": 91787416,
+    "buy_price": 12.438,
+    "sell_price": 12.4381,
+    "change": 12.438,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 12.5787,
-      "previous_val": 0,
-      "net_asset": 92689984,
-      "buy_price": 12.5787,
-      "sell_price": 12.5788
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.5588,
-      "previous_val": 0,
-      "net_asset": 92551336,
-      "buy_price": 12.5588,
-      "sell_price": 12.5589
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.5403,
-      "previous_val": 0,
-      "net_asset": 92301048,
-      "buy_price": 12.5403,
-      "sell_price": 12.5404
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.539,
-      "previous_val": 0,
-      "net_asset": 92092712,
-      "buy_price": 12.539,
-      "sell_price": 12.5391
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 12.5924,
@@ -253,6 +221,38 @@
       "net_asset": 91794912,
       "buy_price": 12.4354,
       "sell_price": 12.4355
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 12.153,
+      "previous_val": 0,
+      "net_asset": 89711992,
+      "buy_price": 12.153,
+      "sell_price": 12.1531
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.0253,
+      "previous_val": 0,
+      "net_asset": 88769584,
+      "buy_price": 12.0253,
+      "sell_price": 12.0254
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 12.1643,
+      "previous_val": 0,
+      "net_asset": 89764344,
+      "buy_price": 12.1643,
+      "sell_price": 12.1644
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.438,
+      "previous_val": 0,
+      "net_asset": 91787416,
+      "buy_price": 12.438,
+      "sell_price": 12.4381
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 18.02,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +296,7 @@
       "percentage": -0.73
     }
   ],
-  "category": null,
+  "category": "VIEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -444,10 +447,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:44:00.141Z",
+  "data_fetched_at": "2025-11-15T11:08:47.389Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

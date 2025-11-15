@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Small Medium Cap Equity RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 6.2613,
+    "nav_date": "2025-11-14",
+    "last_val": 6.0252,
     "previous_val": 0,
-    "net_asset": 45465208,
-    "buy_price": 6.255,
-    "sell_price": 6.2677,
-    "change": 6.2613,
+    "net_asset": 43452532,
+    "buy_price": 6.0192,
+    "sell_price": 6.0313,
+    "change": 6.0252,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 6.8338,
-      "previous_val": 0,
-      "net_asset": 50211960,
-      "buy_price": 6.827,
-      "sell_price": 6.8407
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 6.7511,
-      "previous_val": 0,
-      "net_asset": 49609908,
-      "buy_price": 6.7443,
-      "sell_price": 6.758
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 6.7106,
-      "previous_val": 0,
-      "net_asset": 49316764,
-      "buy_price": 6.7039,
-      "sell_price": 6.7174
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 6.7771,
-      "previous_val": 0,
-      "net_asset": 49807272,
-      "buy_price": 6.7703,
-      "sell_price": 6.784
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 6.7426,
@@ -253,6 +221,38 @@
       "net_asset": 45465208,
       "buy_price": 6.255,
       "sell_price": 6.2677
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 6.241,
+      "previous_val": 0,
+      "net_asset": 45252240,
+      "buy_price": 6.2348,
+      "sell_price": 6.2473
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 6.1361,
+      "previous_val": 0,
+      "net_asset": 44202364,
+      "buy_price": 6.13,
+      "sell_price": 6.1423
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 6.071,
+      "previous_val": 0,
+      "net_asset": 43757980,
+      "buy_price": 6.0649,
+      "sell_price": 6.0772
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 6.0252,
+      "previous_val": 0,
+      "net_asset": 43452532,
+      "buy_price": 6.0192,
+      "sell_price": 6.0313
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 11.06,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -297,7 +300,7 @@
       "percentage": -1.92
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -379,10 +382,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:18:49.179Z",
+  "data_fetched_at": "2025-11-15T10:41:44.614Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

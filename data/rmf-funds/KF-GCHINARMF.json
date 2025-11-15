@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Greater China Equity Hedged FX RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQCH",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.6716,
+    "nav_date": "2025-11-13",
+    "last_val": 10.91,
     "previous_val": 0,
-    "net_asset": 1152071552,
-    "buy_price": 10.6716,
-    "sell_price": 10.6717,
-    "change": 10.6716,
+    "net_asset": 1174598656,
+    "buy_price": 10.91,
+    "sell_price": 10.9101,
+    "change": 10.91,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.6043,
-      "previous_val": 0,
-      "net_asset": 1164881920,
-      "buy_price": 10.6043,
-      "sell_price": 10.6044
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.7492,
-      "previous_val": 0,
-      "net_asset": 1180712448,
-      "buy_price": 10.7492,
-      "sell_price": 10.7493
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.81,
-      "previous_val": 0,
-      "net_asset": 1188177280,
-      "buy_price": 10.81,
-      "sell_price": 10.8101
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.8082,
-      "previous_val": 0,
-      "net_asset": 1189228032,
-      "buy_price": 0,
-      "sell_price": 0
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.898,
@@ -253,6 +221,38 @@
       "net_asset": 1152071552,
       "buy_price": 10.6716,
       "sell_price": 10.6717
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.7926,
+      "previous_val": 0,
+      "net_asset": 1164612352,
+      "buy_price": 10.7926,
+      "sell_price": 10.7927
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.7898,
+      "previous_val": 0,
+      "net_asset": 1164448896,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.8768,
+      "previous_val": 0,
+      "net_asset": 1173839232,
+      "buy_price": 10.8768,
+      "sell_price": 10.8769
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.91,
+      "previous_val": 0,
+      "net_asset": 1174598656,
+      "buy_price": 10.91,
+      "sell_price": 10.9101
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 0.98
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 21.31,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "FSSA Greater China Growth Fund",
@@ -286,7 +289,7 @@
       "percentage": -1.17
     }
   ],
-  "category": null,
+  "category": "CHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -390,11 +393,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:14.498Z",
+  "data_fetched_at": "2025-11-15T10:46:36.202Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

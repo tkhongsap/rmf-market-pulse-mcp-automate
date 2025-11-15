@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Money Market RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMMGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 1,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 14.8196,
+    "nav_date": "2025-11-14",
+    "last_val": 14.8207,
     "previous_val": 0,
-    "net_asset": 1549719296,
-    "buy_price": 14.8196,
-    "sell_price": 14.8197,
-    "change": 14.8196,
+    "net_asset": 1563297664,
+    "buy_price": 14.8207,
+    "sell_price": 14.8208,
+    "change": 14.8207,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 14.8012,
-      "previous_val": 0,
-      "net_asset": 1487581696,
-      "buy_price": 14.8012,
-      "sell_price": 14.8013
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 14.8017,
-      "previous_val": 0,
-      "net_asset": 1487861632,
-      "buy_price": 14.8017,
-      "sell_price": 14.8018
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 14.8027,
-      "previous_val": 0,
-      "net_asset": 1486459392,
-      "buy_price": 14.8027,
-      "sell_price": 14.8028
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 14.8031,
-      "previous_val": 0,
-      "net_asset": 1486819968,
-      "buy_price": 14.8031,
-      "sell_price": 14.8032
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 14.8039,
@@ -253,6 +221,38 @@
       "net_asset": 1549719296,
       "buy_price": 14.8196,
       "sell_price": 14.8197
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 14.8196,
+      "previous_val": 0,
+      "net_asset": 1550108160,
+      "buy_price": 14.8196,
+      "sell_price": 14.8197
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 14.82,
+      "previous_val": 0,
+      "net_asset": 1557745152,
+      "buy_price": 14.82,
+      "sell_price": 14.8201
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 14.8202,
+      "previous_val": 0,
+      "net_asset": 1562868480,
+      "buy_price": 14.8202,
+      "sell_price": 14.8203
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 14.8207,
+      "previous_val": 0,
+      "net_asset": 1563297664,
+      "buy_price": 14.8207,
+      "sell_price": 14.8208
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.49
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.09,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตร",
@@ -301,7 +304,7 @@
       "percentage": 0.66
     }
   ],
-  "category": null,
+  "category": "MMG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -427,10 +430,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:18:09.018Z",
+  "data_fetched_at": "2025-11-15T10:41:03.694Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

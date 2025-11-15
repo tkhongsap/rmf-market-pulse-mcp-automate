@@ -4,22 +4,22 @@
   "fund_name": "Krungsri Japan Equity Index RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.5628,
+    "nav_date": "2025-11-14",
+    "last_val": 10.4495,
     "previous_val": 0,
-    "net_asset": 6697549.5,
-    "buy_price": 10.5628,
-    "sell_price": 10.5629,
-    "change": 10.5628,
+    "net_asset": 7101412.5,
+    "buy_price": 10.4495,
+    "sell_price": 10.4496,
+    "change": 10.4495,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -125,6 +125,38 @@
       "net_asset": 6697549.5,
       "buy_price": 10.5628,
       "sell_price": 10.5629
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.5432,
+      "previous_val": 0,
+      "net_asset": 6756228,
+      "buy_price": 10.5432,
+      "sell_price": 10.5433
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.5874,
+      "previous_val": 0,
+      "net_asset": 7007012.5,
+      "buy_price": 10.5874,
+      "sell_price": 10.5875
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.6323,
+      "previous_val": 0,
+      "net_asset": 7001739.5,
+      "buy_price": 10.6323,
+      "sell_price": 10.6324
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.4495,
+      "previous_val": 0,
+      "net_asset": 7101412.5,
+      "buy_price": 10.4495,
+      "sell_price": 10.4496
     }
   ],
   "dividends": [],
@@ -223,7 +255,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:34.824Z",
+  "data_fetched_at": "2025-11-15T10:46:36.370Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

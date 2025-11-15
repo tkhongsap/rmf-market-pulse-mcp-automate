@@ -1,9 +1,9 @@
 {
-  "generated_at": "2025-11-13T23:09:59.479Z",
+  "generated_at": "2025-11-15T11:19:44.951Z",
   "version": "1.0",
   "statistics": {
     "total_amcs": 29,
-    "total_funds": 14175,
+    "total_funds": 14177,
     "rmf_funds": 400,
     "active_funds": 394,
     "cancelled_funds": 6,
@@ -3437,8 +3437,8 @@
       "fund_name_en": "MEGA 10 CYBERSECURITY AND ENTERPRISE SOFTWARE RETIREMENT MUTUAL FUND",
       "amc_id": "C0000024008",
       "amc_name": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
-      "fund_status": "SE",
-      "regis_date": "-",
+      "fund_status": "RG",
+      "regis_date": "2025-11-13",
       "cancel_date": "-"
     },
     "MEGA10EURORMF": {

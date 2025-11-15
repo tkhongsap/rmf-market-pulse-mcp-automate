@@ -4,56 +4,24 @@
   "fund_name": "MFC SET 50 Retirement Fund",
   "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQSET50",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 8.5882,
+    "nav_date": "2025-11-14",
+    "last_val": 8.3721,
     "previous_val": 0,
-    "net_asset": 77282744,
-    "buy_price": 8.5882,
-    "sell_price": 8.5883,
-    "change": 8.5882,
+    "net_asset": 75342304,
+    "buy_price": 8.3721,
+    "sell_price": 8.3722,
+    "change": 8.3721,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 8.4059,
-      "previous_val": 0,
-      "net_asset": 79874832,
-      "buy_price": 8.4059,
-      "sell_price": 8.406
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.3161,
-      "previous_val": 0,
-      "net_asset": 79028584,
-      "buy_price": 8.3161,
-      "sell_price": 8.3162
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 8.3238,
-      "previous_val": 0,
-      "net_asset": 80286040,
-      "buy_price": 8.3238,
-      "sell_price": 8.3239
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 8.4018,
-      "previous_val": 0,
-      "net_asset": 81743808,
-      "buy_price": 8.4018,
-      "sell_price": 8.4019
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 8.4422,
@@ -253,6 +221,38 @@
       "net_asset": 77282744,
       "buy_price": 8.5882,
       "sell_price": 8.5883
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.5587,
+      "previous_val": 0,
+      "net_asset": 77018728,
+      "buy_price": 8.5587,
+      "sell_price": 8.5588
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.4628,
+      "previous_val": 0,
+      "net_asset": 76157160,
+      "buy_price": 8.4628,
+      "sell_price": 8.4629
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.4886,
+      "previous_val": 0,
+      "net_asset": 76389704,
+      "buy_price": 8.4886,
+      "sell_price": 8.4887
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.3721,
+      "previous_val": 0,
+      "net_asset": 75342304,
+      "buy_price": 8.3721,
+      "sell_price": 8.3722
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.85,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -289,7 +292,7 @@
       "percentage": 0.34
     }
   ],
-  "category": null,
+  "category": "SET50",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -389,10 +392,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:20.660Z",
+  "data_fetched_at": "2025-11-15T10:55:43.667Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

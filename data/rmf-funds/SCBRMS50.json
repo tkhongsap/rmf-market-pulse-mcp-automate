@@ -4,56 +4,24 @@
   "fund_name": "SCB SET50 INDEX RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQSET50",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 16.9635,
+    "nav_date": "2025-11-14",
+    "last_val": 16.5375,
     "previous_val": 0,
-    "net_asset": 3962510592,
-    "buy_price": 16.9635,
-    "sell_price": 16.9636,
-    "change": 16.9635,
+    "net_asset": 3848808960,
+    "buy_price": 16.5375,
+    "sell_price": 16.5376,
+    "change": 16.5375,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 16.5997,
-      "previous_val": 0,
-      "net_asset": 3977884928,
-      "buy_price": 16.5997,
-      "sell_price": 16.5998
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.4227,
-      "previous_val": 0,
-      "net_asset": 3938868992,
-      "buy_price": 16.4227,
-      "sell_price": 16.4228
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 16.4404,
-      "previous_val": 0,
-      "net_asset": 3928896768,
-      "buy_price": 16.4404,
-      "sell_price": 16.4405
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 16.5959,
-      "previous_val": 0,
-      "net_asset": 3960145920,
-      "buy_price": 16.5959,
-      "sell_price": 16.596
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.677,
@@ -253,6 +221,38 @@
       "net_asset": 3962510592,
       "buy_price": 16.9635,
       "sell_price": 16.9636
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 16.9053,
+      "previous_val": 0,
+      "net_asset": 3945373184,
+      "buy_price": 16.9053,
+      "sell_price": 16.9054
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 16.7168,
+      "previous_val": 0,
+      "net_asset": 3904046080,
+      "buy_price": 16.7168,
+      "sell_price": 16.7169
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 16.7677,
+      "previous_val": 0,
+      "net_asset": 3902134784,
+      "buy_price": 16.7677,
+      "sell_price": 16.7678
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 16.5375,
+      "previous_val": 0,
+      "net_asset": 3848808960,
+      "buy_price": 16.5375,
+      "sell_price": 16.5376
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.56
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.89,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้น",
@@ -293,7 +296,7 @@
       "percentage": 0.29
     }
   ],
-  "category": null,
+  "category": "SET50",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -475,10 +478,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:38:12.217Z",
+  "data_fetched_at": "2025-11-15T11:02:37.499Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

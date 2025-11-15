@@ -4,56 +4,24 @@
   "fund_name": "KTAM World Technology Artificial Intelligence Equity RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.3645,
+    "nav_date": "2025-11-13",
+    "last_val": 9.4309,
     "previous_val": 0,
-    "net_asset": 295287872,
-    "buy_price": 9.3645,
-    "sell_price": 9.3646,
-    "change": 9.3645,
+    "net_asset": 312956672,
+    "buy_price": 9.4309,
+    "sell_price": 9.431,
+    "change": 9.4309,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 9.0081,
-      "previous_val": 0,
-      "net_asset": 279854816,
-      "buy_price": 9.0081,
-      "sell_price": 9.0082
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0878,
-      "previous_val": 0,
-      "net_asset": 282532544,
-      "buy_price": 9.0878,
-      "sell_price": 9.0879
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.105,
-      "previous_val": 0,
-      "net_asset": 287866208,
-      "buy_price": 9.105,
-      "sell_price": 9.1051
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.1277,
-      "previous_val": 0,
-      "net_asset": 288686624,
-      "buy_price": 9.1277,
-      "sell_price": 9.1278
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 9.2217,
@@ -245,6 +213,30 @@
       "net_asset": 295287872,
       "buy_price": 9.3645,
       "sell_price": 9.3646
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.3649,
+      "previous_val": 0,
+      "net_asset": 293349600,
+      "buy_price": 9.3649,
+      "sell_price": 9.365
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.4369,
+      "previous_val": 0,
+      "net_asset": 310129024,
+      "buy_price": 9.4369,
+      "sell_price": 9.437
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.4309,
+      "previous_val": 0,
+      "net_asset": 312956672,
+      "buy_price": 9.4309,
+      "sell_price": 9.431
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 26.17,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ตราสารทุน",
@@ -289,7 +284,7 @@
       "percentage": -3.49
     }
   ],
-  "category": null,
+  "category": "TECHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -387,10 +382,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:30:19.248Z",
+  "data_fetched_at": "2025-11-15T10:53:15.974Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

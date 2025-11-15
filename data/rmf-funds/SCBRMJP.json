@@ -4,56 +4,24 @@
   "fund_name": "SCB JAPAN EQUITY RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQJP",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 26.8102,
+    "nav_date": "2025-11-14",
+    "last_val": 26.5334,
     "previous_val": 0,
-    "net_asset": 626619712,
-    "buy_price": 26.8102,
-    "sell_price": 26.8103,
-    "change": 26.8102,
+    "net_asset": 623614912,
+    "buy_price": 26.5334,
+    "sell_price": 26.5335,
+    "change": 26.5334,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 23.8974,
-      "previous_val": 0,
-      "net_asset": 537274688,
-      "buy_price": 23.8974,
-      "sell_price": 23.8975
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 23.8551,
-      "previous_val": 0,
-      "net_asset": 538369856,
-      "buy_price": 23.8551,
-      "sell_price": 23.8552
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 23.7149,
-      "previous_val": 0,
-      "net_asset": 536605760,
-      "buy_price": 23.7149,
-      "sell_price": 23.715
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 23.9035,
-      "previous_val": 0,
-      "net_asset": 543827904,
-      "buy_price": 23.9035,
-      "sell_price": 23.9036
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 24.3082,
@@ -253,6 +221,38 @@
       "net_asset": 626619712,
       "buy_price": 26.8102,
       "sell_price": 26.8103
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 26.7754,
+      "previous_val": 0,
+      "net_asset": 627715456,
+      "buy_price": 26.7754,
+      "sell_price": 26.7755
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 26.8564,
+      "previous_val": 0,
+      "net_asset": 629704512,
+      "buy_price": 26.8564,
+      "sell_price": 26.8565
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 26.9754,
+      "previous_val": 0,
+      "net_asset": 633263232,
+      "buy_price": 26.9754,
+      "sell_price": 26.9755
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 26.5334,
+      "previous_val": 0,
+      "net_asset": 623614912,
+      "buy_price": 26.5334,
+      "sell_price": 26.5335
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 19.88,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -2.62
     }
   ],
-  "category": null,
+  "category": "JPEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -459,10 +462,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-11T06:37:06.006Z",
+  "data_fetched_at": "2025-11-15T11:01:35.963Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

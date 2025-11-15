@@ -4,56 +4,24 @@
   "fund_name": "Krungsri ESG Climate Tech RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 8.9209,
+    "nav_date": "2025-11-13",
+    "last_val": 9.1102,
     "previous_val": 0,
-    "net_asset": 155158720,
-    "buy_price": 8.9209,
-    "sell_price": 8.921,
-    "change": 8.9209,
+    "net_asset": 158598848,
+    "buy_price": 9.1102,
+    "sell_price": 9.1103,
+    "change": 9.1102,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 9.0131,
-      "previous_val": 0,
-      "net_asset": 157905984,
-      "buy_price": 9.0131,
-      "sell_price": 9.0132
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0602,
-      "previous_val": 0,
-      "net_asset": 158725024,
-      "buy_price": 9.0602,
-      "sell_price": 9.0603
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.0818,
-      "previous_val": 0,
-      "net_asset": 158689792,
-      "buy_price": 9.0818,
-      "sell_price": 9.0819
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.1898,
-      "previous_val": 0,
-      "net_asset": 160620480,
-      "buy_price": 9.1898,
-      "sell_price": 9.1899
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 9.3027,
@@ -253,6 +221,38 @@
       "net_asset": 155158720,
       "buy_price": 8.9209,
       "sell_price": 8.921
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.1008,
+      "previous_val": 0,
+      "net_asset": 158770992,
+      "buy_price": 9.1008,
+      "sell_price": 9.1009
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.101,
+      "previous_val": 0,
+      "net_asset": 158856384,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.1447,
+      "previous_val": 0,
+      "net_asset": 159618912,
+      "buy_price": 9.1447,
+      "sell_price": 9.1448
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.1102,
+      "previous_val": 0,
+      "net_asset": 158598848,
+      "buy_price": 9.1102,
+      "sell_price": 9.1103
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": -2.4
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 17.26,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "DWS Invest ESG Climate Opportunities",
@@ -282,7 +285,7 @@
       "percentage": -0.54
     }
   ],
-  "category": null,
+  "category": "EQGLOTH",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -386,11 +389,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:25:15.572Z",
+  "data_fetched_at": "2025-11-15T10:47:39.761Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

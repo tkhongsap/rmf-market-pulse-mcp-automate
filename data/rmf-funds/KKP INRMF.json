@@ -4,56 +4,24 @@
   "fund_name": "KKP INCOME RETIREMENT MUTUAL FUND",
   "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "SM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 16.7675,
+    "nav_date": "2025-11-14",
+    "last_val": 16.7879,
     "previous_val": 0,
-    "net_asset": 1928623616,
-    "buy_price": 16.7675,
-    "sell_price": 16.7676,
-    "change": 16.7675,
+    "net_asset": 1943710592,
+    "buy_price": 16.7879,
+    "sell_price": 16.788,
+    "change": 16.7879,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 16.7997,
-      "previous_val": 0,
-      "net_asset": 1905589248,
-      "buy_price": 16.7997,
-      "sell_price": 16.7998
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 16.8101,
-      "previous_val": 0,
-      "net_asset": 1909218304,
-      "buy_price": 16.8101,
-      "sell_price": 16.8102
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 16.8094,
-      "previous_val": 0,
-      "net_asset": 1909141632,
-      "buy_price": 16.8094,
-      "sell_price": 16.8095
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 16.8111,
-      "previous_val": 0,
-      "net_asset": 1911841920,
-      "buy_price": 16.8111,
-      "sell_price": 16.8112
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.8144,
@@ -253,6 +221,38 @@
       "net_asset": 1928623616,
       "buy_price": 16.7675,
       "sell_price": 16.7676
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 16.76,
+      "previous_val": 0,
+      "net_asset": 1935142144,
+      "buy_price": 16.76,
+      "sell_price": 16.7601
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 16.772,
+      "previous_val": 0,
+      "net_asset": 1938935168,
+      "buy_price": 16.772,
+      "sell_price": 16.7721
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 16.7867,
+      "previous_val": 0,
+      "net_asset": 1940627072,
+      "buy_price": 16.7867,
+      "sell_price": 16.7868
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 16.7879,
+      "previous_val": 0,
+      "net_asset": 1943710592,
+      "buy_price": 16.7879,
+      "sell_price": 16.788
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.79
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.62,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นกู้",
@@ -305,7 +308,7 @@
       "percentage": -0.04
     }
   ],
-  "category": null,
+  "category": "MTGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -561,10 +564,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:28:34.836Z",
+  "data_fetched_at": "2025-11-15T10:50:46.931Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

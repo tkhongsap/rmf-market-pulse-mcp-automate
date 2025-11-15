@@ -1,59 +1,27 @@
 {
   "fund_id": "M0619_2565",
   "symbol": "MEGA10RMF",
-  "fund_name": "MEGA 10 RETIREMENT MUTUAL FUND",
+  "fund_name": "MEGA 10 RETIREMENT MUTUAL FUND ",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQUS",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 21.8163,
+    "nav_date": "2025-11-13",
+    "last_val": 21.6003,
     "previous_val": 0,
-    "net_asset": 343520768,
-    "buy_price": 21.8163,
-    "sell_price": 21.8164,
-    "change": 21.8163,
+    "net_asset": 340439072,
+    "buy_price": 21.6003,
+    "sell_price": 21.6004,
+    "change": 21.6003,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 21.9615,
-      "previous_val": 0,
-      "net_asset": 328695872,
-      "buy_price": 21.9615,
-      "sell_price": 21.9616
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 22.0416,
-      "previous_val": 0,
-      "net_asset": 330271520,
-      "buy_price": 22.0416,
-      "sell_price": 22.0417
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 22.0998,
-      "previous_val": 0,
-      "net_asset": 332254432,
-      "buy_price": 22.0998,
-      "sell_price": 22.0999
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 22.0908,
-      "previous_val": 0,
-      "net_asset": 332750336,
-      "buy_price": 22.0908,
-      "sell_price": 22.0909
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 22.1387,
@@ -253,6 +221,30 @@
       "net_asset": 343520768,
       "buy_price": 21.8163,
       "sell_price": 21.8164
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 22.1894,
+      "previous_val": 0,
+      "net_asset": 348802784,
+      "buy_price": 22.1894,
+      "sell_price": 22.1895
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 22.1366,
+      "previous_val": 0,
+      "net_asset": 348568064,
+      "buy_price": 22.1366,
+      "sell_price": 22.1367
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 21.6003,
+      "previous_val": 0,
+      "net_asset": 340439072,
+      "buy_price": 21.6003,
+      "sell_price": 21.6004
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 25.35,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -293,7 +288,7 @@
       "percentage": -0.16
     }
   ],
-  "category": null,
+  "category": "USEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -378,10 +373,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:01.592Z",
+  "data_fetched_at": "2025-11-15T10:56:26.136Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

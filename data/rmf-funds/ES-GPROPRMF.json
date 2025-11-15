@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Global Property RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPFR",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.0784,
+    "nav_date": "2025-11-13",
+    "last_val": 9.0199,
     "previous_val": 0,
-    "net_asset": 46579508,
-    "buy_price": 9.0693,
-    "sell_price": 9.0876,
-    "change": 9.0784,
+    "net_asset": 45998596,
+    "buy_price": 9.0109,
+    "sell_price": 9.029,
+    "change": 9.0199,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 8.984,
-      "previous_val": 0,
-      "net_asset": 45224108,
-      "buy_price": 8.975,
-      "sell_price": 8.9931
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0052,
-      "previous_val": 0,
-      "net_asset": 45273520,
-      "buy_price": 8.9962,
-      "sell_price": 9.0143
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.0684,
-      "previous_val": 0,
-      "net_asset": 45563352,
-      "buy_price": 9.0593,
-      "sell_price": 9.0776
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.0798,
-      "previous_val": 0,
-      "net_asset": 45461304,
-      "buy_price": 9.0707,
-      "sell_price": 9.089
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 9.042,
@@ -237,6 +205,30 @@
       "net_asset": 46579508,
       "buy_price": 9.0693,
       "sell_price": 9.0876
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.0557,
+      "previous_val": 0,
+      "net_asset": 46394120,
+      "buy_price": 9.0466,
+      "sell_price": 9.0649
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.0827,
+      "previous_val": 0,
+      "net_asset": 46413616,
+      "buy_price": 9.0736,
+      "sell_price": 9.0919
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.0199,
+      "previous_val": 0,
+      "net_asset": 45998596,
+      "buy_price": 9.0109,
+      "sell_price": 9.029
     }
   ],
   "dividends": [],
@@ -262,7 +254,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 16.34,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนรวมอสังหาริมทรัพย์",
@@ -285,7 +280,7 @@
       "percentage": -1.43
     }
   ],
-  "category": null,
+  "category": "FF",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -367,10 +362,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:17:27.885Z",
+  "data_fetched_at": "2025-11-15T11:27:47.849Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

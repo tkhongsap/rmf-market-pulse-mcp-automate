@@ -4,56 +4,24 @@
   "fund_name": "United Global Income Strategic Bond Fund RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXGLDISC",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 11.0981,
+    "nav_date": "2025-11-13",
+    "last_val": 11.0924,
     "previous_val": 0,
-    "net_asset": 1139796096,
-    "buy_price": 11.0981,
-    "sell_price": 11.0982,
-    "change": 11.0981,
+    "net_asset": 1144538240,
+    "buy_price": 11.0924,
+    "sell_price": 11.0925,
+    "change": 11.0924,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.9778,
-      "previous_val": 0,
-      "net_asset": 1112500608,
-      "buy_price": 10.9778,
-      "sell_price": 10.9779
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.9964,
-      "previous_val": 0,
-      "net_asset": 1114468224,
-      "buy_price": 10.9964,
-      "sell_price": 10.9965
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.9963,
-      "previous_val": 0,
-      "net_asset": 1115623680,
-      "buy_price": 10.9963,
-      "sell_price": 10.9964
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.0172,
-      "previous_val": 0,
-      "net_asset": 1116341120,
-      "buy_price": 11.0172,
-      "sell_price": 11.0173
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.0269,
@@ -253,6 +221,30 @@
       "net_asset": 1139796096,
       "buy_price": 11.0981,
       "sell_price": 11.0982
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.0968,
+      "previous_val": 0,
+      "net_asset": 1140961920,
+      "buy_price": 11.0968,
+      "sell_price": 11.0969
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.1196,
+      "previous_val": 0,
+      "net_asset": 1144651136,
+      "buy_price": 11.1196,
+      "sell_price": 11.1197
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.0924,
+      "previous_val": 0,
+      "net_asset": 1144538240,
+      "buy_price": 11.0924,
+      "sell_price": 11.0925
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 5.15,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนระหว่างประเทศ",
@@ -289,7 +284,7 @@
       "percentage": 1.3
     }
   ],
-  "category": null,
+  "category": "GBD",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -429,10 +424,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:44:40.703Z",
+  "data_fetched_at": "2025-11-15T11:09:11.605Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

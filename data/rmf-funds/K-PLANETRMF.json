@@ -4,56 +4,24 @@
   "fund_name": "K Planetary Transition RMF",
   "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 12.5765,
+    "nav_date": "2025-11-12",
+    "last_val": 12.7721,
     "previous_val": 0,
-    "net_asset": 33872476,
-    "buy_price": 12.5765,
-    "sell_price": 12.5766,
-    "change": 12.5765,
+    "net_asset": 34540616,
+    "buy_price": 12.7721,
+    "sell_price": 12.7722,
+    "change": 12.7721,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 12.2634,
-      "previous_val": 0,
-      "net_asset": 30475978,
-      "buy_price": 12.2634,
-      "sell_price": 12.2635
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.3163,
-      "previous_val": 0,
-      "net_asset": 30629916,
-      "buy_price": 12.3163,
-      "sell_price": 12.3164
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.4072,
-      "previous_val": 0,
-      "net_asset": 30867060,
-      "buy_price": 12.4072,
-      "sell_price": 12.4073
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.4859,
-      "previous_val": 0,
-      "net_asset": 31072366,
-      "buy_price": 12.4859,
-      "sell_price": 12.486
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 12.5829,
@@ -253,6 +221,30 @@
       "net_asset": 33872476,
       "buy_price": 12.5765,
       "sell_price": 12.5766
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 12.5553,
+      "previous_val": 0,
+      "net_asset": 33799280,
+      "buy_price": 12.5553,
+      "sell_price": 12.5554
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.7346,
+      "previous_val": 0,
+      "net_asset": 34282396,
+      "buy_price": 12.7346,
+      "sell_price": 12.7347
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.7721,
+      "previous_val": 0,
+      "net_asset": 34540616,
+      "buy_price": 12.7721,
+      "sell_price": 12.7722
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.7,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +288,7 @@
       "percentage": 0.83
     }
   ],
-  "category": null,
+  "category": "EQGLOTH",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -360,10 +355,8 @@
     "minimum_redemption": "500",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:21:52.517Z",
+  "data_fetched_at": "2025-11-15T10:44:52.343Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available",
     "No risk factors data available"
   ]

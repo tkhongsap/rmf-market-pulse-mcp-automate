@@ -4,56 +4,24 @@
   "fund_name": "KKP PROPERTY SECTOR RETIREMENT MUTUAL FUND",
   "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPMIX",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 17.59,
+    "nav_date": "2025-11-13",
+    "last_val": 17.5615,
     "previous_val": 0,
-    "net_asset": 328248800,
-    "buy_price": 17.502,
-    "sell_price": 17.5901,
-    "change": 17.59,
+    "net_asset": 327624064,
+    "buy_price": 17.4737,
+    "sell_price": 17.5616,
+    "change": 17.5615,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 17.2963,
-      "previous_val": 0,
-      "net_asset": 327248032,
-      "buy_price": 17.2098,
-      "sell_price": 17.2964
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 17.3847,
-      "previous_val": 0,
-      "net_asset": 328932448,
-      "buy_price": 17.2978,
-      "sell_price": 17.3848
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 17.4369,
-      "previous_val": 0,
-      "net_asset": 329559904,
-      "buy_price": 17.3497,
-      "sell_price": 17.437
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 17.4975,
-      "previous_val": 0,
-      "net_asset": 330886400,
-      "buy_price": 17.41,
-      "sell_price": 17.4976
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 17.5609,
@@ -245,6 +213,30 @@
       "net_asset": 328248800,
       "buy_price": 17.502,
       "sell_price": 17.5901
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 17.6288,
+      "previous_val": 0,
+      "net_asset": 328972768,
+      "buy_price": 17.5407,
+      "sell_price": 17.6289
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 17.6585,
+      "previous_val": 0,
+      "net_asset": 329114976,
+      "buy_price": 17.5702,
+      "sell_price": 17.6586
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 17.5615,
+      "previous_val": 0,
+      "net_asset": 327624064,
+      "buy_price": 17.4737,
+      "sell_price": 17.5616
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": 3.17
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 9.35,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "กองทุนรวมหมวดอุตสาหกรรม,\r\nโครงสร้างพื้นฐานต่างประเทศ",
@@ -301,7 +296,7 @@
       "percentage": -0.55
     }
   ],
-  "category": null,
+  "category": "FPF",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -545,10 +540,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:28:57.890Z",
+  "data_fetched_at": "2025-11-15T10:51:30.591Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

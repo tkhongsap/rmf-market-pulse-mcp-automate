@@ -4,56 +4,24 @@
   "fund_name": "Eastspring Global Capital Growth RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.943,
+    "nav_date": "2025-11-13",
+    "last_val": 9.9425,
     "previous_val": 0,
-    "net_asset": 270435392,
-    "buy_price": 9.943,
-    "sell_price": 9.9431,
-    "change": 9.943,
+    "net_asset": 270000256,
+    "buy_price": 9.9425,
+    "sell_price": 9.9426,
+    "change": 9.9425,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.1688,
-      "previous_val": 0,
-      "net_asset": 287516672,
-      "buy_price": 10.1688,
-      "sell_price": 10.1689
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.234,
-      "previous_val": 0,
-      "net_asset": 289361664,
-      "buy_price": 10.234,
-      "sell_price": 10.2341
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.2277,
-      "previous_val": 0,
-      "net_asset": 289317696,
-      "buy_price": 10.2277,
-      "sell_price": 10.2278
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.249,
-      "previous_val": 0,
-      "net_asset": 289621088,
-      "buy_price": 10.249,
-      "sell_price": 10.2491
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.3392,
@@ -253,6 +221,30 @@
       "net_asset": 270435392,
       "buy_price": 9.943,
       "sell_price": 9.9431
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.0643,
+      "previous_val": 0,
+      "net_asset": 273390016,
+      "buy_price": 10.0643,
+      "sell_price": 10.0644
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.1267,
+      "previous_val": 0,
+      "net_asset": 275063360,
+      "buy_price": 10.1267,
+      "sell_price": 10.1268
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.9425,
+      "previous_val": 0,
+      "net_asset": 270000256,
+      "buy_price": 9.9425,
+      "sell_price": 9.9426
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 18.55,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ในต่างประเทศ",
@@ -289,7 +284,7 @@
       "percentage": -1.08
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -391,10 +386,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:16:47.941Z",
+  "data_fetched_at": "2025-11-15T11:27:06.874Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

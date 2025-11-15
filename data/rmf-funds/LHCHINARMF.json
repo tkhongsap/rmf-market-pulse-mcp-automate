@@ -4,56 +4,24 @@
   "fund_name": "LH EQUITY CHINA OPPORTUNITY RMF FUND",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQCH",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 4.883,
+    "nav_date": "2025-11-13",
+    "last_val": 4.9511,
     "previous_val": 0,
-    "net_asset": 31827734,
-    "buy_price": 4.883,
-    "sell_price": 4.8831,
-    "change": 4.883,
+    "net_asset": 32443534,
+    "buy_price": 4.9511,
+    "sell_price": 4.9512,
+    "change": 4.9511,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 4.9969,
-      "previous_val": 0,
-      "net_asset": 31866200,
-      "buy_price": 4.9969,
-      "sell_price": 4.997
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 5.0777,
-      "previous_val": 0,
-      "net_asset": 32381604,
-      "buy_price": 5.0777,
-      "sell_price": 5.0778
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 5.1263,
-      "previous_val": 0,
-      "net_asset": 32691418,
-      "buy_price": 5.1263,
-      "sell_price": 5.1264
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 5.1387,
-      "previous_val": 0,
-      "net_asset": 32771470,
-      "buy_price": 5.1387,
-      "sell_price": 5.1388
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 5.2183,
@@ -253,6 +221,38 @@
       "net_asset": 31827734,
       "buy_price": 4.883,
       "sell_price": 4.8831
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 4.9406,
+      "previous_val": 0,
+      "net_asset": 32207728,
+      "buy_price": 4.9406,
+      "sell_price": 4.9407
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 4.9297,
+      "previous_val": 0,
+      "net_asset": 32136812,
+      "buy_price": 4.9297,
+      "sell_price": 4.9298
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 4.9402,
+      "previous_val": 0,
+      "net_asset": 32205474,
+      "buy_price": 4.9402,
+      "sell_price": 4.9403
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 4.9511,
+      "previous_val": 0,
+      "net_asset": 32443534,
+      "buy_price": 4.9511,
+      "sell_price": 4.9512
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": -14.2441521683119
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 24.7283013968814,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -282,7 +285,7 @@
       "percentage": 0.561395463439363
     }
   ],
-  "category": null,
+  "category": "CHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -390,11 +393,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:31:19.512Z",
+  "data_fetched_at": "2025-11-15T10:54:18.054Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

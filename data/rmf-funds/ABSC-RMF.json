@@ -4,56 +4,24 @@
   "fund_name": "abrdn Smart Capital Retirement Mutual Fund",
   "amc": "ABERDEEN ASSET MANAGEMENT (THAILAND) LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 63.1157,
+    "nav_date": "2025-11-14",
+    "last_val": 61.3667,
     "previous_val": 0,
-    "net_asset": 2664001280,
-    "buy_price": 63.1157,
-    "sell_price": 63.1158,
-    "change": 63.1157,
+    "net_asset": 2586155008,
+    "buy_price": 61.3667,
+    "sell_price": 61.3668,
+    "change": 61.3667,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 63.0533,
-      "previous_val": 0,
-      "net_asset": 2692942848,
-      "buy_price": 63.0533,
-      "sell_price": 63.0534
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 62.4331,
-      "previous_val": 0,
-      "net_asset": 2665671936,
-      "buy_price": 62.4331,
-      "sell_price": 62.4332
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 62.3824,
-      "previous_val": 0,
-      "net_asset": 2662074112,
-      "buy_price": 62.3824,
-      "sell_price": 62.3825
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 63.0098,
-      "previous_val": 0,
-      "net_asset": 2688842240,
-      "buy_price": 63.0098,
-      "sell_price": 63.0099
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 63.2576,
@@ -253,6 +221,38 @@
       "net_asset": 2664001280,
       "buy_price": 63.1157,
       "sell_price": 63.1158
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 62.8236,
+      "previous_val": 0,
+      "net_asset": 2648157696,
+      "buy_price": 62.8236,
+      "sell_price": 62.8237
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 62.112,
+      "previous_val": 0,
+      "net_asset": 2617517824,
+      "buy_price": 62.112,
+      "sell_price": 62.1121
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 62.0104,
+      "previous_val": 0,
+      "net_asset": 2613084160,
+      "buy_price": 62.0104,
+      "sell_price": 62.0105
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 61.3667,
+      "previous_val": 0,
+      "net_asset": 2586155008,
+      "buy_price": 61.3667,
+      "sell_price": 61.3668
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.4,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "Equity",
@@ -289,7 +292,7 @@
       "percentage": 4.19
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -375,10 +378,8 @@
     "minimum_redemption": "0",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:10:42.408Z",
+  "data_fetched_at": "2025-11-15T11:19:53.204Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

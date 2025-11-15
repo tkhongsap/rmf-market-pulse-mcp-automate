@@ -4,48 +4,24 @@
   "fund_name": "Eastspring Gold Bullion RMF-Currency Hedged Fund",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "COMPM",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "PM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 20.5273,
+    "nav_date": "2025-11-14",
+    "last_val": 20.9823,
     "previous_val": 0,
-    "net_asset": 590867968,
-    "buy_price": 20.5273,
-    "sell_price": 20.5274,
-    "change": 20.5273,
+    "net_asset": 619646336,
+    "buy_price": 20.9823,
+    "sell_price": 20.9824,
+    "change": 20.9823,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 19.2783,
-      "previous_val": 0,
-      "net_asset": 556464192,
-      "buy_price": 19.2783,
-      "sell_price": 19.2784
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 19.2659,
-      "previous_val": 0,
-      "net_asset": 556097536,
-      "buy_price": 19.2659,
-      "sell_price": 19.266
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 19.5586,
-      "previous_val": 0,
-      "net_asset": 565258112,
-      "buy_price": 19.5586,
-      "sell_price": 19.5587
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 19.5091,
@@ -229,6 +205,30 @@
       "net_asset": 590867968,
       "buy_price": 20.5273,
       "sell_price": 20.5274
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 20.7709,
+      "previous_val": 0,
+      "net_asset": 607138816,
+      "buy_price": 20.7709,
+      "sell_price": 20.771
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 21.2609,
+      "previous_val": 0,
+      "net_asset": 626841472,
+      "buy_price": 21.2609,
+      "sell_price": 21.261
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 20.9823,
+      "previous_val": 0,
+      "net_asset": 619646336,
+      "buy_price": 20.9823,
+      "sell_price": 20.9824
     }
   ],
   "dividends": [],
@@ -254,7 +254,10 @@
       "10y": 11.7
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.47,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ทองคำแท่ง",
@@ -265,7 +268,7 @@
       "percentage": -0.67
     }
   ],
-  "category": null,
+  "category": "CPM",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -375,10 +378,8 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:17:08.125Z",
+  "data_fetched_at": "2025-11-15T11:27:27.580Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

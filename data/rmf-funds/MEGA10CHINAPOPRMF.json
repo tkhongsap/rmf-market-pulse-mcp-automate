@@ -4,22 +4,22 @@
   "fund_name": "MEGA 10 CHINA POPULAR CONSUMER BRAND RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "-",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "Unknown",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.4139,
+    "nav_date": "2025-11-13",
+    "last_val": 9.8756,
     "previous_val": 0,
-    "net_asset": 2110265.75,
-    "buy_price": 9.4139,
-    "sell_price": 9.414,
-    "change": 9.4139,
+    "net_asset": 2445450.5,
+    "buy_price": 9.8756,
+    "sell_price": 9.8757,
+    "change": 9.8756,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -141,6 +141,30 @@
       "net_asset": 2110265.75,
       "buy_price": 9.4139,
       "sell_price": 9.414
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.7535,
+      "previous_val": 0,
+      "net_asset": 2187454,
+      "buy_price": 9.7535,
+      "sell_price": 9.7536
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.8989,
+      "previous_val": 0,
+      "net_asset": 2222718.5,
+      "buy_price": 9.8989,
+      "sell_price": 9.899
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.8756,
+      "previous_val": 0,
+      "net_asset": 2445450.5,
+      "buy_price": 9.8756,
+      "sell_price": 9.8757
     }
   ],
   "dividends": [],
@@ -224,7 +248,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:41.004Z",
+  "data_fetched_at": "2025-11-15T10:56:05.389Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

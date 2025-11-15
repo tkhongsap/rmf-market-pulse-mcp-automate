@@ -4,56 +4,24 @@
   "fund_name": "Principal Protected Retirement Mutual Fund",
   "amc": "PRINCIPAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXGOV",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 3,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 12.8729,
+    "nav_date": "2025-11-14",
+    "last_val": 12.8734,
     "previous_val": 0,
-    "net_asset": 127902584,
-    "buy_price": 12.8729,
-    "sell_price": 12.873,
-    "change": 12.8729,
+    "net_asset": 121660072,
+    "buy_price": 12.8734,
+    "sell_price": 12.8735,
+    "change": 12.8734,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.8576,
-      "previous_val": 0,
-      "net_asset": 126570384,
-      "buy_price": 12.8576,
-      "sell_price": 12.8577
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.8587,
-      "previous_val": 0,
-      "net_asset": 120257880,
-      "buy_price": 12.8587,
-      "sell_price": 12.8588
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.8596,
-      "previous_val": 0,
-      "net_asset": 120421264,
-      "buy_price": 12.8596,
-      "sell_price": 12.8597
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 12.8596,
-      "previous_val": 0,
-      "net_asset": 127201904,
-      "buy_price": 12.8596,
-      "sell_price": 12.8597
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 12.8605,
@@ -253,6 +221,38 @@
       "net_asset": 127902584,
       "buy_price": 12.8729,
       "sell_price": 12.873
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 12.8733,
+      "previous_val": 0,
+      "net_asset": 121620952,
+      "buy_price": 12.8733,
+      "sell_price": 12.8734
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.8733,
+      "previous_val": 0,
+      "net_asset": 121625880,
+      "buy_price": 12.8733,
+      "sell_price": 12.8734
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.8732,
+      "previous_val": 0,
+      "net_asset": 121656504,
+      "buy_price": 12.8732,
+      "sell_price": 12.8733
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 12.8734,
+      "previous_val": 0,
+      "net_asset": 121660072,
+      "buy_price": 12.8734,
+      "sell_price": 12.8735
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.84
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.14,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรธนาคารแห่งประเทศไทย ระยะสั้น อายุไม่เกิน 1 ปี",
@@ -297,7 +300,7 @@
       "percentage": -1.76
     }
   ],
-  "category": null,
+  "category": "STGOV",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -405,10 +408,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:34:42.593Z",
+  "data_fetched_at": "2025-11-15T10:59:10.798Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

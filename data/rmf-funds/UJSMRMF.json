@@ -4,56 +4,24 @@
   "fund_name": "United Japan Small And Mid Cap Fund RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQJP",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 14.798,
+    "nav_date": "2025-11-13",
+    "last_val": 15.1441,
     "previous_val": 0,
-    "net_asset": 50272984,
-    "buy_price": 14.798,
-    "sell_price": 14.7981,
-    "change": 14.798,
+    "net_asset": 51716812,
+    "buy_price": 15.1441,
+    "sell_price": 15.1442,
+    "change": 15.1441,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 15.2081,
-      "previous_val": 0,
-      "net_asset": 47841220,
-      "buy_price": 15.2081,
-      "sell_price": 15.2082
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.0904,
-      "previous_val": 0,
-      "net_asset": 47572516,
-      "buy_price": 15.0904,
-      "sell_price": 15.0905
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.0244,
-      "previous_val": 0,
-      "net_asset": 47375916,
-      "buy_price": 15.0244,
-      "sell_price": 15.0245
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 14.7061,
-      "previous_val": 0,
-      "net_asset": 46913456,
-      "buy_price": 14.7061,
-      "sell_price": 14.7062
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 14.6378,
@@ -237,6 +205,38 @@
       "net_asset": 50272984,
       "buy_price": 14.798,
       "sell_price": 14.7981
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 14.8807,
+      "previous_val": 0,
+      "net_asset": 50566828,
+      "buy_price": 14.8807,
+      "sell_price": 14.8808
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 14.8485,
+      "previous_val": 0,
+      "net_asset": 50588208,
+      "buy_price": 14.8485,
+      "sell_price": 14.8486
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.041,
+      "previous_val": 0,
+      "net_asset": 51329916,
+      "buy_price": 15.041,
+      "sell_price": 15.0411
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.1441,
+      "previous_val": 0,
+      "net_asset": 51716812,
+      "buy_price": 15.1441,
+      "sell_price": 15.1442
     }
   ],
   "dividends": [],
@@ -262,7 +262,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 10.92,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนระหว่างประเทศ",
@@ -273,7 +276,7 @@
       "percentage": 1.55
     }
   ],
-  "category": null,
+  "category": "JPEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -401,10 +404,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:45:00.664Z",
+  "data_fetched_at": "2025-11-15T11:09:32.558Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,48 +4,24 @@
   "fund_name": "KTAM World Healthcare RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQHEALTH",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 14.969,
+    "nav_date": "2025-11-13",
+    "last_val": 15.5558,
     "previous_val": 0,
-    "net_asset": 934562688,
-    "buy_price": 14.969,
-    "sell_price": 14.9691,
-    "change": 14.969,
+    "net_asset": 970835456,
+    "buy_price": 15.5558,
+    "sell_price": 15.5559,
+    "change": 15.5558,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 13.4479,
-      "previous_val": 0,
-      "net_asset": 847635712,
-      "buy_price": 13.4479,
-      "sell_price": 13.448
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.5326,
-      "previous_val": 0,
-      "net_asset": 852311360,
-      "buy_price": 13.5326,
-      "sell_price": 13.5327
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.805,
-      "previous_val": 0,
-      "net_asset": 868341056,
-      "buy_price": 13.805,
-      "sell_price": 13.8051
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 14.1095,
@@ -221,6 +197,30 @@
       "net_asset": 934562688,
       "buy_price": 14.969,
       "sell_price": 14.9691
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 15.1321,
+      "previous_val": 0,
+      "net_asset": 944436800,
+      "buy_price": 15.1321,
+      "sell_price": 15.1322
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.691,
+      "previous_val": 0,
+      "net_asset": 979486080,
+      "buy_price": 15.691,
+      "sell_price": 15.6911
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.5558,
+      "previous_val": 0,
+      "net_asset": 970835456,
+      "buy_price": 15.5558,
+      "sell_price": 15.5559
     }
   ],
   "dividends": [],
@@ -246,7 +246,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 17.21,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ตราสารทุน",
@@ -261,7 +264,7 @@
       "percentage": -0.82
     }
   ],
-  "category": null,
+  "category": "HCS",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -365,10 +368,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:29:58.322Z",
+  "data_fetched_at": "2025-11-15T10:52:34.264Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

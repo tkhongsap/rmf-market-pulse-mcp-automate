@@ -4,56 +4,24 @@
   "fund_name": "KTAM Global Climate Change RMF",
   "amc": "KRUNG THAI ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.2858,
+    "nav_date": "2025-11-13",
+    "last_val": 9.4967,
     "previous_val": 0,
-    "net_asset": 104552640,
-    "buy_price": 9.2858,
-    "sell_price": 9.2859,
-    "change": 9.2858,
+    "net_asset": 107203560,
+    "buy_price": 9.4967,
+    "sell_price": 9.4968,
+    "change": 9.4967,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 9.0261,
-      "previous_val": 0,
-      "net_asset": 99899048,
-      "buy_price": 9.0261,
-      "sell_price": 9.0262
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.1077,
-      "previous_val": 0,
-      "net_asset": 100803088,
-      "buy_price": 9.1077,
-      "sell_price": 9.1078
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.1245,
-      "previous_val": 0,
-      "net_asset": 100877192,
-      "buy_price": 9.1245,
-      "sell_price": 9.1246
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 9.1454,
-      "previous_val": 0,
-      "net_asset": 101056272,
-      "buy_price": 9.1454,
-      "sell_price": 9.1455
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 9.2567,
@@ -245,6 +213,30 @@
       "net_asset": 104552640,
       "buy_price": 9.2858,
       "sell_price": 9.2859
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.4479,
+      "previous_val": 0,
+      "net_asset": 106319224,
+      "buy_price": 9.4479,
+      "sell_price": 9.448
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.5775,
+      "previous_val": 0,
+      "net_asset": 107958944,
+      "buy_price": 9.5775,
+      "sell_price": 9.5776
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.4967,
+      "previous_val": 0,
+      "net_asset": 107203560,
+      "buy_price": 9.4967,
+      "sell_price": 9.4968
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 17.56,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน ตราสารทุน",
@@ -285,7 +280,7 @@
       "percentage": -1.09
     }
   ],
-  "category": null,
+  "category": "EQGLOTH",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -379,10 +374,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:29:38.137Z",
+  "data_fetched_at": "2025-11-15T10:52:12.764Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

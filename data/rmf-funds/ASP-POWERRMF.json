@@ -4,56 +4,24 @@
   "fund_name": "Asset Plus Futuristic Power Supply and Mobility RMF Fund",
   "amc": "ASSET PLUS FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 3.5501,
+    "nav_date": "2025-11-13",
+    "last_val": 3.3932,
     "previous_val": 0,
-    "net_asset": 70011320,
-    "buy_price": 3.5501,
-    "sell_price": 3.5502,
-    "change": 3.5501,
+    "net_asset": 67257584,
+    "buy_price": 3.3932,
+    "sell_price": 3.3933,
+    "change": 3.3932,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 3.5121,
-      "previous_val": 0,
-      "net_asset": 56885608,
-      "buy_price": 3.5121,
-      "sell_price": 3.5122
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 3.5258,
-      "previous_val": 0,
-      "net_asset": 57264980,
-      "buy_price": 3.5258,
-      "sell_price": 3.5259
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 3.5136,
-      "previous_val": 0,
-      "net_asset": 57356732,
-      "buy_price": 3.5136,
-      "sell_price": 3.5137
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 3.5495,
-      "previous_val": 0,
-      "net_asset": 58146272,
-      "buy_price": 3.5495,
-      "sell_price": 3.5496
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 3.6309,
@@ -253,6 +221,38 @@
       "net_asset": 70011320,
       "buy_price": 3.5501,
       "sell_price": 3.5502
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 3.6068,
+      "previous_val": 0,
+      "net_asset": 71116480,
+      "buy_price": 3.6068,
+      "sell_price": 3.6069
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 3.5402,
+      "previous_val": 0,
+      "net_asset": 69913176,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 3.5563,
+      "previous_val": 0,
+      "net_asset": 70229968,
+      "buy_price": 3.5563,
+      "sell_price": 3.5564
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 3.3932,
+      "previous_val": 0,
+      "net_asset": 67257584,
+      "buy_price": 3.3932,
+      "sell_price": 3.3933
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 25.13,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -1.75
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -371,10 +374,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:11:43.655Z",
+  "data_fetched_at": "2025-11-15T11:20:57.546Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

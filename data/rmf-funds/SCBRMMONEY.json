@@ -4,48 +4,24 @@
   "fund_name": "SCB Money Market RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารหนี้",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 1,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.0091,
+    "nav_date": "2025-11-14",
+    "last_val": 10.01,
     "previous_val": 0,
-    "net_asset": 95775224,
-    "buy_price": 10.0091,
-    "sell_price": 10.0092,
-    "change": 10.0091,
+    "net_asset": 100842464,
+    "buy_price": 10.01,
+    "sell_price": 10.0101,
+    "change": 10.01,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.0002,
-      "previous_val": 0,
-      "net_asset": 5229527,
-      "buy_price": 0,
-      "sell_price": 0
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.0004,
-      "previous_val": 0,
-      "net_asset": 5229639,
-      "buy_price": 0,
-      "sell_price": 0
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.0007,
-      "previous_val": 0,
-      "net_asset": 5229808,
-      "buy_price": 0,
-      "sell_price": 0
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.0007,
@@ -245,6 +221,38 @@
       "net_asset": 95775224,
       "buy_price": 10.0091,
       "sell_price": 10.0092
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.0094,
+      "previous_val": 0,
+      "net_asset": 96908240,
+      "buy_price": 10.0094,
+      "sell_price": 10.0095
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.0096,
+      "previous_val": 0,
+      "net_asset": 100173200,
+      "buy_price": 10.0096,
+      "sell_price": 10.0097
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.0098,
+      "previous_val": 0,
+      "net_asset": 105837968,
+      "buy_price": 10.0098,
+      "sell_price": 10.0099
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.01,
+      "previous_val": 0,
+      "net_asset": 100842464,
+      "buy_price": 10.01,
+      "sell_price": 10.0101
     }
   ],
   "dividends": [],
@@ -334,7 +342,7 @@
     "minimum_redemption": "1000",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:37:28.061Z",
+  "data_fetched_at": "2025-11-15T11:01:56.377Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

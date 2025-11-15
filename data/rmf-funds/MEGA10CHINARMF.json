@@ -4,48 +4,24 @@
   "fund_name": "MEGA 10 CHINA RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQCH",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "OT",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 15.2221,
+    "nav_date": "2025-11-14",
+    "last_val": 15.0777,
     "previous_val": 0,
-    "net_asset": 186570832,
-    "buy_price": 15.2221,
-    "sell_price": 15.2222,
-    "change": 15.2221,
+    "net_asset": 185638816,
+    "buy_price": 15.0777,
+    "sell_price": 15.0778,
+    "change": 15.0777,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.6852,
-      "previous_val": 0,
-      "net_asset": 184565568,
-      "buy_price": 15.6852,
-      "sell_price": 15.6853
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.9583,
-      "previous_val": 0,
-      "net_asset": 188185584,
-      "buy_price": 15.9583,
-      "sell_price": 15.9584
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 16.3455,
-      "previous_val": 0,
-      "net_asset": 193081808,
-      "buy_price": 16.3455,
-      "sell_price": 16.3456
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 16.1819,
@@ -229,6 +205,30 @@
       "net_asset": 186570832,
       "buy_price": 15.2221,
       "sell_price": 15.2222
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.3929,
+      "previous_val": 0,
+      "net_asset": 188880800,
+      "buy_price": 15.3929,
+      "sell_price": 15.393
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.3548,
+      "previous_val": 0,
+      "net_asset": 188745472,
+      "buy_price": 15.3548,
+      "sell_price": 15.3549
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 15.0777,
+      "previous_val": 0,
+      "net_asset": 185638816,
+      "buy_price": 15.0777,
+      "sell_price": 15.0778
     }
   ],
   "dividends": [],
@@ -254,7 +254,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 31.7,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -269,7 +272,7 @@
       "percentage": -0.2
     }
   ],
-  "category": null,
+  "category": "CHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -345,10 +348,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:40.618Z",
+  "data_fetched_at": "2025-11-15T10:56:05.262Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

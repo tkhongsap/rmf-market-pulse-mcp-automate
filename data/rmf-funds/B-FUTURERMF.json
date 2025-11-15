@@ -4,56 +4,24 @@
   "fund_name": "Bualuang Future Equity RMF",
   "amc": "BBL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 8.9915,
+    "nav_date": "2025-11-12",
+    "last_val": 8.9741,
     "previous_val": 0,
-    "net_asset": 512185632,
-    "buy_price": 8.9915,
-    "sell_price": 8.9916,
-    "change": 8.9915,
+    "net_asset": 510996320,
+    "buy_price": 8.9741,
+    "sell_price": 8.9742,
+    "change": 8.9741,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 9.0181,
-      "previous_val": 0,
-      "net_asset": 519231936,
-      "buy_price": 9.0181,
-      "sell_price": 9.0182
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 8.9681,
-      "previous_val": 0,
-      "net_asset": 516285312,
-      "buy_price": 8.9681,
-      "sell_price": 8.9682
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0446,
-      "previous_val": 0,
-      "net_asset": 520640896,
-      "buy_price": 9.0446,
-      "sell_price": 9.0447
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 9.0811,
-      "previous_val": 0,
-      "net_asset": 522340480,
-      "buy_price": 9.0811,
-      "sell_price": 9.0812
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 9.1026,
@@ -253,6 +221,38 @@
       "net_asset": 512185632,
       "buy_price": 8.9915,
       "sell_price": 8.9916
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 8.8926,
+      "previous_val": 0,
+      "net_asset": 506582464,
+      "buy_price": 8.8926,
+      "sell_price": 8.8927
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 8.9714,
+      "previous_val": 0,
+      "net_asset": 510650400,
+      "buy_price": 8.9714,
+      "sell_price": 8.9715
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.953,
+      "previous_val": 0,
+      "net_asset": 509793984,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.9741,
+      "previous_val": 0,
+      "net_asset": 510996320,
+      "buy_price": 8.9741,
+      "sell_price": 8.9742
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 16.87,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนกองทุนรวม",
@@ -473,9 +476,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:12:24.144Z",
+  "data_fetched_at": "2025-11-15T11:21:39.091Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

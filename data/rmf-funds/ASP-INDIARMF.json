@@ -4,56 +4,24 @@
   "fund_name": "Asset Plus India Dynamic Equity RMF Fund",
   "amc": "ASSET PLUS FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQIN",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AM",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 8.8079,
+    "nav_date": "2025-11-13",
+    "last_val": 8.8578,
     "previous_val": 0,
-    "net_asset": 28811176,
-    "buy_price": 8.8079,
-    "sell_price": 8.808,
-    "change": 8.8079,
+    "net_asset": 28979852,
+    "buy_price": 8.8578,
+    "sell_price": 8.8579,
+    "change": 8.8578,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 8.6512,
-      "previous_val": 0,
-      "net_asset": 28945530,
-      "buy_price": 8.6512,
-      "sell_price": 8.6513
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 8.6453,
-      "previous_val": 0,
-      "net_asset": 29046480,
-      "buy_price": 8.6453,
-      "sell_price": 8.6454
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.6569,
-      "previous_val": 0,
-      "net_asset": 28812310,
-      "buy_price": 8.6569,
-      "sell_price": 8.657
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 8.7176,
-      "previous_val": 0,
-      "net_asset": 29083352,
-      "buy_price": 8.7176,
-      "sell_price": 8.7177
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 8.712,
@@ -253,6 +221,38 @@
       "net_asset": 28811176,
       "buy_price": 8.8079,
       "sell_price": 8.808
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 8.8268,
+      "previous_val": 0,
+      "net_asset": 28761610,
+      "buy_price": 8.8268,
+      "sell_price": 8.8269
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.8672,
+      "previous_val": 0,
+      "net_asset": 28849928,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.9069,
+      "previous_val": 0,
+      "net_asset": 28978958,
+      "buy_price": 8.9069,
+      "sell_price": 8.907
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.8578,
+      "previous_val": 0,
+      "net_asset": 28979852,
+      "buy_price": 8.8578,
+      "sell_price": 8.8579
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.89,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +296,7 @@
       "percentage": -1.64
     }
   ],
-  "category": null,
+  "category": "IDEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -333,10 +336,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:11:43.815Z",
+  "data_fetched_at": "2025-11-15T11:20:57.482Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

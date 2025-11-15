@@ -4,56 +4,24 @@
   "fund_name": "TALIS DIVIDEND STOCK RMF",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 8.5553,
+    "nav_date": "2025-11-14",
+    "last_val": 8.3535,
     "previous_val": 0,
-    "net_asset": 19146562,
-    "buy_price": 8.5553,
-    "sell_price": 8.5554,
-    "change": 8.5553,
+    "net_asset": 18698978,
+    "buy_price": 8.3535,
+    "sell_price": 8.3536,
+    "change": 8.3535,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 8.6636,
-      "previous_val": 0,
-      "net_asset": 20222278,
-      "buy_price": 8.6636,
-      "sell_price": 8.6637
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.6076,
-      "previous_val": 0,
-      "net_asset": 20089106,
-      "buy_price": 8.6076,
-      "sell_price": 8.6077
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 8.5498,
-      "previous_val": 0,
-      "net_asset": 19954026,
-      "buy_price": 8.5498,
-      "sell_price": 8.5499
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 8.6142,
-      "previous_val": 0,
-      "net_asset": 20104542,
-      "buy_price": 8.6142,
-      "sell_price": 8.6143
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 8.6255,
@@ -253,6 +221,38 @@
       "net_asset": 19146562,
       "buy_price": 8.5553,
       "sell_price": 8.5554
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.5532,
+      "previous_val": 0,
+      "net_asset": 19145918,
+      "buy_price": 8.5532,
+      "sell_price": 8.5533
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.4585,
+      "previous_val": 0,
+      "net_asset": 18933966,
+      "buy_price": 8.4585,
+      "sell_price": 8.4586
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.4084,
+      "previous_val": 0,
+      "net_asset": 18821752,
+      "buy_price": 8.4084,
+      "sell_price": 8.4085
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.3535,
+      "previous_val": 0,
+      "net_asset": 18698978,
+      "buy_price": 8.3535,
+      "sell_price": 8.3536
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.52,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -293,7 +296,7 @@
       "percentage": -0.33
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -387,10 +390,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:41:58.386Z",
+  "data_fetched_at": "2025-11-15T11:06:45.883Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

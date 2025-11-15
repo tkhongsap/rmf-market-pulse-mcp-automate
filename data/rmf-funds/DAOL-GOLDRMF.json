@@ -4,56 +4,24 @@
   "fund_name": "DAOL GOLD AND SILVER EQUITY RETIREMENT MUTUAL FUND",
   "amc": "DAOL INVESTMENT MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AN",
-    "dividend_policy": "-",
+    "dividend_policy": "Unknown",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 13.8018,
+    "nav_date": "2025-11-13",
+    "last_val": 15.5685,
     "previous_val": 0,
-    "net_asset": 73324128,
-    "buy_price": 13.8018,
-    "sell_price": 13.8019,
-    "change": 13.8018,
+    "net_asset": 83966456,
+    "buy_price": 15.5685,
+    "sell_price": 15.5686,
+    "change": 15.5685,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 14.5586,
-      "previous_val": 0,
-      "net_asset": 54935844,
-      "buy_price": 14.5586,
-      "sell_price": 14.5587
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.1905,
-      "previous_val": 0,
-      "net_asset": 57621464,
-      "buy_price": 15.1905,
-      "sell_price": 15.1906
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.1262,
-      "previous_val": 0,
-      "net_asset": 57547624,
-      "buy_price": 15.1262,
-      "sell_price": 15.1263
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.1382,
-      "previous_val": 0,
-      "net_asset": 57849360,
-      "buy_price": 15.1382,
-      "sell_price": 15.1383
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 15.2579,
@@ -245,6 +213,30 @@
       "net_asset": 73324128,
       "buy_price": 13.8018,
       "sell_price": 13.8019
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 14.3051,
+      "previous_val": 0,
+      "net_asset": 76103720,
+      "buy_price": 14.3051,
+      "sell_price": 14.3052
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 14.8947,
+      "previous_val": 0,
+      "net_asset": 79538072,
+      "buy_price": 14.8947,
+      "sell_price": 14.8948
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.5685,
+      "previous_val": 0,
+      "net_asset": 83966456,
+      "buy_price": 15.5685,
+      "sell_price": 15.5686
     }
   ],
   "dividends": [],
@@ -259,7 +251,10 @@
     "since_inception": 8.69
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 33.46,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "UNIT TRUST",
@@ -270,7 +265,7 @@
       "percentage": 2.94
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -333,20 +328,7 @@
       "fee_remark": null
     }
   ],
-  "involved_parties": [
-    {
-      "party_role": "Unknown",
-      "party_name": "Unknown"
-    },
-    {
-      "party_role": "Unknown",
-      "party_name": "Unknown"
-    },
-    {
-      "party_role": "Unknown",
-      "party_name": "Unknown"
-    }
-  ],
+  "involved_parties": null,
   "top_holdings": null,
   "risk_factors": [
     {
@@ -374,11 +356,10 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:15:47.632Z",
+  "data_fetched_at": "2025-11-15T11:25:44.429Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
+    "No involved parties data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "Principal Fixed Income Retirement Mutual Fund",
   "amc": "PRINCIPAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGEN",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 15.205,
+    "nav_date": "2025-11-14",
+    "last_val": 15.2139,
     "previous_val": 0,
-    "net_asset": 183675824,
-    "buy_price": 15.205,
-    "sell_price": 15.2051,
-    "change": 15.205,
+    "net_asset": 183787952,
+    "buy_price": 15.2139,
+    "sell_price": 15.214,
+    "change": 15.2139,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.2443,
-      "previous_val": 0,
-      "net_asset": 178737424,
-      "buy_price": 15.2443,
-      "sell_price": 15.2444
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.255,
-      "previous_val": 0,
-      "net_asset": 178378432,
-      "buy_price": 15.255,
-      "sell_price": 15.2551
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.2533,
-      "previous_val": 0,
-      "net_asset": 178679648,
-      "buy_price": 15.2533,
-      "sell_price": 15.2534
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 15.2546,
-      "previous_val": 0,
-      "net_asset": 178564464,
-      "buy_price": 15.2546,
-      "sell_price": 15.2547
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 15.2571,
@@ -253,6 +221,38 @@
       "net_asset": 183675824,
       "buy_price": 15.205,
       "sell_price": 15.2051
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 15.198,
+      "previous_val": 0,
+      "net_asset": 183664656,
+      "buy_price": 15.198,
+      "sell_price": 15.1981
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.2075,
+      "previous_val": 0,
+      "net_asset": 183737024,
+      "buy_price": 15.2075,
+      "sell_price": 15.2076
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.2154,
+      "previous_val": 0,
+      "net_asset": 183702944,
+      "buy_price": 15.2154,
+      "sell_price": 15.2155
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 15.2139,
+      "previous_val": 0,
+      "net_asset": 183787952,
+      "buy_price": 15.2139,
+      "sell_price": 15.214
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 3.06
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.63,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นกู้บริษัท",
@@ -305,7 +308,7 @@
       "percentage": -0.34
     }
   ],
-  "category": null,
+  "category": "MTGB",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -429,10 +432,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:34:42.766Z",
+  "data_fetched_at": "2025-11-15T10:58:50.610Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

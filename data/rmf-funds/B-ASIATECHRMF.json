@@ -4,56 +4,24 @@
   "fund_name": "Bualuang Asia Technology RMF",
   "amc": "BBL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 12.8407,
+    "nav_date": "2025-11-12",
+    "last_val": 12.9603,
     "previous_val": 0,
-    "net_asset": 334197472,
-    "buy_price": 12.8407,
-    "sell_price": 12.8408,
-    "change": 12.8407,
+    "net_asset": 335815136,
+    "buy_price": 12.9603,
+    "sell_price": 12.9604,
+    "change": 12.9603,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 12.3288,
-      "previous_val": 0,
-      "net_asset": 234583216,
-      "buy_price": 12.3288,
-      "sell_price": 12.3289
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.1528,
-      "previous_val": 0,
-      "net_asset": 233236464,
-      "buy_price": 12.1528,
-      "sell_price": 12.1529
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.3063,
-      "previous_val": 0,
-      "net_asset": 238910832,
-      "buy_price": 12.3063,
-      "sell_price": 12.3064
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.3418,
-      "previous_val": 0,
-      "net_asset": 240960320,
-      "buy_price": 12.3418,
-      "sell_price": 12.3419
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 12.4421,
@@ -253,6 +221,38 @@
       "net_asset": 334197472,
       "buy_price": 12.8407,
       "sell_price": 12.8408
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 12.7951,
+      "previous_val": 0,
+      "net_asset": 335311936,
+      "buy_price": 12.7951,
+      "sell_price": 12.7952
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.0074,
+      "previous_val": 0,
+      "net_asset": 344907680,
+      "buy_price": 13.0074,
+      "sell_price": 13.0075
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.0123,
+      "previous_val": 0,
+      "net_asset": 337160992,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.9603,
+      "previous_val": 0,
+      "net_asset": 335815136,
+      "buy_price": 12.9603,
+      "sell_price": 12.9604
     }
   ],
   "dividends": [],
@@ -375,7 +375,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:12:24.152Z",
+  "data_fetched_at": "2025-11-15T11:21:39.082Z",
   "errors": [
     "No risk metrics available",
     "No category data available",

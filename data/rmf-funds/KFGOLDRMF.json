@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Gold RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "COMPM",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 24.8885,
+    "nav_date": "2025-11-14",
+    "last_val": 25.5029,
     "previous_val": 0,
-    "net_asset": 2932785152,
-    "buy_price": 24.8512,
-    "sell_price": 24.9259,
-    "change": 24.8885,
+    "net_asset": 3028374272,
+    "buy_price": 25.4646,
+    "sell_price": 25.5413,
+    "change": 25.5029,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 23.4646,
-      "previous_val": 0,
-      "net_asset": 2624429824,
-      "buy_price": 23.4294,
-      "sell_price": 23.4999
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 23.458,
-      "previous_val": 0,
-      "net_asset": 2635071488,
-      "buy_price": 23.4228,
-      "sell_price": 23.4933
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 23.9041,
-      "previous_val": 0,
-      "net_asset": 2697192960,
-      "buy_price": 23.8682,
-      "sell_price": 23.9401
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 23.7622,
-      "previous_val": 0,
-      "net_asset": 2688189952,
-      "buy_price": 23.7266,
-      "sell_price": 23.7979
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 23.6881,
@@ -253,6 +221,38 @@
       "net_asset": 2932785152,
       "buy_price": 24.8512,
       "sell_price": 24.9259
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 25.2555,
+      "previous_val": 0,
+      "net_asset": 2984761088,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 25.1779,
+      "previous_val": 0,
+      "net_asset": 2975593984,
+      "buy_price": 25.1401,
+      "sell_price": 25.2158
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 25.7931,
+      "previous_val": 0,
+      "net_asset": 3056738048,
+      "buy_price": 25.7544,
+      "sell_price": 25.8319
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 25.5029,
+      "previous_val": 0,
+      "net_asset": 3028374272,
+      "buy_price": 25.4646,
+      "sell_price": 25.5413
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 11.26
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 14.25,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "SPDR Gold Trust",
@@ -297,7 +300,7 @@
       "percentage": -1.58
     }
   ],
-  "category": null,
+  "category": "CPM",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -401,10 +404,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:26:36.184Z",
+  "data_fetched_at": "2025-11-15T10:48:41.699Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

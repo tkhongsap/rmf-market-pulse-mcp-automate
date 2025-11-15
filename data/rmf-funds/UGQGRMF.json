@@ -4,56 +4,24 @@
   "fund_name": "United Global Quality Growth Fund RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGL",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 13.5227,
+    "nav_date": "2025-11-13",
+    "last_val": 13.6185,
     "previous_val": 0,
-    "net_asset": 1125192576,
-    "buy_price": 13.5227,
-    "sell_price": 13.5228,
-    "change": 13.5227,
+    "net_asset": 1132451840,
+    "buy_price": 13.6185,
+    "sell_price": 13.6186,
+    "change": 13.6185,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 13.6137,
-      "previous_val": 0,
-      "net_asset": 1163023488,
-      "buy_price": 13.6137,
-      "sell_price": 13.6138
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.6573,
-      "previous_val": 0,
-      "net_asset": 1165477760,
-      "buy_price": 13.6573,
-      "sell_price": 13.6574
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.7449,
-      "previous_val": 0,
-      "net_asset": 1172129664,
-      "buy_price": 13.7449,
-      "sell_price": 13.745
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.8028,
-      "previous_val": 0,
-      "net_asset": 1176259840,
-      "buy_price": 13.8028,
-      "sell_price": 13.8029
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 13.8474,
@@ -245,6 +213,30 @@
       "net_asset": 1125192576,
       "buy_price": 13.5227,
       "sell_price": 13.5228
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 13.6431,
+      "previous_val": 0,
+      "net_asset": 1134957568,
+      "buy_price": 13.6431,
+      "sell_price": 13.6432
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.7244,
+      "previous_val": 0,
+      "net_asset": 1141854720,
+      "buy_price": 13.7244,
+      "sell_price": 13.7245
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.6185,
+      "previous_val": 0,
+      "net_asset": 1132451840,
+      "buy_price": 13.6185,
+      "sell_price": 13.6186
     }
   ],
   "dividends": [],
@@ -270,7 +262,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.55,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนระหว่างประเทศ",
@@ -281,7 +276,7 @@
       "percentage": 0.42
     }
   ],
-  "category": null,
+  "category": "GLEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -409,10 +404,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:44:40.723Z",
+  "data_fetched_at": "2025-11-15T11:09:32.457Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

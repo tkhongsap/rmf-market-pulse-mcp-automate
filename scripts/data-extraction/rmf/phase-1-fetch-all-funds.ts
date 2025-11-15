@@ -159,10 +159,10 @@ function loadFundMapping(): FundMapping {
 }
 
 function loadCSVFunds(): CSVFundRow[] {
-  const csvPath = join(process.cwd(), 'docs', 'rmf-funds.csv');
+  const csvPath = join(process.cwd(), 'docs', 'rmf-funds-api.csv');
 
   if (!existsSync(csvPath)) {
-    throw new Error('CSV file not found: docs/rmf-funds.csv');
+    throw new Error('CSV file not found: docs/rmf-funds-api.csv');
   }
 
   const csvContent = readFileSync(csvPath, 'utf-8');
@@ -177,21 +177,21 @@ function loadCSVFunds(): CSVFundRow[] {
     // Parse CSV (handle quoted fields)
     const fields = line.match(/(".*?"|[^,]+)(?=\s*,|\s*$)/g);
 
-    if (!fields || fields.length < 8) {
+    if (!fields || fields.length < 7) {
       continue; // Skip malformed rows
     }
 
-    const [symbol, fund_name, amc, fund_classification, management_style, dividend_policy, risk_level, fund_type] = fields.map(f => f.trim().replace(/^"|"$/g, ''));
+    const [symbol, fund_name, amc, proj_id, status, regis_date, cancel_date] = fields.map(f => f.trim().replace(/^"|"$/g, ''));
 
     funds.push({
       symbol,
       fund_name,
       amc,
-      fund_classification,
-      management_style,
-      dividend_policy,
-      risk_level: parseInt(risk_level) || 0,
-      fund_type,
+      fund_classification: '',
+      management_style: '',
+      dividend_policy: '',
+      risk_level: 0,
+      fund_type: 'RMF',
     });
   }
 

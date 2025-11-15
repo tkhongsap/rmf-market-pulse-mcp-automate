@@ -4,22 +4,22 @@
   "fund_name": "Eastspring Ultimate Global Allocation Fund 3 RMF",
   "amc": "EASTSPRING ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ผสม",
+    "management_style": "AN",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.9413,
+    "nav_date": "2025-11-13",
+    "last_val": 10.0816,
     "previous_val": 0,
-    "net_asset": 10885680,
-    "buy_price": 9.9413,
-    "sell_price": 9.9414,
-    "change": 9.9413,
+    "net_asset": 11310924,
+    "buy_price": 10.0816,
+    "sell_price": 10.0817,
+    "change": 10.0816,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -149,6 +149,30 @@
       "net_asset": 10885680,
       "buy_price": 9.9413,
       "sell_price": 9.9414
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.0478,
+      "previous_val": 0,
+      "net_asset": 11161053,
+      "buy_price": 10.0478,
+      "sell_price": 10.0479
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.1999,
+      "previous_val": 0,
+      "net_asset": 11458005,
+      "buy_price": 10.1999,
+      "sell_price": 10.2
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.0816,
+      "previous_val": 0,
+      "net_asset": 11310924,
+      "buy_price": 10.0816,
+      "sell_price": 10.0817
     }
   ],
   "dividends": [],
@@ -209,7 +233,7 @@
     "minimum_redemption": "1",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:19:10.068Z",
+  "data_fetched_at": "2025-11-15T10:42:05.241Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

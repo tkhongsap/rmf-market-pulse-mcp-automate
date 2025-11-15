@@ -2,58 +2,26 @@
   "fund_id": "M0409_2563",
   "symbol": "TTECHRMF-A",
   "fund_name": "TISCO Technology Equity RMF",
-  "amc": "-",
+  "amc": "TISCO ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PN",
-    "management_style": "No",
-    "dividend_policy": "7",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
+    "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 20.0831,
+    "nav_date": "2025-11-13",
+    "last_val": 19.884,
     "previous_val": 0,
-    "net_asset": 217237696,
-    "buy_price": 20.0831,
-    "sell_price": 20.0832,
-    "change": 20.0831,
+    "net_asset": 215528976,
+    "buy_price": 19.884,
+    "sell_price": 19.8841,
+    "change": 19.884,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 19.6415,
-      "previous_val": 0,
-      "net_asset": 210958832,
-      "buy_price": 19.6415,
-      "sell_price": 19.6416
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 19.6912,
-      "previous_val": 0,
-      "net_asset": 211520752,
-      "buy_price": 19.6912,
-      "sell_price": 19.6913
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 19.7131,
-      "previous_val": 0,
-      "net_asset": 211685280,
-      "buy_price": 19.7131,
-      "sell_price": 19.7132
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 19.8423,
-      "previous_val": 0,
-      "net_asset": 213121216,
-      "buy_price": 19.8423,
-      "sell_price": 19.8424
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 19.9742,
@@ -253,6 +221,38 @@
       "net_asset": 217237696,
       "buy_price": 20.0831,
       "sell_price": 20.0832
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 20.5814,
+      "previous_val": 0,
+      "net_asset": 222838416,
+      "buy_price": 20.5814,
+      "sell_price": 20.5815
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 20.4455,
+      "previous_val": 0,
+      "net_asset": 221446720,
+      "buy_price": 20.4455,
+      "sell_price": 20.4456
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 20.4477,
+      "previous_val": 0,
+      "net_asset": 221505776,
+      "buy_price": 20.4477,
+      "sell_price": 20.4478
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 19.884,
+      "previous_val": 0,
+      "net_asset": 215528976,
+      "buy_price": 19.884,
+      "sell_price": 19.8841
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 24.43,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +296,7 @@
       "percentage": -2
     }
   ],
-  "category": null,
+  "category": "TECHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -581,10 +584,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:43:40.001Z",
+  "data_fetched_at": "2025-11-15T11:08:09.110Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

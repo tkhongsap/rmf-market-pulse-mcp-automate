@@ -4,56 +4,24 @@
   "fund_name": "MEGA 10 HEALTHCARE RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQHEALTH",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "OT",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 10.808,
+    "nav_date": "2025-11-13",
+    "last_val": 11.2377,
     "previous_val": 0,
-    "net_asset": 6157438,
-    "buy_price": 10.808,
-    "sell_price": 10.8081,
-    "change": 10.808,
+    "net_asset": 7143061,
+    "buy_price": 11.2377,
+    "sell_price": 11.2378,
+    "change": 11.2377,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 9.7766,
-      "previous_val": 0,
-      "net_asset": 3316330.75,
-      "buy_price": 9.7766,
-      "sell_price": 9.7767
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.7942,
-      "previous_val": 0,
-      "net_asset": 3293388,
-      "buy_price": 9.7942,
-      "sell_price": 9.7943
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.113,
-      "previous_val": 0,
-      "net_asset": 3481602.5,
-      "buy_price": 10.113,
-      "sell_price": 10.1131
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.4918,
-      "previous_val": 0,
-      "net_asset": 3733518,
-      "buy_price": 10.4918,
-      "sell_price": 10.4919
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.449,
@@ -253,6 +221,30 @@
       "net_asset": 6157438,
       "buy_price": 10.808,
       "sell_price": 10.8081
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.9464,
+      "previous_val": 0,
+      "net_asset": 6677567.5,
+      "buy_price": 10.9464,
+      "sell_price": 10.9465
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.2842,
+      "previous_val": 0,
+      "net_asset": 7111703,
+      "buy_price": 11.2842,
+      "sell_price": 11.2843
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.2377,
+      "previous_val": 0,
+      "net_asset": 7143061,
+      "buy_price": 11.2377,
+      "sell_price": 11.2378
     }
   ],
   "dividends": [],
@@ -293,7 +285,7 @@
       "percentage": -5.22
     }
   ],
-  "category": null,
+  "category": "HCS",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -369,10 +361,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:01.462Z",
+  "data_fetched_at": "2025-11-15T10:56:26.250Z",
   "errors": [
     "No risk metrics available",
-    "No category data available",
     "No involved parties data available",
     "No top holdings data available",
     "No risk factors data available"

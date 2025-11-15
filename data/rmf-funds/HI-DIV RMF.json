@@ -4,56 +4,24 @@
   "fund_name": "MFC Hi-Dividend Retirement Fund",
   "amc": "MFC ASSET MANAGEMENT PUBLIC COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQGEN",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.2553,
+    "nav_date": "2025-11-14",
+    "last_val": 9.0241,
     "previous_val": 0,
-    "net_asset": 60549676,
-    "buy_price": 9.2553,
-    "sell_price": 9.2554,
-    "change": 9.2553,
+    "net_asset": 59056932,
+    "buy_price": 9.0241,
+    "sell_price": 9.0242,
+    "change": 9.0241,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 9.0731,
-      "previous_val": 0,
-      "net_asset": 60840100,
-      "buy_price": 9.0731,
-      "sell_price": 9.0732
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.9932,
-      "previous_val": 0,
-      "net_asset": 60310040,
-      "buy_price": 8.9932,
-      "sell_price": 8.9933
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 8.9983,
-      "previous_val": 0,
-      "net_asset": 60344820,
-      "buy_price": 8.9983,
-      "sell_price": 8.9984
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 9.0719,
-      "previous_val": 0,
-      "net_asset": 60836720,
-      "buy_price": 9.0719,
-      "sell_price": 9.072
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.1224,
@@ -253,6 +221,38 @@
       "net_asset": 60549676,
       "buy_price": 9.2553,
       "sell_price": 9.2554
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 9.2193,
+      "previous_val": 0,
+      "net_asset": 60334440,
+      "buy_price": 9.2193,
+      "sell_price": 9.2194
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.1083,
+      "previous_val": 0,
+      "net_asset": 59608184,
+      "buy_price": 9.1083,
+      "sell_price": 9.1084
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.1407,
+      "previous_val": 0,
+      "net_asset": 59820048,
+      "buy_price": 9.1407,
+      "sell_price": 9.1408
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 9.0241,
+      "previous_val": 0,
+      "net_asset": 59056932,
+      "buy_price": 9.0241,
+      "sell_price": 9.0242
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 13.37,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หุ้นสามัญ",
@@ -293,7 +296,7 @@
       "percentage": 1.67
     }
   ],
-  "category": null,
+  "category": "EG",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -393,10 +396,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:19:50.886Z",
+  "data_fetched_at": "2025-11-15T10:43:08.659Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

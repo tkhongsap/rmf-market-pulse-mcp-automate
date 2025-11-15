@@ -4,56 +4,24 @@
   "fund_name": "K Target Retirement 2040 RMF",
   "amc": "KASIKORN ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXFI",
+    "fund_classification": "ผสม",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 12.2168,
+    "nav_date": "2025-11-13",
+    "last_val": 12.2536,
     "previous_val": 0,
-    "net_asset": 728184448,
-    "buy_price": 12.2168,
-    "sell_price": 12.2169,
-    "change": 12.2168,
+    "net_asset": 734147584,
+    "buy_price": 12.2536,
+    "sell_price": 12.2537,
+    "change": 12.2536,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.0969,
-      "previous_val": 0,
-      "net_asset": 649777408,
-      "buy_price": 12.0969,
-      "sell_price": 12.097
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.1294,
-      "previous_val": 0,
-      "net_asset": 660251520,
-      "buy_price": 12.1294,
-      "sell_price": 12.1295
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.1631,
-      "previous_val": 0,
-      "net_asset": 662375680,
-      "buy_price": 12.1631,
-      "sell_price": 12.1632
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.2259,
-      "previous_val": 0,
-      "net_asset": 666047360,
-      "buy_price": 12.2259,
-      "sell_price": 12.226
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 12.2597,
@@ -253,6 +221,30 @@
       "net_asset": 728184448,
       "buy_price": 12.2168,
       "sell_price": 12.2169
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 12.372,
+      "previous_val": 0,
+      "net_asset": 738898432,
+      "buy_price": 12.372,
+      "sell_price": 12.3721
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 12.4327,
+      "previous_val": 0,
+      "net_asset": 743050112,
+      "buy_price": 12.4327,
+      "sell_price": 12.4328
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.2536,
+      "previous_val": 0,
+      "net_asset": 734147584,
+      "buy_price": 12.2536,
+      "sell_price": 12.2537
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 12.44,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -293,7 +288,7 @@
       "percentage": -0.22
     }
   ],
-  "category": null,
+  "category": "FIA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -385,10 +380,8 @@
     "minimum_redemption": "500",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:20:11.846Z",
+  "data_fetched_at": "2025-11-15T10:43:29.390Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "PHILLIP FIXED INCOME RETIREMENT MUTUAL FUND",
   "amc": "PHILLIP ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXMIDGOV",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 11.8673,
+    "nav_date": "2025-11-14",
+    "last_val": 11.8734,
     "previous_val": 0,
-    "net_asset": 15464160,
-    "buy_price": 11.8673,
-    "sell_price": 11.8674,
-    "change": 11.8673,
+    "net_asset": 15454268,
+    "buy_price": 11.8734,
+    "sell_price": 11.8735,
+    "change": 11.8734,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 12.1847,
-      "previous_val": 0,
-      "net_asset": 16095177,
-      "buy_price": 12.1847,
-      "sell_price": 12.1848
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 12.2237,
-      "previous_val": 0,
-      "net_asset": 16146728,
-      "buy_price": 12.2237,
-      "sell_price": 12.2238
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 12.216,
-      "previous_val": 0,
-      "net_asset": 16136618,
-      "buy_price": 12.216,
-      "sell_price": 12.2161
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 12.2117,
-      "previous_val": 0,
-      "net_asset": 16223067,
-      "buy_price": 12.2117,
-      "sell_price": 12.2118
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 12.2098,
@@ -253,6 +221,38 @@
       "net_asset": 15464160,
       "buy_price": 11.8673,
       "sell_price": 11.8674
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.8533,
+      "previous_val": 0,
+      "net_asset": 15428062,
+      "buy_price": 11.8533,
+      "sell_price": 11.8534
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.8694,
+      "previous_val": 0,
+      "net_asset": 15449014,
+      "buy_price": 11.8694,
+      "sell_price": 11.8695
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.877,
+      "previous_val": 0,
+      "net_asset": 15458932,
+      "buy_price": 11.877,
+      "sell_price": 11.8771
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 11.8734,
+      "previous_val": 0,
+      "net_asset": 15454268,
+      "buy_price": 11.8734,
+      "sell_price": 11.8735
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 3.91
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 1.31,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้ภาครัฐ",
@@ -297,7 +300,7 @@
       "percentage": 0.97
     }
   ],
-  "category": null,
+  "category": "MTGOV",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -477,10 +480,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:34:02.104Z",
+  "data_fetched_at": "2025-11-15T10:58:09.368Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

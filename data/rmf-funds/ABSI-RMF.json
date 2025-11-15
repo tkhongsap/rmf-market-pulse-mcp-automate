@@ -4,56 +4,24 @@
   "fund_name": "abrdn Smart Income Retirement Mutual Fund",
   "amc": "ABERDEEN ASSET MANAGEMENT (THAILAND) LIMITED",
   "metadata": {
-    "fund_classification": "FIXGOV",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 4,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 13.1886,
+    "nav_date": "2025-11-14",
+    "last_val": 13.1949,
     "previous_val": 0,
-    "net_asset": 517264896,
-    "buy_price": 13.1886,
-    "sell_price": 13.1887,
-    "change": 13.1886,
+    "net_asset": 510464928,
+    "buy_price": 13.1949,
+    "sell_price": 13.195,
+    "change": 13.1949,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.1946,
-      "previous_val": 0,
-      "net_asset": 529608000,
-      "buy_price": 13.1946,
-      "sell_price": 13.1947
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.2001,
-      "previous_val": 0,
-      "net_asset": 529890880,
-      "buy_price": 13.2001,
-      "sell_price": 13.2002
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.2008,
-      "previous_val": 0,
-      "net_asset": 530159808,
-      "buy_price": 13.2008,
-      "sell_price": 13.2009
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 13.2034,
-      "previous_val": 0,
-      "net_asset": 530266048,
-      "buy_price": 13.2034,
-      "sell_price": 13.2035
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 13.2041,
@@ -253,6 +221,38 @@
       "net_asset": 517264896,
       "buy_price": 13.1886,
       "sell_price": 13.1887
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.1853,
+      "previous_val": 0,
+      "net_asset": 511981056,
+      "buy_price": 13.1853,
+      "sell_price": 13.1854
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.1892,
+      "previous_val": 0,
+      "net_asset": 509729856,
+      "buy_price": 13.1892,
+      "sell_price": 13.1893
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.1939,
+      "previous_val": 0,
+      "net_asset": 510094784,
+      "buy_price": 13.1939,
+      "sell_price": 13.194
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 13.1949,
+      "previous_val": 0,
+      "net_asset": 510464928,
+      "buy_price": 13.1949,
+      "sell_price": 13.195
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 1.43
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.13,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "Bank of Thailand Bond",
@@ -297,7 +300,7 @@
       "percentage": 2.54
     }
   ],
-  "category": null,
+  "category": "STGOV",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -387,10 +390,8 @@
     "minimum_redemption": "0",
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:10:42.229Z",
+  "data_fetched_at": "2025-11-15T11:19:53.257Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

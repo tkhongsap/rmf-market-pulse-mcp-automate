@@ -4,56 +4,24 @@
   "fund_name": "BCAP Global Target Date 2030 Retirement Mutual Fund",
   "amc": "BANGKOK CAPITAL ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXCONS",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 5,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-06",
-    "last_val": 10.958,
+    "nav_date": "2025-11-12",
+    "last_val": 11.0018,
     "previous_val": 0,
-    "net_asset": 172109552,
-    "buy_price": 10.958,
-    "sell_price": 10.9581,
-    "change": 10.958,
+    "net_asset": 172663840,
+    "buy_price": 11.0018,
+    "sell_price": 11.0019,
+    "change": 11.0018,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-25",
-      "last_val": 10.9101,
-      "previous_val": 0,
-      "net_asset": 172592320,
-      "buy_price": 10.9101,
-      "sell_price": 10.9102
-    },
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 10.9134,
-      "previous_val": 0,
-      "net_asset": 172654816,
-      "buy_price": 10.9134,
-      "sell_price": 10.9135
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.9311,
-      "previous_val": 0,
-      "net_asset": 172990112,
-      "buy_price": 10.9311,
-      "sell_price": 10.9312
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.9382,
-      "previous_val": 0,
-      "net_asset": 173173952,
-      "buy_price": 10.9382,
-      "sell_price": 10.9383
-    },
     {
       "nav_date": "2025-10-01",
       "last_val": 10.9516,
@@ -253,43 +221,78 @@
       "net_asset": 172109552,
       "buy_price": 10.958,
       "sell_price": 10.9581
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 10.9439,
+      "previous_val": 0,
+      "net_asset": 171888224,
+      "buy_price": 10.9439,
+      "sell_price": 10.944
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.9716,
+      "previous_val": 0,
+      "net_asset": 172322528,
+      "buy_price": 10.9716,
+      "sell_price": 10.9717
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.9882,
+      "previous_val": 0,
+      "net_asset": 172450960,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.0018,
+      "previous_val": 0,
+      "net_asset": 172663840,
+      "buy_price": 11.0018,
+      "sell_price": 11.0019
     }
   ],
   "dividends": [],
   "performance": {
-    "ytd": 3.58,
-    "3m": 1.46,
-    "6m": 2.97,
-    "1y": 3.42,
-    "3y": 3.39,
-    "5y": null,
+    "ytd": 3.95,
+    "3m": 1.55,
+    "6m": 3.01,
+    "1y": 3.94,
+    "3y": 3.22,
+    "5y": 2.27,
     "10y": null,
-    "since_inception": 1.82
+    "since_inception": 1.86
   },
   "benchmark": {
     "name": "ดัชนี MSCI ACWI Net Total Return USD",
     "returns": {
-      "ytd": 2.89,
-      "3m": 4.85,
-      "6m": 6.09,
-      "1y": 3.17,
-      "3y": 3.86,
-      "5y": null,
+      "ytd": 3.95,
+      "3m": 2.83,
+      "6m": 5.89,
+      "1y": 3.9,
+      "3y": 3.69,
+      "5y": 3.53,
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 4.34,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
-      "percentage": 99.49
+      "percentage": 99.37
     },
     {
       "asset_class": "เงินฝากธนาคาร",
-      "percentage": 0.87
+      "percentage": 0.64
     }
   ],
-  "category": null,
+  "category": "CA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -417,10 +420,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:14:07.987Z",
+  "data_fetched_at": "2025-11-15T11:23:23.105Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

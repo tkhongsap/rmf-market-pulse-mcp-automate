@@ -4,22 +4,22 @@
   "fund_name": "MEGA 10 CHINA TECHNOLOGY RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "-",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "Unknown",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 9.7879,
+    "nav_date": "2025-11-13",
+    "last_val": 9.9532,
     "previous_val": 0,
-    "net_asset": 4241569,
-    "buy_price": 9.7879,
-    "sell_price": 9.788,
-    "change": 9.7879,
+    "net_asset": 5245010,
+    "buy_price": 9.9532,
+    "sell_price": 9.9533,
+    "change": 9.9532,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -141,6 +141,30 @@
       "net_asset": 4241569,
       "buy_price": 9.7879,
       "sell_price": 9.788
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 9.8894,
+      "previous_val": 0,
+      "net_asset": 4898545,
+      "buy_price": 9.8894,
+      "sell_price": 9.8895
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.9209,
+      "previous_val": 0,
+      "net_asset": 5086323,
+      "buy_price": 9.9209,
+      "sell_price": 9.921
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.9532,
+      "previous_val": 0,
+      "net_asset": 5245010,
+      "buy_price": 9.9532,
+      "sell_price": 9.9533
     }
   ],
   "dividends": [],
@@ -224,7 +248,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:32:41.080Z",
+  "data_fetched_at": "2025-11-15T10:56:04.534Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

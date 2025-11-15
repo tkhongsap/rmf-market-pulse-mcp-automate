@@ -4,48 +4,24 @@
   "fund_name": "United All China Equity Fund RMF",
   "amc": "UOB ASSET MANAGEMENT (THAILAND) COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQCH",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 8.1835,
+    "nav_date": "2025-11-13",
+    "last_val": 8.4063,
     "previous_val": 0,
-    "net_asset": 793534400,
-    "buy_price": 8.1835,
-    "sell_price": 8.1836,
-    "change": 8.1835,
+    "net_asset": 807604672,
+    "buy_price": 8.4063,
+    "sell_price": 8.4064,
+    "change": 8.4063,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 8.2292,
-      "previous_val": 0,
-      "net_asset": 800272832,
-      "buy_price": 8.2292,
-      "sell_price": 8.2293
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 8.3349,
-      "previous_val": 0,
-      "net_asset": 810154752,
-      "buy_price": 8.3349,
-      "sell_price": 8.335
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.4398,
-      "previous_val": 0,
-      "net_asset": 820052928,
-      "buy_price": 8.4398,
-      "sell_price": 8.4399
-    },
     {
       "nav_date": "2025-10-09",
       "last_val": 8.4362,
@@ -197,6 +173,30 @@
       "net_asset": 793534400,
       "buy_price": 8.1835,
       "sell_price": 8.1836
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 8.2881,
+      "previous_val": 0,
+      "net_asset": 803734464,
+      "buy_price": 8.2881,
+      "sell_price": 8.2882
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.3604,
+      "previous_val": 0,
+      "net_asset": 810899840,
+      "buy_price": 8.3604,
+      "sell_price": 8.3605
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.4063,
+      "previous_val": 0,
+      "net_asset": 807604672,
+      "buy_price": 8.4063,
+      "sell_price": 8.4064
     }
   ],
   "dividends": [],
@@ -222,7 +222,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 26.18,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนระหว่างประเทศ",
@@ -233,7 +236,7 @@
       "percentage": 0.12
     }
   ],
-  "category": null,
+  "category": "CHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -361,10 +364,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:44:20.193Z",
+  "data_fetched_at": "2025-11-15T11:08:51.338Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

@@ -4,56 +4,24 @@
   "fund_name": "SCB China A-Shares RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "PN",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 8.7552,
+    "nav_date": "2025-11-14",
+    "last_val": 8.5973,
     "previous_val": 0,
-    "net_asset": 866437312,
-    "buy_price": 8.7552,
-    "sell_price": 8.7553,
-    "change": 8.7552,
+    "net_asset": 851924288,
+    "buy_price": 8.5973,
+    "sell_price": 8.5974,
+    "change": 8.5973,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 8.6049,
-      "previous_val": 0,
-      "net_asset": 865889664,
-      "buy_price": 8.6049,
-      "sell_price": 8.605
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.6407,
-      "previous_val": 0,
-      "net_asset": 866991296,
-      "buy_price": 8.6407,
-      "sell_price": 8.6408
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 8.6364,
-      "previous_val": 0,
-      "net_asset": 870226496,
-      "buy_price": 0,
-      "sell_price": 0
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 8.7644,
-      "previous_val": 0,
-      "net_asset": 883123520,
-      "buy_price": 0,
-      "sell_price": 0
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 8.6837,
@@ -253,6 +221,38 @@
       "net_asset": 866437312,
       "buy_price": 8.7552,
       "sell_price": 8.7553
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.6908,
+      "previous_val": 0,
+      "net_asset": 861306304,
+      "buy_price": 8.6908,
+      "sell_price": 8.6909
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.6714,
+      "previous_val": 0,
+      "net_asset": 860623744,
+      "buy_price": 8.6714,
+      "sell_price": 8.6715
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.7333,
+      "previous_val": 0,
+      "net_asset": 865236928,
+      "buy_price": 8.7333,
+      "sell_price": 8.7334
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.5973,
+      "previous_val": 0,
+      "net_asset": 851924288,
+      "buy_price": 8.5973,
+      "sell_price": 8.5974
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 22.52,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -0.53
     }
   ],
-  "category": null,
+  "category": "EQCHA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -469,10 +472,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-11T06:36:03.208Z",
+  "data_fetched_at": "2025-11-15T11:00:34.384Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

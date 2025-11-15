@@ -4,56 +4,24 @@
   "fund_name": "KKP EXPANDED TECH FUND RMF - HEDGED",
   "amc": "KIATNAKIN PHATRA ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 7,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 15.6236,
+    "nav_date": "2025-11-13",
+    "last_val": 15.4687,
     "previous_val": 0,
-    "net_asset": 365719040,
-    "buy_price": 15.6236,
-    "sell_price": 15.6237,
-    "change": 15.6236,
+    "net_asset": 359062400,
+    "buy_price": 15.4687,
+    "sell_price": 15.4688,
+    "change": 15.4687,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 15.2768,
-      "previous_val": 0,
-      "net_asset": 320050176,
-      "buy_price": 15.2768,
-      "sell_price": 15.2769
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 15.3165,
-      "previous_val": 0,
-      "net_asset": 321609056,
-      "buy_price": 15.3165,
-      "sell_price": 15.3166
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 15.3409,
-      "previous_val": 0,
-      "net_asset": 322766912,
-      "buy_price": 15.3409,
-      "sell_price": 15.341
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 15.4422,
-      "previous_val": 0,
-      "net_asset": 326762464,
-      "buy_price": 15.4422,
-      "sell_price": 15.4423
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 15.5437,
@@ -253,6 +221,30 @@
       "net_asset": 365719040,
       "buy_price": 15.6236,
       "sell_price": 15.6237
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 16.0096,
+      "previous_val": 0,
+      "net_asset": 369272256,
+      "buy_price": 16.0096,
+      "sell_price": 16.0097
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 15.9019,
+      "previous_val": 0,
+      "net_asset": 367597920,
+      "buy_price": 15.9019,
+      "sell_price": 15.902
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 15.4687,
+      "previous_val": 0,
+      "net_asset": 359062400,
+      "buy_price": 15.4687,
+      "sell_price": 15.4688
     }
   ],
   "dividends": [],
@@ -278,7 +270,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 24.77,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนต่างประเทศ",
@@ -301,7 +296,7 @@
       "percentage": -0.6
     }
   ],
-  "category": null,
+  "category": "TECHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -433,10 +428,8 @@
     "minimum_redemption": null,
     "minimum_balance": 100
   },
-  "data_fetched_at": "2025-11-11T06:28:57.880Z",
+  "data_fetched_at": "2025-11-15T10:51:30.587Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

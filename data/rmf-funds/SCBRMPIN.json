@@ -4,56 +4,24 @@
   "fund_name": "SCB Property and Infrastructure Flexible RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "PRFOPMIX",
+    "fund_classification": "ทรัพย์สินทางเลือก",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 8,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 8.4934,
+    "nav_date": "2025-11-14",
+    "last_val": 8.4152,
     "previous_val": 0,
-    "net_asset": 270080224,
-    "buy_price": 8.4934,
-    "sell_price": 8.4935,
-    "change": 8.4934,
+    "net_asset": 275065920,
+    "buy_price": 8.4152,
+    "sell_price": 8.4153,
+    "change": 8.4152,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 8.3684,
-      "previous_val": 0,
-      "net_asset": 266632496,
-      "buy_price": 8.3684,
-      "sell_price": 8.3685
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 8.3836,
-      "previous_val": 0,
-      "net_asset": 266943840,
-      "buy_price": 8.3836,
-      "sell_price": 8.3837
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 8.3999,
-      "previous_val": 0,
-      "net_asset": 267481632,
-      "buy_price": 8.3999,
-      "sell_price": 8.4
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 8.4255,
-      "previous_val": 0,
-      "net_asset": 268882784,
-      "buy_price": 8.4255,
-      "sell_price": 8.4256
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 8.4404,
@@ -253,6 +221,38 @@
       "net_asset": 270080224,
       "buy_price": 8.4934,
       "sell_price": 8.4935
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.5393,
+      "previous_val": 0,
+      "net_asset": 272052992,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.5102,
+      "previous_val": 0,
+      "net_asset": 271127040,
+      "buy_price": 8.5102,
+      "sell_price": 8.5103
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 8.4761,
+      "previous_val": 0,
+      "net_asset": 277023680,
+      "buy_price": 8.4761,
+      "sell_price": 8.4762
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.4152,
+      "previous_val": 0,
+      "net_asset": 275065920,
+      "buy_price": 8.4152,
+      "sell_price": 8.4153
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 9.73,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนของกองทุนรวมอสังหาริมทรัพย์และกองทรัสต์เพื่อการลงทุนในอสังหาริมทรัพย์ - ต่างประเทศ",
@@ -305,7 +308,7 @@
       "percentage": -1.26
     }
   ],
-  "category": null,
+  "category": "FPF",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -453,10 +456,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-11T06:37:49.075Z",
+  "data_fetched_at": "2025-11-15T11:02:16.991Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

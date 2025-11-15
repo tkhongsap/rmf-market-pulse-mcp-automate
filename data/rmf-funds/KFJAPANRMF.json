@@ -4,56 +4,24 @@
   "fund_name": "Krungsri Japan RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "EQJP",
+    "fund_classification": "ผสม",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 18.9379,
+    "nav_date": "2025-11-13",
+    "last_val": 19.4952,
     "previous_val": 0,
-    "net_asset": 364575680,
-    "buy_price": 18.9379,
-    "sell_price": 18.938,
-    "change": 18.9379,
+    "net_asset": 378755712,
+    "buy_price": 19.4952,
+    "sell_price": 19.4953,
+    "change": 19.4952,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 17.8412,
-      "previous_val": 0,
-      "net_asset": 327345504,
-      "buy_price": 17.8412,
-      "sell_price": 17.8413
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 17.8036,
-      "previous_val": 0,
-      "net_asset": 327191808,
-      "buy_price": 17.8036,
-      "sell_price": 17.8037
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 17.8104,
-      "previous_val": 0,
-      "net_asset": 327679392,
-      "buy_price": 0,
-      "sell_price": 0
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 17.8539,
-      "previous_val": 0,
-      "net_asset": 328480000,
-      "buy_price": 0,
-      "sell_price": 0
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 17.5338,
@@ -253,6 +221,38 @@
       "net_asset": 364575680,
       "buy_price": 18.9379,
       "sell_price": 18.938
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 19.0299,
+      "previous_val": 0,
+      "net_asset": 366139712,
+      "buy_price": 19.0299,
+      "sell_price": 19.03
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 19.0605,
+      "previous_val": 0,
+      "net_asset": 367038912,
+      "buy_price": 19.0605,
+      "sell_price": 19.0606
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 19.3513,
+      "previous_val": 0,
+      "net_asset": 373057888,
+      "buy_price": 19.3513,
+      "sell_price": 19.3514
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 19.4952,
+      "previous_val": 0,
+      "net_asset": 378755712,
+      "buy_price": 19.4952,
+      "sell_price": 19.4953
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 19.93,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "JPMorgan Japan (Yen) Fund",
@@ -293,7 +296,7 @@
       "percentage": -1.05
     }
   ],
-  "category": null,
+  "category": "JPEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -397,10 +400,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:27:16.111Z",
+  "data_fetched_at": "2025-11-15T10:49:23.619Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

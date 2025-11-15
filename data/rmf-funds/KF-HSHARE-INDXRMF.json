@@ -4,22 +4,22 @@
   "fund_name": "Krungsri China H Shares Equity Index RMF",
   "amc": "KRUNGSRI ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
-    "management_style": "-",
-    "dividend_policy": "No",
+    "fund_classification": "ตราสารทุน",
+    "management_style": "PN",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.406,
+    "nav_date": "2025-11-14",
+    "last_val": 10.3691,
     "previous_val": 0,
-    "net_asset": 10048972,
-    "buy_price": 10.406,
-    "sell_price": 10.4061,
-    "change": 10.406,
+    "net_asset": 13200967,
+    "buy_price": 10.3691,
+    "sell_price": 10.3692,
+    "change": 10.3691,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -125,6 +125,38 @@
       "net_asset": 10048972,
       "buy_price": 10.406,
       "sell_price": 10.4061
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.4379,
+      "previous_val": 0,
+      "net_asset": 10345002,
+      "buy_price": 10.4379,
+      "sell_price": 10.438
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.5138,
+      "previous_val": 0,
+      "net_asset": 10932805,
+      "buy_price": 10.5138,
+      "sell_price": 10.5139
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.5761,
+      "previous_val": 0,
+      "net_asset": 12374082,
+      "buy_price": 10.5761,
+      "sell_price": 10.5762
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.3691,
+      "previous_val": 0,
+      "net_asset": 13200967,
+      "buy_price": 10.3691,
+      "sell_price": 10.3692
     }
   ],
   "dividends": [],
@@ -223,7 +255,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:24:35.068Z",
+  "data_fetched_at": "2025-11-15T10:46:36.197Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

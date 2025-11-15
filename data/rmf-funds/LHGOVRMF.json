@@ -4,56 +4,24 @@
   "fund_name": "LH GOVERNMENT BOND RMF",
   "amc": "LAND AND HOUSES FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "FIXGOV",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 3,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 11.8829,
+    "nav_date": "2025-11-14",
+    "last_val": 11.8867,
     "previous_val": 0,
-    "net_asset": 788264064,
-    "buy_price": 11.8829,
-    "sell_price": 11.883,
-    "change": 11.8829,
+    "net_asset": 790006720,
+    "buy_price": 11.8867,
+    "sell_price": 11.8868,
+    "change": 11.8867,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 11.9821,
-      "previous_val": 0,
-      "net_asset": 785526016,
-      "buy_price": 11.9821,
-      "sell_price": 11.9822
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.9934,
-      "previous_val": 0,
-      "net_asset": 786149120,
-      "buy_price": 11.9934,
-      "sell_price": 11.9935
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.9931,
-      "previous_val": 0,
-      "net_asset": 786341248,
-      "buy_price": 11.9931,
-      "sell_price": 11.9932
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 11.9937,
-      "previous_val": 0,
-      "net_asset": 785991616,
-      "buy_price": 11.9937,
-      "sell_price": 11.9938
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 11.9969,
@@ -253,6 +221,38 @@
       "net_asset": 788264064,
       "buy_price": 11.8829,
       "sell_price": 11.883
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 11.8736,
+      "previous_val": 0,
+      "net_asset": 787654272,
+      "buy_price": 11.8736,
+      "sell_price": 11.8737
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.8814,
+      "previous_val": 0,
+      "net_asset": 788154304,
+      "buy_price": 11.8814,
+      "sell_price": 11.8815
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.8878,
+      "previous_val": 0,
+      "net_asset": 790076352,
+      "buy_price": 11.8878,
+      "sell_price": 11.8879
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 11.8867,
+      "previous_val": 0,
+      "net_asset": 790006720,
+      "buy_price": 11.8867,
+      "sell_price": 11.8868
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": 1.42469223600499
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 1.03408343204778,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "พันธบัตรรัฐบาล",
@@ -290,7 +293,7 @@
       "percentage": 1.29065407202299
     }
   ],
-  "category": null,
+  "category": "STGOV",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -394,11 +397,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:31:39.461Z",
+  "data_fetched_at": "2025-11-15T10:54:59.537Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

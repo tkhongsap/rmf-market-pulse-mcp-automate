@@ -4,56 +4,24 @@
   "fund_name": "ONE DISCOVERY RETIREMENT MUTUAL FUND",
   "amc": "ONE ASSET MANAGEMENT LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "OT",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 4.978,
+    "nav_date": "2025-11-13",
+    "last_val": 5.0424,
     "previous_val": 0,
-    "net_asset": 19179186,
-    "buy_price": 4.978,
-    "sell_price": 4.9781,
-    "change": 4.978,
+    "net_asset": 19404334,
+    "buy_price": 5.0424,
+    "sell_price": 5.0425,
+    "change": 5.0424,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 5.1738,
-      "previous_val": 0,
-      "net_asset": 18769174,
-      "buy_price": 5.1738,
-      "sell_price": 5.1739
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 5.1741,
-      "previous_val": 0,
-      "net_asset": 18785452,
-      "buy_price": 5.1741,
-      "sell_price": 5.1742
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 5.2049,
-      "previous_val": 0,
-      "net_asset": 20095600,
-      "buy_price": 5.2049,
-      "sell_price": 5.205
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 5.2011,
-      "previous_val": 0,
-      "net_asset": 20127844,
-      "buy_price": 5.2011,
-      "sell_price": 5.2012
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 5.2416,
@@ -253,6 +221,38 @@
       "net_asset": 19179186,
       "buy_price": 4.978,
       "sell_price": 4.9781
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 5.0342,
+      "previous_val": 0,
+      "net_asset": 19365470,
+      "buy_price": 5.0342,
+      "sell_price": 5.0343
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 5.0675,
+      "previous_val": 0,
+      "net_asset": 19494064,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 5.0785,
+      "previous_val": 0,
+      "net_asset": 19536216,
+      "buy_price": 5.0785,
+      "sell_price": 5.0786
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 5.0424,
+      "previous_val": 0,
+      "net_asset": 19404334,
+      "buy_price": 5.0424,
+      "sell_price": 5.0425
     }
   ],
   "dividends": [],
@@ -267,7 +267,10 @@
     "since_inception": -15.46
   },
   "benchmark": null,
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 24.06,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุนในต่างประเทศ",
@@ -414,10 +417,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:33:41.895Z",
+  "data_fetched_at": "2025-11-15T10:57:48.903Z",
   "errors": [
     "No benchmark data available",
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

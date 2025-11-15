@@ -4,56 +4,24 @@
   "fund_name": "TALIS FLEXIBLE RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "MIXAGG",
+    "fund_classification": "ผสม",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 6.0387,
+    "nav_date": "2025-11-14",
+    "last_val": 5.8421,
     "previous_val": 0,
-    "net_asset": 36693248,
-    "buy_price": 6.0387,
-    "sell_price": 6.0388,
-    "change": 6.0387,
+    "net_asset": 35498272,
+    "buy_price": 5.8421,
+    "sell_price": 5.8422,
+    "change": 5.8421,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 6.1499,
-      "previous_val": 0,
-      "net_asset": 38477004,
-      "buy_price": 6.1499,
-      "sell_price": 6.15
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 6.1226,
-      "previous_val": 0,
-      "net_asset": 38306508,
-      "buy_price": 6.1226,
-      "sell_price": 6.1227
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 6.0762,
-      "previous_val": 0,
-      "net_asset": 38015640,
-      "buy_price": 6.0762,
-      "sell_price": 6.0763
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 6.1069,
-      "previous_val": 0,
-      "net_asset": 38209892,
-      "buy_price": 6.1069,
-      "sell_price": 6.107
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 6.1073,
@@ -253,6 +221,38 @@
       "net_asset": 36693248,
       "buy_price": 6.0387,
       "sell_price": 6.0388
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 5.9948,
+      "previous_val": 0,
+      "net_asset": 36426088,
+      "buy_price": 5.9948,
+      "sell_price": 5.9949
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 5.9319,
+      "previous_val": 0,
+      "net_asset": 36043868,
+      "buy_price": 5.9319,
+      "sell_price": 5.932
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 5.8742,
+      "previous_val": 0,
+      "net_asset": 35693684,
+      "buy_price": 5.8742,
+      "sell_price": 5.8743
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 5.8421,
+      "previous_val": 0,
+      "net_asset": 35498272,
+      "buy_price": 5.8421,
+      "sell_price": 5.8422
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 15.7,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "เงินฝากธนาคาร",
@@ -293,7 +296,7 @@
       "percentage": -1.74
     }
   ],
-  "category": null,
+  "category": "AA",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -383,10 +386,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:42:18.677Z",
+  "data_fetched_at": "2025-11-15T11:07:06.237Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }

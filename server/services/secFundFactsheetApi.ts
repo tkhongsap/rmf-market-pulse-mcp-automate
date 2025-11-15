@@ -1023,6 +1023,51 @@ export async function testApiConnection(): Promise<boolean> {
 }
 
 /**
+ * Fund class information (for multi-class funds)
+ */
+export interface FundClassInfo {
+  proj_id: string;
+  class_abbr_name: string;  // Share class symbol (e.g., "TAIRMF-A", "SCBRMUSA(E)")
+  class_name_th?: string;    // Thai name of share class
+  class_name_en?: string;    // English name of share class
+}
+
+/**
+ * Fetch share classes for a fund (if it has multiple classes)
+ * Endpoint: GET /fund/{proj_id}/class_fund
+ */
+export async function fetchFundClasses(proj_id: string): Promise<FundClassInfo[]> {
+  const cacheKey = `fund_classes_${proj_id}`;
+  const cached = getFromCache<FundClassInfo[]>(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const endpoint = `/fund/${proj_id}/class_fund`;
+
+  try {
+    const data = await secFundFactsheetApiRequest<FundClassInfo[]>(endpoint);
+
+    // If no class data, return empty array
+    if (!data || data.length === 0) {
+      setCache(cacheKey, [], 86400000); // Cache empty result too
+      return [];
+    }
+
+    setCache(cacheKey, data, 86400000); // 24 hour TTL
+    return data;
+  } catch (error: any) {
+    // If 204 (no content) or error, return empty array
+    if (error?.message?.includes('204') || error?.message?.includes('404')) {
+      setCache(cacheKey, [], 86400000); // Cache empty result
+      return [];
+    }
+    console.error(`[SEC Fund Factsheet API] Error fetching fund classes for ${proj_id}:`, error.message);
+    return [];
+  }
+}
+
+/**
  * Clear the cache (useful for testing or manual refresh)
  */
 export function clearCache(): void {

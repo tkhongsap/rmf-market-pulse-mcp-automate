@@ -4,56 +4,24 @@
   "fund_name": "XSpringam Equity RMF",
   "amc": "XSPRING ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 13.8674,
+    "nav_date": "2025-11-14",
+    "last_val": 13.3445,
     "previous_val": 0,
-    "net_asset": 3397370.25,
-    "buy_price": 13.8674,
-    "sell_price": 13.8675,
-    "change": 13.8674,
+    "net_asset": 3269258.75,
+    "buy_price": 13.3445,
+    "sell_price": 13.3446,
+    "change": 13.3445,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 14.2721,
-      "previous_val": 0,
-      "net_asset": 3494487.75,
-      "buy_price": 14.2721,
-      "sell_price": 14.2722
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 14.0988,
-      "previous_val": 0,
-      "net_asset": 3452070.5,
-      "buy_price": 14.0988,
-      "sell_price": 14.0989
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 14.019,
-      "previous_val": 0,
-      "net_asset": 3432516,
-      "buy_price": 14.019,
-      "sell_price": 14.0191
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 14.1599,
-      "previous_val": 0,
-      "net_asset": 3467020.75,
-      "buy_price": 14.1599,
-      "sell_price": 14.16
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 14.1761,
@@ -253,6 +221,38 @@
       "net_asset": 3397370.25,
       "buy_price": 13.8674,
       "sell_price": 13.8675
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.7957,
+      "previous_val": 0,
+      "net_asset": 3379794,
+      "buy_price": 13.7957,
+      "sell_price": 13.7958
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.6246,
+      "previous_val": 0,
+      "net_asset": 3337882.75,
+      "buy_price": 13.6246,
+      "sell_price": 13.6247
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.5164,
+      "previous_val": 0,
+      "net_asset": 3311388.75,
+      "buy_price": 13.5164,
+      "sell_price": 13.5165
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 13.3445,
+      "previous_val": 0,
+      "net_asset": 3269258.75,
+      "buy_price": 13.3445,
+      "sell_price": 13.3446
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": 2.66
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 12.47,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ทรัพยากร/พลังงานและสาธารณูปโภค",
@@ -443,9 +446,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:45:41.290Z",
+  "data_fetched_at": "2025-11-15T11:10:33.683Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

@@ -4,56 +4,24 @@
   "fund_name": "TALIS MONEY MARKET RETIREMENT MUTUAL FUND",
   "amc": "TALIS ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารหนี้",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 1,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 10.8808,
+    "nav_date": "2025-11-14",
+    "last_val": 10.8819,
     "previous_val": 0,
-    "net_asset": 68420440,
-    "buy_price": 10.8808,
-    "sell_price": 10.8809,
-    "change": 10.8808,
+    "net_asset": 71227264,
+    "buy_price": 10.8819,
+    "sell_price": 10.882,
+    "change": 10.8819,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.8679,
-      "previous_val": 0,
-      "net_asset": 77005448,
-      "buy_price": 10.8679,
-      "sell_price": 10.868
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 10.8682,
-      "previous_val": 0,
-      "net_asset": 76884784,
-      "buy_price": 10.8682,
-      "sell_price": 10.8683
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.8685,
-      "previous_val": 0,
-      "net_asset": 77090312,
-      "buy_price": 10.8685,
-      "sell_price": 10.8686
-    },
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 10.8688,
-      "previous_val": 0,
-      "net_asset": 77179688,
-      "buy_price": 10.8688,
-      "sell_price": 10.8689
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.8692,
@@ -253,6 +221,38 @@
       "net_asset": 68420440,
       "buy_price": 10.8808,
       "sell_price": 10.8809
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.8811,
+      "previous_val": 0,
+      "net_asset": 69948192,
+      "buy_price": 10.8811,
+      "sell_price": 10.8812
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 10.8814,
+      "previous_val": 0,
+      "net_asset": 69998080,
+      "buy_price": 10.8814,
+      "sell_price": 10.8815
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.8815,
+      "previous_val": 0,
+      "net_asset": 70961344,
+      "buy_price": 10.8815,
+      "sell_price": 10.8816
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 10.8819,
+      "previous_val": 0,
+      "net_asset": 71227264,
+      "buy_price": 10.8819,
+      "sell_price": 10.882
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 0.07,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "ตราสารหนี้ภาครัฐ",
@@ -383,9 +386,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:42:18.339Z",
+  "data_fetched_at": "2025-11-15T11:07:06.197Z",
   "errors": [
-    "No risk metrics available",
     "No category data available",
     "No top holdings data available"
   ]

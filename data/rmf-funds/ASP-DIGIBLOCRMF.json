@@ -4,56 +4,24 @@
   "fund_name": "Asset Plus Digital Blockchain RMF Fund",
   "amc": "ASSET PLUS FUND MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "-",
+    "fund_classification": "ตราสารทุน",
     "management_style": "AM",
-    "dividend_policy": "No",
+    "dividend_policy": "N",
     "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 14.7174,
+    "nav_date": "2025-11-13",
+    "last_val": 12.145,
     "previous_val": 0,
-    "net_asset": 279729664,
-    "buy_price": 14.7174,
-    "sell_price": 14.7175,
-    "change": 14.7174,
+    "net_asset": 229357280,
+    "buy_price": 12.145,
+    "sell_price": 12.1451,
+    "change": 12.145,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T08:11:44.25"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 12.825,
-      "previous_val": 0,
-      "net_asset": 228595216,
-      "buy_price": 12.825,
-      "sell_price": 12.8251
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 13.7086,
-      "previous_val": 0,
-      "net_asset": 244803920,
-      "buy_price": 13.7086,
-      "sell_price": 13.7087
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 13.8004,
-      "previous_val": 0,
-      "net_asset": 246525040,
-      "buy_price": 13.8004,
-      "sell_price": 13.8005
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 13.9464,
-      "previous_val": 0,
-      "net_asset": 253838240,
-      "buy_price": 13.9464,
-      "sell_price": 13.9465
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 14.5744,
@@ -253,6 +221,38 @@
       "net_asset": 279729664,
       "buy_price": 14.7174,
       "sell_price": 14.7175
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 14.6919,
+      "previous_val": 0,
+      "net_asset": 278158688,
+      "buy_price": 14.6919,
+      "sell_price": 14.692
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.8068,
+      "previous_val": 0,
+      "net_asset": 262775472,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.4834,
+      "previous_val": 0,
+      "net_asset": 256619552,
+      "buy_price": 13.4834,
+      "sell_price": 13.4835
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 12.145,
+      "previous_val": 0,
+      "net_asset": 229357280,
+      "buy_price": 12.145,
+      "sell_price": 12.1451
     }
   ],
   "dividends": [],
@@ -278,7 +278,10 @@
       "10y": null
     }
   },
-  "risk_metrics": null,
+  "risk_metrics": {
+    "standard_deviation_5y": 64.9,
+    "tracking_error_1y": null
+  },
   "asset_allocation": [
     {
       "asset_class": "หน่วยลงทุน",
@@ -297,7 +300,7 @@
       "percentage": -1.63
     }
   ],
-  "category": null,
+  "category": "TECHEQ",
   "fees": [
     {
       "fee_type": "Unknown",
@@ -367,10 +370,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-11T06:11:02.454Z",
+  "data_fetched_at": "2025-11-15T11:20:16.024Z",
   "errors": [
-    "No risk metrics available",
-    "No category data available",
     "No top holdings data available"
   ]
 }
