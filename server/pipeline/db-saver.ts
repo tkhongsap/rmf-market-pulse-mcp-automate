@@ -532,7 +532,7 @@ async function insertDividends(
 // ============================================================================
 
 async function main() {
-  const fundLimit = Number(process.env.FUND_LIMIT ?? '20');
+  const fundLimit = Number(process.env.FUND_LIMIT ?? '450');
   const clearDB = process.argv.includes('--clear');
   const dataDir = join(process.cwd(), 'data', 'rmf-funds');
 
@@ -547,34 +547,28 @@ async function main() {
 
   let fundFiles = allFiles;
 
-  // If not clearing DB, skip already-loaded funds
+  // Limit total funds to process (before filtering)
+  if (fundFiles.length > fundLimit) {
+    fundFiles = fundFiles.slice(0, fundLimit);
+  }
+
+  // Show database status (but don't skip - upsert will update existing)
   if (!clearDB) {
     const pool = new Pool({ connectionString: process.env.DATABASE_URL });
     try {
-      const result = await pool.query('SELECT symbol FROM rmf_funds ORDER BY symbol');
-      const loadedSymbols = new Set(result.rows.map((r: any) => r.symbol));
-      const skippedCount = loadedSymbols.size;
+      const result = await pool.query('SELECT COUNT(*) as count FROM rmf_funds');
+      const existingCount = result.rows[0]?.count || 0;
       
-      fundFiles = allFiles.filter(file => {
-        const symbol = file.replace('.json', '');
-        return !loadedSymbols.has(symbol);
-      });
-
-      if (skippedCount > 0) {
-        console.log(`\n📂 Found ${skippedCount} already-loaded funds in database`);
-        console.log(`   Skipping them and processing ${fundFiles.length} remaining funds\n`);
+      if (existingCount > 0) {
+        console.log(`\n📂 Found ${existingCount} existing funds in database`);
+        console.log(`   Will upsert (update existing + insert new) ${fundFiles.length} funds\n`);
       }
     } catch (error: any) {
       console.log(`\n⚠️  Could not check existing funds: ${error.message}`);
-      console.log(`   Processing all ${allFiles.length} funds (will upsert)\n`);
+      console.log(`   Processing ${fundFiles.length} funds in upsert mode\n`);
     } finally {
       await pool.end();
     }
-  }
-
-  // Limit total funds to process
-  if (fundFiles.length > fundLimit) {
-    fundFiles = fundFiles.slice(0, fundLimit);
   }
 
   console.log(`\n📊 Configuration:`);
