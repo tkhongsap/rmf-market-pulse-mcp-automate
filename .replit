@@ -4,7 +4,7 @@ hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [nix]
 channel = "stable-25_05"
-packages = ["copilot-cli"]
+packages = ["copilot-cli", "jq"]
 
 [deployment]
 deploymentTarget = "autoscale"
