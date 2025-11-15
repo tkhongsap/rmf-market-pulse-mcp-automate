@@ -62,6 +62,47 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 
 ## Recent Changes (November 15, 2025)
 
+### Test Chat Interface for Natural Language Testing (November 15, 2025)
+
+**Status**: ✅ Completed - Production-ready
+
+Built an interactive test chat interface that allows testing the MCP server with natural language queries, validating the PostgreSQL integration end-to-end.
+
+**Features:**
+1. **Clean Chat UI** (`/test-chat`):
+   - Beautiful gradient purple theme
+   - Suggestion chips for common queries
+   - Real-time typing indicators
+   - Message history display
+
+2. **AI-Powered Query Interpretation**:
+   - Uses OpenAI (via Replit AI Integrations)
+   - Enforced tool calling (`tool_choice: 'required'`)
+   - Smart tool selection from natural language
+   - Maps questions to the right MCP tool
+
+3. **Robust Error Handling**:
+   - Validates AI responses
+   - 502 errors for malformed responses
+   - Method existence checks
+   - Null-safe result extraction
+
+4. **Example Queries Tested**:
+   - "What are the top performing RMF funds this year?" → `get_rmf_fund_performance`
+   - "Show me low-risk RMF funds" → `search_rmf_funds` (maxRiskLevel: 3)
+   - "Get details for KFRMF fund" → `get_rmf_fund_detail`
+
+**Benefits:**
+- ✅ Test database integration with natural language
+- ✅ Validate all 6 MCP tools are working correctly
+- ✅ See real-time query results from PostgreSQL
+- ✅ No need for manual JSON-RPC requests
+- ✅ Great for demos and debugging
+
+**Files Added:**
+- `server/pages/test-chat.html` - Chat UI
+- `server/index.ts` - `/test-chat` and `/api/chat` endpoints
+
 ### MCP Server Migration to PostgreSQL (November 15, 2025)
 
 **Status**: ✅ Completed - Single source of truth established
