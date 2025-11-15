@@ -545,8 +545,37 @@ async function main() {
     .filter(file => file.endsWith('.json'))
     .sort();
 
-  // Limit to first N funds
-  const fundFiles = allFiles.slice(0, fundLimit);
+  let fundFiles = allFiles;
+
+  // If not clearing DB, skip already-loaded funds
+  if (!clearDB) {
+    const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    try {
+      const result = await pool.query('SELECT symbol FROM rmf_funds ORDER BY symbol');
+      const loadedSymbols = new Set(result.rows.map((r: any) => r.symbol));
+      const skippedCount = loadedSymbols.size;
+      
+      fundFiles = allFiles.filter(file => {
+        const symbol = file.replace('.json', '');
+        return !loadedSymbols.has(symbol);
+      });
+
+      if (skippedCount > 0) {
+        console.log(`\n📂 Found ${skippedCount} already-loaded funds in database`);
+        console.log(`   Skipping them and processing ${fundFiles.length} remaining funds\n`);
+      }
+    } catch (error: any) {
+      console.log(`\n⚠️  Could not check existing funds: ${error.message}`);
+      console.log(`   Processing all ${allFiles.length} funds (will upsert)\n`);
+    } finally {
+      await pool.end();
+    }
+  }
+
+  // Limit total funds to process
+  if (fundFiles.length > fundLimit) {
+    fundFiles = fundFiles.slice(0, fundLimit);
+  }
 
   console.log(`\n📊 Configuration:`);
   console.log(`   Total funds available: ${allFiles.length}`);
