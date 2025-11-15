@@ -61,28 +61,31 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 
 ## Recent Changes (November 15, 2025)
 
-### Complete RMF Data Pipeline - Production Ready
-- **Data Extraction**: Successfully fetched 442 active RMF funds from SEC Thailand APIs with complete metadata
-- **Batch Processing System**: Implemented reliable batch loader with checkpoint/resume capability
-  - Batch size: 10 funds per batch (45 batches total)
-  - Automatic checkpointing in `.db-progress.json` after each batch
-  - Resume capability: Automatically continues from last completed batch on interruption
-  - Upsert mode: Safe incremental updates without data loss
+### Production-Safe Daily Refresh Pipeline
+- **Architecture**: Implemented staging table approach with atomic swap (architect-recommended)
+- **Safety Features**:
+  - Manifest validation: Completeness checks before load
+  - Staging tables: Production untouched during data load
+  - Atomic swap: Single transaction rename (crash-safe rollback)
+  - Constraint preservation: Staging includes all indexes/constraints
+- **Pipeline Components**:
+  - `manifest-validator.ts`: Validates fetched data completeness
+  - `staging-loader.ts`: Loads into staging tables, performs atomic swap
+  - `daily-refresh-production.ts`: Orchestrates the entire pipeline
+- **Data Quality**: 
+  - 442 JSON files with complete fund data in `data/rmf-funds/`
+  - 30-day NAV history per fund
+  - Real-time data from SEC APIs
 - **Database Schema**: PostgreSQL with 4 tables (rmf_funds, rmf_nav_history, rmf_dividends, pipeline_runs)
   - Fixed `proj_id` constraint: No longer unique (allows multiple share classes A/E/P/B per project)
   - 45+ columns in rmf_funds table with complete fund metadata
   - JSONB fields for performance, benchmark, asset_allocation, fees, risk_factors
-- **Data Quality**: 
-  - 442 JSON files with complete fund data in `data/rmf-funds/`
-  - 30-day NAV history per fund
-  - Real-time data from SEC APIs (not manual CSV)
-  - Per-fund transaction isolation with error handling
 
 ### How to Use the Data Pipeline
 
-**Current Status**: ✅ Production-ready with all 442 funds loaded
+**Current Status**: ✅ Production-ready with production-safe staging approach
 
-The pipeline performs full daily refresh from SEC Thailand API:
+The pipeline performs full daily refresh from SEC Thailand API using staging tables:
 
 ```bash
 # Daily refresh (recommended for production)
@@ -90,16 +93,21 @@ npm run data:rmf:daily-refresh
 ```
 
 **What it does:**
-1. **Fetch Mapping**: Gets latest fund list from SEC API
-2. **Fetch Data**: Downloads complete fund data to JSON files
-3. **Upsert**: Updates existing funds + inserts new funds (NO truncation)
-4. **Cleanup**: Removes stale funds no longer in the latest fetch
+1. **Fetch Data**: Gets latest fund list and complete data from SEC API → JSON files
+2. **Validate**: Checks completeness (compares fetched vs expected funds)
+3. **Stage**: Loads data into staging tables (production untouched)
+4. **Swap**: Atomic table swap in single transaction (crash-safe)
+5. **Cleanup**: Drops old tables
 
 **Pipeline Details:**
 - **Data Source**: SEC Thailand API (live data, not cached)
 - **Fund Count**: ~450 RMF funds
 - **Runtime**: 25-30 minutes (respects SEC API rate limits)
-- **Safety**: Uses UPSERT mode - database always has valid data, even if process crashes
+- **Safety**: Staging + atomic swap approach
+  - Production tables untouched until validated data is ready
+  - Completeness checks prevent partial data from going live
+  - Atomic swap = rollback on crash
+  - Staging preserves all constraints/indexes
 - **Output**: Fresh JSON files + updated database
 
 **Verification:**

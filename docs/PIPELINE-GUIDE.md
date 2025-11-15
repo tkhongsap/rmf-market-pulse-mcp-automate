@@ -16,25 +16,46 @@ This guide explains how to use the automated data pipeline that extracts 442 Tha
 
 ### Daily Refresh (Recommended for Production)
 
-Complete refresh from SEC API (truncate + reload):
+Complete refresh from SEC API using production-safe staging approach:
 
 ```bash
 npm run data:rmf:daily-refresh
 ```
 
-This orchestrates the full pipeline using safe UPSERT mode:
-1. **Phase 0**: Fetch latest fund list from SEC API → `data/fund-mapping.json`
-2. **Phase 1**: Fetch complete data for all funds → `data/rmf-funds/*.json`
-3. **Upsert**: Update existing funds + insert new funds into database
-4. **Cleanup**: Remove stale funds no longer in the latest fetch
+This orchestrates the full pipeline with maximum safety:
+
+**Phase 1: Fetch Data**
+1. Fetch latest fund list from SEC API → `data/fund-mapping.json`
+2. Fetch complete data for all funds → `data/rmf-funds/*.json`
+
+**Phase 2: Validate Completeness**
+3. Compare fetched funds vs expected funds
+4. Abort if any required funds are missing
+5. Verify minimum fund count threshold (350+ funds)
+
+**Phase 3: Load into Staging**
+6. Create staging tables with full constraints/indexes
+7. Load data into staging tables (production untouched)
+8. Verify staging table counts match expectations
+
+**Phase 4: Atomic Swap**
+9. Rename production tables to _old
+10. Rename staging tables to production (single transaction)
+11. Drop old tables
 
 **Safety Features:**
-- Uses UPSERT instead of truncate - no data loss risk
-- Database always contains valid data, even if process crashes
-- Incremental updates: existing funds updated, new funds inserted
-- Cleanup step safely removes obsolete funds at the end
+- **Completeness Validation**: Prevents partial data from going live
+- **Staging Tables**: Production untouched during load
+- **Atomic Swap**: Single transaction = crash-safe rollback
+- **Constraint Preservation**: Staging includes all indexes/constraints
+- **Sanity Checks**: Multiple verification steps before swap
 
 **Expected runtime**: 25-30 minutes for ~450 funds
+
+**What happens if it fails?**
+- Before swap: Production remains unchanged
+- During swap: Transaction rollback restores previous state
+- After swap: New data is live, old tables dropped
 
 ### Check Progress
 
