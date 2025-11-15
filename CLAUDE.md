@@ -4,14 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Thai RMF Market Pulse - A **standalone MCP (Model Context Protocol) server** providing comprehensive Thai Retirement Mutual Fund (RMF) market data. This is a backend-only TypeScript server with 6 MCP tools, serving 403 RMF funds with complete market data loaded from pre-extracted CSV files.
+Thai RMF Market Pulse - A **standalone MCP (Model Context Protocol) server** providing comprehensive Thai Retirement Mutual Fund (RMF) market data. This is a backend-only TypeScript server with 6 MCP tools, serving 442 RMF funds with complete market data loaded from PostgreSQL database.
 
 **Key Facts:**
-- **Architecture**: Standalone MCP server (no frontend, no database)
-- **Data Source**: Pre-extracted CSV file (`docs/rmf-funds-consolidated.csv`)
+- **Architecture**: Standalone MCP server (no frontend) with PostgreSQL backend
+- **Data Source**: PostgreSQL database (`rmf_funds`, `rmf_nav_history`, `rmf_dividends` tables)
 - **Protocol**: Model Context Protocol via HTTP POST endpoint
 - **MCP Tools**: 6 tools for fund data, search, performance, NAV history, and comparison
-- **Dependencies**: 138 packages (down from 548 in previous full-stack version)
+- **Data Freshness**: Updated daily via automated pipeline (`npm run data:rmf:daily-refresh`)
+- **Dependencies**: 233 packages including PostgreSQL client
 
 ## Commands
 
@@ -64,7 +65,7 @@ npm run data:rmf:consolidate-csv       # Generate consolidated CSV from JSON fil
 - Single MCP endpoint: `POST /mcp`
 - Health check: `GET /healthz`
 - Server info: `GET /`
-- Initializes `rmfDataService` with CSV data on startup
+- Initializes `rmfDatabaseService` with PostgreSQL connection on startup
 - Port: 5000 (configurable via `PORT` env var)
 
 **MCP Tools:** `server/mcp.ts`
@@ -78,12 +79,17 @@ npm run data:rmf:consolidate-csv       # Generate consolidated CSV from JSON fil
 - All tools return `{ content: [{ type: 'text', text: '...' }] }` format
 - Tools use Zod schemas for parameter validation
 
-**Data Service:** `server/services/rmfDataService.ts`
-- Loads fund data from `docs/rmf-funds-consolidated.csv` (403 funds, 1.5MB)
-- Builds in-memory indexes: `fundsMap` (by symbol), `byAMC`, `byRisk`, `byCategory`
-- Loads NAV history from `data/rmf-funds/{SYMBOL}.json` files (lazy loading with cache)
-- Security: Path traversal protection in `getNavHistory()`
-- Fast lookups: O(1) by symbol, O(n) for search/filter operations
+**Data Service:** `server/services/rmfDatabaseService.ts`
+- Loads fund data from PostgreSQL database (442 funds)
+- Builds in-memory indexes on startup: `fundsMap` (by symbol), `byAMC`, `byRisk`, `byCategory`
+- Loads NAV history from `rmf_nav_history` table (with in-memory cache)
+- Security: SQL injection protection via parameterized queries
+- Fast lookups: O(1) by symbol from in-memory cache, O(n) for search/filter operations
+- Connection pooling: 20 max connections, 30s idle timeout
+
+**Legacy Data Service:** `server/services/rmfDataService.ts` (CSV-based, deprecated)
+- Original CSV-based service (kept for reference)
+- Not used by MCP server anymore
 
 **SEC API Services:** `server/services/` (used for data extraction only, not by MCP server)
 - `secFundDailyInfoApi.ts` - Daily NAV, historical NAV, dividends
@@ -192,12 +198,20 @@ See `scripts/data-extraction/rmf/README.md` for detailed documentation.
 ## Environment Variables
 
 **Required:**
-- None (server runs without external API dependencies)
+- `DATABASE_URL` - PostgreSQL connection string (e.g., `postgresql://user:password@localhost:5432/rmf_market_pulse`)
 
 **Optional:**
 - `PORT` - Server port (defaults to 5000)
 - `ALLOWED_ORIGINS` - CORS allowed origins (comma-separated, defaults to '*')
 - `SEC_API_KEY` - Only needed for data extraction scripts (not for MCP server)
+
+**Example .env file:**
+```bash
+DATABASE_URL=postgresql://user:password@localhost:5432/rmf_market_pulse
+PORT=5000
+ALLOWED_ORIGINS=*
+SEC_API_KEY=your_sec_api_key_here
+```
 
 ## Security Features
 

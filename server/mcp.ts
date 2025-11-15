@@ -1,5 +1,5 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { rmfDataService } from './services/rmfDataService';
+import { rmfDatabaseService } from './services/rmfDatabaseService';
 import { z } from 'zod';
 import type { RMFFundCSV } from '@shared/schema';
 
@@ -112,7 +112,7 @@ export class RMFMCPServer {
     const sortBy = args?.sortBy;
     const sortOrder = args?.sortOrder || (sortBy ? 'desc' : 'asc');
 
-    const { funds, totalCount } = rmfDataService.search({
+    const { funds, totalCount } = rmfDatabaseService.search({
       page,
       pageSize,
       sortBy,
@@ -159,7 +159,7 @@ export class RMFMCPServer {
   }
 
   private async handleSearchRmfFunds(args: any) {
-    const { funds, totalCount } = rmfDataService.search({
+    const { funds, totalCount } = rmfDatabaseService.search({
       search: args?.search,
       amc: args?.amc,
       minRiskLevel: args?.minRiskLevel,
@@ -231,13 +231,13 @@ export class RMFMCPServer {
       throw new Error('fundCode parameter is required');
     }
 
-    const fund = rmfDataService.getBySymbol(fundCode);
+    const fund = rmfDatabaseService.getBySymbol(fundCode);
 
     if (!fund) {
       throw new Error(`Fund not found: ${fundCode}`);
     }
 
-    const navHistory7d = rmfDataService.getNavHistory(fundCode, 7);
+    const navHistory7d = await rmfDatabaseService.getNavHistory(fundCode, 7);
 
     const textSummary = `${fund.fund_name} (${fund.symbol}) managed by ${fund.amc}. Current NAV: ${fund.nav_value} THB (${fund.nav_change >= 0 ? '+' : ''}${fund.nav_change_percent.toFixed(2)}%). Risk level: ${fund.risk_level}/8.`;
 
@@ -342,7 +342,7 @@ export class RMFMCPServer {
     }
 
     // Get all funds and filter
-    const { funds: allFunds } = rmfDataService.search({});
+    const { funds: allFunds } = rmfDatabaseService.search({});
     
     let filteredFunds = allFunds.filter(fund => {
       const perfValue = (fund as any)[perfField];
@@ -445,12 +445,12 @@ export class RMFMCPServer {
       throw new Error('fundCode parameter is required');
     }
 
-    const fund = rmfDataService.getBySymbol(fundCode);
+    const fund = rmfDatabaseService.getBySymbol(fundCode);
     if (!fund) {
       throw new Error(`Fund not found: ${fundCode}`);
     }
 
-    const navHistory = rmfDataService.getNavHistory(fundCode, days);
+    const navHistory = await rmfDatabaseService.getNavHistory(fundCode, days);
 
     if (!navHistory || navHistory.length === 0) {
       const textSummary = `No NAV history available for ${fund.fund_name} (${fundCode})`;
@@ -565,7 +565,7 @@ export class RMFMCPServer {
 
     // Fetch all funds
     const funds = fundCodes.map((code: string) => {
-      const fund = rmfDataService.getBySymbol(code);
+      const fund = rmfDatabaseService.getBySymbol(code);
       if (!fund) {
         throw new Error(`Fund not found: ${code}`);
       }

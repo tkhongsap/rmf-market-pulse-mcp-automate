@@ -26,7 +26,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { rmfMCPServer } from './mcp';
-import { rmfDataService } from './services/rmfDataService';
+import { rmfDatabaseService } from './services/rmfDatabaseService';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -79,7 +79,7 @@ app.use((req, res, next) => {
  * Health check endpoint - Clean status dashboard
  */
 const healthHandler = (_req: express.Request, res: express.Response) => {
-  const totalFunds = rmfDataService.getTotalCount();
+  const totalFunds = rmfDatabaseService.getTotalCount();
   const uptime = process.uptime();
   const memoryUsage = process.memoryUsage();
   const uptimeHours = Math.floor(uptime / 3600);
@@ -346,7 +346,7 @@ const mcpLimiter = rateLimit({
  * MCP Protocol endpoint - GET: Landing page with documentation
  */
 app.get('/mcp', (_req, res) => {
-  const totalFunds = rmfDataService.getTotalCount();
+  const totalFunds = rmfDatabaseService.getTotalCount();
   
   res.send(`<!DOCTYPE html>
 <html lang="en">
@@ -657,7 +657,7 @@ app.post('/mcp', mcpLimiter, async (req, res) => {
  * Root endpoint - Server information with minimalist React-style design
  */
 app.get('/', (_req, res) => {
-  const totalFunds = rmfDataService.getTotalCount();
+  const totalFunds = rmfDatabaseService.getTotalCount();
   
   res.send(`<!DOCTYPE html>
 <html lang="en">
@@ -910,9 +910,9 @@ async function startServer() {
   console.log('=' .repeat(60));
 
   // Initialize data service
-  console.log('📦 Loading RMF fund data...');
-  await rmfDataService.initialize();
-  console.log(`✓ Loaded ${rmfDataService.getTotalCount()} RMF funds`);
+  console.log('📦 Loading RMF fund data from database...');
+  await rmfDatabaseService.initialize();
+  console.log(`✓ Loaded ${rmfDatabaseService.getTotalCount()} RMF funds`);
 
   // Create HTTP server
   const httpServer = createServer(app);
