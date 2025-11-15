@@ -13,7 +13,7 @@ import { join } from 'path';
 // Configuration
 // ============================================================================
 
-const BATCH_SIZE = 10; // Process 10 funds per batch
+const BATCH_SIZE = 1; // Process 1 fund at a time for reliability
 const CHECKPOINT_FILE = join(process.cwd(), '.db-progress.json');
 
 // ============================================================================
