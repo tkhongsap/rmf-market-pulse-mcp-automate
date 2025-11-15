@@ -2,11 +2,19 @@
  * Database Saver for RMF Pipeline
  * 
  * Saves fund data from JSON files to PostgreSQL database
+ * Features: Batch processing, progress checkpointing, resume capability
  */
 
 import { Pool, PoolClient } from 'pg';
-import { readFileSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
+
+// ============================================================================
+// Configuration
+// ============================================================================
+
+const BATCH_SIZE = 10; // Process 10 funds per batch
+const CHECKPOINT_FILE = join(process.cwd(), '.db-progress.json');
 
 // ============================================================================
 // Types
@@ -68,6 +76,52 @@ interface SaveStats {
   errors: Array<{ symbol: string; error: string }>;
 }
 
+interface ProgressCheckpoint {
+  last_batch_completed: number;
+  total_batches: number;
+  funds_processed: number;
+  timestamp: string;
+}
+
+// ============================================================================
+// Progress Checkpoint Functions
+// ============================================================================
+
+function loadCheckpoint(): ProgressCheckpoint | null {
+  if (!existsSync(CHECKPOINT_FILE)) {
+    return null;
+  }
+  
+  try {
+    const data = readFileSync(CHECKPOINT_FILE, 'utf-8');
+    const parsed = JSON.parse(data);
+    
+    // Validate it's a real checkpoint (not a "cleared" marker)
+    if (parsed.cleared) {
+      return null;
+    }
+    
+    // Check for required fields (allow last_batch_completed to be 0)
+    if (typeof parsed.last_batch_completed !== 'number' || typeof parsed.total_batches !== 'number') {
+      return null;
+    }
+    
+    return parsed as ProgressCheckpoint;
+  } catch {
+    return null;
+  }
+}
+
+function saveCheckpoint(checkpoint: ProgressCheckpoint): void {
+  writeFileSync(CHECKPOINT_FILE, JSON.stringify(checkpoint, null, 2));
+}
+
+function clearCheckpoint(): void {
+  if (existsSync(CHECKPOINT_FILE)) {
+    writeFileSync(CHECKPOINT_FILE, JSON.stringify({ cleared: true, timestamp: new Date().toISOString() }));
+  }
+}
+
 // ============================================================================
 // Database Clear Function
 // ============================================================================
@@ -86,19 +140,23 @@ async function clearDatabase(client: PoolClient): Promise<void> {
 }
 
 // ============================================================================
-// Main Saver Function
+// Batch Processing Function
 // ============================================================================
 
-export async function saveFundsToDB(
+export async function saveFundsToDBInBatches(
   fundFiles: string[],
-  dataDir: string = join(process.cwd(), 'data', 'rmf-funds')
+  dataDir: string = join(process.cwd(), 'data', 'rmf-funds'),
+  clearDB: boolean = false
 ): Promise<SaveStats> {
   const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
   });
 
-  const client = await pool.connect();
-
+  // Calculate batches
+  const totalBatches = Math.ceil(fundFiles.length / BATCH_SIZE);
+  let startBatch = 0;
+  
+  // Initialize stats (may be restored from checkpoint)
   const stats: SaveStats = {
     funds_processed: 0,
     funds_saved: 0,
@@ -107,67 +165,117 @@ export async function saveFundsToDB(
     errors: [],
   };
 
-  try {
-    // Clear database before saving
-    await clearDatabase(client);
-
-    console.log(`\n🗄️  Saving ${fundFiles.length} funds to PostgreSQL...\n`);
-
-    for (const file of fundFiles) {
-      try {
-        await client.query('BEGIN');
-        
-        const filePath = join(dataDir, file);
-        const fundData: FundData = JSON.parse(readFileSync(filePath, 'utf-8'));
-
-        stats.funds_processed++;
-
-        // Insert fund data
-        await insertFund(client, fundData);
-        stats.funds_saved++;
-
-        // Insert NAV history
-        if (fundData.nav_history_30d && fundData.nav_history_30d.length > 0) {
-          const navCount = await insertNavHistory(client, fundData.symbol, fundData.nav_history_30d);
-          stats.nav_records_saved += navCount;
-        }
-
-        // Insert dividends
-        if (fundData.dividends && fundData.dividends.length > 0) {
-          const divCount = await insertDividends(client, fundData.symbol, fundData.dividends);
-          stats.dividend_records_saved += divCount;
-        }
-
-        await client.query('COMMIT');
-        console.log(`  ✓ ${fundData.symbol} (${stats.funds_processed}/${fundFiles.length})`);
-
-      } catch (error: any) {
-        await client.query('ROLLBACK');
-        const symbol = file.replace('.json', '');
-        console.log(`  ✗ ${symbol}: ${error.message}`);
-        stats.errors.push({ symbol, error: error.message });
-      }
-    }
-
-    console.log(`\n✅ Database save completed!`);
-    console.log(`   Funds saved: ${stats.funds_saved}/${stats.funds_processed}`);
-    console.log(`   NAV records: ${stats.nav_records_saved}`);
-    console.log(`   Dividend records: ${stats.dividend_records_saved}`);
-
-    if (stats.errors.length > 0) {
-      console.log(`\n⚠️  Errors encountered: ${stats.errors.length}`);
-      stats.errors.forEach(({ symbol, error }) => {
-        console.log(`   - ${symbol}: ${error}`);
-      });
-    }
-
-  } catch (error: any) {
-    await client.query('ROLLBACK');
-    throw error;
-  } finally {
-    client.release();
-    await pool.end();
+  // Check for existing progress
+  const checkpoint = loadCheckpoint();
+  if (checkpoint && !clearDB && checkpoint.last_batch_completed < totalBatches - 1) {
+    console.log(`\n📂 Found checkpoint: ${checkpoint.funds_processed} funds already processed`);
+    console.log(`   Resuming from batch ${checkpoint.last_batch_completed + 2}/${totalBatches}\n`);
+    startBatch = checkpoint.last_batch_completed + 1;
+    
+    // Restore cumulative progress
+    stats.funds_processed = checkpoint.funds_processed || 0;
+    stats.funds_saved = checkpoint.funds_processed || 0; // Approximate
+  } else if (clearDB) {
+    console.log(`\n🔄 Clear mode enabled - starting fresh\n`);
+    clearCheckpoint();
   }
+
+  // Clear database if requested
+  if (clearDB) {
+    const client = await pool.connect();
+    try {
+      await clearDatabase(client);
+    } finally {
+      client.release();
+    }
+  }
+
+  console.log(`\n🗄️  Processing ${fundFiles.length} funds in ${totalBatches} batches (${BATCH_SIZE} per batch)\n`);
+
+  // Process each batch
+  for (let batchIndex = startBatch; batchIndex < totalBatches; batchIndex++) {
+    const client = await pool.connect();
+    
+    try {
+      const batchStart = batchIndex * BATCH_SIZE;
+      const batchEnd = Math.min(batchStart + BATCH_SIZE, fundFiles.length);
+      const batchFiles = fundFiles.slice(batchStart, batchEnd);
+
+      console.log(`\n📦 Batch ${batchIndex + 1}/${totalBatches} (funds ${batchStart + 1}-${batchEnd})`);
+      console.log(`${'─'.repeat(60)}`);
+
+      // Process each fund in the batch
+      for (const file of batchFiles) {
+        try {
+          await client.query('BEGIN');
+          
+          const filePath = join(dataDir, file);
+          const fundData: FundData = JSON.parse(readFileSync(filePath, 'utf-8'));
+
+          stats.funds_processed++;
+
+          // Insert fund data
+          await insertFund(client, fundData);
+          stats.funds_saved++;
+
+          // Insert NAV history
+          if (fundData.nav_history_30d && fundData.nav_history_30d.length > 0) {
+            const navCount = await insertNavHistory(client, fundData.symbol, fundData.nav_history_30d);
+            stats.nav_records_saved += navCount;
+          }
+
+          // Insert dividends
+          if (fundData.dividends && fundData.dividends.length > 0) {
+            const divCount = await insertDividends(client, fundData.symbol, fundData.dividends);
+            stats.dividend_records_saved += divCount;
+          }
+
+          await client.query('COMMIT');
+          console.log(`  ✓ ${fundData.symbol} (${stats.funds_processed}/${fundFiles.length})`);
+
+        } catch (error: any) {
+          await client.query('ROLLBACK');
+          const symbol = file.replace('.json', '');
+          console.log(`  ✗ ${symbol}: ${error.message}`);
+          stats.errors.push({ symbol, error: error.message });
+        }
+      }
+
+      // Save checkpoint after each batch
+      const checkpoint: ProgressCheckpoint = {
+        last_batch_completed: batchIndex,
+        total_batches: totalBatches,
+        funds_processed: stats.funds_processed,
+        timestamp: new Date().toISOString(),
+      };
+      saveCheckpoint(checkpoint);
+
+      console.log(`✅ Batch ${batchIndex + 1} complete (${stats.funds_saved}/${stats.funds_processed} saved)`);
+
+    } catch (error: any) {
+      console.error(`❌ Error in batch ${batchIndex + 1}: ${error.message}`);
+      throw error;
+    } finally {
+      client.release();
+    }
+  }
+
+  await pool.end();
+
+  console.log(`\n✅ All batches completed!`);
+  console.log(`   Funds saved: ${stats.funds_saved}/${stats.funds_processed}`);
+  console.log(`   NAV records: ${stats.nav_records_saved}`);
+  console.log(`   Dividend records: ${stats.dividend_records_saved}`);
+
+  if (stats.errors.length > 0) {
+    console.log(`\n⚠️  Errors encountered: ${stats.errors.length}`);
+    stats.errors.forEach(({ symbol, error }) => {
+      console.log(`   - ${symbol}: ${error}`);
+    });
+  }
+
+  // Clear checkpoint on successful completion
+  clearCheckpoint();
 
   return stats;
 }
@@ -425,10 +533,11 @@ async function insertDividends(
 
 async function main() {
   const fundLimit = Number(process.env.FUND_LIMIT ?? '20');
+  const clearDB = process.argv.includes('--clear');
   const dataDir = join(process.cwd(), 'data', 'rmf-funds');
 
   console.log(`\n╔════════════════════════════════════════════════════════════════════╗`);
-  console.log(`║         Save RMF Funds to PostgreSQL Database (Phase 2)           ║`);
+  console.log(`║      Save RMF Funds to PostgreSQL - Batch Mode with Resume       ║`);
   console.log(`╚════════════════════════════════════════════════════════════════════╝`);
 
   // Get all fund files
@@ -439,11 +548,14 @@ async function main() {
   // Limit to first N funds
   const fundFiles = allFiles.slice(0, fundLimit);
 
-  console.log(`\n📊 Processing ${fundFiles.length} funds (limit: ${fundLimit})`);
-  console.log(`   Total available: ${allFiles.length}\n`);
+  console.log(`\n📊 Configuration:`);
+  console.log(`   Total funds available: ${allFiles.length}`);
+  console.log(`   Funds to process: ${fundFiles.length}`);
+  console.log(`   Batch size: ${BATCH_SIZE} funds per batch`);
+  console.log(`   Clear database: ${clearDB ? 'YES' : 'NO (upsert mode)'}`);
 
   try {
-    const stats = await saveFundsToDB(fundFiles, dataDir);
+    const stats = await saveFundsToDBInBatches(fundFiles, dataDir, clearDB);
 
     console.log(`\n${'═'.repeat(70)}`);
     console.log(`📈 FINAL SUMMARY`);
