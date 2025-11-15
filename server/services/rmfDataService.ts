@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { parse } from 'csv-parse/sync';
+import { Pool } from 'pg';
 import type { RMFFundCSV, RMFNavHistory } from '@shared/schema';
 
 export interface FundSearchFilters {
@@ -23,28 +23,64 @@ export class RMFDataService {
   private byCategory: Map<string, string[]> = new Map();
   private navHistoryCache: Map<string, RMFNavHistory[]> = new Map();
   private initialized = false;
+  private dbPool: Pool;
 
-  constructor() {}
+  constructor(databasePool: Pool) {
+    this.dbPool = databasePool;
+  }
 
   async initialize(): Promise<void> {
     if (this.initialized) return;
 
     const startTime = Date.now();
-    console.log('Loading RMF funds from CSV...');
+    console.log('Loading RMF funds from PostgreSQL...');
 
     try {
-      const csvPath = join(process.cwd(), 'docs', 'rmf-funds-consolidated.csv');
-      const csvContent = readFileSync(csvPath, 'utf-8');
-      
-      const records = parse(csvContent, {
-        columns: true,
-        skip_empty_lines: true,
-        cast: true,
-        cast_date: false,
-      }) as any[];
+      // Query all funds from database
+      const result = await this.dbPool.query(`
+        SELECT 
+          proj_id as fund_id,
+          symbol,
+          fund_name_en as fund_name,
+          fund_name_th,
+          amc,
+          fund_category as fund_classification,
+          management_style,
+          dividend_policy,
+          risk_level,
+          fund_type,
+          latest_nav_date as nav_date,
+          latest_nav as nav_value,
+          nav_change,
+          nav_change_percent,
+          net_asset,
+          buy_price,
+          sell_price,
+          nav_history_count,
+          nav_history_first_date,
+          nav_history_last_date,
+          nav_history_min,
+          nav_history_max,
+          performance,
+          benchmark,
+          dividends_count,
+          dividends_total,
+          dividends_last_date as dividend_dates,
+          asset_allocation,
+          fees,
+          involved_parties as parties_json,
+          top_holdings as holdings_json,
+          risk_factors as risk_factors_json,
+          suitability as suitability_json,
+          document_urls,
+          investment_minimums,
+          data_updated_at as last_upd_date
+        FROM rmf_funds
+        ORDER BY symbol
+      `);
 
-      for (const record of records) {
-        const fund = this.parseFundRecord(record);
+      for (const record of result.rows) {
+        const fund = this.parseDatabaseRecord(record);
         this.fundsMap.set(fund.symbol, fund);
 
         if (!this.byAMC.has(fund.amc)) {
@@ -66,34 +102,31 @@ export class RMFDataService {
 
       this.initialized = true;
       const loadTime = Date.now() - startTime;
-      console.log(`✓ Loaded ${this.fundsMap.size} RMF funds in ${loadTime}ms`);
+      console.log(`✓ Loaded ${this.fundsMap.size} RMF funds from database in ${loadTime}ms`);
     } catch (error) {
-      console.error('CRITICAL: Failed to load RMF fund data:', error);
+      console.error('CRITICAL: Failed to load RMF fund data from database:', error);
       throw new Error('Cannot start server without fund data');
     }
   }
 
-  private parseFundRecord(record: any): RMFFundCSV {
-    const parseJSON = (jsonStr: string | null) => {
-      if (!jsonStr || jsonStr === 'Unknown') return null;
-      try {
-        return JSON.parse(jsonStr);
-      } catch {
-        return null;
-      }
-    };
+  private parseDatabaseRecord(record: any): RMFFundCSV {
+    // JSONB fields from database are already parsed objects
+    const performance = record.performance || {};
+    const benchmark = record.benchmark || {};
+    const document_urls = record.document_urls || {};
+    const investment_minimums = record.investment_minimums || {};
 
     return {
-      fund_id: record.fund_id,
+      fund_id: record.fund_id || record.symbol,
       symbol: record.symbol,
       fund_name: record.fund_name,
-      amc: record.amc,
-      fund_classification: record.fund_classification,
-      management_style: record.management_style,
-      dividend_policy: record.dividend_policy,
+      amc: record.amc || 'Unknown',
+      fund_classification: record.fund_classification || 'Unknown',
+      management_style: record.management_style || 'Unknown',
+      dividend_policy: record.dividend_policy || 'Unknown',
       risk_level: parseInt(record.risk_level) || 0,
-      fund_type: record.fund_type,
-      nav_date: record.nav_date,
+      fund_type: record.fund_type || 'RMF',
+      nav_date: record.nav_date ? record.nav_date.toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
       nav_value: parseFloat(record.nav_value) || 0,
       nav_change: parseFloat(record.nav_change) || 0,
       nav_change_percent: parseFloat(record.nav_change_percent) || 0,
@@ -101,41 +134,41 @@ export class RMFDataService {
       buy_price: parseFloat(record.buy_price) || 0,
       sell_price: parseFloat(record.sell_price) || 0,
       nav_history_count: parseInt(record.nav_history_count) || 0,
-      nav_history_first_date: record.nav_history_first_date,
-      nav_history_last_date: record.nav_history_last_date,
+      nav_history_first_date: record.nav_history_first_date ? record.nav_history_first_date.toISOString().split('T')[0] : null,
+      nav_history_last_date: record.nav_history_last_date ? record.nav_history_last_date.toISOString().split('T')[0] : null,
       nav_history_min: parseFloat(record.nav_history_min) || null,
       nav_history_max: parseFloat(record.nav_history_max) || null,
-      perf_ytd: parseFloat(record.perf_ytd) || null,
-      perf_3m: parseFloat(record.perf_3m) || null,
-      perf_6m: parseFloat(record.perf_6m) || null,
-      perf_1y: parseFloat(record.perf_1y) || null,
-      perf_3y: parseFloat(record.perf_3y) || null,
-      perf_5y: parseFloat(record.perf_5y) || null,
-      perf_10y: parseFloat(record.perf_10y) || null,
-      perf_since_inception: parseFloat(record.perf_since_inception) || null,
-      benchmark_name: record.benchmark_name || null,
-      benchmark_ytd: parseFloat(record.benchmark_ytd) || null,
-      benchmark_3m: parseFloat(record.benchmark_3m) || null,
-      benchmark_6m: parseFloat(record.benchmark_6m) || null,
-      benchmark_1y: parseFloat(record.benchmark_1y) || null,
-      benchmark_3y: parseFloat(record.benchmark_3y) || null,
-      benchmark_5y: parseFloat(record.benchmark_5y) || null,
-      benchmark_10y: parseFloat(record.benchmark_10y) || null,
+      perf_ytd: performance.ytd || null,
+      perf_3m: performance.three_month || null,
+      perf_6m: performance.six_month || null,
+      perf_1y: performance.one_year || null,
+      perf_3y: performance.three_year || null,
+      perf_5y: performance.five_year || null,
+      perf_10y: performance.ten_year || null,
+      perf_since_inception: performance.since_inception || null,
+      benchmark_name: benchmark.name || null,
+      benchmark_ytd: benchmark.returns?.ytd || null,
+      benchmark_3m: benchmark.returns?.three_month || null,
+      benchmark_6m: benchmark.returns?.six_month || null,
+      benchmark_1y: benchmark.returns?.one_year || null,
+      benchmark_3y: benchmark.returns?.three_year || null,
+      benchmark_5y: benchmark.returns?.five_year || null,
+      benchmark_10y: benchmark.returns?.ten_year || null,
       dividends_count: parseInt(record.dividends_count) || 0,
       dividends_total: parseFloat(record.dividends_total) || null,
-      dividend_dates: record.dividend_dates || null,
-      asset_allocation_json: parseJSON(record.asset_allocation_json),
-      fees_json: parseJSON(record.fees_json),
-      parties_json: parseJSON(record.parties_json),
-      holdings_json: parseJSON(record.holdings_json),
-      risk_factors_json: parseJSON(record.risk_factors_json),
-      suitability_json: parseJSON(record.suitability_json),
-      factsheet_url: record.factsheet_url || null,
-      annual_report_url: record.annual_report_url || null,
-      halfyear_report_url: record.halfyear_report_url || null,
-      investment_min_initial: parseFloat(record.investment_min_initial) || null,
-      investment_min_additional: parseFloat(record.investment_min_additional) || null,
-      last_upd_date: record.last_upd_date || new Date().toISOString(),
+      dividend_dates: record.dividend_dates ? record.dividend_dates.toISOString().split('T')[0] : null,
+      asset_allocation_json: record.asset_allocation,
+      fees_json: record.fees,
+      parties_json: record.parties_json,
+      holdings_json: record.holdings_json,
+      risk_factors_json: record.risk_factors_json,
+      suitability_json: record.suitability_json,
+      factsheet_url: document_urls.factsheet_url || null,
+      annual_report_url: document_urls.annual_report_url || null,
+      halfyear_report_url: document_urls.halfyear_report_url || null,
+      investment_min_initial: parseFloat(investment_minimums.initial) || null,
+      investment_min_additional: parseFloat(investment_minimums.additional) || null,
+      last_upd_date: record.last_upd_date ? record.last_upd_date.toISOString() : new Date().toISOString(),
     };
   }
 
@@ -231,7 +264,7 @@ export class RMFDataService {
 
     const totalCount = results.length;
 
-    if (filters.page && filters.pageSize) {
+    if (filters.page !== undefined && filters.pageSize !== undefined) {
       const start = (filters.page - 1) * filters.pageSize;
       results = results.slice(start, start + filters.pageSize);
     }
@@ -272,8 +305,8 @@ export class RMFDataService {
       .filter((f): f is RMFFundCSV => f !== null);
   }
 
-  getNavHistory(symbol: string, days: number = 30): RMFNavHistory[] {
-    // SECURITY: Sanitize symbol to prevent path traversal
+  async getNavHistory(symbol: string, days: number = 30): Promise<RMFNavHistory[]> {
+    // SECURITY: Sanitize symbol to prevent SQL injection
     // Only allow alphanumeric characters, dash, and underscore
     const sanitizedSymbol = symbol.replace(/[^a-zA-Z0-9\-_]/g, '');
 
@@ -293,29 +326,41 @@ export class RMFDataService {
     }
 
     try {
-      const jsonPath = join(process.cwd(), 'data', 'rmf-funds', `${sanitizedSymbol}.json`);
-      const fileContent = readFileSync(jsonPath, 'utf-8');
-      const fundData = JSON.parse(fileContent);
+      // Query NAV history from database
+      const result = await this.dbPool.query(`
+        SELECT 
+          nav_date,
+          nav_value as last_val,
+          previous_nav as previous_val,
+          net_asset,
+          buy_price,
+          sell_price
+        FROM rmf_nav_history
+        WHERE fund_symbol = $1
+        ORDER BY nav_date DESC
+        LIMIT $2
+      `, [sanitizedSymbol, safeDays]);
 
-      const navHistory: RMFNavHistory[] = (fundData.nav_history_30d || []).map((nav: any) => ({
+      const navHistory: RMFNavHistory[] = result.rows.map((nav: any) => ({
         nav_date: nav.nav_date,
-        last_val: nav.last_val,
-        previous_val: nav.previous_val,
-        net_asset: nav.net_asset,
-        buy_price: nav.buy_price,
-        sell_price: nav.sell_price,
-        change: nav.last_val - (nav.previous_val || nav.last_val),
+        last_val: parseFloat(nav.last_val) || 0,
+        previous_val: parseFloat(nav.previous_val) || 0,
+        net_asset: parseFloat(nav.net_asset) || 0,
+        buy_price: parseFloat(nav.buy_price) || 0,
+        sell_price: parseFloat(nav.sell_price) || 0,
+        change: (parseFloat(nav.last_val) || 0) - (parseFloat(nav.previous_val) || 0),
         change_percent: nav.previous_val 
-          ? ((nav.last_val - nav.previous_val) / nav.previous_val) * 100 
+          ? ((parseFloat(nav.last_val) - parseFloat(nav.previous_val)) / parseFloat(nav.previous_val)) * 100 
           : 0,
       }));
 
-      const filteredHistory = navHistory.slice(-safeDays);
-      this.navHistoryCache.set(cacheKey, filteredHistory);
+      // Reverse to get chronological order (oldest first)
+      navHistory.reverse();
 
-      return filteredHistory;
+      this.navHistoryCache.set(cacheKey, navHistory);
+      return navHistory;
     } catch (error) {
-      console.warn('Failed to load NAV history for fund');
+      console.warn('Failed to load NAV history for fund from database:', error);
       return [];
     }
   }
@@ -328,5 +373,3 @@ export class RMFDataService {
     return this.fundsMap.size;
   }
 }
-
-export const rmfDataService = new RMFDataService();

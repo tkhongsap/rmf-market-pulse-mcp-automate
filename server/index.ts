@@ -24,9 +24,10 @@ import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { Pool } from 'pg';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
-import { rmfMCPServer } from './mcp';
-import { rmfDataService } from './services/rmfDataService';
+import { RMFMCPServer } from './mcp';
+import { RMFDataService } from './services/rmfDataService';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -902,6 +903,23 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
   res.status(status).json({ error: message });
 });
 
+// Initialize database connection pool and services
+const databaseUrl = process.env.DATABASE_URL;
+if (!databaseUrl) {
+  throw new Error('DATABASE_URL environment variable is required');
+}
+
+const dbPool = new Pool({
+  connectionString: databaseUrl,
+  max: 20, // Maximum pool size
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 10000, // 10 seconds
+});
+
+// Initialize services
+const rmfDataService = new RMFDataService(dbPool);
+const rmfMCPServer = new RMFMCPServer(rmfDataService);
+
 /**
  * Initialize and start server
  */
@@ -910,9 +928,9 @@ async function startServer() {
   console.log('=' .repeat(60));
 
   // Initialize data service
-  console.log('📦 Loading RMF fund data...');
+  console.log('📦 Loading RMF fund data from PostgreSQL...');
   await rmfDataService.initialize();
-  console.log(`✓ Loaded ${rmfDataService.getTotalCount()} RMF funds`);
+  console.log(`✓ Loaded ${rmfDataService.getTotalCount()} RMF funds from database`);
 
   // Create HTTP server
   const httpServer = createServer(app);
@@ -951,7 +969,11 @@ async function startServer() {
       process.exit(1);
     }, 10000);
 
-    httpServer.close(() => {
+    httpServer.close(async () => {
+      // Close database pool
+      await dbPool.end();
+      console.log('✓ Database connection closed');
+      
       clearTimeout(forceExitTimeout);
       console.log('✓ Server closed gracefully');
       process.exit(0);
