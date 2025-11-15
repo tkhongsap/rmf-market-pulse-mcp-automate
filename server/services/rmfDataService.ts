@@ -328,13 +328,12 @@ export class RMFDataService {
     try {
       // Query NAV history from database
       const result = await this.dbPool.query(`
-        SELECT 
+        SELECT
           nav_date,
-          nav_value as last_val,
+          nav as last_val,
           previous_nav as previous_val,
-          net_asset,
-          buy_price,
-          sell_price
+          nav_change,
+          nav_change_percent
         FROM rmf_nav_history
         WHERE fund_symbol = $1
         ORDER BY nav_date DESC
@@ -345,13 +344,11 @@ export class RMFDataService {
         nav_date: nav.nav_date,
         last_val: parseFloat(nav.last_val) || 0,
         previous_val: parseFloat(nav.previous_val) || 0,
-        net_asset: parseFloat(nav.net_asset) || 0,
-        buy_price: parseFloat(nav.buy_price) || 0,
-        sell_price: parseFloat(nav.sell_price) || 0,
-        change: (parseFloat(nav.last_val) || 0) - (parseFloat(nav.previous_val) || 0),
-        change_percent: nav.previous_val 
-          ? ((parseFloat(nav.last_val) - parseFloat(nav.previous_val)) / parseFloat(nav.previous_val)) * 100 
-          : 0,
+        net_asset: 0, // Not available in nav_history table
+        buy_price: 0, // Not available in nav_history table
+        sell_price: 0, // Not available in nav_history table
+        change: parseFloat(nav.nav_change) || 0,
+        change_percent: parseFloat(nav.nav_change_percent) || 0,
       }));
 
       // Reverse to get chronological order (oldest first)

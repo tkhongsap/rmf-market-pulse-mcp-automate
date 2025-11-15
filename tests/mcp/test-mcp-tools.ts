@@ -4,8 +4,26 @@
  * Tests all 6 MCP tools with various input scenarios
  */
 
-import { rmfMCPServer } from '../../server/mcp';
-import { rmfDataService } from '../../server/services/rmfDataService';
+import { Pool } from 'pg';
+import { RMFMCPServer } from '../../server/mcp';
+import { RMFDataService } from '../../server/services/rmfDataService';
+
+// Initialize database connection
+if (!process.env.DATABASE_URL) {
+  console.error('❌ ERROR: DATABASE_URL environment variable is required');
+  process.exit(1);
+}
+
+const dbPool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.DATABASE_URL.includes('localhost') ? false : {
+    rejectUnauthorized: false
+  }
+});
+
+// Create service instances
+const rmfDataService = new RMFDataService(dbPool);
+const rmfMCPServer = new RMFMCPServer(rmfDataService);
 
 interface TestCase {
   name: string;
