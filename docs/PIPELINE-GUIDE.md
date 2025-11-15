@@ -16,7 +16,7 @@ This guide explains how to use the automated data pipeline that extracts 442 Tha
 
 ### Daily Refresh (Recommended for Production)
 
-Complete refresh from SEC API using production-safe staging approach:
+Complete refresh from SEC API using production-safe UPSERT approach:
 
 ```bash
 npm run data:rmf:daily-refresh
@@ -29,33 +29,34 @@ This orchestrates the full pipeline with maximum safety:
 2. Fetch complete data for all funds → `data/rmf-funds/*.json`
 
 **Phase 2: Validate Completeness**
-3. Compare fetched funds vs expected funds
+3. Compare fetched funds vs expected funds (from fund-mapping.json)
 4. Abort if any required funds are missing
 5. Verify minimum fund count threshold (350+ funds)
+6. Check for significant drops in fund count vs current database
 
-**Phase 3: Load into Staging**
-6. Create staging tables with full constraints/indexes
-7. Load data into staging tables (production untouched)
-8. Verify staging table counts match expectations
-
-**Phase 4: Atomic Swap**
-9. Rename production tables to _old
-10. Rename staging tables to production (single transaction)
-11. Drop old tables
+**Phase 3: Load Data (UPSERT)**
+7. Load all fetched funds using proven db-saver.ts
+8. UPSERT mode: Update existing funds + Insert new funds
+9. No truncation - database always has valid data
 
 **Safety Features:**
 - **Completeness Validation**: Prevents partial data from going live
-- **Staging Tables**: Production untouched during load
-- **Atomic Swap**: Single transaction = crash-safe rollback
-- **Constraint Preservation**: Staging includes all indexes/constraints
-- **Sanity Checks**: Multiple verification steps before swap
+- **UPSERT Mode**: No truncation, database always has valid data
+- **Process Crash-Safe**: Transactions ensure data integrity
+- **Proven Code**: Reuses battle-tested db-saver.ts logic
+- **Sanity Checks**: Multiple verification steps before load
 
 **Expected runtime**: 25-30 minutes for ~450 funds
 
 **What happens if it fails?**
-- Before swap: Production remains unchanged
-- During swap: Transaction rollback restores previous state
-- After swap: New data is live, old tables dropped
+- Before validation: No changes to production
+- During validation: Aborts if incomplete data detected
+- During load: Previous data remains intact (UPSERT updates incrementally)
+- Database always contains valid data
+
+**Note on Stale Funds:**
+This pipeline does NOT automatically remove cancelled/stale funds (intentional for safety).
+Stale funds remain in the database. Manual cleanup can be performed periodically if needed.
 
 ### Check Progress
 

@@ -95,7 +95,22 @@ export async function validateManifest(databaseUrl: string): Promise<ValidationR
     }
 
     const jsonFiles = readdirSync(dataDir).filter(f => f.endsWith('.json'));
-    const fetchedSymbols = jsonFiles.map(f => f.replace('.json', ''));
+    
+    // Read actual symbols from JSON files (don't derive from filenames)
+    const fetchedSymbols: string[] = [];
+    for (const file of jsonFiles) {
+      try {
+        const filePath = join(dataDir, file);
+        const fundData = JSON.parse(readFileSync(filePath, 'utf-8'));
+        if (fundData.symbol) {
+          fetchedSymbols.push(fundData.symbol);
+        }
+      } catch (error) {
+        // Skip files that can't be parsed
+        console.warn(`  ⚠️  Could not read symbol from ${file}`);
+      }
+    }
+    
     result.stats.fetched_funds = fetchedSymbols.length;
 
     console.log(`📦 Fetched funds (JSON files): ${result.stats.fetched_funds}`);

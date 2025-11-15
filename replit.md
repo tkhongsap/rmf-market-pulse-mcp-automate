@@ -62,15 +62,15 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 ## Recent Changes (November 15, 2025)
 
 ### Production-Safe Daily Refresh Pipeline
-- **Architecture**: Implemented staging table approach with atomic swap (architect-recommended)
+- **Architecture**: UPSERT-based approach (simple and safe)
 - **Safety Features**:
   - Manifest validation: Completeness checks before load
-  - Staging tables: Production untouched during data load
-  - Atomic swap: Single transaction rename (crash-safe rollback)
-  - Constraint preservation: Staging includes all indexes/constraints
+  - UPSERT mode: Updates existing funds, inserts new ones (no truncation)
+  - Process crash-safe: Database always has valid data
+  - Reuses proven db-saver.ts logic (no schema mismatches)
 - **Pipeline Components**:
   - `manifest-validator.ts`: Validates fetched data completeness
-  - `staging-loader.ts`: Loads into staging tables, performs atomic swap
+  - `db-saver.ts`: Proven batch loader with UPSERT
   - `daily-refresh-production.ts`: Orchestrates the entire pipeline
 - **Data Quality**: 
   - 442 JSON files with complete fund data in `data/rmf-funds/`
@@ -95,20 +95,19 @@ npm run data:rmf:daily-refresh
 **What it does:**
 1. **Fetch Data**: Gets latest fund list and complete data from SEC API → JSON files
 2. **Validate**: Checks completeness (compares fetched vs expected funds)
-3. **Stage**: Loads data into staging tables (production untouched)
-4. **Swap**: Atomic table swap in single transaction (crash-safe)
-5. **Cleanup**: Drops old tables
+3. **Load**: Updates existing funds + inserts new funds using UPSERT
 
 **Pipeline Details:**
 - **Data Source**: SEC Thailand API (live data, not cached)
 - **Fund Count**: ~450 RMF funds
 - **Runtime**: 25-30 minutes (respects SEC API rate limits)
-- **Safety**: Staging + atomic swap approach
-  - Production tables untouched until validated data is ready
-  - Completeness checks prevent partial data from going live
-  - Atomic swap = rollback on crash
-  - Staging preserves all constraints/indexes
+- **Safety**: UPSERT-based approach
+  - Completeness validation prevents partial data from going live
+  - UPSERT = no truncation, database always has valid data
+  - Process crash-safe (transactional updates)
+  - Reuses proven db-saver.ts (no schema mismatches)
 - **Output**: Fresh JSON files + updated database
+- **Note**: Stale/cancelled funds are NOT automatically removed (intentional for safety)
 
 **Verification:**
 ```bash
