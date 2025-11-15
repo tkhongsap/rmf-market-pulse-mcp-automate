@@ -517,7 +517,7 @@
     "minimum_redemption": null,
     "minimum_balance": 100
   },
-  "data_fetched_at": "2025-11-15T10:50:47.119Z",
+  "data_fetched_at": "2025-11-15T15:17:13.589Z",
   "errors": [
     "No benchmark data available",
     "No top holdings data available"

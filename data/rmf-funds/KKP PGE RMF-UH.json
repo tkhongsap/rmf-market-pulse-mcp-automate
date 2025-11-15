@@ -231,14 +231,6 @@
       "sell_price": 11.8315
     },
     {
-      "nav_date": "2025-11-12",
-      "last_val": 11.9389,
-      "previous_val": 0,
-      "net_asset": 208706176,
-      "buy_price": 11.9389,
-      "sell_price": 11.939
-    },
-    {
       "nav_date": "2025-11-13",
       "last_val": 11.683,
       "previous_val": 0,
@@ -374,7 +366,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T10:51:08.636Z",
+  "data_fetched_at": "2025-11-15T15:17:34.230Z",
   "errors": [
     "No involved parties data available",
     "No top holdings data available",

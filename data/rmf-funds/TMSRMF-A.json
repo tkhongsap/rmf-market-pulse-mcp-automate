@@ -207,46 +207,6 @@
       "sell_price": 9.14
     },
     {
-      "nav_date": "2025-11-07",
-      "last_val": 9.0568,
-      "previous_val": 0,
-      "net_asset": 116769056,
-      "buy_price": 9.0568,
-      "sell_price": 9.0569
-    },
-    {
-      "nav_date": "2025-11-10",
-      "last_val": 9.0839,
-      "previous_val": 0,
-      "net_asset": 117124008,
-      "buy_price": 9.0839,
-      "sell_price": 9.084
-    },
-    {
-      "nav_date": "2025-11-11",
-      "last_val": 9.041,
-      "previous_val": 0,
-      "net_asset": 116587624,
-      "buy_price": 9.041,
-      "sell_price": 9.0411
-    },
-    {
-      "nav_date": "2025-11-12",
-      "last_val": 9.0377,
-      "previous_val": 0,
-      "net_asset": 116535576,
-      "buy_price": 9.0377,
-      "sell_price": 9.0378
-    },
-    {
-      "nav_date": "2025-11-13",
-      "last_val": 8.95,
-      "previous_val": 0,
-      "net_asset": 115415072,
-      "buy_price": 8.95,
-      "sell_price": 8.9501
-    },
-    {
       "nav_date": "2025-11-14",
       "last_val": 8.9436,
       "previous_val": 0,
@@ -640,7 +600,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T11:07:06.382Z",
+  "data_fetched_at": "2025-11-15T15:24:05.911Z",
   "errors": [
     "No top holdings data available"
   ]

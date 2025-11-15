@@ -23,22 +23,6 @@
   },
   "nav_history_30d": [
     {
-      "nav_date": "2025-11-11",
-      "last_val": 10.0004,
-      "previous_val": 0,
-      "net_asset": 121833528,
-      "buy_price": 0,
-      "sell_price": 0
-    },
-    {
-      "nav_date": "2025-11-12",
-      "last_val": 10.0003,
-      "previous_val": 0,
-      "net_asset": 121831928,
-      "buy_price": 10.0003,
-      "sell_price": 10.0004
-    },
-    {
       "nav_date": "2025-11-13",
       "last_val": 9.78,
       "previous_val": 0,
@@ -134,7 +118,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T14:51:52.420Z",
+  "data_fetched_at": "2025-11-15T15:01:30.495Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

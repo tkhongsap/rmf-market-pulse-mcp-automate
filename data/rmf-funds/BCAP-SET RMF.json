@@ -11,17 +11,41 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-14",
-    "last_val": 8.9853,
+    "nav_date": "2025-11-11",
+    "last_val": 9.2014,
     "previous_val": 0,
-    "net_asset": 7994730.5,
-    "buy_price": 8.9853,
-    "sell_price": 8.9854,
-    "change": 8.9853,
+    "net_asset": 8186485.5,
+    "buy_price": 9.2014,
+    "sell_price": 9.2015,
+    "change": 9.2014,
     "change_percent": 0,
-    "last_upd_date": "2025-11-15T16:11:03.813"
+    "last_upd_date": "2025-11-12T16:10:36.647"
   },
   "nav_history_30d": [
+    {
+      "nav_date": "2025-09-30",
+      "last_val": 8.9831,
+      "previous_val": 0,
+      "net_asset": 7792218,
+      "buy_price": 8.9831,
+      "sell_price": 8.9832
+    },
+    {
+      "nav_date": "2025-10-01",
+      "last_val": 9.0026,
+      "previous_val": 0,
+      "net_asset": 7809115.5,
+      "buy_price": 9.0026,
+      "sell_price": 9.0027
+    },
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 9.0943,
+      "previous_val": 0,
+      "net_asset": 7899237.5,
+      "buy_price": 9.0943,
+      "sell_price": 9.0944
+    },
     {
       "nav_date": "2025-10-03",
       "last_val": 9.1365,
@@ -229,30 +253,6 @@
       "net_asset": 8186485.5,
       "buy_price": 9.2014,
       "sell_price": 9.2015
-    },
-    {
-      "nav_date": "2025-11-12",
-      "last_val": 9.0921,
-      "previous_val": 0,
-      "net_asset": 8089770.5,
-      "buy_price": 9.0921,
-      "sell_price": 9.0922
-    },
-    {
-      "nav_date": "2025-11-13",
-      "last_val": 9.1109,
-      "previous_val": 0,
-      "net_asset": 8106428.5,
-      "buy_price": 9.1109,
-      "sell_price": 9.111
-    },
-    {
-      "nav_date": "2025-11-14",
-      "last_val": 8.9853,
-      "previous_val": 0,
-      "net_asset": 7994730.5,
-      "buy_price": 8.9853,
-      "sell_price": 8.9854
     }
   ],
   "dividends": [],
@@ -343,7 +343,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T14:52:54.983Z",
+  "data_fetched_at": "2025-11-15T15:02:32.422Z",
   "errors": [
     "No risk metrics available",
     "No involved parties data available",
