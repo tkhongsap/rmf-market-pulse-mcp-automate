@@ -14,15 +14,21 @@ This guide explains how to use the automated data pipeline that extracts 442 Tha
 
 ## Quick Start
 
-### Load All Funds (Recommended)
+### Daily Update (Recommended for Production)
 
-Run this command multiple times until all 442 funds are loaded:
+Upsert all 442 funds (updates existing + inserts new):
 
 ```bash
-FUND_LIMIT=450 npm run data:rmf:save-to-db
+npm run data:rmf:save-to-db
 ```
 
-**Why multiple runs?** The platform automatically stops long-running processes after ~5 minutes. The checkpoint system saves progress after each batch (10 funds), so you can safely restart and continue from where it left off.
+This will:
+- Update NAV data for all existing funds
+- Insert any new funds that were added
+- Refresh `data_updated_at` timestamps
+- Default processes all 442 funds (FUND_LIMIT=450)
+
+**For automated daily updates**, just run this command once per day. The upsert mode ensures data stays fresh.
 
 ### Check Progress
 
@@ -51,11 +57,12 @@ FUND_LIMIT=450 npm run data:rmf:save-to-db -- --clear
 
 ### Batch Processing System
 
-1. **Batch Size**: 10 funds per batch
-2. **Total Batches**: 45 batches (442 funds)
+1. **Batch Size**: 1 fund at a time (for maximum reliability)
+2. **Total Batches**: 442 batches (one per fund)
 3. **Checkpoint**: Saves progress to `.db-progress.json` after each batch
 4. **Resume**: Automatically continues from last completed batch
 5. **Safety**: Individual fund failures don't stop the batch
+6. **Upsert Mode**: Uses `ON CONFLICT DO UPDATE` to refresh existing data
 
 ### Data Flow
 
@@ -79,28 +86,34 @@ data/rmf-funds/*.json → Batch Loader → PostgreSQL
 - `proj_id` is NOT unique (allows share classes A/E/P/B)
 - JSONB fields for flexible data: performance, fees, asset_allocation
 
-## Typical Loading Session
+## Production Usage
+
+### Automated Daily Updates
+
+Schedule this command to run daily (e.g., via cron or GitHub Actions):
 
 ```bash
-# Run 1 - Loads 94 funds, then stops (~5 minutes)
-FUND_LIMIT=450 npm run data:rmf:save-to-db
-
-# Check progress
-cat .db-progress.json
-# Output: {"lastCompletedBatch":9,"fundsProcessed":94,...}
-
-# Run 2 - Continues from fund 95, loads another ~90 funds
-FUND_LIMIT=450 npm run data:rmf:save-to-db
-
-# Run 3 - Continues from fund 185...
-FUND_LIMIT=450 npm run data:rmf:save-to-db
-
-# ... repeat until all 442 funds loaded
+npm run data:rmf:save-to-db
 ```
 
-**You'll know it's complete when:**
-- Checkpoint shows `fundsProcessed: 442`
-- Database count: `SELECT COUNT(*) FROM rmf_funds;` returns 442
+**Expected behavior:**
+- Runtime: ~30-60 minutes for 442 funds (1 fund at a time)
+- Updates: All NAV data refreshed, new funds inserted
+- Interruption: Safe to restart - checkpoint system resumes from last batch
+- Output: "Funds Saved: 442/442" when complete
+
+**Environment Variables:**
+- `FUND_LIMIT`: Defaults to 450 (processes all funds)
+- `DATABASE_URL`: PostgreSQL connection (auto-configured on Replit)
+
+**Verification:**
+```bash
+# Check total funds
+psql $DATABASE_URL -c "SELECT COUNT(*) FROM rmf_funds;"
+
+# Check last update time
+psql $DATABASE_URL -c "SELECT MAX(data_updated_at) FROM rmf_funds;"
+```
 
 ## Database Migration (Already Applied)
 

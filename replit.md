@@ -78,33 +78,37 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
   - Real-time data from SEC APIs (not manual CSV)
   - Per-fund transaction isolation with error handling
 
-### How to Complete Database Loading
+### How to Use the Data Pipeline
 
-**Current Status**: Database migrated and ready. 94 funds loaded, 348 remaining.
+**Current Status**: ✅ Production-ready with all 442 funds loaded
 
-The batch processing system works reliably with checkpoint/resume. To load all 442 funds:
+The pipeline supports both initial load and daily updates via upsert mode:
 
 ```bash
-# Resume from checkpoint (run multiple times until complete)
-FUND_LIMIT=450 npm run data:rmf:save-to-db
+# Daily update (recommended for production)
+npm run data:rmf:save-to-db
 
-# Check progress
-cat .db-progress.json
-psql $DATABASE_URL -c "SELECT COUNT(*) FROM rmf_funds;"
-
-# Fresh load (clears database first)
-FUND_LIMIT=450 npm run data:rmf:save-to-db -- --clear
+# Fresh load (clears database first - use only for initial setup)
+npm run data:rmf:save-to-db -- --clear
 ```
 
-**Progress Tracking:**
-- Checkpoint saves after each batch (every 10 funds)
-- Automatically resumes from last completed batch
-- Safe to interrupt and restart - no data loss
-- Platform timeout: Process stops after ~5 minutes (normal behavior)
-- Solution: Just run the command again - it resumes automatically
+**Pipeline Configuration:**
+- **BATCH_SIZE**: 1 fund at a time (maximum reliability)
+- **FUND_LIMIT**: 450 (processes all 442 funds by default)
+- **Upsert Mode**: Updates existing funds + inserts new ones
+- **Runtime**: ~30-60 minutes for full 442-fund update
+- **Checkpoint System**: Safe to interrupt and restart
 
-**Database Migration (Already Applied):**
-The database has been migrated to remove the unique constraint on `proj_id`. See `docs/PIPELINE-GUIDE.md` for complete details.
+**Verification:**
+```bash
+# Check total funds
+psql $DATABASE_URL -c "SELECT COUNT(*) FROM rmf_funds;"
+
+# Check last update
+psql $DATABASE_URL -c "SELECT MAX(data_updated_at) FROM rmf_funds;"
+```
+
+See `docs/PIPELINE-GUIDE.md` for complete documentation.
 
 ### Files Modified/Added
 - `server/pipeline/db-schema.sql` - Production schema (proj_id no longer unique)
