@@ -11,33 +11,17 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-11",
-    "last_val": 11.6906,
+    "nav_date": "2025-11-13",
+    "last_val": 11.468,
     "previous_val": 0,
-    "net_asset": 267552736,
-    "buy_price": 0,
-    "sell_price": 0,
-    "change": 11.6906,
+    "net_asset": 264457936,
+    "buy_price": 11.468,
+    "sell_price": 11.4681,
+    "change": 11.468,
     "change_percent": 0,
-    "last_upd_date": "2025-11-13T08:16:14.42"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.4184,
-      "previous_val": 0,
-      "net_asset": 221890352,
-      "buy_price": 11.4184,
-      "sell_price": 11.4185
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.4451,
-      "previous_val": 0,
-      "net_asset": 223471120,
-      "buy_price": 11.4451,
-      "sell_price": 11.4452
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.4746,
@@ -63,12 +47,212 @@
       "sell_price": 11.5374
     },
     {
+      "nav_date": "2025-10-07",
+      "last_val": 11.5277,
+      "previous_val": 0,
+      "net_asset": 232901616,
+      "buy_price": 11.5277,
+      "sell_price": 11.5278
+    },
+    {
+      "nav_date": "2025-10-08",
+      "last_val": 11.5778,
+      "previous_val": 0,
+      "net_asset": 235378896,
+      "buy_price": 11.5778,
+      "sell_price": 11.5779
+    },
+    {
+      "nav_date": "2025-10-09",
+      "last_val": 11.5841,
+      "previous_val": 0,
+      "net_asset": 236276640,
+      "buy_price": 11.5841,
+      "sell_price": 11.5842
+    },
+    {
+      "nav_date": "2025-10-10",
+      "last_val": 11.3226,
+      "previous_val": 0,
+      "net_asset": 231838496,
+      "buy_price": 11.3226,
+      "sell_price": 11.3227
+    },
+    {
+      "nav_date": "2025-10-14",
+      "last_val": 11.472,
+      "previous_val": 0,
+      "net_asset": 236564544,
+      "buy_price": 11.472,
+      "sell_price": 11.4721
+    },
+    {
+      "nav_date": "2025-10-15",
+      "last_val": 11.4437,
+      "previous_val": 0,
+      "net_asset": 236687280,
+      "buy_price": 11.4437,
+      "sell_price": 11.4438
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 11.3893,
+      "previous_val": 0,
+      "net_asset": 236030816,
+      "buy_price": 11.3893,
+      "sell_price": 11.3894
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 11.4816,
+      "previous_val": 0,
+      "net_asset": 239026832,
+      "buy_price": 11.4816,
+      "sell_price": 11.4817
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 11.6222,
+      "previous_val": 0,
+      "net_asset": 245300880,
+      "buy_price": 11.6222,
+      "sell_price": 11.6223
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 11.6314,
+      "previous_val": 0,
+      "net_asset": 245442896,
+      "buy_price": 11.6314,
+      "sell_price": 11.6315
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 11.6181,
+      "previous_val": 0,
+      "net_asset": 248044000,
+      "buy_price": 11.6181,
+      "sell_price": 11.6182
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 11.7371,
+      "previous_val": 0,
+      "net_asset": 252141408,
+      "buy_price": 11.7371,
+      "sell_price": 11.7372
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 11.8517,
+      "previous_val": 0,
+      "net_asset": 256832608,
+      "buy_price": 11.8517,
+      "sell_price": 11.8518
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 11.8036,
+      "previous_val": 0,
+      "net_asset": 258009520,
+      "buy_price": 11.8036,
+      "sell_price": 11.8037
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 11.7335,
+      "previous_val": 0,
+      "net_asset": 258266960,
+      "buy_price": 11.7335,
+      "sell_price": 11.7336
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 11.6456,
+      "previous_val": 0,
+      "net_asset": 258316000,
+      "buy_price": 11.6456,
+      "sell_price": 11.6457
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 11.6588,
+      "previous_val": 0,
+      "net_asset": 260469392,
+      "buy_price": 11.6588,
+      "sell_price": 11.6589
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 11.7155,
+      "previous_val": 0,
+      "net_asset": 265306192,
+      "buy_price": 11.7155,
+      "sell_price": 11.7156
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 11.6176,
+      "previous_val": 0,
+      "net_asset": 265300608,
+      "buy_price": 11.6176,
+      "sell_price": 11.6177
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 11.6594,
+      "previous_val": 0,
+      "net_asset": 265989440,
+      "buy_price": 11.6594,
+      "sell_price": 11.6595
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 11.4684,
+      "previous_val": 0,
+      "net_asset": 261077984,
+      "buy_price": 11.4684,
+      "sell_price": 11.4685
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 11.4776,
+      "previous_val": 0,
+      "net_asset": 261837888,
+      "buy_price": 11.4776,
+      "sell_price": 11.4777
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 11.651,
+      "previous_val": 0,
+      "net_asset": 266735632,
+      "buy_price": 11.651,
+      "sell_price": 11.6511
+    },
+    {
       "nav_date": "2025-11-11",
       "last_val": 11.6906,
       "previous_val": 0,
       "net_asset": 267552736,
       "buy_price": 0,
       "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.7248,
+      "previous_val": 0,
+      "net_asset": 268336064,
+      "buy_price": 11.7248,
+      "sell_price": 11.7249
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.468,
+      "previous_val": 0,
+      "net_asset": 264457936,
+      "buy_price": 11.468,
+      "sell_price": 11.4681
     }
   ],
   "dividends": [],
@@ -194,7 +378,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T09:51:18.479Z",
+  "data_fetched_at": "2025-11-15T10:50:05.467Z",
   "errors": [
     "No involved parties data available",
     "No top holdings data available",

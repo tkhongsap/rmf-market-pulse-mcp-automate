@@ -11,25 +11,17 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-13",
-    "last_val": 8.4084,
+    "nav_date": "2025-11-14",
+    "last_val": 8.3535,
     "previous_val": 0,
-    "net_asset": 18821752,
-    "buy_price": 8.4084,
-    "sell_price": 8.4085,
-    "change": 8.4084,
+    "net_asset": 18698978,
+    "buy_price": 8.3535,
+    "sell_price": 8.3536,
+    "change": 8.3535,
     "change_percent": 0,
-    "last_upd_date": "2025-11-14T09:38:21.393"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-10-02",
-      "last_val": 8.6142,
-      "previous_val": 0,
-      "net_asset": 20104542,
-      "buy_price": 8.6142,
-      "sell_price": 8.6143
-    },
     {
       "nav_date": "2025-10-03",
       "last_val": 8.6255,
@@ -223,12 +215,44 @@
       "sell_price": 8.5372
     },
     {
+      "nav_date": "2025-11-10",
+      "last_val": 8.5553,
+      "previous_val": 0,
+      "net_asset": 19146562,
+      "buy_price": 8.5553,
+      "sell_price": 8.5554
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 8.5532,
+      "previous_val": 0,
+      "net_asset": 19145918,
+      "buy_price": 8.5532,
+      "sell_price": 8.5533
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 8.4585,
+      "previous_val": 0,
+      "net_asset": 18933966,
+      "buy_price": 8.4585,
+      "sell_price": 8.4586
+    },
+    {
       "nav_date": "2025-11-13",
       "last_val": 8.4084,
       "previous_val": 0,
       "net_asset": 18821752,
       "buy_price": 8.4084,
       "sell_price": 8.4085
+    },
+    {
+      "nav_date": "2025-11-14",
+      "last_val": 8.3535,
+      "previous_val": 0,
+      "net_asset": 18698978,
+      "buy_price": 8.3535,
+      "sell_price": 8.3536
     }
   ],
   "dividends": [],
@@ -366,7 +390,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T10:07:55.471Z",
+  "data_fetched_at": "2025-11-15T11:06:45.883Z",
   "errors": [
     "No top holdings data available"
   ]

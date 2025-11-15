@@ -4,56 +4,24 @@
   "fund_name": "SCB China A Shares Active Equity RMF",
   "amc": "SCB ASSET MANAGEMENT COMPANY LIMITED",
   "metadata": {
-    "fund_classification": "Unknown",
-    "management_style": "Unknown",
-    "dividend_policy": "Unknown",
-    "risk_level": 0,
+    "fund_classification": "ตราสารทุน",
+    "management_style": "AN",
+    "dividend_policy": "N",
+    "risk_level": 6,
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-07",
-    "last_val": 7.4155,
+    "nav_date": "2025-11-13",
+    "last_val": 7.4951,
     "previous_val": 0,
-    "net_asset": 182088512,
-    "buy_price": 7.4155,
-    "sell_price": 7.4156,
-    "change": 7.4155,
+    "net_asset": 183860048,
+    "buy_price": 7.4951,
+    "sell_price": 7.4952,
+    "change": 7.4951,
     "change_percent": 0,
-    "last_upd_date": "2025-11-11T16:09:59.097"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-26",
-      "last_val": 7.3076,
-      "previous_val": 0,
-      "net_asset": 187888224,
-      "buy_price": 7.3076,
-      "sell_price": 7.3077
-    },
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 7.4348,
-      "previous_val": 0,
-      "net_asset": 191650112,
-      "buy_price": 7.4348,
-      "sell_price": 7.4349
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 7.5409,
-      "previous_val": 0,
-      "net_asset": 195067392,
-      "buy_price": 7.5409,
-      "sell_price": 7.541
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 7.5401,
-      "previous_val": 0,
-      "net_asset": 195450032,
-      "buy_price": 0,
-      "sell_price": 0
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 7.5401,
@@ -119,6 +87,126 @@
       "sell_price": 7.2251
     },
     {
+      "nav_date": "2025-10-15",
+      "last_val": 7.4127,
+      "previous_val": 0,
+      "net_asset": 183030848,
+      "buy_price": 7.4127,
+      "sell_price": 7.4128
+    },
+    {
+      "nav_date": "2025-10-16",
+      "last_val": 7.4091,
+      "previous_val": 0,
+      "net_asset": 182914112,
+      "buy_price": 7.4091,
+      "sell_price": 7.4092
+    },
+    {
+      "nav_date": "2025-10-17",
+      "last_val": 7.1915,
+      "previous_val": 0,
+      "net_asset": 177671968,
+      "buy_price": 7.1915,
+      "sell_price": 7.1916
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 7.2604,
+      "previous_val": 0,
+      "net_asset": 177346160,
+      "buy_price": 7.2604,
+      "sell_price": 7.2605
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 7.3697,
+      "previous_val": 0,
+      "net_asset": 180093280,
+      "buy_price": 7.3697,
+      "sell_price": 7.3698
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 7.2952,
+      "previous_val": 0,
+      "net_asset": 178220128,
+      "buy_price": 7.2952,
+      "sell_price": 7.2953
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 7.4686,
+      "previous_val": 0,
+      "net_asset": 183041152,
+      "buy_price": 7.4686,
+      "sell_price": 7.4687
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 7.5531,
+      "previous_val": 0,
+      "net_asset": 185600912,
+      "buy_price": 7.5531,
+      "sell_price": 7.5532
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 7.5197,
+      "previous_val": 0,
+      "net_asset": 184304208,
+      "buy_price": 7.5197,
+      "sell_price": 7.5198
+    },
+    {
+      "nav_date": "2025-10-29",
+      "last_val": 7.5101,
+      "previous_val": 0,
+      "net_asset": 184307312,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 7.5178,
+      "previous_val": 0,
+      "net_asset": 184496912,
+      "buy_price": 7.5178,
+      "sell_price": 7.5179
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 7.4321,
+      "previous_val": 0,
+      "net_asset": 182778128,
+      "buy_price": 7.4321,
+      "sell_price": 7.4322
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 7.4493,
+      "previous_val": 0,
+      "net_asset": 182784624,
+      "buy_price": 7.4493,
+      "sell_price": 7.4494
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 7.3664,
+      "previous_val": 0,
+      "net_asset": 180768160,
+      "buy_price": 7.3664,
+      "sell_price": 7.3665
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 7.3961,
+      "previous_val": 0,
+      "net_asset": 181412672,
+      "buy_price": 7.3961,
+      "sell_price": 7.3962
+    },
+    {
       "nav_date": "2025-11-06",
       "last_val": 7.5057,
       "previous_val": 0,
@@ -133,6 +221,38 @@
       "net_asset": 182088512,
       "buy_price": 7.4155,
       "sell_price": 7.4156
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 7.4516,
+      "previous_val": 0,
+      "net_asset": 184003552,
+      "buy_price": 7.4516,
+      "sell_price": 7.4517
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 7.4116,
+      "previous_val": 0,
+      "net_asset": 182897760,
+      "buy_price": 0,
+      "sell_price": 0
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 7.4047,
+      "previous_val": 0,
+      "net_asset": 182727168,
+      "buy_price": 7.4047,
+      "sell_price": 7.4048
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 7.4951,
+      "previous_val": 0,
+      "net_asset": 183860048,
+      "buy_price": 7.4951,
+      "sell_price": 7.4952
     }
   ],
   "dividends": [],
@@ -304,9 +424,8 @@
     "minimum_redemption": "1000",
     "minimum_balance": 1000
   },
-  "data_fetched_at": "2025-11-14T10:01:23.434Z",
+  "data_fetched_at": "2025-11-15T11:00:12.835Z",
   "errors": [
-    "No policy metadata available",
     "No top holdings data available"
   ]
 }

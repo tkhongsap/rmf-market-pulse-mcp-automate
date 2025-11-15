@@ -43,7 +43,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T10:11:21.771Z",
+  "data_fetched_at": "2025-11-15T11:10:11.995Z",
   "errors": [
     "Failed to fetch latest NAV",
     "No NAV history available",

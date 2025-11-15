@@ -13,6 +13,37 @@ import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import { Pool } from 'pg';
 
+/**
+ * Normalize fund symbol by removing share class suffixes
+ * Handles variations between SEC API (Phase-0) and CSV (Phase-1)
+ */
+function normalizeSymbol(symbol: string): string {
+  let normalized = symbol;
+  
+  // Remove " FUND" suffix (SEC API adds this to some KKP funds)
+  if (normalized.endsWith(' FUND')) {
+    normalized = normalized.slice(0, -5); // Remove ' FUND'
+  }
+  
+  // Remove parentheses variants: (A), (B), (E), (P)
+  const parenthesesVariants = ['(A)', '(B)', '(E)', '(P)'];
+  for (const variant of parenthesesVariants) {
+    if (normalized.endsWith(variant)) {
+      return normalized.slice(0, -variant.length);
+    }
+  }
+
+  // Remove dash variants: -A, -B, -P, -H, -UH, -F
+  const dashVariants = ['-A', '-B', '-P', '-H', '-UH', '-F'];
+  for (const variant of dashVariants) {
+    if (normalized.endsWith(variant)) {
+      return normalized.slice(0, -variant.length);
+    }
+  }
+
+  return normalized;
+}
+
 export interface ValidationResult {
   valid: boolean;
   stats: {
@@ -80,10 +111,25 @@ export async function validateManifest(databaseUrl: string): Promise<ValidationR
     }
 
     const mappingData: FundMappingFile = JSON.parse(readFileSync(mappingPath, 'utf-8'));
-    const expectedSymbols = Object.keys(mappingData.mapping);
-    result.stats.expected_funds = expectedSymbols.length;
+    
+    // Filter out cancelled/liquidated funds (Phase-1 skips these)
+    const activeSymbols = Object.keys(mappingData.mapping).filter(
+      symbol => {
+        const fundInfo = mappingData.mapping[symbol];
+        return fundInfo.fund_status !== 'CA' && fundInfo.fund_status !== 'LI';
+      }
+    );
+    
+    // Normalize expected symbols (SEC API may have different suffixes than CSV)
+    const expectedNormalizedSymbols = new Set(activeSymbols.map(normalizeSymbol));
+    
+    result.stats.expected_funds = activeSymbols.length;
+    const totalInMapping = Object.keys(mappingData.mapping).length;
+    const cancelledCount = totalInMapping - activeSymbols.length;
 
-    console.log(`📋 Expected funds from mapping: ${result.stats.expected_funds}`);
+    console.log(`📋 Total funds in mapping: ${totalInMapping}`);
+    console.log(`📋 Expected active funds: ${activeSymbols.length} (excluding ${cancelledCount} cancelled/liquidated)`);
+    console.log(`📋 Expected unique base funds (normalized): ${expectedNormalizedSymbols.size}`);
 
     // Step 2: Check fetched JSON files
     const dataDir = join(process.cwd(), 'data', 'rmf-funds');
@@ -98,12 +144,16 @@ export async function validateManifest(databaseUrl: string): Promise<ValidationR
     
     // Read actual symbols from JSON files (don't derive from filenames)
     const fetchedSymbols: string[] = [];
+    const fetchedNormalizedSymbols = new Set<string>();
+    
     for (const file of jsonFiles) {
       try {
         const filePath = join(dataDir, file);
         const fundData = JSON.parse(readFileSync(filePath, 'utf-8'));
         if (fundData.symbol) {
           fetchedSymbols.push(fundData.symbol);
+          // Normalize to base symbol (remove share class suffixes)
+          fetchedNormalizedSymbols.add(normalizeSymbol(fundData.symbol));
         }
       } catch (error) {
         // Skip files that can't be parsed
@@ -114,15 +164,18 @@ export async function validateManifest(databaseUrl: string): Promise<ValidationR
     result.stats.fetched_funds = fetchedSymbols.length;
 
     console.log(`📦 Fetched funds (JSON files): ${result.stats.fetched_funds}`);
+    console.log(`📦 Unique base funds (normalized): ${fetchedNormalizedSymbols.size}`);
 
     // Step 3: Find missing funds (in mapping but not fetched)
-    result.stats.missing_funds = expectedSymbols.filter(
-      symbol => !fetchedSymbols.includes(symbol)
+    // Compare using normalized symbols (base symbols without share class suffixes)
+    result.stats.missing_funds = Array.from(expectedNormalizedSymbols).filter(
+      normalizedSymbol => !fetchedNormalizedSymbols.has(normalizedSymbol)
     );
 
     // Step 4: Find extra funds (fetched but not in mapping)
-    result.stats.extra_funds = fetchedSymbols.filter(
-      symbol => !expectedSymbols.includes(symbol)
+    // These are normalized symbols that don't have a mapping entry
+    result.stats.extra_funds = Array.from(fetchedNormalizedSymbols).filter(
+      normalizedSymbol => !expectedNormalizedSymbols.has(normalizedSymbol)
     );
 
     // Step 5: Get current database count

@@ -11,25 +11,17 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-12",
-    "last_val": 11.0204,
+    "nav_date": "2025-11-13",
+    "last_val": 10.9693,
     "previous_val": 0,
-    "net_asset": 37190728,
-    "buy_price": 11.0204,
-    "sell_price": 11.0205,
-    "change": 11.0204,
+    "net_asset": 37018252,
+    "buy_price": 10.9693,
+    "sell_price": 10.9694,
+    "change": 10.9693,
     "change_percent": 0,
-    "last_upd_date": "2025-11-14T09:38:21.393"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 10.9234,
-      "previous_val": 0,
-      "net_asset": 37902884,
-      "buy_price": 10.9234,
-      "sell_price": 10.9235
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 10.9601,
@@ -223,12 +215,44 @@
       "sell_price": 10.8113
     },
     {
+      "nav_date": "2025-11-07",
+      "last_val": 10.7165,
+      "previous_val": 0,
+      "net_asset": 35685144,
+      "buy_price": 10.7165,
+      "sell_price": 10.7166
+    },
+    {
+      "nav_date": "2025-11-10",
+      "last_val": 10.871,
+      "previous_val": 0,
+      "net_asset": 36259720,
+      "buy_price": 10.871,
+      "sell_price": 10.8711
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 10.9653,
+      "previous_val": 0,
+      "net_asset": 36726592,
+      "buy_price": 10.9653,
+      "sell_price": 10.9654
+    },
+    {
       "nav_date": "2025-11-12",
       "last_val": 11.0204,
       "previous_val": 0,
       "net_asset": 37190728,
       "buy_price": 11.0204,
       "sell_price": 11.0205
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 10.9693,
+      "previous_val": 0,
+      "net_asset": 37018252,
+      "buy_price": 10.9693,
+      "sell_price": 10.9694
     }
   ],
   "dividends": [],
@@ -474,7 +498,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T10:06:53.886Z",
+  "data_fetched_at": "2025-11-15T11:05:44.298Z",
   "errors": [
     "No involved parties data available",
     "No top holdings data available",

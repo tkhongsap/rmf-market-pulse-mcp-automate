@@ -11,41 +11,17 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 11.3079,
+    "nav_date": "2025-11-13",
+    "last_val": 11.2916,
     "previous_val": 0,
-    "net_asset": 10237552,
-    "buy_price": 11.3079,
-    "sell_price": 11.308,
-    "change": 11.3079,
+    "net_asset": 10218380,
+    "buy_price": 11.2916,
+    "sell_price": 11.2917,
+    "change": 11.2916,
     "change_percent": 0,
-    "last_upd_date": "2025-11-13T08:16:14.42"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
-    {
-      "nav_date": "2025-09-29",
-      "last_val": 10.9729,
-      "previous_val": 0,
-      "net_asset": 10313245,
-      "buy_price": 10.9729,
-      "sell_price": 10.973
-    },
-    {
-      "nav_date": "2025-09-30",
-      "last_val": 11.0322,
-      "previous_val": 0,
-      "net_asset": 10371897,
-      "buy_price": 11.0322,
-      "sell_price": 11.0323
-    },
-    {
-      "nav_date": "2025-10-01",
-      "last_val": 11.1308,
-      "previous_val": 0,
-      "net_asset": 9945176,
-      "buy_price": 11.1308,
-      "sell_price": 11.1309
-    },
     {
       "nav_date": "2025-10-02",
       "last_val": 11.1986,
@@ -245,6 +221,22 @@
       "net_asset": 10237552,
       "buy_price": 11.3079,
       "sell_price": 11.308
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 11.4322,
+      "previous_val": 0,
+      "net_asset": 10342683,
+      "buy_price": 11.4322,
+      "sell_price": 11.4323
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 11.2916,
+      "previous_val": 0,
+      "net_asset": 10218380,
+      "buy_price": 11.2916,
+      "sell_price": 11.2917
     }
   ],
   "dividends": [],
@@ -336,20 +328,7 @@
       "fee_remark": null
     }
   ],
-  "involved_parties": [
-    {
-      "party_role": "Unknown",
-      "party_name": "Unknown"
-    },
-    {
-      "party_role": "Unknown",
-      "party_name": "Unknown"
-    },
-    {
-      "party_role": "Unknown",
-      "party_name": "Unknown"
-    }
-  ],
+  "involved_parties": null,
   "top_holdings": null,
   "risk_factors": [
     {
@@ -377,9 +356,10 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T09:38:54.888Z",
+  "data_fetched_at": "2025-11-15T11:25:44.586Z",
   "errors": [
     "No benchmark data available",
+    "No involved parties data available",
     "No top holdings data available"
   ]
 }

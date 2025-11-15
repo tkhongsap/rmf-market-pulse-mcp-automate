@@ -10,8 +10,27 @@
     "risk_level": 7,
     "fund_type": "RMF"
   },
-  "latest_nav": null,
-  "nav_history_30d": [],
+  "latest_nav": {
+    "nav_date": "2025-11-13",
+    "last_val": 9.9988,
+    "previous_val": 0,
+    "net_asset": 1959231.25,
+    "buy_price": 0,
+    "sell_price": 0,
+    "change": 9.9988,
+    "change_percent": 0,
+    "last_upd_date": "2025-11-15T16:11:03.813"
+  },
+  "nav_history_30d": [
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.9988,
+      "previous_val": 0,
+      "net_asset": 1959231.25,
+      "buy_price": 0,
+      "sell_price": 0
+    }
+  ],
   "dividends": [],
   "performance": null,
   "benchmark": null,
@@ -93,10 +112,8 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T09:57:33.457Z",
+  "data_fetched_at": "2025-11-15T10:56:25.838Z",
   "errors": [
-    "Failed to fetch latest NAV",
-    "No NAV history available",
     "No performance data available",
     "No benchmark data available",
     "No risk metrics available",

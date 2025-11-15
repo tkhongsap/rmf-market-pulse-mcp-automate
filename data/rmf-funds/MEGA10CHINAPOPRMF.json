@@ -11,15 +11,15 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.7535,
+    "nav_date": "2025-11-13",
+    "last_val": 9.8756,
     "previous_val": 0,
-    "net_asset": 2187454,
-    "buy_price": 9.7535,
-    "sell_price": 9.7536,
-    "change": 9.7535,
+    "net_asset": 2445450.5,
+    "buy_price": 9.8756,
+    "sell_price": 9.8757,
+    "change": 9.8756,
     "change_percent": 0,
-    "last_upd_date": "2025-11-12T16:10:36.647"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -31,12 +31,140 @@
       "sell_price": 0
     },
     {
+      "nav_date": "2025-10-17",
+      "last_val": 9.9984,
+      "previous_val": 0,
+      "net_asset": 1331803.25,
+      "buy_price": 9.9984,
+      "sell_price": 9.9985
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 9.9961,
+      "previous_val": 0,
+      "net_asset": 1471470.25,
+      "buy_price": 9.9961,
+      "sell_price": 9.9962
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 9.9473,
+      "previous_val": 0,
+      "net_asset": 1474252.5,
+      "buy_price": 9.9473,
+      "sell_price": 9.9474
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 9.9008,
+      "previous_val": 0,
+      "net_asset": 1480307.63,
+      "buy_price": 9.9008,
+      "sell_price": 9.9009
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 9.8464,
+      "previous_val": 0,
+      "net_asset": 1673111,
+      "buy_price": 9.8464,
+      "sell_price": 9.8465
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 9.8812,
+      "previous_val": 0,
+      "net_asset": 1820957.75,
+      "buy_price": 9.8812,
+      "sell_price": 9.8813
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 9.7033,
+      "previous_val": 0,
+      "net_asset": 1814693.75,
+      "buy_price": 9.7033,
+      "sell_price": 9.7034
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 9.6699,
+      "previous_val": 0,
+      "net_asset": 1816433.75,
+      "buy_price": 9.6699,
+      "sell_price": 9.67
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 9.5982,
+      "previous_val": 0,
+      "net_asset": 1897750,
+      "buy_price": 9.5982,
+      "sell_price": 9.5983
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 9.5817,
+      "previous_val": 0,
+      "net_asset": 2024276.25,
+      "buy_price": 9.5817,
+      "sell_price": 9.5818
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 9.471,
+      "previous_val": 0,
+      "net_asset": 2012750,
+      "buy_price": 9.471,
+      "sell_price": 9.4711
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 9.5243,
+      "previous_val": 0,
+      "net_asset": 2070530.13,
+      "buy_price": 9.5243,
+      "sell_price": 9.5244
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 9.5714,
+      "previous_val": 0,
+      "net_asset": 2144085.25,
+      "buy_price": 9.5714,
+      "sell_price": 9.5715
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.4139,
+      "previous_val": 0,
+      "net_asset": 2110265.75,
+      "buy_price": 9.4139,
+      "sell_price": 9.414
+    },
+    {
       "nav_date": "2025-11-10",
       "last_val": 9.7535,
       "previous_val": 0,
       "net_asset": 2187454,
       "buy_price": 9.7535,
       "sell_price": 9.7536
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.8989,
+      "previous_val": 0,
+      "net_asset": 2222718.5,
+      "buy_price": 9.8989,
+      "sell_price": 9.899
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.8756,
+      "previous_val": 0,
+      "net_asset": 2445450.5,
+      "buy_price": 9.8756,
+      "sell_price": 9.8757
     }
   ],
   "dividends": [],
@@ -120,7 +248,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T09:57:14.701Z",
+  "data_fetched_at": "2025-11-15T10:56:05.389Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

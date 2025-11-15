@@ -58,7 +58,7 @@
     "halfyear_report_url": "-"
   },
   "investment_minimums": null,
-  "data_fetched_at": "2025-11-14T10:04:48.501Z",
+  "data_fetched_at": "2025-11-15T11:03:37.741Z",
   "errors": [
     "Failed to fetch latest NAV",
     "No NAV history available",

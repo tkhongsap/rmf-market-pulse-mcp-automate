@@ -11,15 +11,15 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-10",
-    "last_val": 9.8894,
+    "nav_date": "2025-11-13",
+    "last_val": 9.9532,
     "previous_val": 0,
-    "net_asset": 4898545,
-    "buy_price": 9.8894,
-    "sell_price": 9.8895,
-    "change": 9.8894,
+    "net_asset": 5245010,
+    "buy_price": 9.9532,
+    "sell_price": 9.9533,
+    "change": 9.9532,
     "change_percent": 0,
-    "last_upd_date": "2025-11-12T16:10:36.647"
+    "last_upd_date": "2025-11-15T16:11:03.813"
   },
   "nav_history_30d": [
     {
@@ -31,12 +31,140 @@
       "sell_price": 0
     },
     {
+      "nav_date": "2025-10-17",
+      "last_val": 9.9991,
+      "previous_val": 0,
+      "net_asset": 2352706.25,
+      "buy_price": 9.9991,
+      "sell_price": 9.9992
+    },
+    {
+      "nav_date": "2025-10-20",
+      "last_val": 9.9977,
+      "previous_val": 0,
+      "net_asset": 2464369,
+      "buy_price": 9.9977,
+      "sell_price": 9.9978
+    },
+    {
+      "nav_date": "2025-10-21",
+      "last_val": 10.0553,
+      "previous_val": 0,
+      "net_asset": 2492832.75,
+      "buy_price": 10.0553,
+      "sell_price": 10.0554
+    },
+    {
+      "nav_date": "2025-10-22",
+      "last_val": 9.9942,
+      "previous_val": 0,
+      "net_asset": 2541319.25,
+      "buy_price": 9.9942,
+      "sell_price": 9.9943
+    },
+    {
+      "nav_date": "2025-10-24",
+      "last_val": 10.1734,
+      "previous_val": 0,
+      "net_asset": 2623528.5,
+      "buy_price": 10.1734,
+      "sell_price": 10.1735
+    },
+    {
+      "nav_date": "2025-10-27",
+      "last_val": 10.2756,
+      "previous_val": 0,
+      "net_asset": 2910499,
+      "buy_price": 10.2756,
+      "sell_price": 10.2757
+    },
+    {
+      "nav_date": "2025-10-28",
+      "last_val": 10.0826,
+      "previous_val": 0,
+      "net_asset": 2982262,
+      "buy_price": 10.0826,
+      "sell_price": 10.0827
+    },
+    {
+      "nav_date": "2025-10-30",
+      "last_val": 10.0353,
+      "previous_val": 0,
+      "net_asset": 3105373,
+      "buy_price": 10.0353,
+      "sell_price": 10.0354
+    },
+    {
+      "nav_date": "2025-10-31",
+      "last_val": 9.8468,
+      "previous_val": 0,
+      "net_asset": 3477006.25,
+      "buy_price": 9.8468,
+      "sell_price": 9.8469
+    },
+    {
+      "nav_date": "2025-11-03",
+      "last_val": 9.8501,
+      "previous_val": 0,
+      "net_asset": 3752234.5,
+      "buy_price": 9.8501,
+      "sell_price": 9.8502
+    },
+    {
+      "nav_date": "2025-11-04",
+      "last_val": 9.7621,
+      "previous_val": 0,
+      "net_asset": 4055081,
+      "buy_price": 9.7621,
+      "sell_price": 9.7622
+    },
+    {
+      "nav_date": "2025-11-05",
+      "last_val": 9.7475,
+      "previous_val": 0,
+      "net_asset": 4093094.25,
+      "buy_price": 9.7475,
+      "sell_price": 9.7476
+    },
+    {
+      "nav_date": "2025-11-06",
+      "last_val": 9.9199,
+      "previous_val": 0,
+      "net_asset": 4183821.75,
+      "buy_price": 9.9199,
+      "sell_price": 9.92
+    },
+    {
+      "nav_date": "2025-11-07",
+      "last_val": 9.7879,
+      "previous_val": 0,
+      "net_asset": 4241569,
+      "buy_price": 9.7879,
+      "sell_price": 9.788
+    },
+    {
       "nav_date": "2025-11-10",
       "last_val": 9.8894,
       "previous_val": 0,
       "net_asset": 4898545,
       "buy_price": 9.8894,
       "sell_price": 9.8895
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 9.9209,
+      "previous_val": 0,
+      "net_asset": 5086323,
+      "buy_price": 9.9209,
+      "sell_price": 9.921
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 9.9532,
+      "previous_val": 0,
+      "net_asset": 5245010,
+      "buy_price": 9.9532,
+      "sell_price": 9.9533
     }
   ],
   "dividends": [],
@@ -120,7 +248,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-14T09:57:14.596Z",
+  "data_fetched_at": "2025-11-15T10:56:04.534Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",
