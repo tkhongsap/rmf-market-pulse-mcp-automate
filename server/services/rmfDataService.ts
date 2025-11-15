@@ -1,5 +1,3 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import { Pool } from 'pg';
 import type { RMFFundCSV, RMFNavHistory } from '@shared/schema';
 
