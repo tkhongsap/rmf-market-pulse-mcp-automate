@@ -5,7 +5,7 @@
 CREATE TABLE IF NOT EXISTS rmf_funds (
     id SERIAL PRIMARY KEY,
     symbol VARCHAR(50) UNIQUE NOT NULL,
-    proj_id VARCHAR(50) UNIQUE NOT NULL,
+    proj_id VARCHAR(50) NOT NULL,
     fund_name_en TEXT,
     fund_name_th TEXT,
     amc VARCHAR(255),
@@ -93,6 +93,7 @@ CREATE TABLE IF NOT EXISTS rmf_funds (
 
 -- Indexes for rmf_funds
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_symbol ON rmf_funds(symbol);
+CREATE INDEX IF NOT EXISTS idx_rmf_funds_proj_id ON rmf_funds(proj_id);
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_amc ON rmf_funds(amc);
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_risk_level ON rmf_funds(risk_level);
 CREATE INDEX IF NOT EXISTS idx_rmf_funds_status ON rmf_funds(status);
