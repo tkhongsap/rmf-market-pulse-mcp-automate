@@ -83,9 +83,9 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 
 ### How to Use the Data Pipeline
 
-**Current Status**: ✅ Production-ready with production-safe staging approach
+**Current Status**: ✅ Production-ready with production-safe UPSERT approach
 
-The pipeline performs full daily refresh from SEC Thailand API using staging tables:
+The pipeline performs full daily refresh from SEC Thailand API with fresh data fetch:
 
 ```bash
 # Daily refresh (recommended for production)
@@ -93,9 +93,10 @@ npm run data:rmf:daily-refresh
 ```
 
 **What it does:**
-1. **Fetch Data**: Gets latest fund list and complete data from SEC API → JSON files
-2. **Validate**: Checks completeness (compares fetched vs expected funds)
-3. **Load**: Updates existing funds + inserts new funds using UPSERT
+1. **Build Mapping**: Generates fresh fund list from SEC API (Phase 0)
+2. **Fetch Data**: Clears old progress + fetches complete data for all funds → JSON files (Phase 1)
+3. **Validate**: Checks completeness (compares fetched vs expected funds from mapping)
+4. **Load**: Updates existing funds + inserts new funds using UPSERT
 
 **Pipeline Details:**
 - **Data Source**: SEC Thailand API (live data, not cached)
@@ -120,7 +121,14 @@ psql $DATABASE_URL -c "SELECT MAX(data_updated_at) FROM rmf_funds;"
 
 See `docs/PIPELINE-GUIDE.md` for complete documentation.
 
+### Critical Bug Fixes (November 15, 2025)
+- **Manifest Validator**: Fixed to read actual symbols from JSON files instead of deriving from filenames (handles symbols with spaces correctly)
+- **Daily Refresh**: Added progress file clearing before fetch to ensure fresh data instead of resuming old fetches
+- **Result**: Validation now correctly compares fetched funds vs mapping, preventing data mismatches
+
 ### Files Modified/Added
+- `server/pipeline/manifest-validator.ts` - Reads symbols from JSON payloads (not filenames)
+- `server/pipeline/daily-refresh-production.ts` - Clears old progress for fresh fetch
 - `server/pipeline/db-schema.sql` - Production schema (proj_id no longer unique)
 - `server/pipeline/db-saver.ts` - Batch processor with checkpoint system
 - `scripts/data-extraction/rmf/` - Complete SEC API data extraction pipeline

@@ -78,10 +78,20 @@ async function main() {
       'Phase 1.1: Building fund mapping from SEC API'
     );
 
-    // Step 1.2: Fetch complete data for all funds (saves to JSON files)
+    // Step 1.2: Clear any existing progress to ensure fresh fetch
+    try {
+      const { unlinkSync } = await import('fs');
+      const progressPath = join(process.cwd(), 'data', 'progress.json');
+      unlinkSync(progressPath);
+      console.log('✓ Cleared old progress file\n');
+    } catch (err) {
+      // File doesn't exist, that's fine
+    }
+
+    // Step 1.3: Fetch complete data for all funds (saves to JSON files)
     await runCommand(
       'npx tsx scripts/data-extraction/rmf/phase-1-fetch-all-funds.ts',
-      'Phase 1.2: Fetching complete fund data from SEC API'
+      'Phase 1.3: Fetching complete fund data from SEC API (fresh fetch)'
     );
 
     // ========================================================================
