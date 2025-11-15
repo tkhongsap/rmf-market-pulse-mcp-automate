@@ -80,6 +80,8 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 
 ### How to Complete Database Loading
 
+**Current Status**: Database migrated and ready. 94 funds loaded, 348 remaining.
+
 The batch processing system works reliably with checkpoint/resume. To load all 442 funds:
 
 ```bash
@@ -98,6 +100,11 @@ FUND_LIMIT=450 npm run data:rmf:save-to-db -- --clear
 - Checkpoint saves after each batch (every 10 funds)
 - Automatically resumes from last completed batch
 - Safe to interrupt and restart - no data loss
+- Platform timeout: Process stops after ~5 minutes (normal behavior)
+- Solution: Just run the command again - it resumes automatically
+
+**Database Migration (Already Applied):**
+The database has been migrated to remove the unique constraint on `proj_id`. See `docs/PIPELINE-GUIDE.md` for complete details.
 
 ### Files Modified/Added
 - `server/pipeline/db-schema.sql` - Production schema (proj_id no longer unique)
