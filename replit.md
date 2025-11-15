@@ -2,10 +2,10 @@
 
 ## Overview
 
-This project provides a robust Model Context Protocol (MCP) integration for ChatGPT, enabling it to query, analyze, and visualize data for 403 Thai Retirement Mutual Funds (RMFs). The system offers real-time data access, comprehensive analysis tools, and interactive HTML widgets for rich data visualization directly within ChatGPT. 
+This project provides a robust Model Context Protocol (MCP) integration for ChatGPT, enabling it to query, analyze, and visualize data for 442 Thai Retirement Mutual Funds (RMFs). The system offers real-time data access from PostgreSQL, comprehensive analysis tools, and interactive HTML widgets for rich data visualization directly within ChatGPT. 
 
-**NEW: Automated Daily Pipeline (In Progress)**  
-Building an automated daily pipeline that extracts Thai RMF data from SEC Thailand APIs and stores it in PostgreSQL for real-time data access. Phase 2 testing completed with 17/20 funds successfully validated (85% success rate).
+**✅ COMPLETED: PostgreSQL as Single Source of Truth**  
+MCP Server now reads directly from PostgreSQL database instead of CSV files. Automated daily pipeline extracts Thai RMF data from SEC Thailand APIs and updates the database, ensuring ChatGPT always queries fresh data.
 
 ## User Preferences
 
@@ -34,7 +34,7 @@ The system is built on an Express.js backend using TypeScript, integrating with 
     3.  `rmf-comparison-table.html`: Multi-fund comparison table.
     4.  `rmf-performance-chart.html`: SVG line chart for NAV history.
     The total widget bundle size is optimized to 84KB.
--   **Data Management (RMFDataService)**: A centralized data access layer handling RMF fund data. It uses eager loading of CSV data (403 funds, 2MB) into memory on startup for instant access and lazy loading of per-fund NAV history JSON data on demand. In-memory caching ensures optimal performance.
+-   **Data Management (RMFDataService)**: A centralized data access layer handling RMF fund data. It queries PostgreSQL database on startup to load 442 funds into memory (~5 seconds) for instant access. NAV history is lazily loaded from the database on demand. In-memory caching ensures optimal performance. **Single source of truth: PostgreSQL database updated by daily pipeline.**
 -   **Validation**: Zod schemas are used for robust input validation for all MCP tools.
 -   **UI/UX Decisions**:
     -   **Minimalist Landing Pages**: All primary web pages (`/`, `/health`, `/mcp`) feature clean, React-style UI.
@@ -46,7 +46,8 @@ The system is built on an Express.js backend using TypeScript, integrating with 
 ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the `/mcp` endpoint. After Zod validation and data retrieval via `RMFDataService` (leveraging in-memory cache), a JSON response containing a text summary and structured data is returned, which is then rendered by HTML widgets for interactive visualization.
 
 **Performance Optimizations:**
--   **Data Loading**: Eager loading of CSV on startup, lazy loading of JSON NAV history, and in-memory caching for high hit rates.
+-   **Data Loading**: Eager loading from PostgreSQL on startup (~5s for 442 funds), lazy loading of NAV history from database, and in-memory caching for high hit rates.
+-   **Database**: Connection pooling (max 20 connections, 10s timeout), optimized queries with indexes.
 -   **Widget Optimization**: Minimal bundle size, native SVG charts, CSS variables for theming, and shared utilities.
 
 ## External Dependencies
@@ -55,11 +56,47 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 -   **Express.js**: The web framework for building the backend server.
 -   **TypeScript**: The primary language for backend development, enhancing code quality and maintainability.
 -   **Zod**: A TypeScript-first schema declaration and validation library used for validating tool inputs.
--   **PostgreSQL (Neon)**: Development database for storing RMF fund data with 4-table schema (rmf_funds, rmf_nav_history, rmf_dividends, pipeline_runs).
--   **CSV Files**: `rmf-funds-consolidated.csv` contains comprehensive data for 403 RMF funds.
--   **JSON Files**: Individual JSON files (`{SYMBOL}.json`) store 30-day NAV history for each RMF fund.
+-   **PostgreSQL (Neon)**: Primary data source for RMF fund data with 4-table schema (rmf_funds, rmf_nav_history, rmf_dividends, pipeline_runs).
+-   **pg (node-postgres)**: PostgreSQL client library with connection pooling for efficient database access.
+-   **Legacy Data Files**: CSV and JSON files in `data/` directory used by daily pipeline for staging before database load.
 
 ## Recent Changes (November 15, 2025)
+
+### MCP Server Migration to PostgreSQL (November 15, 2025)
+
+**Status**: ✅ Completed - Single source of truth established
+
+Successfully migrated MCP Server from CSV-based data loading to PostgreSQL as the primary data source, eliminating sync issues between CSV and database.
+
+**Changes Made:**
+1. **RMFDataService Refactored**:
+   - Removed CSV file reading logic
+   - Added PostgreSQL query on initialization
+   - Loads 442 funds from database in ~5 seconds
+   - NAV history queries database instead of JSON files
+   - Maintains in-memory caching for performance
+
+2. **Database Connection**:
+   - Connection pool with 20 max connections
+   - 10-second connection timeout
+   - Passed as dependency to RMFDataService
+
+3. **Critical Bug Fixes** (identified by architect):
+   - Fixed async/await for `getNavHistory` in MCP handlers
+   - Fixed pagination logic (page === 1 falsey bug)
+   - Fixed data mapping for dividend_dates field
+
+4. **Benefits**:
+   - ✅ Single source of truth (PostgreSQL)
+   - ✅ Always fresh data from daily pipeline
+   - ✅ No CSV/database sync issues
+   - ✅ Real-time data updates without server restart
+   - ✅ Consistent data across all MCP tools
+
+**Files Modified:**
+- `server/services/rmfDataService.ts` - Database queries instead of CSV reading
+- `server/mcp.ts` - Async handling for database calls
+- `server/index.ts` - Database pool creation and service initialization
 
 ### Production-Safe Daily Refresh Pipeline
 - **Architecture**: UPSERT-based approach (simple and safe)
