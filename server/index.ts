@@ -28,6 +28,7 @@ import { Pool } from 'pg';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { RMFMCPServer } from './mcp';
 import { RMFDataService } from './services/rmfDataService';
+import OpenAI from 'openai';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -875,6 +876,238 @@ app.get('/', (_req, res) => {
   </div>
 </body>
 </html>`);
+});
+
+/**
+ * Test Chat Interface - Natural Language Testing
+ */
+app.get('/test-chat', (_req, res) => {
+  res.sendFile(path.resolve(process.cwd(), 'server/pages/test-chat.html'));
+});
+
+/**
+ * Chat API - Natural Language to MCP Tool Calls
+ */
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { message } = req.body;
+    
+    if (!message || typeof message !== 'string') {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+    
+    // Initialize OpenAI with Replit AI Integrations
+    const openai = new OpenAI({
+      apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+      baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+    });
+    
+    // Define available MCP tools for the AI to choose from
+    const tools = [
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_funds',
+          description: 'List RMF funds with optional pagination and sorting. Use this for general fund listings.',
+          parameters: {
+            type: 'object',
+            properties: {
+              limit: { type: 'number', description: 'Number of funds to return (default 20)' },
+              sortBy: { 
+                type: 'string',
+                enum: ['ytd', '1y', '3y', '5y', 'nav', 'name', 'risk'],
+                description: 'Field to sort by'
+              },
+              sortOrder: { type: 'string', enum: ['asc', 'desc'], description: 'Sort order' }
+            }
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'search_rmf_funds',
+          description: 'Search and filter RMF funds by multiple criteria like risk level, category, AMC, or minimum YTD return.',
+          parameters: {
+            type: 'object',
+            properties: {
+              search: { type: 'string', description: 'Search term for fund name or symbol' },
+              amc: { type: 'string', description: 'Asset Management Company name' },
+              minRiskLevel: { type: 'number', description: 'Minimum risk level (1-8)' },
+              maxRiskLevel: { type: 'number', description: 'Maximum risk level (1-8)' },
+              category: { type: 'string', description: 'Fund category' },
+              minYtdReturn: { type: 'number', description: 'Minimum YTD return percentage' },
+              limit: { type: 'number', description: 'Number of results' }
+            }
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_fund_detail',
+          description: 'Get detailed information about a specific RMF fund by its symbol/code.',
+          parameters: {
+            type: 'object',
+            properties: {
+              fundCode: { type: 'string', description: 'Fund symbol/code (e.g., KFRMF, SCBRMF)' }
+            },
+            required: ['fundCode']
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_fund_performance',
+          description: 'Get top performing RMF funds for a specific time period.',
+          parameters: {
+            type: 'object',
+            properties: {
+              period: {
+                type: 'string',
+                enum: ['ytd', '3m', '6m', '1y', '3y', '5y', '10y'],
+                description: 'Performance period'
+              },
+              limit: { type: 'number', description: 'Number of top performers to return' },
+              riskLevel: { type: 'number', description: 'Filter by risk level (1-8)' }
+            },
+            required: ['period']
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_fund_nav_history',
+          description: 'Get NAV (Net Asset Value) history for a specific fund over time.',
+          parameters: {
+            type: 'object',
+            properties: {
+              fundCode: { type: 'string', description: 'Fund symbol/code' },
+              days: { type: 'number', description: 'Number of days of history (default 30)' }
+            },
+            required: ['fundCode']
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'compare_rmf_funds',
+          description: 'Compare multiple RMF funds side-by-side (2-5 funds).',
+          parameters: {
+            type: 'object',
+            properties: {
+              fundCodes: {
+                type: 'array',
+                items: { type: 'string' },
+                description: 'Array of fund symbols to compare (2-5 funds)'
+              }
+            },
+            required: ['fundCodes']
+          }
+        }
+      }
+    ];
+    
+    // Ask OpenAI to determine which tool to use - ENFORCE tool call
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        {
+          role: 'system',
+          content: `You are an AI assistant that helps users query Thai RMF (Retirement Mutual Fund) data. 
+You MUST always call one of the available tools to answer queries. Never respond with plain text.
+
+Guidelines:
+- For "top performers" or "best funds" → use get_rmf_fund_performance
+- For "low risk" or "conservative" → use search_rmf_funds with maxRiskLevel
+- For specific fund details → use get_rmf_fund_detail
+- For comparing funds → use compare_rmf_funds
+- For NAV history/charts → use get_rmf_fund_nav_history
+- For general listings → use get_rmf_funds
+
+If the query is unclear or not about RMF funds, use get_rmf_funds with default parameters.`
+        },
+        { role: 'user', content: message }
+      ],
+      tools: tools as any,
+      tool_choice: 'required' // Enforce tool calling
+    });
+    
+    const responseMessage = completion.choices[0].message;
+    
+    // Verify tool call exists
+    if (!responseMessage.tool_calls || responseMessage.tool_calls.length === 0) {
+      return res.status(502).json({
+        error: 'AI model did not return a tool call',
+        response: 'Sorry, I couldn\'t process your question. Please try rephrasing or ask about RMF fund performance, details, or comparisons.'
+      });
+    }
+    
+    const toolCall = responseMessage.tool_calls[0] as any;
+    let toolName: string;
+    let toolArgs: any;
+    
+    // Parse tool call with error handling
+    try {
+      toolName = toolCall.function?.name;
+      if (!toolName) {
+        throw new Error('Tool name is missing');
+      }
+      toolArgs = JSON.parse(toolCall.function.arguments);
+    } catch (parseError: any) {
+      return res.status(502).json({
+        error: 'Failed to parse AI response',
+        response: 'Sorry, there was an error processing your request. Please try again.'
+      });
+    }
+    
+    // Convert snake_case tool name to camelCase method name
+    const methodName = `handle${toolName.charAt(0).toUpperCase() + toolName.slice(1).replace(/_([a-z])/g, (_: any, letter: string) => letter.toUpperCase())}`;
+    
+    // Call the actual MCP tool via RMFMCPServer
+    let result;
+    try {
+      const method = (rmfMCPServer as any)[methodName];
+      if (typeof method !== 'function') {
+        throw new Error(`Tool ${toolName} not found`);
+      }
+      result = await method.call(rmfMCPServer, toolArgs);
+    } catch (error: any) {
+      console.error(`Tool execution error (${toolName}):`, error);
+      return res.json({
+        error: error.message,
+        toolCall: `${toolName}(${JSON.stringify(toolArgs, null, 2)})`,
+        response: `Failed to execute tool: ${error.message}`
+      });
+    }
+    
+    // Extract meaningful data from result
+    let resultData = result;
+    if (result && result.content && Array.isArray(result.content)) {
+      const textContent = result.content.find((c: any) => c.type === 'text' && c.text && c.text.startsWith('{'));
+      if (textContent) {
+        try {
+          resultData = JSON.parse(textContent.text);
+        } catch {
+          resultData = result.content[0]?.text || result;
+        }
+      } else if (result.content[0]?.text) {
+        resultData = result.content[0].text;
+      }
+    }
+    
+    return res.json({
+      response: `I used the ${toolName} tool to answer your question.`,
+      toolCall: `${toolName}(${JSON.stringify(toolArgs, null, 2)})`,
+      result: resultData
+    });
+  } catch (error: any) {
+    console.error('Chat API error:', error);
+    res.status(500).json({ error: error.message || 'Internal server error' });
+  }
 });
 
 /**
