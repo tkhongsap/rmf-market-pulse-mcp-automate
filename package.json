@@ -37,6 +37,7 @@
     "data:rmf:parse": "node scripts/data-parsing/rmf/parse-rmf-funds.js",
     "data:rmf:consolidate-csv": "tsx scripts/data-extraction/rmf/consolidate-to-csv.ts",
     "data:rmf:save-to-db": "tsx server/pipeline/db-saver.ts",
+    "data:rmf:daily-refresh": "tsx server/pipeline/daily-refresh.ts",
     "data:esg:generate-list": "tsx scripts/data-extraction/esg/generate-thai-esg-fund-list.ts",
     "data:esgx:generate-list": "tsx scripts/data-extraction/esgx/generate-thai-esgx-fund-list.ts"
   },

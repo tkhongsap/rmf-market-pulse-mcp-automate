@@ -1,14 +1,6 @@
-node_modules
-dist
-.DS_Store
-server/public
-vite.config.ts.*
-*.tar.gz
+node_modules/
 .env
-.env.local
-.env.*.local
-
-# Generated data pipeline files
-data/progress.json
-data/batch-process.log
+data/
+dist/
 coverage/
+.db-progress.json
