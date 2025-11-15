@@ -22,11 +22,17 @@ Complete refresh from SEC API (truncate + reload):
 npm run data:rmf:daily-refresh
 ```
 
-This orchestrates the full pipeline:
+This orchestrates the full pipeline using safe UPSERT mode:
 1. **Phase 0**: Fetch latest fund list from SEC API → `data/fund-mapping.json`
 2. **Phase 1**: Fetch complete data for all funds → `data/rmf-funds/*.json`
-3. **Truncate**: Clear all database tables (rmf_funds, rmf_nav_history, rmf_dividends)
-4. **Reload**: Load fresh JSON data into database
+3. **Upsert**: Update existing funds + insert new funds into database
+4. **Cleanup**: Remove stale funds no longer in the latest fetch
+
+**Safety Features:**
+- Uses UPSERT instead of truncate - no data loss risk
+- Database always contains valid data, even if process crashes
+- Incremental updates: existing funds updated, new funds inserted
+- Cleanup step safely removes obsolete funds at the end
 
 **Expected runtime**: 25-30 minutes for ~450 funds
 

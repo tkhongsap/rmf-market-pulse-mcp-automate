@@ -90,15 +90,16 @@ npm run data:rmf:daily-refresh
 ```
 
 **What it does:**
-1. Fetches latest fund list from SEC API
-2. Fetches complete fund data (NAV, performance, history)
-3. Truncates database tables
-4. Reloads with fresh data
+1. **Fetch Mapping**: Gets latest fund list from SEC API
+2. **Fetch Data**: Downloads complete fund data to JSON files
+3. **Upsert**: Updates existing funds + inserts new funds (NO truncation)
+4. **Cleanup**: Removes stale funds no longer in the latest fetch
 
 **Pipeline Details:**
 - **Data Source**: SEC Thailand API (live data, not cached)
 - **Fund Count**: ~450 RMF funds
 - **Runtime**: 25-30 minutes (respects SEC API rate limits)
+- **Safety**: Uses UPSERT mode - database always has valid data, even if process crashes
 - **Output**: Fresh JSON files + updated database
 
 **Verification:**
