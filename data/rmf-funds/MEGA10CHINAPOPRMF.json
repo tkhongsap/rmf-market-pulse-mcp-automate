@@ -19,7 +19,7 @@
     "sell_price": 9.8757,
     "change": 9.8756,
     "change_percent": 0,
-    "last_upd_date": "2025-11-15T16:11:03.813"
+    "last_upd_date": "2025-11-14T16:58:54.717"
   },
   "nav_history_30d": [
     {
@@ -248,7 +248,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T15:22:30.170Z",
+  "data_fetched_at": "2025-11-16T06:11:03.312Z",
   "errors": [
     "No performance data available",
     "No benchmark data available",

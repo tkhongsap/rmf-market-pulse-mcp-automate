@@ -11,17 +11,25 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-14",
-    "last_val": 10.3797,
+    "nav_date": "2025-11-13",
+    "last_val": 10.4052,
     "previous_val": 0,
-    "net_asset": 1205273216,
-    "buy_price": 10.3797,
-    "sell_price": 10.3798,
-    "change": 10.3797,
+    "net_asset": 1208293888,
+    "buy_price": 10.4052,
+    "sell_price": 10.4053,
+    "change": 10.4052,
     "change_percent": 0,
-    "last_upd_date": "2025-11-15T16:11:03.813"
+    "last_upd_date": "2025-11-14T16:58:54.717"
   },
   "nav_history_30d": [
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 10.4612,
+      "previous_val": 0,
+      "net_asset": 1219133440,
+      "buy_price": 10.4612,
+      "sell_price": 10.4613
+    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.467,
@@ -245,14 +253,6 @@
       "net_asset": 1208293888,
       "buy_price": 10.4052,
       "sell_price": 10.4053
-    },
-    {
-      "nav_date": "2025-11-14",
-      "last_val": 10.3797,
-      "previous_val": 0,
-      "net_asset": 1205273216,
-      "buy_price": 10.3797,
-      "sell_price": 10.3798
     }
   ],
   "dividends": [],
@@ -416,7 +416,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T15:15:25.541Z",
+  "data_fetched_at": "2025-11-16T07:17:35.117Z",
   "errors": [
     "No top holdings data available"
   ]

@@ -11,17 +11,25 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-14",
-    "last_val": 10.6161,
+    "nav_date": "2025-11-13",
+    "last_val": 10.6157,
     "previous_val": 0,
-    "net_asset": 7263491.5,
-    "buy_price": 10.6161,
-    "sell_price": 10.6162,
-    "change": 10.6161,
+    "net_asset": 7362308.5,
+    "buy_price": 10.6157,
+    "sell_price": 10.6158,
+    "change": 10.6157,
     "change_percent": 0,
-    "last_upd_date": "2025-11-15T16:11:03.813"
+    "last_upd_date": "2025-11-14T16:58:54.717"
   },
   "nav_history_30d": [
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 10.6014,
+      "previous_val": 0,
+      "net_asset": 5651063.5,
+      "buy_price": 10.6014,
+      "sell_price": 10.6015
+    },
     {
       "nav_date": "2025-10-03",
       "last_val": 10.6018,
@@ -245,14 +253,6 @@
       "net_asset": 7362308.5,
       "buy_price": 10.6157,
       "sell_price": 10.6158
-    },
-    {
-      "nav_date": "2025-11-14",
-      "last_val": 10.6161,
-      "previous_val": 0,
-      "net_asset": 7263491.5,
-      "buy_price": 10.6161,
-      "sell_price": 10.6162
     }
   ],
   "dividends": [],
@@ -348,7 +348,32 @@
       "fee_remark": null
     }
   ],
-  "involved_parties": null,
+  "involved_parties": [
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    },
+    {
+      "party_role": "Unknown",
+      "party_name": "Unknown"
+    }
+  ],
   "top_holdings": null,
   "risk_factors": [
     {
@@ -388,10 +413,9 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T15:04:22.093Z",
+  "data_fetched_at": "2025-11-16T07:06:49.154Z",
   "errors": [
     "No benchmark data available",
-    "No involved parties data available",
     "No top holdings data available"
   ]
 }

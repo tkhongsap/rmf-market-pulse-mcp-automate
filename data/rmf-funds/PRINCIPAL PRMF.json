@@ -23,6 +23,14 @@
   },
   "nav_history_30d": [
     {
+      "nav_date": "2025-10-02",
+      "last_val": 12.8596,
+      "previous_val": 0,
+      "net_asset": 127201904,
+      "buy_price": 12.8596,
+      "sell_price": 12.8597
+    },
+    {
       "nav_date": "2025-10-03",
       "last_val": 12.8605,
       "previous_val": 0,
@@ -400,7 +408,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T15:25:36.937Z",
+  "data_fetched_at": "2025-11-16T06:14:08.420Z",
   "errors": [
     "No top holdings data available"
   ]

@@ -11,17 +11,25 @@
     "fund_type": "RMF"
   },
   "latest_nav": {
-    "nav_date": "2025-11-14",
-    "last_val": 13.9575,
+    "nav_date": "2025-11-13",
+    "last_val": 13.9569,
     "previous_val": 0,
-    "net_asset": 10544929792,
-    "buy_price": 13.9575,
-    "sell_price": 13.9576,
-    "change": 13.9575,
+    "net_asset": 10532439040,
+    "buy_price": 13.9569,
+    "sell_price": 13.957,
+    "change": 13.9569,
     "change_percent": 0,
-    "last_upd_date": "2025-11-15T16:11:03.813"
+    "last_upd_date": "2025-11-14T16:58:54.717"
   },
   "nav_history_30d": [
+    {
+      "nav_date": "2025-10-02",
+      "last_val": 13.9397,
+      "previous_val": 0,
+      "net_asset": 10311997440,
+      "buy_price": 13.9397,
+      "sell_price": 13.9398
+    },
     {
       "nav_date": "2025-10-03",
       "last_val": 13.9406,
@@ -215,12 +223,36 @@
       "sell_price": 13.9547
     },
     {
-      "nav_date": "2025-11-14",
-      "last_val": 13.9575,
+      "nav_date": "2025-11-10",
+      "last_val": 13.9557,
       "previous_val": 0,
-      "net_asset": 10544929792,
-      "buy_price": 13.9575,
-      "sell_price": 13.9576
+      "net_asset": 10518829056,
+      "buy_price": 13.9557,
+      "sell_price": 13.9558
+    },
+    {
+      "nav_date": "2025-11-11",
+      "last_val": 13.9566,
+      "previous_val": 0,
+      "net_asset": 10512712704,
+      "buy_price": 13.9566,
+      "sell_price": 13.9567
+    },
+    {
+      "nav_date": "2025-11-12",
+      "last_val": 13.957,
+      "previous_val": 0,
+      "net_asset": 10519480320,
+      "buy_price": 13.957,
+      "sell_price": 13.9571
+    },
+    {
+      "nav_date": "2025-11-13",
+      "last_val": 13.9569,
+      "previous_val": 0,
+      "net_asset": 10532439040,
+      "buy_price": 13.9569,
+      "sell_price": 13.957
     }
   ],
   "dividends": [],
@@ -380,7 +412,7 @@
     "minimum_redemption": null,
     "minimum_balance": null
   },
-  "data_fetched_at": "2025-11-15T15:13:58.154Z",
+  "data_fetched_at": "2025-11-16T07:16:13.065Z",
   "errors": [
     "No top holdings data available"
   ]
