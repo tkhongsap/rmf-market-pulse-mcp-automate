@@ -1,0 +1,302 @@
+[1m[34m
+╔════════════════════════════════════════════════════════════════════╗
+║        BILINGUAL MCP SERVER - COMPREHENSIVE UNIT TEST              ║
+║        Testing All i18n Functions with Thai & English              ║
+╚════════════════════════════════════════════════════════════════════╝
+[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 1: Language Detection Function[0m
+[34m======================================================================[0m
+
+✅ No question (undefined)
+   Input: "(empty)"
+   Detected: en (Expected: en)
+
+✅ Empty string
+   Input: "(empty)"
+   Detected: en (Expected: en)
+
+✅ English question
+   Input: "What are the best funds?"
+   Detected: en (Expected: en)
+
+✅ Thai question
+   Input: "กองทุนที่ดีที่สุด"
+   Detected: th (Expected: th)
+
+✅ Mixed (contains Thai)
+   Input: "Show me RMF funds ที่ดี"
+   Detected: th (Expected: th)
+
+
+[34m======================================================================[0m
+[1m[34mTEST 2: get_rmf_funds - List RMF Funds[0m
+[34m======================================================================[0m
+
+[33m📝 get_rmf_funds[0m
+
+[36m🇬🇧 English Question:[0m "Show me the first page of RMF funds"
+[32m   English Response:[0m
+   Found 442 RMF funds. Showing page 1 (20 funds).
+
+[36m🇹🇭 Thai Question:[0m "แสดงกองทุน RMF หน้าแรก"
+[32m   Thai Response:[0m
+   พบ กองทุน RMF 442 กองทุน แสดงหน้า 1 (20 กองทุน)
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 3: search_rmf_funds - Search with Filters[0m
+[34m======================================================================[0m
+
+[33m📝 search_rmf_funds (low risk)[0m
+
+[36m🇬🇧 English Question:[0m "Find low risk RMF funds"
+[32m   English Response:[0m
+   Found 52 RMF funds matching filters: max risk: 3
+
+[36m🇹🇭 Thai Question:[0m "ค้นหากองทุน RMF ที่มีความเสี่ยงต่ำ"
+[32m   Thai Response:[0m
+   พบ กองทุน RMF 52 กองทุนที่ตรงกับเงื่อนไข: ความเสี่ยงสูงสุด: 3
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+[33m📝 search_rmf_funds (multiple filters)[0m
+
+[36m🇬🇧 English Question:[0m "Search for equity funds with good returns"
+[32m   English Response:[0m
+   Found 25 RMF funds matching filters: search: "TECH", category: Equity, min YTD: 10%
+
+[36m🇹🇭 Thai Question:[0m "ค้นหากองทุนหุ้นที่มีผลตอบแทนดี"
+[32m   Thai Response:[0m
+   พบ กองทุน RMF 25 กองทุนที่ตรงกับเงื่อนไข: ค้นหา: "TECH", ประเภท: Equity, ผลตอบแทน YTD ต่ำสุด: 10%
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 4: get_rmf_fund_detail - Fund Details[0m
+[34m======================================================================[0m
+
+[33m📝 get_rmf_fund_detail[0m
+
+[36m🇬🇧 English Question:[0m "Tell me about DAOL-GOLDRMF"
+[32m   English Response:[0m
+   DAOL GOLD AND SILVER EQUITY RETIREMENT MUTUAL FUND (DAOL-GOLDRMF) managed by DAOL INVESTMENT MANAGEMENT COMPANY LIMITED. Current NAV: 14.8947 THB (+0.00%). Risk level: 7/8.
+
+[36m🇹🇭 Thai Question:[0m "บอกข้อมูลกองทุน DAOL-GOLDRMF"
+[32m   Thai Response:[0m
+   DAOL GOLD AND SILVER EQUITY RETIREMENT MUTUAL FUND (DAOL-GOLDRMF) จัดการโดย DAOL INVESTMENT MANAGEMENT COMPANY LIMITED มูลค่าหน่วยลงทุนปัจจุบัน: 14.8947 บาท (+0.00%) ระดับความเสี่ยง: 7/8
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 5: get_rmf_fund_performance - Top Performers[0m
+[34m======================================================================[0m
+
+[33m📝 get_rmf_fund_performance (1-year)[0m
+
+[36m🇬🇧 English Question:[0m "Show me the best 1-year performers"
+[32m   English Response:[0m
+   Top 5 performing RMF funds for 1-Year
+
+[36m🇹🇭 Thai Question:[0m "แสดงกองทุนที่มีผลตอบแทนดีที่สุดในช่วง 1 ปี"
+[32m   Thai Response:[0m
+   กองทุน RMF ที่มีผลตอบแทนสูงสุด 5 อันดับแรก สำหรับช่วง1 ปี
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+[33m📝 get_rmf_fund_performance (YTD + risk)[0m
+
+[36m🇬🇧 English Question:[0m "Top YTD performers with risk level 6"
+[32m   English Response:[0m
+   Top 10 performing RMF funds for YTD (Risk Level 6)
+
+[36m🇹🇭 Thai Question:[0m "กองทุนที่ให้ผลตอบแทนดีที่สุดตั้งแต่ต้นปี ระดับความเสี่ยง 6"
+[32m   Thai Response:[0m
+   กองทุน RMF ที่มีผลตอบแทนสูงสุด 10 อันดับแรก สำหรับช่วงตั้งแต่ต้นปี (ระดับความเสี่ยง 6)
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 6: get_rmf_fund_nav_history - NAV History[0m
+[34m======================================================================[0m
+
+[33m📝 get_rmf_fund_nav_history[0m
+
+[36m🇬🇧 English Question:[0m "Show NAV history for ASP-DIGIBLOCRMF"
+[32m   English Response:[0m
+   Asset Plus Digital Blockchain RMF Fund (ASP-DIGIBLOCRMF) NAV history over 30 days. Period return: 14.83%. Volatility: 4.93%.
+
+[36m🇹🇭 Thai Question:[0m "แสดงประวัติราคา NAV ของ ASP-DIGIBLOCRMF"
+[32m   Thai Response:[0m
+   Asset Plus Digital Blockchain RMF Fund (ASP-DIGIBLOCRMF) ประวัติมูลค่าหน่วยลงทุนย้อนหลัง 30 วัน ผลตอบแทนช่วงเวลา: 14.83% ความผันผวน: 4.93%
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+[33m📝 get_rmf_fund_nav_history (no data)[0m
+
+[36m🇬🇧 English Question:[0m "NAV history for NEWFUND"
+[32m   English Response:[0m
+   No NAV history available for New RMF Fund (NEWFUND)
+
+[36m🇹🇭 Thai Question:[0m "ประวัติราคา NAV ของกองทุน NEWFUND"
+[32m   Thai Response:[0m
+   ไม่มีข้อมูลมูลค่าหน่วยลงทุนสำหรับ New RMF Fund (NEWFUND)
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 7: compare_rmf_funds - Fund Comparison[0m
+[34m======================================================================[0m
+
+[33m📝 compare_rmf_funds[0m
+
+[36m🇬🇧 English Question:[0m "Compare DAOL-GOLDRMF with ASP-DIGIBLOCRMF"
+[32m   English Response:[0m
+   Comparing 2 RMF funds: DAOL-GOLDRMF, ASP-DIGIBLOCRMF
+
+[36m🇹🇭 Thai Question:[0m "เปรียบเทียบ DAOL-GOLDRMF กับ ASP-DIGIBLOCRMF"
+[32m   Thai Response:[0m
+   เปรียบเทียบ กองทุน RMF 2 กองทุน: DAOL-GOLDRMF, ASP-DIGIBLOCRMF
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 8: Error Messages - Bilingual Errors[0m
+[34m======================================================================[0m
+
+[33m📝 Error: fundCodeRequired[0m
+
+[36m🇬🇧 English Question:[0m "Missing fund code"
+[32m   English Response:[0m
+   fundCode parameter is required
+
+[36m🇹🇭 Thai Question:[0m "ไม่มีรหัสกองทุน"
+[32m   Thai Response:[0m
+   ต้องระบุรหัสกองทุน
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+[33m📝 Error: fundNotFound[0m
+
+[36m🇬🇧 English Question:[0m "Fund XYZ not found"
+[32m   English Response:[0m
+   Fund not found
+
+[36m🇹🇭 Thai Question:[0m "ไม่พบกองทุน XYZ"
+[32m   Thai Response:[0m
+   ไม่พบกองทุน
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+[33m📝 Error: invalidPeriod[0m
+
+[36m🇬🇧 English Question:[0m "Invalid period 99y"
+[32m   English Response:[0m
+   Invalid period
+
+[36m🇹🇭 Thai Question:[0m "ช่วงเวลาไม่ถูกต้อง 99y"
+[32m   Thai Response:[0m
+   ช่วงเวลาไม่ถูกต้อง
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+[33m📝 Error: atLeastTwoFundsRequired[0m
+
+[36m🇬🇧 English Question:[0m "Need 2 funds to compare"
+[32m   English Response:[0m
+   At least 2 fund codes are required for comparison
+
+[36m🇹🇭 Thai Question:[0m "ต้องการ 2 กองทุนเพื่อเปรียบเทียบ"
+[32m   Thai Response:[0m
+   ต้องระบุรหัสกองทุนอย่างน้อย 2 กองทุนสำหรับการเปรียบเทียบ
+
+[32m   ✅ Language detection working correctly[0m
+[34m----------------------------------------------------------------------[0m
+
+[34m======================================================================[0m
+[1m[34mTEST 9: Period Labels - All Periods[0m
+[34m======================================================================[0m
+
+[33m📊 Period Label Translations:[0m
+
+[36mPeriod: ytd[0m
+  🇬🇧 English: YTD (Context: "YTD performance")
+  🇹🇭 Thai: ตั้งแต่ต้นปี (Context: "ผลตอบแทนตั้งแต่ต้นปี")
+
+[36mPeriod: 3m[0m
+  🇬🇧 English: 3-Month (Context: "3-month performance")
+  🇹🇭 Thai: 3 เดือน (Context: "ผลตอบแทน 3 เดือน")
+
+[36mPeriod: 6m[0m
+  🇬🇧 English: 6-Month (Context: "6-month performance")
+  🇹🇭 Thai: 6 เดือน (Context: "ผลตอบแทน 6 เดือน")
+
+[36mPeriod: 1y[0m
+  🇬🇧 English: 1-Year (Context: "1-year performance")
+  🇹🇭 Thai: 1 ปี (Context: "ผลตอบแทน 1 ปี")
+
+[36mPeriod: 3y[0m
+  🇬🇧 English: 3-Year (Context: "3-year performance")
+  🇹🇭 Thai: 3 ปี (Context: "ผลตอบแทน 3 ปี")
+
+[36mPeriod: 5y[0m
+  🇬🇧 English: 5-Year (Context: "5-year performance")
+  🇹🇭 Thai: 5 ปี (Context: "ผลตอบแทน 5 ปี")
+
+[36mPeriod: 10y[0m
+  🇬🇧 English: 10-Year (Context: "10-year performance")
+  🇹🇭 Thai: 10 ปี (Context: "ผลตอบแทน 10 ปี")
+
+
+[34m======================================================================[0m
+[1m[34mTEST 10: Translation Dictionary Spot Check[0m
+[34m======================================================================[0m
+
+[33m📚 Translation Dictionary:[0m
+
+[36mfound               [0m EN: Found                     TH: พบ
+[36mrmfFunds            [0m EN: RMF funds                 TH: กองทุน RMF
+[36mfund                [0m EN: fund                      TH: กองทุน
+[36mfunds               [0m EN: funds                     TH: กองทุน
+[36mshowingPage         [0m EN: Showing page              TH: แสดงหน้า
+[36mmanagedBy           [0m EN: managed by                TH: จัดการโดย
+[36mcurrentNav          [0m EN: Current NAV               TH: มูลค่าหน่วยลงทุนปัจจุบัน
+[36mriskLevel           [0m EN: Risk level                TH: ระดับความเสี่ยง
+[36mcomparing           [0m EN: Comparing                 TH: เปรียบเทียบ
+[36msearch              [0m EN: search                    TH: ค้นหา
+[36mamc                 [0m EN: AMC                       TH: บลจ.
+[36mcategory            [0m EN: category                  TH: ประเภท
+[36mvolatility          [0m EN: Volatility                TH: ความผันผวน
+[36mthb                 [0m EN: THB                       TH: บาท
+[36mbaht                [0m EN: THB                       TH: บาท
+
+[34m======================================================================[0m
+[1m[34mTEST SUMMARY[0m
+[34m======================================================================[0m
+
+[32m✅ All bilingual functions tested successfully![0m
+
+📊 Test Coverage:
+   ✅ Language detection (5 test cases)
+   ✅ All 6 MCP tool response formatters
+   ✅ Error messages (4 types)
+   ✅ Period labels (7 periods)
+   ✅ Translation dictionary (16 keys)
+
+🎯 Key Validations:
+   ✅ Thai Unicode detection working (U+0E00-U+0E7F)
+   ✅ English responses contain no Thai characters
+   ✅ Thai responses contain Thai characters
+   ✅ Natural Thai sentence structure (not word-by-word)
+   ✅ Backward compatible (undefined defaults to English)
+
+[1m[32m🚀 Bilingual implementation is working correctly![0m
+
