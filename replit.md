@@ -75,3 +75,51 @@ Transformed the MCP server to be fully Apps SDK compliant for ChatGPT integratio
 - Test report: `TEST_REPORT.md`
 
 **Readiness:** 95% ready for ChatGPT integration. Remaining work: visual validation of 3 widgets, ngrok tunnel setup for live testing.
+
+## Production Deployment Architecture
+
+The system uses a **dual-deployment architecture** on Replit to separate the MCP server from the data pipeline:
+
+### Deployment 1: MCP Server (Main Application)
+- **Type:** Autoscale
+- **URL:** https://alfie-app-tkhongsap.replit.app
+- **Command:** `npm run dev`
+- **Purpose:** Serves ChatGPT MCP requests 24/7
+- **Features:**
+  - Loads 442 RMF funds into memory on startup
+  - Responds to ChatGPT tool calls
+  - Serves widget resources
+  - Auto-scales based on traffic
+
+### Deployment 2: Data Pipeline (Scheduled Job)
+- **Type:** Scheduled Deployment
+- **Schedule:** Weekdays at midnight UTC (7 AM Bangkok time)
+- **Command:** `npm run data:rmf:daily-refresh`
+- **Timeout:** 2 hours (7200 seconds)
+- **Purpose:** Refreshes RMF data from SEC Thailand APIs
+- **Process:**
+  1. Fetches all AMCs and RMF funds from SEC API
+  2. Downloads comprehensive data (~14 endpoints per fund)
+  3. Validates data completeness
+  4. Updates PostgreSQL database via UPSERT
+  5. Shuts down after completion
+
+Both deployments share the same PostgreSQL database, ensuring the MCP server always serves fresh data.
+
+### Setting Up Scheduled Deployment
+
+To create the scheduled data pipeline deployment:
+
+1. Open **Publishing** tool in Replit
+2. Click **"+ New Deployment"**
+3. Select **"Scheduled"** deployment type
+4. Configure:
+   - **Name:** RMF Data Pipeline - Daily Refresh
+   - **Schedule:** `Every weekday at midnight` or cron `0 0 * * 1-5`
+   - **Job Timeout:** `7200` seconds (2 hours)
+   - **Build Command:** `npm install`
+   - **Run Command:** `npm run data:rmf:daily-refresh`
+5. Ensure `DATABASE_URL` is set in deployment secrets
+6. Click **"Create"** to deploy
+
+The scheduled job will run independently and update the database automatically every weekday.

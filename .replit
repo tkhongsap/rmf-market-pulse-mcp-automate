@@ -7,9 +7,9 @@ channel = "stable-25_05"
 packages = ["copilot-cli", "jq"]
 
 [deployment]
-deploymentTarget = "scheduled"
-build = ["npm", "run", "build"]
-run = ["npm", "run", "data:rmf:daily-refresh"]
+deploymentTarget = "autoscale"
+build = ["npm", "install"]
+run = ["npm", "run", "dev"]
 
 [[ports]]
 localPort = 5000
