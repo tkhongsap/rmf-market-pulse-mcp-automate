@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMF Widget Test Harness</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .controls {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .controls label {
+      margin-right: 20px;
+      font-weight: 500;
+    }
+    
+    select, button {
+      padding: 8px 16px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    
+    button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      margin-left: 10px;
+    }
+    
+    button:hover {
+      background: #0052a3;
+    }
+    
+    .test-area {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      min-height: 400px;
+    }
+    
+    .widget-container {
+      border: 2px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 16px;
+      background: white;
+    }
+    
+    .status {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8f4fd;
+      border-radius: 4px;
+      border-left: 4px solid #0066cc;
+    }
+    
+    .status h3 {
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+    
+    .status pre {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    body.dark {
+      background: #1a1a1a;
+    }
+    
+    body.dark .controls,
+    body.dark .test-area {
+      background: #2a2a2a;
+      color: #e0e0e0;
+    }
+    
+    body.dark h1,
+    body.dark .status h3 {
+      color: #e0e0e0;
+    }
+    
+    body.dark .status {
+      background: #1e3a5f;
+      border-left-color: #4a9eff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 RMF Widget Test Harness</h1>
+    
+    <div class="controls">
+      <label>Widget:</label>
+      <select id="widgetSelect">
+        <option value="fund-list">Fund List</option>
+        <option value="fund-detail">Fund Detail</option>
+        <option value="fund-comparison">Fund Comparison</option>
+        <option value="performance-chart">Performance Chart</option>
+      </select>
+      
+      <label style="margin-left: 30px;">Theme:</label>
+      <select id="themeSelect">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      
+      <button onclick="loadWidget()">Load Widget</button>
+      <button onclick="checkState()">Check State</button>
+      <button onclick="clearState()">Clear State</button>
+    </div>
+    
+    <div class="test-area">
+      <div id="widgetContainer" class="widget-container"></div>
+    </div>
+    
+    <div class="status">
+      <h3>Test Status</h3>
+      <div id="statusLog"></div>
+    </div>
+  </div>
+
+  <script>
+    // Simulate OpenAI Apps SDK environment
+    const widgetStateStorage = {};
+    
+    window.openai = {
+      toolOutput: null,
+      toolResponseMetadata: null,
+      widgetState: null,
+      
+      setWidgetState(state) {
+        const widgetId = document.getElementById('widgetSelect').value;
+        widgetStateStorage[widgetId] = state;
+        this.widgetState = state;
+        log(`✅ State saved for ${widgetId}`, state);
+      },
+      
+      getWidgetState(widgetId) {
+        return widgetStateStorage[widgetId] || null;
+      }
+    };
+    
+    // Sample test data for each widget
+    const testData = {
+      'fund-list': {
+        toolOutput: {
+          funds: [
+            {
+              proj_abbr_name: "ABAPAC-RMF",
+              proj_name_en: "abrdn Asia Pacific Equity Retirement Mutual Fund",
+              unique_id: "Aberdeen Asset Management",
+              last_val: 15.889,
+              return_ytd: 8.8,
+              return_1y: 6.65,
+              risk_spectrum: 6
+            },
+            {
+              proj_abbr_name: "ABGDD-RMF",
+              proj_name_en: "abrdn Global Dynamic Dividend Retirement Mutual Fund",
+              unique_id: "Aberdeen Asset Management",
+              last_val: 12.5585,
+              return_ytd: 10.39,
+              return_1y: 6.42,
+              risk_spectrum: 6
+            }
+          ],
+          pagination: {
+            page: 1,
+            pageSize: 10,
+            totalCount: 442,
+            totalPages: 45
+          }
+        },
+        toolResponseMetadata: {
+          funds: [
+            {
+              proj_abbr_name: "ABAPAC-RMF",
+              proj_name_en: "abrdn Asia Pacific Equity Retirement Mutual Fund",
+              unique_id: "Aberdeen Asset Management",
+              last_val: 15.889,
+              return_ytd: 8.8,
+              return_1y: 6.65,
+              risk_spectrum: 6
+            },
+            {
+              proj_abbr_name: "ABGDD-RMF",
+              proj_name_en: "abrdn Global Dynamic Dividend Retirement Mutual Fund",
+              unique_id: "Aberdeen Asset Management",
+              last_val: 12.5585,
+              return_ytd: 10.39,
+              return_1y: 6.42,
+              risk_spectrum: 6
+            }
+          ]
+        }
+      },
+      
+      'fund-detail': {
+        toolOutput: {
+          symbol: "ABAPAC-RMF",
+          fund_name: "abrdn Asia Pacific Equity Retirement Mutual Fund",
+          amc: "Aberdeen Asset Management",
+          nav_value: 15.889,
+          nav_change_percent: 0.5,
+          risk_level: 6,
+          performance: {
+            ytd: 8.8,
+            "1y": 6.65,
+            "3y": 12.5
+          }
+        },
+        toolResponseMetadata: {
+          symbol: "ABAPAC-RMF",
+          fundName: "abrdn Asia Pacific Equity Retirement Mutual Fund",
+          amc: "Aberdeen Asset Management",
+          nav: 15.889,
+          navChange: 0.5,
+          riskLevel: 6,
+          ytd: 8.8,
+          oneYear: 6.65,
+          threeYear: 12.5
+        }
+      },
+      
+      'fund-comparison': {
+        toolOutput: {
+          funds: [
+            {
+              proj_abbr_name: "ABAPAC-RMF",
+              proj_name_en: "Fund A",
+              return_ytd: 8.8,
+              return_1y: 6.65,
+              risk_spectrum: 6,
+              last_val: 15.889
+            },
+            {
+              proj_abbr_name: "ABGDD-RMF",
+              proj_name_en: "Fund B",
+              return_ytd: 10.39,
+              return_1y: 6.42,
+              risk_spectrum: 6,
+              last_val: 12.5585
+            }
+          ]
+        },
+        toolResponseMetadata: {
+          funds: [
+            {
+              proj_abbr_name: "ABAPAC-RMF",
+              proj_name_en: "Fund A",
+              return_ytd: 8.8,
+              return_1y: 6.65,
+              risk_spectrum: 6,
+              last_val: 15.889
+            },
+            {
+              proj_abbr_name: "ABGDD-RMF",
+              proj_name_en: "Fund B",
+              return_ytd: 10.39,
+              return_1y: 6.42,
+              risk_spectrum: 6,
+              last_val: 12.5585
+            }
+          ]
+        }
+      },
+      
+      'performance-chart': {
+        toolOutput: {
+          fundCode: "ABAPAC-RMF",
+          fundName: "abrdn Asia Pacific Equity Retirement Mutual Fund",
+          statistics: {
+            minNav: 14.5,
+            maxNav: 16.2,
+            avgNav: 15.4,
+            volatility: 2.3
+          },
+          navHistory: [
+            { nav_date: "2025-01-01", last_val: 15.0 },
+            { nav_date: "2025-01-02", last_val: 15.2 },
+            { nav_date: "2025-01-03", last_val: 15.5 },
+            { nav_date: "2025-01-04", last_val: 15.3 },
+            { nav_date: "2025-01-05", last_val: 15.889 }
+          ]
+        },
+        toolResponseMetadata: {
+          fundCode: "ABAPAC-RMF",
+          fundName: "abrdn Asia Pacific Equity Retirement Mutual Fund",
+          statistics: {
+            minNav: 14.5,
+            maxNav: 16.2,
+            avgNav: 15.4,
+            volatility: 2.3
+          },
+          navHistory: [
+            { nav_date: "2025-01-01", last_val: 15.0 },
+            { nav_date: "2025-01-02", last_val: 15.2 },
+            { nav_date: "2025-01-03", last_val: 15.5 },
+            { nav_date: "2025-01-04", last_val: 15.3 },
+            { nav_date: "2025-01-05", last_val: 15.889 }
+          ]
+        }
+      }
+    };
+    
+    function log(message, data) {
+      const statusLog = document.getElementById('statusLog');
+      const entry = document.createElement('div');
+      entry.innerHTML = `<strong>${new Date().toLocaleTimeString()}</strong>: ${message}`;
+      
+      if (data) {
+        const pre = document.createElement('pre');
+        pre.textContent = JSON.stringify(data, null, 2);
+        entry.appendChild(pre);
+      }
+      
+      statusLog.appendChild(entry);
+      statusLog.scrollTop = statusLog.scrollHeight;
+    }
+    
+    async function loadWidget() {
+      const widgetId = document.getElementById('widgetSelect').value;
+      const container = document.getElementById('widgetContainer');
+      
+      log(`Loading widget: ${widgetId}`);
+      
+      // Set up test data
+      const data = testData[widgetId];
+      window.openai.toolOutput = data.toolOutput;
+      window.openai.toolResponseMetadata = data.toolResponseMetadata;
+      window.openai.widgetState = widgetStateStorage[widgetId] || null;
+      
+      try {
+        // Fetch widget HTML
+        const response = await fetch(`/widgets/${widgetId}.html`);
+        const html = await response.text();
+        
+        // Extract script content
+        const scriptMatch = html.match(/<script>([\s\S]*)<\/script>/);
+        const styleMatch = html.match(/<style>([\s\S]*)<\/style>/);
+        const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/);
+        
+        // Clear container
+        container.innerHTML = '';
+        
+        // Add styles
+        if (styleMatch) {
+          const style = document.createElement('style');
+          style.textContent = styleMatch[1];
+          document.head.appendChild(style);
+        }
+        
+        // Add body content
+        if (bodyMatch) {
+          container.innerHTML = bodyMatch[1];
+        }
+        
+        // Execute script
+        if (scriptMatch) {
+          const script = document.createElement('script');
+          script.textContent = scriptMatch[1];
+          document.body.appendChild(script);
+        }
+        
+        log(`✅ Widget loaded successfully: ${widgetId}`);
+      } catch (error) {
+        log(`❌ Error loading widget: ${error.message}`, error);
+        console.error('Widget load error:', error);
+      }
+    }
+    
+    function checkState() {
+      const widgetId = document.getElementById('widgetSelect').value;
+      const state = widgetStateStorage[widgetId];
+      
+      if (state) {
+        log(`📊 Current state for ${widgetId}`, state);
+      } else {
+        log(`ℹ️ No state found for ${widgetId}`);
+      }
+    }
+    
+    function clearState() {
+      const widgetId = document.getElementById('widgetSelect').value;
+      delete widgetStateStorage[widgetId];
+      window.openai.widgetState = null;
+      log(`🗑️ State cleared for ${widgetId}`);
+    }
+    
+    // Theme switcher
+    document.getElementById('themeSelect').addEventListener('change', (e) => {
+      const theme = e.target.value;
+      document.body.className = theme;
+      
+      // Trigger theme change event for widgets
+      window.dispatchEvent(new CustomEvent('openai:set_globals', {
+        detail: { globals: { theme } }
+      }));
+      
+      log(`🎨 Theme changed to: ${theme}`);
+    });
+    
+    // Auto-load first widget on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      log('🚀 Widget test harness initialized');
+      loadWidget();
+    });
+  </script>
+</body>
+</html>
