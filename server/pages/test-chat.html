@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Chat - RMF Market Pulse</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+      max-height: 700px;
+    }
+    
+    .header {
+      background: #667eea;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .suggestions {
+      padding: 16px 24px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .suggestions p {
+      font-size: 12px;
+      color: #6c757d;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    .suggestion-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .chip {
+      background: white;
+      border: 1px solid #dee2e6;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .chip:hover {
+      background: #667eea;
+      color: white;
+      border-color: #667eea;
+    }
+    
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      background: #f8f9fa;
+    }
+    
+    .message {
+      margin-bottom: 16px;
+      display: flex;
+      gap: 12px;
+    }
+    
+    .message.user {
+      justify-content: flex-end;
+    }
+    
+    .message-content {
+      max-width: 70%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .message.user .message-content {
+      background: #667eea;
+      color: white;
+    }
+    
+    .message.assistant .message-content {
+      background: white;
+      color: #212529;
+      border: 1px solid #dee2e6;
+    }
+    
+    .message.assistant .message-content pre {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-top: 8px;
+      font-size: 12px;
+    }
+    
+    .message.assistant .message-content .tool-call {
+      background: #e7f3ff;
+      border-left: 3px solid #0066cc;
+      padding: 8px 12px;
+      margin-top: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .loading {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      color: #6c757d;
+      font-size: 14px;
+    }
+    
+    .loading.active {
+      display: flex;
+    }
+    
+    .loading-dots {
+      display: flex;
+      gap: 4px;
+    }
+    
+    .loading-dots span {
+      width: 6px;
+      height: 6px;
+      background: #6c757d;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+    
+    .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+    
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+    
+    .input-area {
+      padding: 16px 24px;
+      background: white;
+      border-top: 1px solid #dee2e6;
+      display: flex;
+      gap: 12px;
+    }
+    
+    .input-area input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1px solid #dee2e6;
+      border-radius: 24px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    
+    .input-area input:focus {
+      border-color: #667eea;
+    }
+    
+    .input-area button {
+      padding: 12px 24px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    
+    .input-area button:hover:not(:disabled) {
+      background: #5568d3;
+    }
+    
+    .input-area button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #6c757d;
+    }
+    
+    .empty-state svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 16px;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🧪 Test Chat - RMF Market Pulse</h1>
+      <p>Ask questions about Thai RMF funds in natural language</p>
+    </div>
+    
+    <div class="suggestions">
+      <p>Try asking:</p>
+      <div class="suggestion-chips">
+        <div class="chip" onclick="sendSuggestion(this)">What are the top performing RMF funds this year?</div>
+        <div class="chip" onclick="sendSuggestion(this)">Show me low-risk RMF funds</div>
+        <div class="chip" onclick="sendSuggestion(this)">Get details for KFRMF fund</div>
+        <div class="chip" onclick="sendSuggestion(this)">Compare SCBRMF and KFRMF</div>
+      </div>
+    </div>
+    
+    <div class="messages" id="messages">
+      <div class="empty-state">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+        <p>No messages yet. Ask a question to get started!</p>
+      </div>
+    </div>
+    
+    <div class="loading" id="loading">
+      <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span>Thinking...</span>
+    </div>
+    
+    <div class="input-area">
+      <input 
+        type="text" 
+        id="input" 
+        placeholder="Ask about RMF funds... (e.g., 'Show me top performers')"
+        onkeypress="handleKeyPress(event)"
+      />
+      <button onclick="sendMessage()" id="sendBtn">Send</button>
+    </div>
+  </div>
+  
+  <script>
+    const messagesEl = document.getElementById('messages');
+    const inputEl = document.getElementById('input');
+    const loadingEl = document.getElementById('loading');
+    const sendBtn = document.getElementById('sendBtn');
+    
+    function sendSuggestion(chip) {
+      inputEl.value = chip.textContent;
+      sendMessage();
+    }
+    
+    function handleKeyPress(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage();
+      }
+    }
+    
+    function addMessage(text, isUser, toolCall = null, result = null) {
+      const emptyState = messagesEl.querySelector('.empty-state');
+      if (emptyState) emptyState.remove();
+      
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
+      
+      let content = `<div class="message-content">${escapeHtml(text)}`;
+      
+      if (toolCall) {
+        content += `<div class="tool-call">🔧 Tool: ${toolCall}</div>`;
+      }
+      
+      if (result) {
+        const formatted = typeof result === 'string' ? result : JSON.stringify(result, null, 2);
+        content += `<pre>${escapeHtml(formatted)}</pre>`;
+      }
+      
+      content += '</div>';
+      messageDiv.innerHTML = content;
+      
+      messagesEl.appendChild(messageDiv);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+    
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    async function sendMessage() {
+      const text = inputEl.value.trim();
+      if (!text) return;
+      
+      addMessage(text, true);
+      inputEl.value = '';
+      inputEl.disabled = true;
+      sendBtn.disabled = true;
+      loadingEl.classList.add('active');
+      
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        });
+        
+        const data = await response.json();
+        
+        if (data.error) {
+          addMessage(`Error: ${data.error}`, false);
+        } else {
+          addMessage(
+            data.response || 'Here are the results:',
+            false,
+            data.toolCall,
+            data.result
+          );
+        }
+      } catch (error) {
+        addMessage(`Error: ${error.message}`, false);
+      } finally {
+        inputEl.disabled = false;
+        sendBtn.disabled = false;
+        loadingEl.classList.remove('active');
+        inputEl.focus();
+      }
+    }
+  </script>
+</body>
+</html>

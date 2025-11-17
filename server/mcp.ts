@@ -2,6 +2,19 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 import type { RMFFundCSV } from '@shared/schema';
 import type { RMFDataService } from './services/rmfDataService';
+import {
+  detectLanguage,
+  formatFundListSummary,
+  formatSearchSummary,
+  formatFundDetailSummary,
+  formatPerformanceSummary,
+  formatNoNavHistorySummary,
+  formatNavHistorySummary,
+  formatCompareSummary,
+  getErrorMessage,
+  type Language,
+} from './i18n/index.js';
+import { t, getPeriodLabel } from './i18n/translations.js';
 
 export class RMFMCPServer {
   private server: McpServer;
@@ -40,19 +53,20 @@ export class RMFMCPServer {
   private setupTools() {
     this.server.tool(
       'get_rmf_funds',
-      'Get a list of Thai Retirement Mutual Funds (RMF) with pagination and sorting',
+      'Get a list of Thai Retirement Mutual Funds (RMF) with pagination and sorting. Responds in Thai if question is in Thai, English otherwise.',
       {
         page: z.number().optional().default(1).describe('Page number for pagination'),
         pageSize: z.number().optional().default(20).describe('Number of funds per page (max: 50)'),
         sortBy: z.enum(['ytd', '1y', '3y', '5y', 'nav', 'name', 'risk']).optional().describe('Sort by field'),
         sortOrder: z.enum(['asc', 'desc']).optional().describe('Sort order'),
+        question: z.string().optional().describe('User question (used for language detection)'),
       },
       async (args) => this.handleGetRmfFunds(args)
     );
 
     this.server.tool(
       'search_rmf_funds',
-      'Search and filter Thai RMF funds by multiple criteria',
+      'Search and filter Thai RMF funds by multiple criteria. Responds in Thai if question is in Thai, English otherwise.',
       {
         search: z.string().optional().describe('Search in fund name or symbol'),
         amc: z.string().optional().describe('Filter by Asset Management Company'),
@@ -62,47 +76,52 @@ export class RMFMCPServer {
         minYtdReturn: z.number().optional().describe('Minimum YTD return percentage'),
         sortBy: z.enum(['ytd', '1y', '3y', '5y', 'nav', 'name', 'risk']).optional().describe('Sort by field'),
         limit: z.number().optional().default(20).describe('Maximum results'),
+        question: z.string().optional().describe('User question (used for language detection)'),
       },
       async (args) => this.handleSearchRmfFunds(args)
     );
 
     this.server.tool(
       'get_rmf_fund_detail',
-      'Get detailed information for a specific Thai RMF fund',
+      'Get detailed information for a specific Thai RMF fund. Responds in Thai if question is in Thai, English otherwise.',
       {
         fundCode: z.string().describe('Fund symbol/code (e.g., "ABAPAC-RMF")'),
+        question: z.string().optional().describe('User question (used for language detection)'),
       },
       async (args) => this.handleGetRmfFundDetail(args)
     );
 
     this.server.tool(
       'get_rmf_fund_performance',
-      'Get top performing Thai RMF funds for a specific period with benchmark comparison',
+      'Get top performing Thai RMF funds for a specific period with benchmark comparison. Responds in Thai if question is in Thai, English otherwise.',
       {
         period: z.enum(['ytd', '3m', '6m', '1y', '3y', '5y', '10y']).describe('Performance period'),
         sortOrder: z.enum(['asc', 'desc']).optional().default('desc').describe('Sort order (desc = best performers first)'),
         limit: z.number().optional().default(10).describe('Maximum number of funds to return'),
         riskLevel: z.number().min(1).max(8).optional().describe('Filter by risk level'),
+        question: z.string().optional().describe('User question (used for language detection)'),
       },
       async (args) => this.handleGetRmfFundPerformance(args)
     );
 
     this.server.tool(
       'get_rmf_fund_nav_history',
-      'Get NAV (Net Asset Value) history for a specific Thai RMF fund over time',
+      'Get NAV (Net Asset Value) history for a specific Thai RMF fund over time. Responds in Thai if question is in Thai, English otherwise.',
       {
         fundCode: z.string().describe('Fund symbol/code (e.g., "ABAPAC-RMF")'),
         days: z.number().min(1).max(365).optional().default(30).describe('Number of days of history (1-365)'),
+        question: z.string().optional().describe('User question (used for language detection)'),
       },
       async (args) => this.handleGetRmfFundNavHistory(args)
     );
 
     this.server.tool(
       'compare_rmf_funds',
-      'Compare multiple Thai RMF funds side by side',
+      'Compare multiple Thai RMF funds side by side. Responds in Thai if question is in Thai, English otherwise.',
       {
         fundCodes: z.array(z.string()).min(2).max(5).describe('Array of fund symbols to compare (2-5 funds)'),
         compareBy: z.enum(['performance', 'risk', 'fees', 'all']).optional().default('all').describe('Comparison focus'),
+        question: z.string().optional().describe('User question (used for language detection)'),
       },
       async (args) => this.handleCompareFunds(args)
     );
@@ -121,7 +140,9 @@ export class RMFMCPServer {
       sortOrder,
     });
 
-    const textSummary = `Found ${totalCount} RMF funds. Showing page ${page} (${funds.length} funds).`;
+    // Detect language and format response
+    const lang = detectLanguage(args?.question);
+    const textSummary = formatFundListSummary(totalCount, page, funds.length, lang);
 
     const fundsData = funds.map(f => ({
       proj_abbr_name: f.symbol,
@@ -174,17 +195,17 @@ export class RMFMCPServer {
       pageSize: args?.limit || 20,
     });
 
-    const filters = [];
-    if (args?.search) filters.push(`search: "${args.search}"`);
-    if (args?.amc) filters.push(`AMC: "${args.amc}"`);
-    if (args?.minRiskLevel) filters.push(`min risk: ${args.minRiskLevel}`);
-    if (args?.maxRiskLevel) filters.push(`max risk: ${args.maxRiskLevel}`);
-    if (args?.category) filters.push(`category: ${args.category}`);
-    if (args?.minYtdReturn) filters.push(`min YTD: ${args.minYtdReturn}%`);
-
-    const textSummary = filters.length > 0
-      ? `Found ${totalCount} RMF funds matching filters: ${filters.join(', ')}`
-      : `Found ${totalCount} RMF funds.`;
+    // Detect language and format response
+    const lang = detectLanguage(args?.question);
+    const filterParams = {
+      search: args?.search,
+      amc: args?.amc,
+      minRiskLevel: args?.minRiskLevel,
+      maxRiskLevel: args?.maxRiskLevel,
+      category: args?.category,
+      minYtdReturn: args?.minYtdReturn,
+    };
+    const textSummary = formatSearchSummary(totalCount, filterParams, lang);
 
     const fundsData = funds.map(f => ({
       proj_abbr_name: f.symbol,
@@ -210,7 +231,7 @@ export class RMFMCPServer {
           text: JSON.stringify({
             funds: fundsData.slice(0, 10),
             totalCount,
-            filters: filters,
+            filters: filterParams,
           }, null, 2),
         },
       ],
@@ -228,20 +249,21 @@ export class RMFMCPServer {
 
   private async handleGetRmfFundDetail(args: any) {
     const fundCode = args?.fundCode;
+    const lang = detectLanguage(args?.question);
 
     if (!fundCode) {
-      throw new Error('fundCode parameter is required');
+      throw new Error(getErrorMessage('fundCodeRequired', undefined, lang));
     }
 
     const fund = this.dataService.getBySymbol(fundCode);
 
     if (!fund) {
-      throw new Error(`Fund not found: ${fundCode}`);
+      throw new Error(getErrorMessage('fundNotFound', fundCode, lang));
     }
 
     const navHistory7d = await this.dataService.getNavHistory(fundCode, 7);
 
-    const textSummary = `${fund.fund_name} (${fund.symbol}) managed by ${fund.amc}. Current NAV: ${fund.nav_value} THB (${fund.nav_change >= 0 ? '+' : ''}${fund.nav_change_percent.toFixed(2)}%). Risk level: ${fund.risk_level}/8.`;
+    const textSummary = formatFundDetailSummary(fund, lang);
 
     // OpenAI Apps SDK compatible response format
     return {
@@ -313,6 +335,7 @@ export class RMFMCPServer {
     const sortOrder = args?.sortOrder || 'desc';
     const limit = args?.limit || 10;
     const riskLevel = args?.riskLevel;
+    const lang = detectLanguage(args?.question);
 
     // Map period to fund property
     const periodMap: Record<string, string> = {
@@ -338,9 +361,9 @@ export class RMFMCPServer {
 
     const perfField = periodMap[period];
     const benchmarkField = benchmarkMap[period];
-    
+
     if (!perfField) {
-      throw new Error(`Invalid period: ${period}`);
+      throw new Error(getErrorMessage('invalidPeriod', period, lang));
     }
 
     // Get all funds and filter
@@ -367,20 +390,7 @@ export class RMFMCPServer {
     // Limit results
     const topFunds = filteredFunds.slice(0, limit);
 
-    const periodLabel: Record<string, string> = {
-      'ytd': 'YTD',
-      '3m': '3-Month',
-      '6m': '6-Month',
-      '1y': '1-Year',
-      '3y': '3-Year',
-      '5y': '5-Year',
-      '10y': '10-Year',
-    };
-    const periodLabelText = periodLabel[period] || period;
-
-    const textSummary = riskLevel
-      ? `Top ${topFunds.length} performing RMF funds for ${periodLabelText} (Risk Level ${riskLevel})`
-      : `Top ${topFunds.length} performing RMF funds for ${periodLabelText}`;
+    const textSummary = formatPerformanceSummary(topFunds.length, period, riskLevel, lang);
 
     const fundsData = topFunds.map((f, index) => {
       const fundPerf = (f as any)[perfField];
@@ -414,7 +424,7 @@ export class RMFMCPServer {
         {
           type: 'text' as const,
           text: JSON.stringify({
-            period: periodLabelText,
+            period: getPeriodLabel(period, lang),
             topFunds: fundsData.slice(0, 10).map(f => ({
               rank: f.rank,
               symbol: f.proj_abbr_name,
@@ -432,7 +442,7 @@ export class RMFMCPServer {
         pageSize: limit,
         total: topFunds.length,
         period,
-        periodLabel: periodLabelText,
+        periodLabel: getPeriodLabel(period, lang),
         filters: { riskLevel },
         timestamp: new Date().toISOString(),
       },
@@ -442,20 +452,21 @@ export class RMFMCPServer {
   private async handleGetRmfFundNavHistory(args: any) {
     const fundCode = args?.fundCode;
     const days = Math.min(args?.days || 30, 365);
+    const lang = detectLanguage(args?.question);
 
     if (!fundCode) {
-      throw new Error('fundCode parameter is required');
+      throw new Error(getErrorMessage('fundCodeRequired', undefined, lang));
     }
 
     const fund = this.dataService.getBySymbol(fundCode);
     if (!fund) {
-      throw new Error(`Fund not found: ${fundCode}`);
+      throw new Error(getErrorMessage('fundNotFound', fundCode, lang));
     }
 
     const navHistory = await this.dataService.getNavHistory(fundCode, days);
 
     if (!navHistory || navHistory.length === 0) {
-      const textSummary = `No NAV history available for ${fund.fund_name} (${fundCode})`;
+      const textSummary = formatNoNavHistorySummary(fund.fund_name, fundCode, lang);
       return {
         content: [
           {
@@ -467,7 +478,7 @@ export class RMFMCPServer {
             text: JSON.stringify({
               symbol: fundCode,
               fund_name: fund.fund_name,
-              message: 'No NAV history available',
+              message: t('noNavHistoryAvailable', lang),
               timestamp: new Date().toISOString(),
             }, null, 2),
           },
@@ -503,7 +514,14 @@ export class RMFMCPServer {
       volatility = (Math.sqrt(variance) * 100).toFixed(2);
     }
 
-    const textSummary = `${fund.fund_name} (${fundCode}) NAV history over ${days} days. Period return: ${periodReturn}%. Volatility: ${volatility}%.`;
+    const textSummary = formatNavHistorySummary(
+      fund.fund_name,
+      fundCode,
+      days,
+      periodReturn || 'N/A',
+      volatility,
+      lang
+    );
 
     const navHistoryData = navHistory.map(h => ({
       date: h.nav_date,
@@ -556,25 +574,27 @@ export class RMFMCPServer {
   private async handleCompareFunds(args: any) {
     const fundCodes = args?.fundCodes || [];
     const compareBy = args?.compareBy || 'all';
+    const lang = detectLanguage(args?.question);
 
     if (!fundCodes || fundCodes.length < 2) {
-      throw new Error('At least 2 fund codes are required for comparison');
+      throw new Error(getErrorMessage('atLeastTwoFundsRequired', undefined, lang));
     }
 
     if (fundCodes.length > 5) {
-      throw new Error('Maximum 5 funds can be compared at once');
+      throw new Error(getErrorMessage('maximumFiveFunds', undefined, lang));
     }
 
     // Fetch all funds
     const funds = fundCodes.map((code: string) => {
       const fund = this.dataService.getBySymbol(code);
       if (!fund) {
-        throw new Error(`Fund not found: ${code}`);
+        throw new Error(getErrorMessage('fundNotFound', code, lang));
       }
       return fund;
     });
 
-    const textSummary = `Comparing ${funds.length} RMF funds: ${funds.map((f: RMFFundCSV) => f.symbol).join(', ')}`;
+    const fundSymbols = funds.map((f: RMFFundCSV) => f.symbol);
+    const textSummary = formatCompareSummary(funds.length, fundSymbols, lang);
 
     // Build comparison data with Apps SDK field names
     const comparison = funds.map((fund: RMFFundCSV) => {

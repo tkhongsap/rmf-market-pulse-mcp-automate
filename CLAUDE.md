@@ -4,14 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Thai RMF Market Pulse - A **standalone MCP (Model Context Protocol) server** providing comprehensive Thai Retirement Mutual Fund (RMF) market data. This is a backend-only TypeScript server with 6 MCP tools, serving 403 RMF funds with complete market data loaded from pre-extracted CSV files.
+Thai RMF Market Pulse - A **PostgreSQL-backed MCP (Model Context Protocol) server** providing comprehensive Thai Retirement Mutual Fund (RMF) market data. This is a backend-only TypeScript server with 6 MCP tools, serving 403+ RMF funds with complete market data loaded from PostgreSQL database.
 
 **Key Facts:**
-- **Architecture**: Standalone MCP server (no frontend, no database)
-- **Data Source**: Pre-extracted CSV file (`docs/rmf-funds-consolidated.csv`)
+- **Architecture**: Standalone MCP server (no frontend) with PostgreSQL database
+- **Database**: PostgreSQL with 4 tables (`rmf_funds`, `rmf_nav_history`, `rmf_dividends`, `pipeline_runs`)
+- **Data Source**: PostgreSQL database (loads into memory on startup)
 - **Protocol**: Model Context Protocol via HTTP POST endpoint
 - **MCP Tools**: 6 tools for fund data, search, performance, NAV history, and comparison
-- **Dependencies**: 138 packages (down from 548 in previous full-stack version)
+- **Dependencies**: 138 packages including `pg` for PostgreSQL
 
 ## Commands
 
@@ -38,21 +39,41 @@ npm run test:user-scenarios # Natural language question tests (bash script)
 npm run test:all            # Run all test suites
 ```
 
-### Data Extraction (Optional)
-These commands regenerate the fund data CSV from SEC APIs. Run only when updating fund data:
+### Database Population
 
+**Production (Automated Daily Refresh):**
 ```bash
-# Fund List Generation (API-based)
+npm run data:rmf:daily-refresh         # Full pipeline: fetch from SEC API → load to PostgreSQL
+                                       # Runtime: ~25-30 minutes
+                                       # Recommended: Daily cron job at 2 AM
+```
+
+**Development (Manual 3-Phase Pipeline):**
+```bash
+# Phase 0: Build fund mapping from SEC API
+npm run data:rmf:build-mapping         # Output: data/fund-mapping.json (symbol → proj_id)
+
+# Phase 1: Fetch complete fund data from SEC API
+npm run data:rmf:fetch-all             # Output: data/rmf-funds/{SYMBOL}.json (442 files)
+                                       # Runtime: ~25 minutes with rate limiting
+
+# Phase 2: Load fetched data to PostgreSQL database
+npm run data:rmf:save-to-db            # Input: JSON files → PostgreSQL (UPSERT mode)
+                                       # Checkpoint/resume capability via .db-progress.json
+```
+
+**Utility Commands:**
+```bash
+npm run data:rmf:identify-incomplete   # Find funds with incomplete data
+npm run data:rmf:reprocess             # Re-fetch incomplete funds
+npm run data:rmf:consolidate-csv       # Generate CSV from JSON (LEGACY - not used by server)
+```
+
+### Fund List Generation (Reference)
+```bash
 npm run data:rmf:generate-list         # Generate RMF fund list from SEC API
 npm run data:esg:generate-list         # Generate Thai ESG fund list
 npm run data:esgx:generate-list        # Generate Thai ESGX fund list
-
-# RMF Data Pipeline (multi-phase extraction)
-npm run data:rmf:build-mapping         # Phase 0: Build fund symbol → proj_id mapping
-npm run data:rmf:fetch-all             # Phase 1: Fetch all RMF funds with complete data
-npm run data:rmf:identify-incomplete   # Identify funds with incomplete data
-npm run data:rmf:reprocess             # Re-process incomplete funds
-npm run data:rmf:consolidate-csv       # Generate consolidated CSV from JSON files
 ```
 
 ## Architecture
@@ -61,10 +82,11 @@ npm run data:rmf:consolidate-csv       # Generate consolidated CSV from JSON fil
 
 **Entry Point:** `server/index.ts`
 - Express server with security middleware (Helmet, CORS, rate limiting)
+- PostgreSQL connection pool initialization (requires `DATABASE_URL`)
 - Single MCP endpoint: `POST /mcp`
 - Health check: `GET /healthz`
 - Server info: `GET /`
-- Initializes `rmfDataService` with CSV data on startup
+- Initializes `rmfDataService` by loading data from PostgreSQL on startup
 - Port: 5000 (configurable via `PORT` env var)
 
 **MCP Tools:** `server/mcp.ts`
@@ -79,11 +101,12 @@ npm run data:rmf:consolidate-csv       # Generate consolidated CSV from JSON fil
 - Tools use Zod schemas for parameter validation
 
 **Data Service:** `server/services/rmfDataService.ts`
-- Loads fund data from `docs/rmf-funds-consolidated.csv` (403 funds, 1.5MB)
+- Loads fund data from PostgreSQL `rmf_funds` table on startup (403+ funds)
 - Builds in-memory indexes: `fundsMap` (by symbol), `byAMC`, `byRisk`, `byCategory`
-- Loads NAV history from `data/rmf-funds/{SYMBOL}.json` files (lazy loading with cache)
-- Security: Path traversal protection in `getNavHistory()`
-- Fast lookups: O(1) by symbol, O(n) for search/filter operations
+- Queries NAV history from PostgreSQL `rmf_nav_history` table (cached after first query)
+- Database schema: 4 tables with JSONB columns for complex data (performance, fees, holdings)
+- Security: Path traversal protection, parameterized queries
+- Fast lookups: O(1) by symbol (in-memory), O(n) for search/filter operations
 
 **SEC API Services:** `server/services/` (used for data extraction only, not by MCP server)
 - `secFundDailyInfoApi.ts` - Daily NAV, historical NAV, dividends
@@ -98,8 +121,8 @@ npm run data:rmf:consolidate-csv       # Generate consolidated CSV from JSON fil
 
 Zod schemas for type-safe data structures:
 
-**CSV Data:**
-- `RMFFundCSV` - Complete fund record from consolidated CSV (60 fields)
+**Database Records:**
+- `RMFFund` - Complete fund record from PostgreSQL (45+ fields, includes JSONB data)
 - `RMFNavHistory` - NAV history entry with change calculations
 
 **Fund Data Components:**
@@ -146,18 +169,27 @@ Zod schemas for type-safe data structures:
 ## Data Files
 
 ### Primary Data Source
-**File:** `docs/rmf-funds-consolidated.csv` (403 funds, 1.5MB)
-- Loaded by `rmfDataService` on server startup
-- 60 columns with complete fund data (NAV, performance, fees, etc.)
-- Generated from: `data/rmf-funds/{SYMBOL}.json` files
-- Command: `npm run data:rmf:consolidate-csv`
+**PostgreSQL Database** (required)
+- **Tables**: `rmf_funds`, `rmf_nav_history`, `rmf_dividends`, `pipeline_runs`
+- **Schema**: `server/pipeline/db-schema.sql`
+- **Loaded by**: `rmfDataService.initialize()` on server startup
+- **Connection**: Requires `DATABASE_URL` environment variable
+- **Records**: 403+ funds with complete market data
 
-### NAV History Files
-**Location:** `data/rmf-funds/{SYMBOL}.json`
-- Individual JSON files per fund with 30-day NAV history
-- Loaded on-demand by `getNavHistory()` method
-- Cached in-memory after first load
-- Used by: `get_rmf_fund_nav_history` tool
+### Staging Files (Data Extraction Pipeline)
+**Location:** `data/rmf-funds/{SYMBOL}.json` (442 files)
+- Individual JSON files per fund with complete data from SEC API
+- **Purpose**: Intermediate format before database load
+- **Generated by**: `npm run data:rmf:fetch-all`
+- **Used by**: `npm run data:rmf:save-to-db` (loads into PostgreSQL)
+- **Not used by MCP server** (server reads from database only)
+
+### Legacy CSV File (NOT USED)
+**File:** `docs/rmf-funds-consolidated.csv` (403 rows, 1.5MB)
+- **Status**: LEGACY - Not used by MCP server
+- **Generated by**: `npm run data:rmf:consolidate-csv`
+- **Purpose**: Historical artifact from pre-PostgreSQL architecture
+- **Note**: Can be deleted or used for data analysis only
 
 ### Fund Lists (Reference)
 - `docs/rmf-funds-api.csv` - 400 RMF funds (394 active, 6 cancelled)
@@ -166,38 +198,149 @@ Zod schemas for type-safe data structures:
 
 ### Data Extraction Pipeline
 
-**Two-Phase Process** (only needed when updating fund data):
+**Three-Phase Process** (updates PostgreSQL database with latest SEC data):
 
 **Phase 0: Build Mapping**
 - Command: `npm run data:rmf:build-mapping`
 - Script: `scripts/data-extraction/rmf/phase-0-build-mapping.ts`
 - Output: `data/fund-mapping.json` (symbol → proj_id mapping)
 - Fetches all funds from 29 AMCs via SEC API
+- Runtime: ~30 seconds
 
 **Phase 1: Fetch All Funds**
 - Command: `npm run data:rmf:fetch-all`
 - Script: `scripts/data-extraction/rmf/phase-1-fetch-all-funds.ts`
-- Output: `data/rmf-funds/{SYMBOL}.json` (403 files)
+- Output: `data/rmf-funds/{SYMBOL}.json` (442 files)
 - Rate limiting: 4 funds/batch, 15-second delays
 - Progress tracking: `data/progress.json` (resume capability)
 - Fetches 14 data points per fund (NAV, performance, risk, fees, etc.)
+- Runtime: ~25 minutes
+
+**Phase 2: Load to Database**
+- Command: `npm run data:rmf:save-to-db`
+- Script: `server/pipeline/db-saver.ts`
+- Input: `data/rmf-funds/{SYMBOL}.json` files
+- Output: PostgreSQL tables (`rmf_funds`, `rmf_nav_history`, `rmf_dividends`)
+- Mode: UPSERT (safe, non-destructive updates)
+- Progress tracking: `.db-progress.json` (checkpoint/resume)
+- Runtime: ~5-10 minutes
+
+**Production Automation:**
+- Command: `npm run data:rmf:daily-refresh`
+- Script: `server/pipeline/daily-refresh-production.ts`
+- Orchestrates all 3 phases automatically
+- Recommended: Daily cron job at 2 AM
 
 **Utility Scripts:**
 - `identify-incomplete-funds.ts` - Find funds with missing data
 - `reprocess-incomplete-funds.ts` - Re-fetch incomplete funds
-- `consolidate-to-csv.ts` - Generate consolidated CSV from JSON files
+- `consolidate-to-csv.ts` - Generate CSV (LEGACY - not used by server)
 
 See `scripts/data-extraction/rmf/README.md` for detailed documentation.
 
 ## Environment Variables
 
-**Required:**
-- None (server runs without external API dependencies)
+**Required for MCP Server:**
+- `DATABASE_URL` - PostgreSQL connection string (e.g., `postgresql://user:password@host:5432/dbname`)
+  - Server will crash on startup if not provided
+  - Used by `rmfDataService` to load fund data
+
+**Required for Data Extraction Pipeline:**
+- `SEC_FUND_FACTSHEET_KEY` - SEC API key for fund factsheet endpoint
+- `SEC_FUND_FACTSHEET_SECONDARY_KEY` - Secondary SEC API key
+- `SEC_FUND_DAILY_INFO_KEY` - SEC API key for daily NAV/dividend data
 
 **Optional:**
 - `PORT` - Server port (defaults to 5000)
 - `ALLOWED_ORIGINS` - CORS allowed origins (comma-separated, defaults to '*')
-- `SEC_API_KEY` - Only needed for data extraction scripts (not for MCP server)
+
+## Database Population Process
+
+### Overview
+
+The MCP server loads all fund data from PostgreSQL on startup. The database must be populated using the data extraction pipeline before the server can run.
+
+### Development vs Production
+
+| Aspect | Development | Production |
+|--------|-------------|------------|
+| **Data Source** | PostgreSQL | PostgreSQL (same) |
+| **Update Method** | Manual 3-phase scripts | Automated daily refresh |
+| **Trigger** | On-demand by developer | Cron job (2 AM daily) |
+| **Database Mode** | UPSERT | UPSERT (both safe) |
+| **Command** | `npm run data:rmf:save-to-db` | `npm run data:rmf:daily-refresh` |
+| **Duration** | Phase 2 only: 5-10 min | All phases: 25-30 min |
+
+### Data Flow: SEC API → PostgreSQL → MCP Server
+
+```
+┌─────────────────┐
+│  SEC Thailand   │
+│   API (14 endpoints)  │
+└────────┬────────┘
+         │ Phase 0-1: Fetch
+         ▼
+┌─────────────────┐
+│ JSON Files      │
+│ data/rmf-funds/ │
+│ (442 files)     │
+└────────┬────────┘
+         │ Phase 2: Load
+         ▼
+┌─────────────────┐
+│  PostgreSQL     │
+│  Database       │
+│  (4 tables)     │
+└────────┬────────┘
+         │ Server Startup
+         ▼
+┌─────────────────┐
+│ In-Memory Cache │
+│ (rmfDataService)│
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  MCP Tools      │
+│  (6 tools)      │
+└─────────────────┘
+```
+
+### Database Schema
+
+**4 Tables in PostgreSQL:**
+
+1. **`rmf_funds`** (Main fund data)
+   - Primary key: `symbol` (UNIQUE)
+   - 45+ columns including JSONB fields
+   - JSONB columns: `performance`, `benchmark`, `asset_allocation`, `fees`, `involved_parties`, `top_holdings`, `risk_factors`, `suitability`, `document_urls`, `investment_minimums`, `errors`
+   - 403+ fund records
+
+2. **`rmf_nav_history`** (Historical NAV)
+   - Foreign key: `fund_symbol` → `rmf_funds(symbol)`
+   - Composite unique: `(fund_symbol, nav_date)`
+   - 30-day NAV history per fund
+
+3. **`rmf_dividends`** (Dividend history)
+   - Foreign key: `fund_symbol` → `rmf_funds(symbol)`
+   - Composite unique: `(fund_symbol, xa_date)`
+
+4. **`pipeline_runs`** (Execution tracking)
+   - Tracks pipeline statistics and errors
+
+**Schema File:** `server/pipeline/db-schema.sql`
+
+### Update Modes
+
+**UPSERT Mode (Used by Both Dev & Prod):**
+- Safe, non-destructive updates
+- Existing records updated, new records inserted
+- Database always has valid data (no truncation)
+- Process is crash-safe with checkpoint/resume
+
+**When to Run:**
+- **Development**: After fetching new data (`npm run data:rmf:fetch-all`)
+- **Production**: Daily via cron job (captures latest NAV, market changes)
 
 ## Security Features
 
@@ -247,11 +390,15 @@ npm start  # Runs: node dist/index.js
 ## Development Notes
 
 ### Key Design Decisions
-1. **No Database**: All data loaded from CSV into memory (fast, simple, deterministic)
+1. **PostgreSQL Database**: Data loaded from PostgreSQL into memory on startup (fast, reliable, queryable)
+   - UPSERT-based updates (safe, non-destructive)
+   - JSONB columns for complex nested data
+   - In-memory caching after initial load
 2. **No Frontend**: Pure MCP server (removed React/Vite in recent commits)
-3. **No External APIs**: Server runs without SEC API key (pre-extracted data)
-4. **In-Memory Indexes**: Fast lookups without database queries
-5. **Lazy Loading**: NAV history loaded on-demand, cached after first access
+3. **No External APIs at Runtime**: Server runs without SEC API key (pre-loaded from database)
+   - SEC APIs only used during data extraction pipeline
+4. **In-Memory Indexes**: Fast lookups after database load (O(1) by symbol)
+5. **Cached Queries**: NAV history queries cached after first access
 
 ### Path Aliases
 - `@shared/*` → `./shared/*` (used in server code)

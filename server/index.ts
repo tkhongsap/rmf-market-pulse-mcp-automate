@@ -28,6 +28,7 @@ import { Pool } from 'pg';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { RMFMCPServer } from './mcp';
 import { RMFDataService } from './services/rmfDataService';
+import OpenAI from 'openai';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -875,6 +876,549 @@ app.get('/', (_req, res) => {
   </div>
 </body>
 </html>`);
+});
+
+/**
+ * Test Chat Interface - Natural Language Testing
+ */
+app.get('/test-chat', (_req, res) => {
+  res.sendFile(path.resolve(process.cwd(), 'server/pages/test-chat.html'));
+});
+
+/**
+ * Chat API - Natural Language to MCP Tool Calls
+ */
+app.post('/api/chat', async (req, res) => {
+  try {
+    const { message } = req.body;
+    
+    if (!message || typeof message !== 'string') {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+    
+    // Initialize OpenAI with Replit AI Integrations
+    const openai = new OpenAI({
+      apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+      baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+    });
+    
+    // Define available MCP tools for the AI to choose from
+    const tools = [
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_funds',
+          description: 'List RMF funds with optional pagination and sorting. Use this for general fund listings.',
+          parameters: {
+            type: 'object',
+            properties: {
+              limit: { type: 'number', description: 'Number of funds to return (default 20)' },
+              sortBy: { 
+                type: 'string',
+                enum: ['ytd', '1y', '3y', '5y', 'nav', 'name', 'risk'],
+                description: 'Field to sort by'
+              },
+              sortOrder: { type: 'string', enum: ['asc', 'desc'], description: 'Sort order' }
+            }
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'search_rmf_funds',
+          description: 'Search and filter RMF funds by multiple criteria like risk level, category, AMC, or minimum YTD return.',
+          parameters: {
+            type: 'object',
+            properties: {
+              search: { type: 'string', description: 'Search term for fund name or symbol' },
+              amc: { type: 'string', description: 'Asset Management Company name' },
+              minRiskLevel: { type: 'number', description: 'Minimum risk level (1-8)' },
+              maxRiskLevel: { type: 'number', description: 'Maximum risk level (1-8)' },
+              category: { type: 'string', description: 'Fund category' },
+              minYtdReturn: { type: 'number', description: 'Minimum YTD return percentage' },
+              limit: { type: 'number', description: 'Number of results' }
+            }
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_fund_detail',
+          description: 'Get detailed information about a specific RMF fund by its symbol/code.',
+          parameters: {
+            type: 'object',
+            properties: {
+              fundCode: { type: 'string', description: 'Fund symbol/code (e.g., KFRMF, SCBRMF)' }
+            },
+            required: ['fundCode']
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_fund_performance',
+          description: 'Get top performing RMF funds for a specific time period.',
+          parameters: {
+            type: 'object',
+            properties: {
+              period: {
+                type: 'string',
+                enum: ['ytd', '3m', '6m', '1y', '3y', '5y', '10y'],
+                description: 'Performance period'
+              },
+              limit: { type: 'number', description: 'Number of top performers to return' },
+              riskLevel: { type: 'number', description: 'Filter by risk level (1-8)' }
+            },
+            required: ['period']
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'get_rmf_fund_nav_history',
+          description: 'Get NAV (Net Asset Value) history for a specific fund over time.',
+          parameters: {
+            type: 'object',
+            properties: {
+              fundCode: { type: 'string', description: 'Fund symbol/code' },
+              days: { type: 'number', description: 'Number of days of history (default 30)' }
+            },
+            required: ['fundCode']
+          }
+        }
+      },
+      {
+        type: 'function',
+        function: {
+          name: 'compare_rmf_funds',
+          description: 'Compare multiple RMF funds side-by-side (2-5 funds).',
+          parameters: {
+            type: 'object',
+            properties: {
+              fundCodes: {
+                type: 'array',
+                items: { type: 'string' },
+                description: 'Array of fund symbols to compare (2-5 funds)'
+              }
+            },
+            required: ['fundCodes']
+          }
+        }
+      }
+    ];
+    
+    // Ask OpenAI to determine which tool to use - ENFORCE tool call
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        {
+          role: 'system',
+          content: `You are an AI assistant that helps users query Thai RMF (Retirement Mutual Fund) data. 
+You MUST always call one of the available tools to answer queries. Never respond with plain text.
+
+Guidelines:
+- For "top performers" or "best funds" → use get_rmf_fund_performance
+- For "low risk" or "conservative" → use search_rmf_funds with maxRiskLevel
+- For specific fund details → use get_rmf_fund_detail
+- For comparing funds → use compare_rmf_funds
+- For NAV history/charts → use get_rmf_fund_nav_history
+- For general listings → use get_rmf_funds
+
+If the query is unclear or not about RMF funds, use get_rmf_funds with default parameters.`
+        },
+        { role: 'user', content: message }
+      ],
+      tools: tools as any,
+      tool_choice: 'required' // Enforce tool calling
+    });
+    
+    const responseMessage = completion.choices[0].message;
+    
+    // Verify tool call exists
+    if (!responseMessage.tool_calls || responseMessage.tool_calls.length === 0) {
+      return res.status(502).json({
+        error: 'AI model did not return a tool call',
+        response: 'Sorry, I couldn\'t process your question. Please try rephrasing or ask about RMF fund performance, details, or comparisons.'
+      });
+    }
+    
+    const toolCall = responseMessage.tool_calls[0] as any;
+    let toolName: string;
+    let toolArgs: any;
+    
+    // Parse tool call with error handling
+    try {
+      toolName = toolCall.function?.name;
+      if (!toolName) {
+        throw new Error('Tool name is missing');
+      }
+      toolArgs = JSON.parse(toolCall.function.arguments);
+    } catch (parseError: any) {
+      return res.status(502).json({
+        error: 'Failed to parse AI response',
+        response: 'Sorry, there was an error processing your request. Please try again.'
+      });
+    }
+    
+    // Convert snake_case tool name to camelCase method name
+    const methodName = `handle${toolName.charAt(0).toUpperCase() + toolName.slice(1).replace(/_([a-z])/g, (_: any, letter: string) => letter.toUpperCase())}`;
+    
+    // Call the actual MCP tool via RMFMCPServer
+    let result;
+    try {
+      const method = (rmfMCPServer as any)[methodName];
+      if (typeof method !== 'function') {
+        throw new Error(`Tool ${toolName} not found`);
+      }
+      result = await method.call(rmfMCPServer, toolArgs);
+    } catch (error: any) {
+      console.error(`Tool execution error (${toolName}):`, error);
+      return res.json({
+        error: error.message,
+        toolCall: `${toolName}(${JSON.stringify(toolArgs, null, 2)})`,
+        response: `Failed to execute tool: ${error.message}`
+      });
+    }
+    
+    // Extract meaningful data from result
+    let resultData = result;
+    if (result && result.content && Array.isArray(result.content)) {
+      const textContent = result.content.find((c: any) => c.type === 'text' && c.text && c.text.startsWith('{'));
+      if (textContent) {
+        try {
+          resultData = JSON.parse(textContent.text);
+        } catch {
+          resultData = result.content[0]?.text || result;
+        }
+      } else if (result.content[0]?.text) {
+        resultData = result.content[0].text;
+      }
+    }
+    
+    return res.json({
+      response: `I used the ${toolName} tool to answer your question.`,
+      toolCall: `${toolName}(${JSON.stringify(toolArgs, null, 2)})`,
+      result: resultData
+    });
+  } catch (error: any) {
+    console.error('Chat API error:', error);
+    res.status(500).json({ error: error.message || 'Internal server error' });
+  }
+});
+
+// Concurrency control for admin pipeline
+let pipelineRunning = false;
+let pipelineStartTime: number | null = null;
+
+/**
+ * Admin endpoint status check
+ * GET /admin/status
+ * 
+ * Returns whether the database initialization pipeline is currently running
+ */
+app.get('/admin/status', (_req, res) => {
+  if (pipelineRunning && pipelineStartTime) {
+    const elapsedMinutes = Math.floor((Date.now() - pipelineStartTime) / 1000 / 60);
+    return res.json({
+      running: true,
+      elapsedMinutes,
+      message: `Pipeline has been running for ${elapsedMinutes} minutes. Estimated total: 25-30 minutes.`
+    });
+  }
+  
+  return res.json({
+    running: false,
+    message: 'No pipeline is currently running.'
+  });
+});
+
+/**
+ * Admin endpoint to initialize/refresh database
+ * Protected by ADMIN_SECRET via Authorization header
+ * 
+ * Usage: POST /admin/init-database
+ * Headers: Authorization: Bearer YOUR_ADMIN_SECRET
+ * 
+ * This endpoint triggers the full data pipeline:
+ * 1. Fetches latest data from SEC Thailand API (~450 RMF funds)
+ * 2. Validates data completeness
+ * 3. Loads into database using production-safe UPSERT mode
+ * 
+ * Response: Streams real-time progress updates
+ * 
+ * Security: Uses POST with Authorization header (no secrets in logs/history)
+ * Concurrency: Only one pipeline run allowed at a time
+ */
+app.post('/admin/init-database', async (req, res) => {
+  // Check if pipeline is already running
+  if (pipelineRunning) {
+    const elapsedMinutes = pipelineStartTime 
+      ? Math.floor((Date.now() - pipelineStartTime) / 1000 / 60)
+      : 0;
+    return res.status(409).send(`
+      <!DOCTYPE html>
+      <html><head><title>Pipeline Already Running</title></head><body style="font-family: sans-serif; padding: 40px;">
+        <h1>⚠️ Pipeline Already Running</h1>
+        <p>The database initialization pipeline is already in progress.</p>
+        <p>Elapsed time: ${elapsedMinutes} minutes (estimated total: 25-30 minutes)</p>
+        <p><a href="/admin/status">Check status</a></p>
+      </body></html>
+    `);
+  }
+  
+  // Verify admin secret from Authorization header
+  const adminSecret = process.env.ADMIN_SECRET;
+  if (!adminSecret) {
+    return res.status(500).send(`
+      <!DOCTYPE html>
+      <html><head><title>Error</title></head><body style="font-family: sans-serif; padding: 40px;">
+        <h1>⚠️ Configuration Error</h1>
+        <p>ADMIN_SECRET environment variable is not configured.</p>
+      </body></html>
+    `);
+  }
+  
+  // Extract bearer token from Authorization header
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).send(`
+      <!DOCTYPE html>
+      <html><head><title>Unauthorized</title></head><body style="font-family: sans-serif; padding: 40px;">
+        <h1>🔒 Unauthorized</h1>
+        <p>Missing or invalid Authorization header.</p>
+        <p>Required: <code>Authorization: Bearer YOUR_ADMIN_SECRET</code></p>
+        <h3>Example using curl:</h3>
+        <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px;">curl -X POST https://your-app.replit.app/admin/init-database \\
+  -H "Authorization: Bearer YOUR_SECRET"</pre>
+      </body></html>
+    `);
+  }
+  
+  const providedSecret = authHeader.substring(7); // Remove "Bearer " prefix
+  
+  // Constant-time comparison to prevent timing attacks
+  const crypto = await import('crypto');
+  const expectedBuffer = Buffer.from(adminSecret);
+  const providedBuffer = Buffer.from(providedSecret);
+  
+  if (expectedBuffer.length !== providedBuffer.length) {
+    return res.status(401).send(`
+      <!DOCTYPE html>
+      <html><head><title>Unauthorized</title></head><body style="font-family: sans-serif; padding: 40px;">
+        <h1>🔒 Unauthorized</h1>
+        <p>Invalid admin secret.</p>
+      </body></html>
+    `);
+  }
+  
+  if (!crypto.timingSafeEqual(expectedBuffer, providedBuffer)) {
+    return res.status(401).send(`
+      <!DOCTYPE html>
+      <html><head><title>Unauthorized</title></head><body style="font-family: sans-serif; padding: 40px;">
+        <h1>🔒 Unauthorized</h1>
+        <p>Invalid admin secret.</p>
+      </body></html>
+    `);
+  }
+  
+  // Mark pipeline as running
+  pipelineRunning = true;
+  pipelineStartTime = Date.now();
+  
+  // Set headers for streaming response
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.setHeader('Transfer-Encoding', 'chunked');
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  
+  // Send initial HTML with styling
+  res.write(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Database Initialization - Thai RMF Market Pulse</title>
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Consolas', monospace;
+          background: #1a1a1a;
+          color: #e5e7eb;
+          padding: 20px;
+          line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+          background: #111827;
+          padding: 24px;
+          border-radius: 12px;
+          margin-bottom: 24px;
+          border: 1px solid #374151;
+        }
+        .header h1 {
+          font-size: 24px;
+          font-weight: 700;
+          color: #10b981;
+          margin-bottom: 8px;
+        }
+        .header p { font-size: 14px; color: #9ca3af; }
+        .log-box {
+          background: #111827;
+          padding: 20px;
+          border-radius: 12px;
+          border: 1px solid #374151;
+          min-height: 400px;
+          max-height: 600px;
+          overflow-y: auto;
+          font-family: 'Consolas', 'Monaco', monospace;
+          font-size: 13px;
+        }
+        .log-line {
+          margin-bottom: 4px;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+        .success { color: #10b981; }
+        .error { color: #ef4444; }
+        .warning { color: #f59e0b; }
+        .info { color: #3b82f6; }
+        .complete {
+          background: #065f46;
+          color: white;
+          padding: 16px;
+          border-radius: 8px;
+          margin-top: 20px;
+          text-align: center;
+          font-weight: 600;
+        }
+        .failed {
+          background: #991b1b;
+          color: white;
+          padding: 16px;
+          border-radius: 8px;
+          margin-top: 20px;
+          text-align: center;
+          font-weight: 600;
+        }
+        .spinner {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border: 2px solid #374151;
+          border-top-color: #10b981;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="header">
+          <h1>🗄️ Database Initialization</h1>
+          <p>Running daily refresh pipeline to populate production database...</p>
+          <p style="margin-top: 8px;"><span class="spinner"></span> <span style="color: #10b981;">In Progress</span></p>
+        </div>
+        <div class="log-box" id="logs">
+  `);
+  
+  // Import spawn for running the pipeline
+  const { spawn } = await import('child_process');
+  
+  // Spawn the pipeline process
+  const pipeline = spawn('npx', ['tsx', 'server/pipeline/daily-refresh-production.ts'], {
+    cwd: process.cwd(),
+    env: process.env,
+  });
+  
+  // Helper to write log lines
+  const writeLog = (text: string, className = '') => {
+    const escapedText = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+    res.write(`<div class="log-line ${className}">${escapedText}</div>`);
+  };
+  
+  // Stream stdout
+  pipeline.stdout.on('data', (data) => {
+    const lines = data.toString().split('\n');
+    lines.forEach((line: string) => {
+      if (line.trim()) {
+        let className = '';
+        if (line.includes('✓') || line.includes('✅') || line.includes('SUCCESS')) className = 'success';
+        else if (line.includes('❌') || line.includes('ERROR') || line.includes('FAILED')) className = 'error';
+        else if (line.includes('⚠') || line.includes('WARNING')) className = 'warning';
+        writeLog(line, className);
+      }
+    });
+  });
+  
+  // Stream stderr
+  pipeline.stderr.on('data', (data) => {
+    const lines = data.toString().split('\n');
+    lines.forEach((line: string) => {
+      if (line.trim()) {
+        writeLog(line, 'error');
+      }
+    });
+  });
+  
+  // Handle completion
+  pipeline.on('close', (code) => {
+    res.write('</div>'); // Close log-box
+    
+    if (code === 0) {
+      res.write(`
+        <div class="complete">
+          ✅ Pipeline completed successfully! Your production database is now populated with RMF funds data.
+        </div>
+      `);
+    } else {
+      res.write(`
+        <div class="failed">
+          ❌ Pipeline failed with exit code ${code}. Check the logs above for details.
+        </div>
+      `);
+    }
+    
+    res.write(`
+        </div>
+        <script>
+          // Auto-scroll logs to bottom
+          const logBox = document.getElementById('logs');
+          if (logBox) logBox.scrollTop = logBox.scrollHeight;
+        </script>
+      </body>
+      </html>
+    `);
+    res.end();
+    
+    // Release pipeline lock
+    pipelineRunning = false;
+    pipelineStartTime = null;
+  });
+  
+  // Handle errors
+  pipeline.on('error', (error) => {
+    writeLog(`Pipeline error: ${error.message}`, 'error');
+    res.write('</div>');
+    res.write(`
+      <div class="failed">
+        ❌ Pipeline failed to start: ${error.message}
+      </div>
+      </div></body></html>
+    `);
+    res.end();
+    
+    // Release pipeline lock
+    pipelineRunning = false;
+    pipelineStartTime = null;
+  });
 });
 
 /**

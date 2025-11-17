@@ -1,5 +1,3 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import { Pool } from 'pg';
 import type { RMFFundCSV, RMFNavHistory } from '@shared/schema';
 
@@ -139,21 +137,21 @@ export class RMFDataService {
       nav_history_min: parseFloat(record.nav_history_min) || null,
       nav_history_max: parseFloat(record.nav_history_max) || null,
       perf_ytd: performance.ytd || null,
-      perf_3m: performance.three_month || null,
-      perf_6m: performance.six_month || null,
-      perf_1y: performance.one_year || null,
-      perf_3y: performance.three_year || null,
-      perf_5y: performance.five_year || null,
-      perf_10y: performance.ten_year || null,
+      perf_3m: performance['3m'] || null,
+      perf_6m: performance['6m'] || null,
+      perf_1y: performance['1y'] || null,
+      perf_3y: performance['3y'] || null,
+      perf_5y: performance['5y'] || null,
+      perf_10y: performance['10y'] || null,
       perf_since_inception: performance.since_inception || null,
       benchmark_name: benchmark.name || null,
       benchmark_ytd: benchmark.returns?.ytd || null,
-      benchmark_3m: benchmark.returns?.three_month || null,
-      benchmark_6m: benchmark.returns?.six_month || null,
-      benchmark_1y: benchmark.returns?.one_year || null,
-      benchmark_3y: benchmark.returns?.three_year || null,
-      benchmark_5y: benchmark.returns?.five_year || null,
-      benchmark_10y: benchmark.returns?.ten_year || null,
+      benchmark_3m: benchmark.returns?.['3m'] || null,
+      benchmark_6m: benchmark.returns?.['6m'] || null,
+      benchmark_1y: benchmark.returns?.['1y'] || null,
+      benchmark_3y: benchmark.returns?.['3y'] || null,
+      benchmark_5y: benchmark.returns?.['5y'] || null,
+      benchmark_10y: benchmark.returns?.['10y'] || null,
       dividends_count: parseInt(record.dividends_count) || 0,
       dividends_total: parseFloat(record.dividends_total) || null,
       dividend_dates: record.dividend_dates ? record.dividend_dates.toISOString().split('T')[0] : null,
@@ -328,13 +326,12 @@ export class RMFDataService {
     try {
       // Query NAV history from database
       const result = await this.dbPool.query(`
-        SELECT 
+        SELECT
           nav_date,
-          nav_value as last_val,
+          nav as last_val,
           previous_nav as previous_val,
-          net_asset,
-          buy_price,
-          sell_price
+          nav_change,
+          nav_change_percent
         FROM rmf_nav_history
         WHERE fund_symbol = $1
         ORDER BY nav_date DESC
@@ -345,13 +342,11 @@ export class RMFDataService {
         nav_date: nav.nav_date,
         last_val: parseFloat(nav.last_val) || 0,
         previous_val: parseFloat(nav.previous_val) || 0,
-        net_asset: parseFloat(nav.net_asset) || 0,
-        buy_price: parseFloat(nav.buy_price) || 0,
-        sell_price: parseFloat(nav.sell_price) || 0,
-        change: (parseFloat(nav.last_val) || 0) - (parseFloat(nav.previous_val) || 0),
-        change_percent: nav.previous_val 
-          ? ((parseFloat(nav.last_val) - parseFloat(nav.previous_val)) / parseFloat(nav.previous_val)) * 100 
-          : 0,
+        net_asset: 0, // Not available in nav_history table
+        buy_price: 0, // Not available in nav_history table
+        sell_price: 0, // Not available in nav_history table
+        change: parseFloat(nav.nav_change) || 0,
+        change_percent: parseFloat(nav.nav_change_percent) || 0,
       }));
 
       // Reverse to get chronological order (oldest first)

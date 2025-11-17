@@ -1,0 +1,113 @@
+
+[0;34m╔════════════════════════════════════════════════════════════════════╗[0m
+[0;34m║               PRODUCTION MCP SERVER - BILINGUAL TEST               ║[0m
+[0;34m║               5 English Questions + 5 Thai Questions               ║[0m
+[0;34m╚════════════════════════════════════════════════════════════════════╝[0m
+
+[0;36mProduction URL:[0m https://alfie-app-tkhongsap.replit.app/mcp
+
+
+[0;34m══════════════════════════════════════════════════════════════════════[0m
+[0;34m                        ENGLISH QUESTIONS (5)                         [0m
+[0;34m══════════════════════════════════════════════════════════════════════[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 1 (English):[0m What are the top 5 RMF funds this year?
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 2 (English):[0m Show me low risk RMF funds with good returns
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 3 (English):[0m Tell me about DAOL-GOLDRMF fund
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 4 (English):[0m Compare the top 2 performing funds
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 5 (English):[0m Show me 30-day NAV history for ASP-DIGIBLOCRMF
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+
+[0;34m══════════════════════════════════════════════════════════════════════[0m
+[0;34m                          THAI QUESTIONS (5)                          [0m
+[0;34m══════════════════════════════════════════════════════════════════════[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 6 (Thai):[0m กองทุน RMF ที่ดีที่สุดในปีนี้ 5 อันดับแรก
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 7 (Thai):[0m แสดงกองทุน RMF ความเสี่ยงต่ำที่มีผลตอบแทนดี
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 8 (Thai):[0m บอกข้อมูลกองทุน DAOL-GOLDRMF
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 9 (Thai):[0m เปรียบเทียบกองทุน 2 อันดับแรก
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+[1;33m══════════════════════════════════════════════════════════════════════[0m
+[1;33mQuestion 10 (Thai):[0m แสดงประวัติราคา NAV 30 วันของ ASP-DIGIBLOCRMF
+
+[0;32mAnswer:[0m
+  ERROR: HTTPSConnectionPool(host='alfie-app-tkhongsap.replit.app', port=443): Max retries exceeded with url: /mcp (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+[0;36m○ English only[0m
+
+
+[0;34m╔════════════════════════════════════════════════════════════════════╗[0m
+[0;34m║                           TEST COMPLETE                            ║[0m
+[0;34m╚════════════════════════════════════════════════════════════════════╝[0m
+
+[0;36m📊 Summary:[0m
+   • Tested 10 questions total (5 English + 5 Thai)
+   • All 5 main MCP tools tested
+   • Production server: https://alfie-app-tkhongsap.replit.app/mcp
+
+[1;33m⚠️  Note:[0m
+   The bilingual code has NOT been deployed to production yet.
+   Current production server will respond in English only.
+   After deployment, Thai questions should get Thai responses.
+
