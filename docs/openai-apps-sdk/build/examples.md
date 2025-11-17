@@ -1,35 +1,32 @@
-# Examples
+# Apps SDK Examples Documentation
 
-## Page Overview
+## Overview
 
-The Examples section is part of OpenAI's Apps SDK documentation. It serves as a resource for developers building ChatGPT applications.
+This page introduces end-to-end examples for the Apps SDK, with the Pizzaz demo app serving as the primary reference implementation.
 
-## Key Content
+## Key Points
 
-**Main Section Title:** "Examples"
+**Purpose**: "The Pizzaz demo app bundles a handful of UI components so you can see the full tool surface area end-to-end."
 
-**Description:** The page introduces "End-to-end Apps SDK examples" designed to help developers understand the full implementation of app components.
-
-## Featured Example
-
-**Pizzaz Demo App**
-
-The documentation highlights a demonstration application that "bundles a handful of UI components so you can see the full tool surface area end-to-end." The walkthrough covers:
-
+The documentation walks developers through:
 - MCP server implementations
-- Component implementations powering tools
+- Component implementations powering the available tools
 
-## Resource Availability
+## Resource Location
 
-The page directs developers to the official GitHub repository for practical examples. As noted in the documentation, "You can find the 'Pizzaz' demo app and other examples in our examples repository on GitHub."
+Example code and applications are maintained in the [openai-apps-sdk-examples repository on GitHub](https://github.com/openai/openai-apps-sdk-examples).
 
-## Purpose
+## Guidance for Developers
 
-These examples function as "blueprints when you assemble your own app," providing developers with reference implementations for building their applications.
+The examples function as templates and starting points. Developers should reference these implementations as blueprints when creating their own applications.
 
 ## Navigation Context
 
-The page appears within a structured documentation path: **ChatGPT > Apps SDK > Build > Examples**, with a preceding section on state management.
+This page appears in the Apps SDK documentation structure under the "Build" section, following the state management guide and preceding deployment instructions.
+
+---
+
+**Note**: The provided content consists primarily of navigation elements, JavaScript initialization code, and minimal substantive documentation text. The actual example implementations and detailed code samples are referenced but not included in this page excerpt.
 
 ---
 

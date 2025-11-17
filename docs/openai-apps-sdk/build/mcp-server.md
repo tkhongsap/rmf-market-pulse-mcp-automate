@@ -1,48 +1,46 @@
-# Building Your MCP Server for ChatGPT Apps
+# Build Your MCP Server: Complete Documentation
 
 ## Overview
 
-ChatGPT Apps rely on three interconnected components: your MCP server (defining tools and returning data), a widget/UI bundle (rendering in ChatGPT's sandbox), and the AI model (deciding when to invoke tools).
+Building a ChatGPT App requires three components working in concert: your backend MCP server (which defines tools and manages authentication), a UI bundle that renders within ChatGPT's sandbox, and the model itself, which decides when to invoke your tools. The server maintains clean boundaries between these layers, enabling independent iteration on interface and data logic.
 
-The architecture follows this flow:
-1. User prompt triggers ChatGPT to call an MCP tool
-2. Server processes the request and returns `structuredContent`, `_meta`, and UI metadata
-3. ChatGPT loads the HTML template and injects the payload via `window.openai`
-4. Widget renders and can trigger additional tool calls
-5. Model uses `structuredContent` to narrate outcomes
+### Key Architectural Principle
+
+"ChatGPT Apps have three components: Your MCP server defines tools, enforces auth, returns data, and points each tool to a UI bundle. The widget/UI bundle renders inside ChatGPT's iframe, reading data and widget-runtime globals exposed through `window.openai`. The model decides when to call tools and narrates the experience using the structured data you return."
 
 ## Prerequisites
 
-- Proficiency with TypeScript/Python and a web bundler (Vite, esbuild)
-- HTTP-accessible MCP server (localhost works initially)
-- Built UI bundle exporting a root script (React or vanilla JavaScript)
+You'll need familiarity with TypeScript or Python, a web bundler (Vite or esbuild), an HTTP-accessible MCP server, and a built UI bundle exporting a root script in React or vanilla JavaScript. A typical project structure separates the server code, web components, and distribution assets.
 
-## Core Concepts: window.openai Runtime
+## Widget Runtime: `window.openai`
 
-The sandboxed iframe exposes `window.openai` with these essential properties:
+The sandboxed iframe exposes a single global object providing state management, data access, and API capabilities:
 
-**State & Data:**
-- `toolInput` — Arguments from tool invocation
-- `toolOutput` — Your `structuredContent` (model reads this verbatim)
-- `toolResponseMetadata` — The `_meta` payload (widget-only)
-- `widgetState` — UI state snapshot persisting between renders
-- `setWidgetState(state)` — Persist new state synchronously
+**State & Data Access:**
+- `toolInput`: Arguments passed during tool invocation
+- `toolOutput`: Your `structuredContent` payload
+- `toolResponseMetadata`: The `_meta` payload (widget-only, invisible to model)
+- `widgetState`: Persisted UI state snapshot
+- `setWidgetState(state)`: Synchronously stores UI state after interactions
 
 **Widget APIs:**
-- `callTool(name, args)` — Invoke another MCP tool from widget
-- `sendFollowUpMessage({ prompt })` — Post message to ChatGPT
-- `requestModal` — Spawn ChatGPT-owned modal overlay
-- `notifyIntrinsicHeight` — Report dynamic widget heights
-- `openExternal({ href })` — Open vetted external link
+- `callTool(name, args)`: Invoke tools from within the widget
+- `sendFollowUpMessage({ prompt })`: Have ChatGPT post a message
+- `requestDisplayMode`: Request picture-in-picture or fullscreen
+- `requestModal`: Spawn a modal overlay
+- `notifyIntrinsicHeight`: Report dynamic heights
+- `openExternal({ href })`: Open vetted external links
 
-**Context:**
-- `theme`, `displayMode`, `maxHeight`, `safeArea`, `locale` — Environment signals readable or subscribable via `useOpenAiGlobal`
+**Context Signals:**
+- `theme`, `displayMode`, `maxHeight`, `safeArea`, `view`, `userAgent`, `locale`
+
+React components can use `useOpenAiGlobal` to subscribe to these fields for synchronized updates across components.
 
 ## Implementation Steps
 
 ### Step 1: Register Component Template
 
-Each UI bundle is exposed as an MCP resource with `mimeType: "text/html+skybridge"`. This signals to ChatGPT that the content should render as a sandboxed widget:
+Expose your UI bundle as an MCP resource with MIME type `text/html+skybridge`, which signals ChatGPT to treat it as a sandboxed widget entry point:
 
 ```typescript
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -80,15 +78,11 @@ server.registerResource(
 );
 ```
 
-**Best Practice:** Version template URIs when making breaking changes to prevent stale cached bundles.
+**Best Practice:** Version template URIs when making breaking changes so ChatGPT loads fresh bundles rather than cached versions.
 
-### Step 2: Define Tools with Metadata
+### Step 2: Define Tools
 
-Tools represent user intents. Each descriptor should contain:
-- Machine-readable name and human-readable title
-- JSON schema for arguments
-- `_meta["openai/outputTemplate"]` linking to template URI
-- Optional metadata for invocation strings and capabilities
+Each tool represents a distinct user intent. Descriptors must include machine-readable names, schemas (using zod, JSON Schema, or dataclasses), template references, and optional metadata for UI strings:
 
 ```typescript
 server.registerTool(
@@ -113,17 +107,15 @@ server.registerTool(
 );
 ```
 
-Design handlers to be idempotent, as the model may retry failed calls.
+**Important:** Keep handlers idempotent—the model may retry calls. The model inspects tool descriptors to determine relevance, making names, descriptions, and schemas part of your user experience design.
 
-### Step 3: Structure Response Data
+### Step 3: Structure Response Payloads
 
-Tool responses contain three payloads:
+Every tool response contains three sibling payloads:
 
-**`structuredContent`** — Concise JSON the widget uses and the model reads (model narrates this content)
-
-**`content`** — Optional narration (Markdown/plaintext) for model response
-
-**`_meta`** — Large or sensitive data exclusively for the widget (never reaches model)
+- **`structuredContent`**: Concise JSON the widget reads and the model processes. Include only data the model should understand.
+- **`content`**: Optional narrative text (Markdown or plaintext) for the model's response.
+- **`_meta`**: Large or sensitive data exclusively for the widget; never visible to the model.
 
 ```typescript
 async function loadKanbanBoard(workspace: string) {
@@ -139,7 +131,7 @@ async function loadKanbanBoard(workspace: string) {
     content: [
       {
         type: "text",
-        text: "Drag cards in the widget to update status.",
+        text: "Here's the latest snapshot. Drag cards in the widget to update status.",
       },
     ],
     _meta: {
@@ -150,32 +142,34 @@ async function loadKanbanBoard(workspace: string) {
 }
 ```
 
+The widget accesses these through `window.openai.toolOutput` and `window.openai.toolResponseMetadata`, while the model only receives `structuredContent` and `content`.
+
 ### Step 4: Local Testing
 
-1. Build UI bundle: `npm run build` in the `web/` directory
-2. Start MCP server
-3. Use MCP Inspector to test tool calls and verify widget rendering
+Build your UI bundle and start the MCP server:
 
 ```bash
-npm run build
-node dist/index.js
+npm run build       # compile server + widget
+node dist/index.js  # start the compiled MCP server
 ```
 
-### Step 5: Deploy with HTTPS
+Use the MCP Inspector early and often—it mirrors ChatGPT's widget runtime and catches issues before deployment.
 
-ChatGPT requires HTTPS. Use a tunnel for development:
+### Step 5: Expose HTTPS Endpoint
+
+ChatGPT requires HTTPS. During development, tunnel localhost using ngrok:
 
 ```bash
 ngrok http <port>
-# Use https://<subdomain>.ngrok.app in ChatGPT developer mode
+# Forwarding: https://<subdomain>.ngrok.app -> http://127.0.0.1:<port>
 ```
 
-For production, deploy to HTTPS infrastructure (Cloudflare Workers, Fly.io, Vercel, AWS).
+For production, deploy to a low-latency HTTPS host such as Cloudflare Workers, Fly.io, Vercel, or AWS.
 
-## Example Implementation
+## Complete Minimal Example
 
-**Server Code:**
 ```typescript
+// server/src/index.ts
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 const server = new McpServer({ name: "hello-world", version: "1.0.0" });
@@ -208,61 +202,38 @@ server.registerTool(
 );
 ```
 
-**Widget Code:**
 ```javascript
+// hello-widget.js
 const root = document.getElementById("root");
 const { message } = window.openai.toolOutput ?? { message: "Hi!" };
 root.textContent = message;
 ```
 
-## Common Issues
-
-| Problem | Solution |
-|---------|----------|
-| Widget won't render | Verify `mimeType: "text/html+skybridge"` and bundled URLs resolve in sandbox |
-| `window.openai` undefined | Check MIME type; only `text/html+skybridge` templates receive runtime injection |
-| CSP/CORS errors | Define exact allowed domains in `openai/widgetCSP` |
-| Cached bundles persist | Change template URI or filename with each breaking change |
-| Large payloads | Trim `structuredContent` to what the model needs; oversized payloads degrade performance |
-
 ## Advanced Features
 
-**Component-Initiated Tool Calls:**
-Enable `_meta.openai/widgetAccessible: true` for widgets to invoke tools independently:
+**Widget-Initiated Tool Calls:** Set `"openai/widgetAccessible": true` to enable `window.openai.callTool` for direct tool invocation from your component.
 
-```typescript
-"_meta": {
-  "openai/outputTemplate": "ui://widget/kanban-board.html",
-  "openai/widgetAccessible": true
-}
-```
+**Content Security Policy:** Provide `openai/widgetCSP` specifying allowed domains for network and resource access:
 
-**Content Security Policy:**
-Restrict sandbox access to specific domains:
-
-```typescript
+```json
 "openai/widgetCSP": {
-  connect_domains: ["https://api.example.com"],
-  resource_domains: ["https://persistent.oaistatic.com"]
+  "connect_domains": ["https://api.example.com"],
+  "resource_domains": ["https://persistent.oaistatic.com"]
 }
 ```
 
-**Dedicated Widget Domain:**
-```typescript
-"openai/widgetDomain": "https://chatgpt.com"
-```
+**Localization:** ChatGPT provides locale information via `_meta["openai/locale"]`. Use RFC 4647 matching to select appropriate locales and format content accordingly.
 
-**Localization:**
-ChatGPT provides requested locale in `_meta["openai/locale"]`. Use RFC 4647 matching to select the closest supported locale and format content accordingly.
+**Component Descriptions:** Use `"openai/widgetDescription"` to help the model understand what your widget does, reducing redundant narration.
+
+## Troubleshooting
+
+- **Widget doesn't render**: Verify MIME type is `text/html+skybridge` and bundled JS/CSS URLs resolve within the sandbox.
+- **`window.openai` undefined**: The runtime only injects for `text/html+skybridge` templates. Check MIME type and CSP violations.
+- **CSP or CORS failures**: Use `openai/widgetCSP` to explicitly allow required domains.
+- **Stale bundles**: Cache-bust template URIs when deploying breaking changes.
+- **Performance issues**: Trim `structuredContent` to only what the model needs; oversized payloads degrade performance.
 
 ## Security Considerations
 
-- Treat `structuredContent`, `content`, `_meta`, and widget state as user-visible—never embed credentials or secrets
-- Never rely on context hints for authorization; enforce auth inside your MCP server
-- Avoid exposing destructive or admin-only tools without proper caller verification
-
----
-
-**Next Step:** Review the [custom UX guide](/apps-sdk/build/custom-ux) for detailed widget development patterns.
-
-**Source**: https://developers.openai.com/apps-sdk/build/mcp-server
+Never embed API keys, tokens, or secrets in `structuredContent`, `content`, `_meta`, or widget state—all are user-visible. Do not rely on client-side hints like `userAgent` or `locale` for authorization; enforce authentication within your MCP server and backing APIs. Avoid exposing destructive or admin-only tools without proper identity verification.
