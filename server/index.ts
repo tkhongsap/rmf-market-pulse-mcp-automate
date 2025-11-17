@@ -324,6 +324,13 @@ app.get('/healthz', healthHandler);
 app.get('/health', healthHandler);
 
 /**
+ * Widget Test Harness - Interactive testing for Apps SDK widgets
+ */
+app.get('/test-widgets', (_req, res) => {
+  res.sendFile(path.resolve(__dirname, 'test-widget-harness.html'));
+});
+
+/**
  * Security: Rate limiting for MCP endpoint
  * Prevents DoS attacks by limiting requests per IP
  */

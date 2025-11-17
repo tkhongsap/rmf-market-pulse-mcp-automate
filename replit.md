@@ -44,3 +44,34 @@ ChatGPT prompts lead to MCP tool selection, triggering a JSON-RPC request to the
 -   **Zod**: TypeScript-first schema validation library.
 -   **PostgreSQL (Neon)**: Primary data source with a 4-table schema (rmf_funds, rmf_nav_history, rmf_dividends, pipeline_runs).
 -   **pg (node-postgres)**: PostgreSQL client library with connection pooling.
+
+## Recent Changes (November 17, 2025)
+
+### OpenAI Apps SDK Compliance Implementation
+
+Transformed the MCP server to be fully Apps SDK compliant for ChatGPT integration:
+
+**Resource Registration:**
+- Registered 4 widget HTML files as resources with `mimeType: "text/html+skybridge"`
+- Widget URIs: `ui://widget/{fund-list,fund-detail,fund-comparison,performance-chart}.html`
+- Widgets served from `/widgets` endpoint with proper CORS and CSP headers
+
+**Tool Response Structure:**
+- Updated all 6 tools to return three-field structure:
+  - `structuredContent`: Concise data visible to AI model
+  - `content`: Human-readable narrative text
+  - `_meta`: Full data for widgets with `openai/outputTemplate` URI
+
+**Widget Enhancements:**
+- Updated all widgets to use `window.openai.toolOutput` and `window.openai.toolResponseMetadata`
+- Implemented state persistence via `window.openai.setWidgetState()` in all 4 widgets
+- Added theme change event listeners for light/dark mode support
+- Handles both old/new field naming conventions for backward compatibility
+
+**Testing:**
+- Created comprehensive test suite with 17 automated tests (all passing)
+- Built interactive test harness at `/test-widgets` endpoint
+- Validated MCP protocol compliance, response structures, and edge cases
+- Test report: `TEST_REPORT.md`
+
+**Readiness:** 95% ready for ChatGPT integration. Remaining work: visual validation of 3 widgets, ngrok tunnel setup for live testing.

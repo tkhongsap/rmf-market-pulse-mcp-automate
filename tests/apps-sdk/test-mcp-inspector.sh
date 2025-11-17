@@ -14,8 +14,11 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Configuration
-MCP_ENDPOINT="${MCP_ENDPOINT:-http://localhost:5000/mcp}"
+# Use production URL if available, otherwise localhost
+MCP_ENDPOINT="${MCP_ENDPOINT:-https://alfie-app-tkhongsap.replit.app/mcp}"
+LOCAL_ENDPOINT="http://localhost:5000/mcp"
 SERVER_PID=""
+USE_PRODUCTION=true
 
 # Function to cleanup on exit
 cleanup() {
@@ -28,14 +31,22 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-# Check if server is already running
-if curl -s "$MCP_ENDPOINT" > /dev/null 2>&1; then
-    echo -e "${GREEN}✓${NC} Server already running at $MCP_ENDPOINT"
+# Check if using production or local
+if [ "$USE_PRODUCTION" = true ] && curl -s "$MCP_ENDPOINT" > /dev/null 2>&1; then
+    echo -e "${GREEN}✓${NC} Using production server at $MCP_ENDPOINT"
+    echo -e "${YELLOW}ℹ${NC} No local server needed - testing against production"
+elif curl -s "$LOCAL_ENDPOINT" > /dev/null 2>&1; then
+    echo -e "${GREEN}✓${NC} Local server already running at $LOCAL_ENDPOINT"
+    MCP_ENDPOINT="$LOCAL_ENDPOINT"
+    USE_PRODUCTION=false
 else
-    echo "Starting MCP server..."
+    echo "Starting local MCP server..."
+    echo -e "${YELLOW}ℹ${NC} To use production instead, set: MCP_ENDPOINT=https://alfie-app-tkhongsap.replit.app/mcp"
     cd "$(dirname "$0")/../.."
     npm run dev > /tmp/mcp-server.log 2>&1 &
     SERVER_PID=$!
+    MCP_ENDPOINT="$LOCAL_ENDPOINT"
+    USE_PRODUCTION=false
     
     # Wait for server to start
     echo "Waiting for server to start..."
@@ -78,6 +89,9 @@ echo ""
 echo "1. MCP Inspector will open in your browser"
 echo "2. Enter this URL when prompted:"
 echo "   ${GREEN}$MCP_ENDPOINT${NC}"
+if [ "$USE_PRODUCTION" = true ]; then
+    echo -e "   ${YELLOW}ℹ${NC} Using production server (no ngrok needed!)"
+fi
 echo ""
 echo "3. Test each tool:"
 echo "   - get_rmf_funds"
