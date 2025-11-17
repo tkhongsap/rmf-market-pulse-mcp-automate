@@ -115,19 +115,36 @@
   </div>
 
   <script>
-    const data = window.openai.toolOutput._meta;
+    // Apps SDK compliant: read from structuredContent and _meta
+    const structuredData = window.openai.toolOutput || {};
+    const metadata = window.openai.toolResponseMetadata || {};
     
-    document.getElementById('fundName').textContent = data.fundName || 'N/A';
-    document.getElementById('fundCode').textContent = data.fundCode || 'N/A';
+    // Use full data from metadata, fallback to structured data
+    const fundCode = metadata.fundCode || structuredData.fundCode || 'N/A';
+    const fundName = metadata.fundName || structuredData.fundName || 'N/A';
+    const statistics = metadata.statistics || structuredData.statistics || {};
+    const navHistory = metadata.navHistory || structuredData.navHistory || [];
+    
+    document.getElementById('fundName').textContent = fundName;
+    document.getElementById('fundCode').textContent = fundCode;
+
+    // Initialize and persist widget state
+    let widgetState = window.openai.widgetState || { viewedFunds: [], viewedAt: null };
+    if (!widgetState.viewedFunds.includes(fundCode)) {
+      widgetState.viewedFunds.push(fundCode);
+    }
+    widgetState.lastViewedFund = fundCode;
+    widgetState.viewedAt = new Date().toISOString();
+    window.openai.setWidgetState(widgetState);
 
     // Display statistics
     const statsGrid = document.getElementById('statsGrid');
     const stats = [
-      { label: 'Min NAV', value: data.statistics?.minNav || 'N/A' },
-      { label: 'Max NAV', value: data.statistics?.maxNav || 'N/A' },
-      { label: 'Avg NAV', value: data.statistics?.avgNav || 'N/A' },
-      { label: 'Period Return', value: data.statistics?.periodReturn || 'N/A', isReturn: true },
-      { label: 'Volatility', value: data.statistics?.volatility || 'N/A' },
+      { label: 'Min NAV', value: statistics.minNav || 'N/A' },
+      { label: 'Max NAV', value: statistics.maxNav || 'N/A' },
+      { label: 'Avg NAV', value: statistics.avgNav || 'N/A' },
+      { label: 'Period Return', value: statistics.periodReturn || 'N/A', isReturn: true },
+      { label: 'Volatility', value: statistics.volatility || 'N/A' },
     ];
 
     stats.forEach(({ label, value, isReturn }) => {
@@ -137,17 +154,17 @@
         className = numValue >= 0 ? 'positive' : 'negative';
       }
 
-      statsGrid.innerHTML += `
-        <div class="stat-item">
-          <div class="stat-label">${label}</div>
-          <div class="stat-value ${className}">${value}</div>
-        </div>
+      const statItem = document.createElement('div');
+      statItem.className = 'stat-item';
+      statItem.innerHTML = `
+        <div class="stat-label">${label}</div>
+        <div class="stat-value ${className}">${value}</div>
       `;
+      statsGrid.appendChild(statItem);
     });
 
     // Display NAV history
     const navList = document.getElementById('navList');
-    const navHistory = data.navHistory || [];
 
     if (navHistory.length === 0) {
       navList.innerHTML = '<div style="text-align: center; padding: 20px; color: #6b7280;">No NAV history available</div>';
@@ -159,15 +176,23 @@
           ? `${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%`
           : 'N/A';
 
-        navList.innerHTML += `
-          <div class="nav-row">
-            <div class="nav-date">${item.date || 'N/A'}</div>
-            <div class="nav-value">${item.nav ? parseFloat(item.nav).toFixed(4) : 'N/A'}</div>
-            <div class="nav-change ${changeClass}">${changeText}</div>
-          </div>
+        const row = document.createElement('div');
+        row.className = 'nav-row';
+        row.innerHTML = `
+          <div class="nav-date">${item.date || 'N/A'}</div>
+          <div class="nav-value">${item.nav ? parseFloat(item.nav).toFixed(4) : 'N/A'}</div>
+          <div class="nav-change ${changeClass}">${changeText}</div>
         `;
+        navList.appendChild(row);
       });
     }
+
+    // Support for theme changes
+    window.addEventListener('openai:set_globals', (event) => {
+      if (event.detail.globals.theme) {
+        document.body.className = event.detail.globals.theme;
+      }
+    });
   </script>
 </body>
 </html>

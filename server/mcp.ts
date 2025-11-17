@@ -1,5 +1,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import type { RMFFundCSV } from '@shared/schema';
 import type { RMFDataService } from './services/rmfDataService';
 import {
@@ -19,6 +21,7 @@ import { t, getPeriodLabel } from './i18n/translations.js';
 export class RMFMCPServer {
   private server: McpServer;
   private dataService: RMFDataService;
+  private widgetTemplates: Map<string, string>;
 
   constructor(dataService: RMFDataService) {
     this.dataService = dataService;
@@ -27,28 +30,133 @@ export class RMFMCPServer {
       version: '1.0.0',
     });
 
+    this.widgetTemplates = new Map();
+    this.loadWidgetTemplates();
+    this.setupResources();
     this.setupTools();
-    // Note: Resource registration for Apps SDK widgets will be added when MCP SDK fully supports it
-    // For now, _meta fields in responses provide Apps SDK compatibility
   }
 
-  // TODO: Re-enable when MCP SDK supports Apps SDK resource patterns
-  // private setupResources() {
-  //   // Register HTML widgets as MCP resources for OpenAI Apps SDK
-  //   this.server.resource({
-  //     uri: 'ui://fund-detail',
-  //     name: 'Fund Detail Widget',
-  //     description: 'Interactive widget for displaying detailed Thai RMF fund information',
-  //     mimeType: 'text/html+skybridge',
-  //   }, async () => ({
-  //     contents: [{
-  //       uri: 'ui://fund-detail',
-  //       mimeType: 'text/html+skybridge',
-  //       text: widgetTemplates['fund-detail'],
-  //     }],
-  //   }));
-  //   // ... other resources
-  // }
+  private loadWidgetTemplates() {
+    const widgetDir = join(process.cwd(), 'server', 'widgets');
+    const widgetFiles = [
+      'fund-list.html',
+      'fund-detail.html',
+      'fund-comparison.html',
+      'performance-chart.html',
+    ];
+
+    widgetFiles.forEach(file => {
+      try {
+        const content = readFileSync(join(widgetDir, file), 'utf-8');
+        const name = file.replace('.html', '');
+        this.widgetTemplates.set(name, content);
+        console.log(`✓ Loaded widget template: ${name}`);
+      } catch (error) {
+        console.error(`Failed to load widget template ${file}:`, error);
+      }
+    });
+  }
+
+  private setupResources() {
+    // Register HTML widgets as MCP resources for OpenAI Apps SDK
+    const baseUrl = process.env.REPLIT_DOMAINS 
+      ? `https://${process.env.REPLIT_DOMAINS.split(',')[0]}`
+      : 'https://alfie-app-tkhongsap.replit.app';
+
+    // Fund List Widget
+    this.server.registerResource(
+      'fund-list',
+      'ui://widget/fund-list.html',
+      {},
+      async () => ({
+        contents: [{
+          uri: 'ui://widget/fund-list.html',
+          mimeType: 'text/html+skybridge',
+          text: this.widgetTemplates.get('fund-list') || '<html><body>Widget not found</body></html>',
+          _meta: {
+            'openai/widgetDescription': 'Interactive list displaying Thai RMF funds with pagination and sorting',
+            'openai/widgetPrefersBorder': true,
+            'openai/widgetDomain': 'https://chatgpt.com',
+            'openai/widgetCSP': {
+              connect_domains: [baseUrl],
+              resource_domains: [],
+            },
+          },
+        }],
+      })
+    );
+
+    // Fund Detail Widget
+    this.server.registerResource(
+      'fund-detail',
+      'ui://widget/fund-detail.html',
+      {},
+      async () => ({
+        contents: [{
+          uri: 'ui://widget/fund-detail.html',
+          mimeType: 'text/html+skybridge',
+          text: this.widgetTemplates.get('fund-detail') || '<html><body>Widget not found</body></html>',
+          _meta: {
+            'openai/widgetDescription': 'Detailed view of a specific Thai RMF fund with performance metrics',
+            'openai/widgetPrefersBorder': true,
+            'openai/widgetDomain': 'https://chatgpt.com',
+            'openai/widgetCSP': {
+              connect_domains: [baseUrl],
+              resource_domains: [],
+            },
+          },
+        }],
+      })
+    );
+
+    // Fund Comparison Widget
+    this.server.registerResource(
+      'fund-comparison',
+      'ui://widget/fund-comparison.html',
+      {},
+      async () => ({
+        contents: [{
+          uri: 'ui://widget/fund-comparison.html',
+          mimeType: 'text/html+skybridge',
+          text: this.widgetTemplates.get('fund-comparison') || '<html><body>Widget not found</body></html>',
+          _meta: {
+            'openai/widgetDescription': 'Side-by-side comparison of multiple Thai RMF funds',
+            'openai/widgetPrefersBorder': true,
+            'openai/widgetDomain': 'https://chatgpt.com',
+            'openai/widgetCSP': {
+              connect_domains: [baseUrl],
+              resource_domains: [],
+            },
+          },
+        }],
+      })
+    );
+
+    // Performance Chart Widget
+    this.server.registerResource(
+      'performance-chart',
+      'ui://widget/performance-chart.html',
+      {},
+      async () => ({
+        contents: [{
+          uri: 'ui://widget/performance-chart.html',
+          mimeType: 'text/html+skybridge',
+          text: this.widgetTemplates.get('performance-chart') || '<html><body>Widget not found</body></html>',
+          _meta: {
+            'openai/widgetDescription': 'NAV history chart and performance statistics for Thai RMF funds',
+            'openai/widgetPrefersBorder': true,
+            'openai/widgetDomain': 'https://chatgpt.com',
+            'openai/widgetCSP': {
+              connect_domains: [baseUrl],
+              resource_domains: [],
+            },
+          },
+        }],
+      })
+    );
+
+    console.log('✓ Registered 4 widget resources with MCP server');
+  }
 
   private setupTools() {
     this.server.tool(
@@ -61,7 +169,7 @@ export class RMFMCPServer {
         sortOrder: z.enum(['asc', 'desc']).optional().describe('Sort order'),
         question: z.string().optional().describe('User question (used for language detection)'),
       },
-      async (args) => this.handleGetRmfFunds(args)
+      async (args: any) => this.handleGetRmfFunds(args)
     );
 
     this.server.tool(
@@ -78,7 +186,7 @@ export class RMFMCPServer {
         limit: z.number().optional().default(20).describe('Maximum results'),
         question: z.string().optional().describe('User question (used for language detection)'),
       },
-      async (args) => this.handleSearchRmfFunds(args)
+      async (args: any) => this.handleSearchRmfFunds(args)
     );
 
     this.server.tool(
@@ -88,7 +196,7 @@ export class RMFMCPServer {
         fundCode: z.string().describe('Fund symbol/code (e.g., "ABAPAC-RMF")'),
         question: z.string().optional().describe('User question (used for language detection)'),
       },
-      async (args) => this.handleGetRmfFundDetail(args)
+      async (args: any) => this.handleGetRmfFundDetail(args)
     );
 
     this.server.tool(
@@ -101,7 +209,7 @@ export class RMFMCPServer {
         riskLevel: z.number().min(1).max(8).optional().describe('Filter by risk level'),
         question: z.string().optional().describe('User question (used for language detection)'),
       },
-      async (args) => this.handleGetRmfFundPerformance(args)
+      async (args: any) => this.handleGetRmfFundPerformance(args)
     );
 
     this.server.tool(
@@ -112,7 +220,7 @@ export class RMFMCPServer {
         days: z.number().min(1).max(365).optional().default(30).describe('Number of days of history (1-365)'),
         question: z.string().optional().describe('User question (used for language detection)'),
       },
-      async (args) => this.handleGetRmfFundNavHistory(args)
+      async (args: any) => this.handleGetRmfFundNavHistory(args)
     );
 
     this.server.tool(
@@ -123,7 +231,7 @@ export class RMFMCPServer {
         compareBy: z.enum(['performance', 'risk', 'fees', 'all']).optional().default('all').describe('Comparison focus'),
         question: z.string().optional().describe('User question (used for language detection)'),
       },
-      async (args) => this.handleCompareFunds(args)
+      async (args: any) => this.handleCompareFunds(args)
     );
   }
 
@@ -157,25 +265,30 @@ export class RMFMCPServer {
 
     // OpenAI Apps SDK compatible response format
     return {
+      structuredContent: {
+        funds: fundsData.slice(0, 10),
+        pagination: { 
+          page, 
+          pageSize, 
+          totalCount, 
+          totalPages: Math.ceil(totalCount / pageSize) 
+        },
+      },
       content: [
         {
           type: 'text' as const,
           text: textSummary,
         },
-        {
-          type: 'text' as const,
-          text: JSON.stringify({
-            funds: fundsData.slice(0, 10),
-            pagination: { page, pageSize, totalCount, totalPages: Math.ceil(totalCount / pageSize) },
-          }, null, 2),
-        },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://fund-list',
+        'openai/outputTemplate': 'ui://widget/fund-list.html',
         funds: fundsData,
-        page,
-        pageSize,
-        total: totalCount,
+        pagination: {
+          page,
+          pageSize,
+          totalCount,
+          totalPages: Math.ceil(totalCount / pageSize),
+        },
         timestamp: new Date().toISOString(),
       },
     } as any;
@@ -221,26 +334,25 @@ export class RMFMCPServer {
 
     // OpenAI Apps SDK compatible response format
     return {
+      structuredContent: {
+        funds: fundsData.slice(0, 10),
+        totalCount,
+        filters: filterParams,
+      },
       content: [
         {
           type: 'text' as const,
           text: textSummary,
         },
-        {
-          type: 'text' as const,
-          text: JSON.stringify({
-            funds: fundsData.slice(0, 10),
-            totalCount,
-            filters: filterParams,
-          }, null, 2),
-        },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://fund-list',
+        'openai/outputTemplate': 'ui://widget/fund-list.html',
         funds: fundsData,
-        page: 1,
-        pageSize: args?.limit || 20,
-        total: totalCount,
+        pagination: {
+          page: 1,
+          pageSize: args?.limit || 20,
+          totalCount,
+        },
         filters: args,
         timestamp: new Date().toISOString(),
       },
@@ -267,31 +379,28 @@ export class RMFMCPServer {
 
     // OpenAI Apps SDK compatible response format
     return {
+      structuredContent: {
+        symbol: fund.symbol,
+        fund_name: fund.fund_name,
+        amc: fund.amc,
+        nav_value: fund.nav_value,
+        nav_change_percent: fund.nav_change_percent,
+        risk_level: fund.risk_level,
+        performance: {
+          ytd: fund.perf_ytd,
+          '1y': fund.perf_1y,
+          '3y': fund.perf_3y,
+          '5y': fund.perf_5y,
+        },
+      },
       content: [
         {
           type: 'text' as const,
           text: textSummary,
         },
-        {
-          type: 'text' as const,
-          text: JSON.stringify({
-            symbol: fund.symbol,
-            fund_name: fund.fund_name,
-            amc: fund.amc,
-            nav_value: fund.nav_value,
-            nav_change_percent: fund.nav_change_percent,
-            risk_level: fund.risk_level,
-            performance: {
-              ytd: fund.perf_ytd,
-              '1y': fund.perf_1y,
-              '3y': fund.perf_3y,
-              '5y': fund.perf_5y,
-            },
-          }, null, 2),
-        },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://fund-detail',
+        'openai/outputTemplate': 'ui://widget/fund-detail.html',
         fundData: {
           proj_abbr_name: fund.symbol,
           proj_name_en: fund.fund_name,
@@ -416,31 +525,30 @@ export class RMFMCPServer {
 
     // OpenAI Apps SDK compatible response format
     return {
+      structuredContent: {
+        period: getPeriodLabel(period, lang),
+        topFunds: fundsData.slice(0, 10).map(f => ({
+          rank: f.rank,
+          symbol: f.proj_abbr_name,
+          name: f.proj_name_en,
+          performance: f.performance,
+          risk: f.risk_spectrum,
+        })),
+      },
       content: [
         {
           type: 'text' as const,
           text: textSummary,
         },
-        {
-          type: 'text' as const,
-          text: JSON.stringify({
-            period: getPeriodLabel(period, lang),
-            topFunds: fundsData.slice(0, 10).map(f => ({
-              rank: f.rank,
-              symbol: f.proj_abbr_name,
-              name: f.proj_name_en,
-              performance: f.performance,
-              risk: f.risk_spectrum,
-            })),
-          }, null, 2),
-        },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://fund-list',
+        'openai/outputTemplate': 'ui://widget/fund-list.html',
         funds: fundsData,
-        page: 1,
-        pageSize: limit,
-        total: topFunds.length,
+        pagination: {
+          page: 1,
+          pageSize: limit,
+          totalCount: topFunds.length,
+        },
         period,
         periodLabel: getPeriodLabel(period, lang),
         filters: { riskLevel },
@@ -535,27 +643,26 @@ export class RMFMCPServer {
 
     // OpenAI Apps SDK compatible response format
     return {
+      structuredContent: {
+        fundCode,
+        fundName: fund.fund_name,
+        navHistory: navHistoryData.slice(0, 10),
+        statistics: {
+          minNav: minNav.toFixed(4),
+          maxNav: maxNav.toFixed(4),
+          avgNav: avgNav.toFixed(4),
+          periodReturn: periodReturn ? `${periodReturn}%` : 'N/A',
+          volatility: `${volatility}%`,
+        },
+      },
       content: [
         {
           type: 'text' as const,
           text: textSummary,
         },
-        {
-          type: 'text' as const,
-          text: JSON.stringify({
-            navHistory: navHistoryData.slice(0, 10),
-            statistics: {
-              minNav: minNav.toFixed(4),
-              maxNav: maxNav.toFixed(4),
-              avgNav: avgNav.toFixed(4),
-              periodReturn: periodReturn ? `${periodReturn}%` : 'N/A',
-              volatility: `${volatility}%`,
-            },
-          }, null, 2),
-        },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://performance-chart',
+        'openai/outputTemplate': 'ui://widget/performance-chart.html',
         fundCode,
         fundName: fund.fund_name,
         navHistory: navHistoryData,
@@ -638,22 +745,19 @@ export class RMFMCPServer {
 
     // OpenAI Apps SDK compatible response format
     return {
+      structuredContent: {
+        compareBy,
+        fundCount: funds.length,
+        funds: comparison,
+      },
       content: [
         {
           type: 'text' as const,
           text: textSummary,
         },
-        {
-          type: 'text' as const,
-          text: JSON.stringify({
-            compareBy,
-            fundCount: funds.length,
-            funds: comparison,
-          }, null, 2),
-        },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://fund-comparison',
+        'openai/outputTemplate': 'ui://widget/fund-comparison.html',
         funds: comparison,
         compareBy,
         fundCount: funds.length,

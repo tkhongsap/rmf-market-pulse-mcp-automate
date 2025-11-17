@@ -1,0 +1,187 @@
+OpenAI Apps SDK Integration Plan
+Current State
+✅ Completed:
+
+MCP server with 6 tools working on production database
+HTML widgets exist (server/widgets/) using window.openai.toolOutput._meta
+Widgets served statically at /widgets/ endpoint
+_meta fields with openai/outputTemplate set in tool responses
+Server uses TypeScript MCP SDK (@modelcontextprotocol/sdk)
+❌ Missing (Based on Official Docs):
+
+MCP resources not registered using server.registerResource()
+Tool responses missing structuredContent field (only have content and _meta)
+Widgets don't use setWidgetState() for state persistence
+No widgetAccessible metadata for component-initiated tool calls
+Missing toolInvocation status messages
+No CSP configuration in resource metadata
+Widgets need theme and display mode support
+Implementation Steps
+1. Register MCP Resources Using registerResource()
+File: server/mcp.ts
+
+According to official docs, use server.registerResource() method:
+
+server.registerResource(
+  "resource-name",
+  "ui://widget/fund-list.html",
+  {},
+  async () => ({
+    contents: [{
+      uri: "ui://widget/fund-list.html",
+      mimeType: "text/html+skybridge",
+      text: widgetHTMLContent,
+      _meta: {
+        "openai/widgetDescription": "Displays list of Thai RMF funds",
+        "openai/widgetCSP": {
+          connect_domains: ["https://alfie-app-tkhongsap.replit.app"],
+          resource_domains: []
+        }
+      }
+    }]
+  })
+);
+Register 4 widgets:
+
+ui://fund-list → fund-list.html
+ui://fund-detail → fund-detail.html
+ui://fund-comparison → fund-comparison.html
+ui://performance-chart → performance-chart.html
+2. Add structuredContent to Tool Responses
+File: server/mcp.ts
+
+Official docs require three fields in tool responses:
+
+structuredContent: Concise JSON visible to model (currently missing)
+content: Narrative text (already exists)
+_meta: Widget-only data (already exists)
+Current structure:
+
+return {
+  content: [...],
+  _meta: {...}
+}
+Required structure:
+
+return {
+  structuredContent: {
+    // Minimal data model needs to understand
+    funds: fundsData.slice(0, 10),
+    totalCount
+  },
+  content: [...],
+  _meta: {
+    // Full data for widget
+    funds: fundsData,
+    pagination: {...}
+  }
+}
+3. Update Widgets to Use window.openai API Correctly
+Files: server/widgets/*.html
+
+Based on official docs, widgets should access:
+
+window.openai.toolOutput → maps to structuredContent (not _meta)
+window.openai.toolResponseMetadata → maps to _meta
+window.openai.widgetState → persisted UI state
+window.openai.setWidgetState(state) → persist state
+Current (incorrect):
+
+const { funds } = window.openai.toolOutput._meta;
+Correct:
+
+const funds = window.openai.toolOutput.funds; // from structuredContent
+const fullData = window.openai.toolResponseMetadata.funds; // from _meta
+Also add:
+
+Theme support: window.openai.theme
+Display mode: window.openai.displayMode
+State persistence: window.openai.setWidgetState()
+4. Add Tool Metadata for Apps SDK
+File: server/mcp.ts
+
+Update tool definitions with Apps SDK metadata:
+
+_meta: {
+  "openai/outputTemplate": "ui://fund-list",
+  "openai/widgetAccessible": true, // Enable callTool() from widget
+  "openai/toolInvocation/invoking": "Loading funds...",
+  "openai/toolInvocation/invoked": "Funds loaded successfully"
+}
+5. Implement State Management
+Files: server/widgets/*.html, server/mcp.ts
+
+Based on state management docs:
+
+Business data: Already in MCP server (fund data from PostgreSQL)
+UI state: Add setWidgetState() for filters, sort order, selected items
+Cross-session state: Not needed initially (no user auth yet)
+Example in widgets:
+
+// Save filter state
+window.openai.setWidgetState({
+  searchTerm: input.value,
+  sortBy: 'ytd'
+});
+6. Local Testing with MCP Inspector
+New File: tests/apps-sdk/test-mcp-inspector.sh
+
+# Start server
+npm run dev &
+SERVER_PID=$!
+
+# Wait for server
+sleep 3
+
+# Launch MCP Inspector
+npx @modelcontextprotocol/inspector@latest http://localhost:5000/mcp
+
+# Cleanup
+trap "kill $SERVER_PID" EXIT
+7. ChatGPT Developer Mode Integration
+Documentation: docs/CHATGPT_INTEGRATION.md
+
+Steps:
+
+Deploy to HTTPS (already at https://alfie-app-tkhongsap.replit.app)
+Open ChatGPT → Settings → Connectors → Developer mode
+Add connector: https://alfie-app-tkhongsap.replit.app/mcp
+Test with golden prompts
+Verify widgets render correctly
+8. Authentication (Optional - Future)
+File: server/index.ts
+
+For future OAuth 2.1 implementation:
+
+Add /.well-known/oauth-protected-resource endpoint
+Configure securitySchemes in tool definitions
+Not required for read-only public fund data
+Testing Checklist
+[ ] All 4 resources registered via registerResource()
+[ ] MCP Inspector shows resources in list
+[ ] Tool responses include structuredContent field
+[ ] Widgets read from window.openai.toolOutput (not _meta)
+[ ] Widgets read full data from window.openai.toolResponseMetadata
+[ ] Widgets use setWidgetState() for UI state
+[ ] Theme switching works (light/dark mode)
+[ ] Display mode transitions work
+[ ] ChatGPT Developer Mode connects successfully
+[ ] All 6 tools trigger correct widgets
+[ ] Widgets render without console errors
+Files to Modify
+server/mcp.ts - Add registerResource() calls, add structuredContent, update _meta
+server/widgets/*.html - Update to use correct window.openai API, add state management
+tests/apps-sdk/test-mcp-inspector.sh - New test script
+docs/CHATGPT_INTEGRATION.md - New integration guide
+Key Differences from Current Implementation
+Response Structure: Must include structuredContent (separate from _meta)
+Widget API: Use toolOutput for model data, toolResponseMetadata for widget data
+Resource Registration: Use registerResource() method, not commented-out code
+State Management: Implement setWidgetState() for UI state persistence
+Success Criteria
+All 4 widgets registered as MCP resources with text/html+skybridge MIME type
+Tool responses include structuredContent, content, and _meta fields
+Widgets correctly access data from window.openai.toolOutput and toolResponseMetadata
+MCP Inspector successfully renders all widgets
+ChatGPT Developer Mode connects and displays widgets correctly
+Widgets support theme switching and state persistence

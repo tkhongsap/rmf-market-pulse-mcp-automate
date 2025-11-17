@@ -66,38 +66,64 @@
   </div>
 
   <script>
-    const { funds } = window.openai.toolOutput._meta;
+    // Apps SDK compliant: read from structuredContent and _meta
+    const structuredData = window.openai.toolOutput || {};
+    const metadata = window.openai.toolResponseMetadata || {};
+    
+    // Use full data from metadata, fallback to structured data
+    const funds = metadata.funds || structuredData.funds || [];
+    
+    // Initialize widget state
+    let widgetState = window.openai.widgetState || { highlightedMetric: null, viewedAt: null };
+    widgetState.comparedFunds = funds.map(f => f.proj_abbr_name || f.symbol);
+    widgetState.viewedAt = new Date().toISOString();
+    window.openai.setWidgetState(widgetState);
 
     // Build header
     const headerRow = document.getElementById('headerRow');
-    headerRow.innerHTML = '<th>Metric</th>';
+    const metricHeader = document.createElement('th');
+    metricHeader.textContent = 'Metric';
+    headerRow.appendChild(metricHeader);
+    
     funds.forEach(fund => {
-      headerRow.innerHTML += `
-        <th>
-          <div class="fund-header">${fund.fund_name || 'N/A'}</div>
-          <span class="fund-code">${fund.symbol || 'N/A'}</span>
-        </th>
+      const th = document.createElement('th');
+      const fundName = fund.proj_name_en || fund.fund_name || 'N/A';
+      const symbol = fund.proj_abbr_name || fund.symbol || 'N/A';
+      th.innerHTML = `
+        <div class="fund-header">${fundName}</div>
+        <span class="fund-code">${symbol}</span>
       `;
+      headerRow.appendChild(th);
     });
 
-    // Metrics to compare
+    // Metrics to compare (handle both field formats)
     const metrics = [
-      { label: 'NAV', key: 'nav_value', format: (v) => v ? parseFloat(v).toFixed(4) : 'N/A', compare: false },
-      { label: 'YTD Return', key: 'performance.ytd', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
-      { label: '1Y Return', key: 'performance.1y', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
-      { label: '3Y Return', key: 'performance.3y', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
-      { label: '5Y Return', key: 'performance.5y', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
-      { label: 'Risk Level', key: 'risk_level', format: (v) => v || 'N/A', compare: false },
-      { label: 'AMC', key: 'amc', format: (v) => v || 'N/A', compare: false },
+      { label: 'NAV', key: 'last_val,nav_value', format: (v) => v ? parseFloat(v).toFixed(4) : 'N/A', compare: false },
+      { label: 'YTD Return', key: 'return_ytd,perf_ytd,performance.ytd', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
+      { label: '1Y Return', key: 'return_1y,perf_1y,performance.1y', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
+      { label: '3Y Return', key: 'return_3y,perf_3y,performance.3y', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
+      { label: '5Y Return', key: 'return_5y,perf_5y,performance.5y', format: (v) => v !== null && v !== undefined ? parseFloat(v).toFixed(2) + '%' : 'N/A', compare: true },
+      { label: 'Risk Level', key: 'risk_spectrum,risk_level', format: (v) => v || 'N/A', compare: false },
+      { label: 'AMC', key: 'unique_id,amc', format: (v) => v || 'N/A', compare: false },
     ];
 
-    const getNestedValue = (obj, path) => {
-      return path.split('.').reduce((o, p) => o && o[p], obj);
+    const getNestedValue = (obj, paths) => {
+      const pathList = paths.split(',');
+      for (const path of pathList) {
+        const value = path.split('.').reduce((o, p) => o && o[p], obj);
+        if (value !== null && value !== undefined) return value;
+      }
+      return null;
     };
 
     const tableBody = document.getElementById('tableBody');
     metrics.forEach(({ label, key, format, compare }) => {
-      let row = `<tr><td class="metric-label">${label}</td>`;
+      const row = document.createElement('tr');
+      
+      const labelCell = document.createElement('td');
+      labelCell.className = 'metric-label';
+      labelCell.textContent = label;
+      row.appendChild(labelCell);
 
       const values = funds.map(fund => {
         const val = getNestedValue(fund, key);
@@ -110,17 +136,25 @@
         const numValue = value !== null && value !== undefined ? parseFloat(value) : null;
         const formatted = format(value);
 
+        const cell = document.createElement('td');
         let className = '';
         if (compare && numValue !== null && !isNaN(numValue)) {
           className = numValue >= 0 ? 'positive' : 'negative';
           if (numValue === maxValue) className += ' best';
         }
-
-        row += `<td class="${className}">${formatted}</td>`;
+        cell.className = className;
+        cell.textContent = formatted;
+        row.appendChild(cell);
       });
 
-      row += '</tr>';
-      tableBody.innerHTML += row;
+      tableBody.appendChild(row);
+    });
+
+    // Support for theme changes
+    window.addEventListener('openai:set_globals', (event) => {
+      if (event.detail.globals.theme) {
+        document.body.className = event.detail.globals.theme;
+      }
     });
   </script>
 </body>

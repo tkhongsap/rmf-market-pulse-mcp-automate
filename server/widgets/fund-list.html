@@ -92,34 +92,60 @@
   </div>
 
   <script>
-    const { funds, pagination } = window.openai.toolOutput._meta;
+    // Apps SDK compliant: read from structuredContent and _meta
+    const structuredData = window.openai.toolOutput || {};
+    const metadata = window.openai.toolResponseMetadata || {};
+    
+    // Use full data from metadata, fallback to structured data
+    const funds = metadata.funds || structuredData.funds || [];
+    const pagination = metadata.pagination || structuredData.pagination || {};
+
+    // Initialize widget state for persistence
+    let widgetState = window.openai.widgetState || { sortBy: null, selectedFund: null };
 
     const fundRows = document.getElementById('fundRows');
-    funds.forEach(fund => {
-      const ytd = parseFloat(fund.perf_ytd);
-      const oneYear = parseFloat(fund.perf_1y);
+    funds.forEach((fund, index) => {
+      const ytd = parseFloat(fund.return_ytd || fund.perf_ytd);
+      const oneYear = parseFloat(fund.return_1y || fund.perf_1y);
       const ytdClass = ytd >= 0 ? 'positive' : 'negative';
       const oneYearClass = oneYear >= 0 ? 'positive' : 'negative';
-      const riskLevel = parseInt(fund.risk_level) || 0;
+      const riskLevel = parseInt(fund.risk_spectrum || fund.risk_level) || 0;
+      const fundName = fund.proj_name_en || fund.fund_name || 'N/A';
+      const symbol = fund.proj_abbr_name || fund.symbol || 'N/A';
+      const navValue = fund.last_val || fund.nav_value;
 
-      fundRows.innerHTML += `
-        <div class="fund-row">
-          <div class="fund-info">
-            <div class="fund-name">${fund.fund_name || 'N/A'}</div>
-            <div class="fund-code">${fund.symbol || 'N/A'}</div>
-          </div>
-          <div class="nav-value">${fund.nav_value ? parseFloat(fund.nav_value).toFixed(4) : 'N/A'}</div>
-          <div class="perf-value ${ytdClass}">${!isNaN(ytd) ? ytd.toFixed(2) + '%' : 'N/A'}</div>
-          <div class="perf-value ${oneYearClass}">${!isNaN(oneYear) ? oneYear.toFixed(2) + '%' : 'N/A'}</div>
-          <div><span class="risk-badge risk-${riskLevel}">${riskLevel}</span></div>
+      const row = document.createElement('div');
+      row.className = 'fund-row';
+      row.onclick = () => {
+        widgetState.selectedFund = symbol;
+        window.openai.setWidgetState(widgetState);
+      };
+      
+      row.innerHTML = `
+        <div class="fund-info">
+          <div class="fund-name">${fundName}</div>
+          <div class="fund-code">${symbol}</div>
         </div>
+        <div class="nav-value">${navValue ? parseFloat(navValue).toFixed(4) : 'N/A'}</div>
+        <div class="perf-value ${ytdClass}">${!isNaN(ytd) ? ytd.toFixed(2) + '%' : 'N/A'}</div>
+        <div class="perf-value ${oneYearClass}">${!isNaN(oneYear) ? oneYear.toFixed(2) + '%' : 'N/A'}</div>
+        <div><span class="risk-badge risk-${riskLevel}">${riskLevel}</span></div>
       `;
+      
+      fundRows.appendChild(row);
     });
 
-    if (pagination) {
+    if (pagination && pagination.totalCount) {
       document.getElementById('pagination').textContent =
-        `Page ${pagination.page} • Showing ${funds.length} of ${pagination.totalCount} funds`;
+        `Page ${pagination.page || 1} • Showing ${funds.length} of ${pagination.totalCount} funds`;
     }
+
+    // Support for theme changes
+    window.addEventListener('openai:set_globals', (event) => {
+      if (event.detail.globals.theme) {
+        document.body.className = event.detail.globals.theme;
+      }
+    });
   </script>
 </body>
 </html>
