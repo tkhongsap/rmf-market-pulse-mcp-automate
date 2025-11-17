@@ -282,6 +282,9 @@ export class RMFMCPServer {
       ],
       _meta: {
         'openai/outputTemplate': 'ui://widget/fund-list.html',
+        'openai/widgetAccessible': true,
+        'openai/toolInvocation/invoking': 'Loading RMF funds...',
+        'openai/toolInvocation/invoked': 'Funds loaded successfully',
         funds: fundsData,
         pagination: {
           page,
@@ -401,6 +404,9 @@ export class RMFMCPServer {
       ],
       _meta: {
         'openai/outputTemplate': 'ui://widget/fund-detail.html',
+        'openai/widgetAccessible': true,
+        'openai/toolInvocation/invoking': 'Loading fund details...',
+        'openai/toolInvocation/invoked': 'Fund details loaded',
         fundData: {
           proj_abbr_name: fund.symbol,
           proj_name_en: fund.fund_name,
@@ -542,7 +548,10 @@ export class RMFMCPServer {
         },
       ],
       _meta: {
-        'openai/outputTemplate': 'ui://widget/fund-list.html',
+        'openai/outputTemplate': 'ui://widget/performance-chart.html',
+        'openai/widgetAccessible': true,
+        'openai/toolInvocation/invoking': 'Analyzing fund performance...',
+        'openai/toolInvocation/invoked': 'Performance analysis complete',
         funds: fundsData,
         pagination: {
           page: 1,
@@ -663,6 +672,9 @@ export class RMFMCPServer {
       ],
       _meta: {
         'openai/outputTemplate': 'ui://widget/performance-chart.html',
+        'openai/widgetAccessible': true,
+        'openai/toolInvocation/invoking': 'Loading NAV history...',
+        'openai/toolInvocation/invoked': 'NAV history loaded',
         fundCode,
         fundName: fund.fund_name,
         navHistory: navHistoryData,
@@ -758,6 +770,9 @@ export class RMFMCPServer {
       ],
       _meta: {
         'openai/outputTemplate': 'ui://widget/fund-comparison.html',
+        'openai/widgetAccessible': true,
+        'openai/toolInvocation/invoking': 'Comparing funds...',
+        'openai/toolInvocation/invoked': 'Comparison complete',
         funds: comparison,
         compareBy,
         fundCount: funds.length,

@@ -190,12 +190,24 @@
     widgetState.viewedAt = new Date().toISOString();
     window.openai.setWidgetState(widgetState);
 
-    // Support for theme and display mode
+    // Support for theme and display mode changes
     window.addEventListener('openai:set_globals', (event) => {
-      if (event.detail.globals.theme) {
-        document.body.className = event.detail.globals.theme;
+      const globals = event.detail.globals || {};
+      if (globals.theme) {
+        document.body.className = globals.theme;
+      }
+      if (globals.displayMode) {
+        document.body.setAttribute('data-display-mode', globals.displayMode);
       }
     });
+    
+    // Initialize theme and display mode from current state
+    if (window.openai?.theme) {
+      document.body.className = window.openai.theme;
+    }
+    if (window.openai?.displayMode) {
+      document.body.setAttribute('data-display-mode', window.openai.displayMode);
+    }
   </script>
 </body>
 </html>
