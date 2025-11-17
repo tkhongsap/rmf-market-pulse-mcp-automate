@@ -83,13 +83,15 @@ The system uses a **dual-deployment architecture** on Replit to separate the MCP
 ### Deployment 1: MCP Server (Main Application)
 - **Type:** Autoscale
 - **URL:** https://alfie-app-tkhongsap.replit.app
-- **Command:** `npm run dev`
+- **Build Command:** `npm run build`
+- **Run Command:** `npm start`
 - **Purpose:** Serves ChatGPT MCP requests 24/7
 - **Features:**
   - Loads 442 RMF funds into memory on startup
   - Responds to ChatGPT tool calls
   - Serves widget resources
   - Auto-scales based on traffic
+  - Production-optimized compiled code
 
 ### Deployment 2: Data Pipeline (Scheduled Job)
 - **Type:** Scheduled Deployment

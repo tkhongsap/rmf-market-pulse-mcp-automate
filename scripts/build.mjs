@@ -44,8 +44,10 @@ try {
   // Create directories
   const distDocsDir = path.join(distDir, 'docs');
   const distDataDir = path.join(distDir, 'data', 'rmf-funds');
+  const distWidgetsDir = path.join(distDir, 'server', 'widgets');
   fs.mkdirSync(distDocsDir, { recursive: true });
   fs.mkdirSync(distDataDir, { recursive: true });
+  fs.mkdirSync(distWidgetsDir, { recursive: true });
 
   // Copy CSV file
   const csvSource = path.join(rootDir, 'docs', 'rmf-funds-consolidated.csv');
@@ -75,9 +77,25 @@ try {
     throw new Error(`JSON directory not found: ${jsonSourceDir}`);
   }
 
+  // Copy widget HTML files
+  const widgetsSourceDir = path.join(rootDir, 'server', 'widgets');
+  if (fs.existsSync(widgetsSourceDir)) {
+    const widgetFiles = fs.readdirSync(widgetsSourceDir).filter(f => f.endsWith('.html'));
+    let widgetCount = 0;
+    
+    for (const file of widgetFiles) {
+      const srcFile = path.join(widgetsSourceDir, file);
+      const destFile = path.join(distWidgetsDir, file);
+      fs.copyFileSync(srcFile, destFile);
+      widgetCount++;
+    }
+    
+    console.log(`   ✓ Copied ${widgetCount} widget HTML files`);
+  }
+
   console.log('\n✅ Build completed successfully!\n');
   console.log('📦 Output: dist/index.js');
-  console.log('📁 Assets: Copied to dist/docs/ and dist/data/');
+  console.log('📁 Assets: Copied to dist/docs/, dist/data/, and dist/server/widgets/');
   console.log('🚀 Run with: npm start\n');
 
 } catch (error) {

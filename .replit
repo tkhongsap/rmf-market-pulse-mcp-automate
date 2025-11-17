@@ -8,8 +8,8 @@ packages = ["copilot-cli", "jq"]
 
 [deployment]
 deploymentTarget = "autoscale"
-build = ["npm", "install"]
-run = ["npm", "run", "dev"]
+build = ["npm", "run", "build"]
+run = ["npm", "start"]
 
 [[ports]]
 localPort = 5000
